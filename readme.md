@@ -18,7 +18,7 @@ Install RVM. Make sure you follow the final instructions to source the rvm comma
 Install a version of ruby and set it to the default version.
 
 ```
-rvm instal ruby-2.4.2
+rvm install ruby-2.4.2
 rvm use ruby-2.4.2 --default
 ```
 
