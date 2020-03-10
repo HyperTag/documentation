@@ -87,15 +87,9 @@ Some fields are common across all events a list of common fields and their descr
 # Context Fields 
 | Field    | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|
-| active | Boolean | Whether a user is active 
-
-This is usually used to flag an .identify() call to just update the traits but not “last seen.” |
-| app | Object | dictionary of information about the current application, containing name, version and build. 
-
-This is collected automatically from our mobile libraries when possible. |
-| campaign | Object | Dictionary of information about the campaign that resulted in the API call, containing name, source, medium, term and content. 
-
-This maps directly to the common UTM campaign parameters. |
+| active | Boolean | Whether a user is active. This is usually used to flag an .identify() call to just update the traits but not “last seen.” |
+| app | Object | dictionary of information about the current application, containing name, version and build.  This is collected automatically from our mobile libraries when possible. |
+| campaign | Object | Dictionary of information about the campaign that resulted in the API call, containing name, source, medium, term and content.  This maps directly to the common UTM campaign parameters. |
 | device | Object | Dictionary of information about the device, containing id, manufacturer, model, name, type and version. |
 | ip | String | Current user’s IP address. |
 | library | Object | Dictionary of information about the library making the requests to the API, containing name and version. |
@@ -107,12 +101,8 @@ This maps directly to the common UTM campaign parameters. |
 | referrer | Object | Dictionary of information about the way the user was referred to the website or app, containing type, name, url and link |
 | screen | Object | Dictionary of information about the device’s screen, containing density, height and width |
 | timezone | String | Timezones are sent as tzdata strings to add user timezone information which might be stripped from the timestamp, for example America/New_York |
-| groupId | String | Group / Account ID. 
-
-This is useful in B2B use cases where you need to attribute your non-group calls to a company or account. It is relied on by several Customer Success and CRM tools. |
-| traits | Object | Dictionary of traits of the current user 
-
-This is useful in cases where you need to track an event, but also associate information from a previous identify call. You should fill this object the same way you would fill traits in an identify call. |
+| groupId | String | Group / Account ID.  This is useful in B2B use cases where you need to attribute your non-group calls to a company or account. It is relied on by several Customer Success and CRM tools. |
+| traits | Object | Dictionary of traits of the current user.  This is useful in cases where you need to track an event, but also associate information from a previous identify call. You should fill this object the same way you would fill traits in an identify call. |
 | userAgent | String | User agent of the device making the request |
 
  #### Identify
