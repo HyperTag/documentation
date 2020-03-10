@@ -71,7 +71,7 @@ Check out the below calls and their use cases to determine the calls that you ne
 
 Some fields are common across all events a list of common fields and their description is below 
 
-# General Fields 
+###### General Fields 
 | Field    | Required  | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|-----------:|
 | anonymousId | optional if userID is set instead | String | A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier. A userId or an anonymousId is required.
@@ -84,7 +84,7 @@ Some fields are common across all events a list of common fields and their descr
  | type | required | String | Type of message, corresponding to the API method: 'identify', 'group', 'track', 'page', 'screen' or 'alias'.
  | userId | optional if anonymousID is set instead | String | Unique identifier for the user in your database. A userId or an anonymousId is required.
 
-# Context Fields 
+###### Context Fields 
 | Field    | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|
 | active | Boolean | Whether a user is active. This is usually used to flag an .identify() call to just update the traits but not “last seen.” |
@@ -111,7 +111,6 @@ The `identify` method helps you associate your users and their actions to a uniq
 
 Post `https://e.metarouter.io/v1/i`
 
-# Identify fields 
 | Field    | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|
 | traits | optional | Object  | Free-form dictionary of traits of the user, like email or name |
