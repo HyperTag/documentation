@@ -61,7 +61,7 @@ Batch error endpoints return errors in a slightly different format.  the Errors 
 ```
 
 ##### Max Request Size
-There is a maximum of 500KB per call (our batch endpoint accepts a maximum of 500KB per batch and 15KB per call). HTTP Tracking API will respond with 413 request entity to large if these limits are exceeded.
+There is a maximum of 15KB per call (our batch endpoint accepts a maximum of 500KB per batch and 15KB per call). HTTP Tracking API will respond with 413 request entity to large if these limits are exceeded.
 
 ### Calls in HTTP API
 
