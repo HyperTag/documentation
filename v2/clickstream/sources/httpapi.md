@@ -3,13 +3,13 @@ title: HTTP API
 sidebar: platform_sidebar
 ---
 
-## HTTP Tracking API
+# HTTP Tracking API
 
 This document review the basic structure of our HTTP Tracking API endpoints and how to connect and send information into the system via the API.
 
-### Getting Started with HTTP API
+## Getting Started with HTTP API
 
-#### Authentication (optional)
+### Authentication (optional)
 
 You'll need to supply your app_ID with each request using HTTP Basic Auth.
 
@@ -21,11 +21,11 @@ For example, if your Source ID is ILoveData123, that will be encoded to SUxvdmVE
 Authorization: Basic SUxvdmVEYXRhMTIz
 ```
 
-#### Content-Type
+### Content-Type
 
 Make sure to set the content-type header to `application/json`.
 
-#### Errors and Error responses 
+### Errors and Error responses 
 
 The HTTP Tracking API uses several response codes to validate requests sent to the API.  The following are response codes render by the server and what they mean
 
@@ -60,18 +60,18 @@ Batch error endpoints return errors in a slightly different format.  the Errors 
 }
 ```
 
-##### Max Request Size
+#### Max Request Size
 There is a maximum of 15KB per call (our batch endpoint accepts a maximum of 500KB per batch and 15KB per call). HTTP Tracking API will respond with 413 request entity too large if these limits are exceeded.
 
-### Calls in HTTP API
+## Calls in HTTP API
 
 Check out the below calls and their use cases to determine the calls that you need to make. We have also included examples of how you'd call specific objects in HTTP API.
 
-#### Common Fields 
+### Common Fields 
 
 Some fields are common across all events a list of common fields and their description is below 
 
-###### General Fields 
+#### General Fields 
 | Field    | Required  | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|-----------:|
 | anonymousId | optional if userID is set instead | String | A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier. A userId or an anonymousId is required.
@@ -84,7 +84,7 @@ Some fields are common across all events a list of common fields and their descr
  | type | required | String | Type of message, corresponding to the API method: 'identify', 'group', 'track', 'page', 'screen' or 'alias'.
  | userId | optional if anonymousID is set instead | String | Unique identifier for the user in your database. A userId or an anonymousId is required.
 
-###### Context Fields 
+#### Context Fields 
 | Field    | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|
 | active | Boolean | Whether a user is active. This is usually used to flag an .identify() call to just update the traits but not “last seen.” |
@@ -105,11 +105,11 @@ Some fields are common across all events a list of common fields and their descr
 | traits | Object | Dictionary of traits of the current user.  This is useful in cases where you need to track an event, but also associate information from a previous identify call. You should fill this object the same way you would fill traits in an identify call. |
 | userAgent | String | User-agent of the device making the request |
 
- #### Identify
+### Identify
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
-Post `https://e.metarouter.io/v1/i`
+Post `https://e.metarouter.io/v1/i` or `https://e.metarouter.io/v1/identify`
 
 | Field    | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|
@@ -129,11 +129,11 @@ Post `https://e.metarouter.io/v1/i`
 }
 ```
 
-#### Track
+### Track
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your website. This will tell MetaRouter which actions you are performing on your site. With `track`, each user action triggers an “event,” which can also have associated properties.
 
-Post `https://e.metarouter.io/v1/t`
+Post `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
 
 | Property    | Required | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|--------------:|
@@ -158,7 +158,7 @@ Post `https://e.metarouter.io/v1/t`
 
 The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing.
 
-Post `https://e.metarouter.io/v1/p`
+Post `https://e.metarouter.io/v1/p` or `https://e.metarouter.io/v1/page`
 
 | Property    | Required | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|--------------:|
@@ -177,11 +177,11 @@ Post `https://e.metarouter.io/v1/p`
 }
 ```
 
-#### Group
+### Group
 
 The `group` method associates an identified user with a company, organization, project, etc.
 
-Post `https://e.metarouter.io/v1/g`
+Post `https://e.metarouter.io/v1/g` or `https://e.metarouter.io/v1/group`
 
 | Property    | Required | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|--------------:|
@@ -200,11 +200,11 @@ Post `https://e.metarouter.io/v1/g`
 }
 ```
 
-#### Alias
+### Alias
 
 The `alias` method combines two unassociated User IDs.
 
-Post  `https://e.metarouter.io/v1/a`
+Post `https://e.metarouter.io/v1/a` or `https://e.metarouter.io/v1/alias`
 
 | Property    | Required | Type        | Explanation            |
 | ------------- |:-------------:|--------------:|--------------:|
@@ -220,11 +220,11 @@ userId | optional if anonymousID is set instead | String | Unique identifier for
 }
 ```
 
-#### batch
+### Batch
 
 The `batch` method allows for submitting multiple events with one request.  The events follow the standard message formats from above and allow for context and timestamps to be injected from the top level.
 
-Post  `https://e.metarouter.io/v1/batch`
+Post `https://e.metarouter.io/v1/batch` or  `https://e.metarouter.io/v1/import`
 
 ```
 {
@@ -263,3 +263,50 @@ Post  `https://e.metarouter.io/v1/batch`
   }
 }
 ```
+
+### Tracking Pixel 
+
+The API also exposes an `/v1/pixel/...` route for each of our single event POST requests to allow you to send data via a GET request. This option requires you to include the JSON payload as a Base64 encoded query parameter. 
+
+For example, the following payload for a Track Event:
+
+```
+{
+    "integrations": {},
+    "context": {
+        "page": {
+            "path": "/home"
+        },
+        "library": {
+            "name": "analytics.js",
+            "version": "3.2.21"
+        }
+    },
+    "event": "example event",
+    "messageId": "1234567890",
+    "type": "track",
+    "writeKey": "example",
+    "userId": "0987654321"
+}
+```
+
+Would be sent as a Tracking Pixel by calling the following URL:
+
+```
+https://e.metarouter.io/v1/pixel/track?data=ewogICAgImludGVncmF0aW9ucyI6IHt9LAogICAgImNvbnRleHQiOiB7CiAgICAgICAgInBhZ2UiOiB7CiAgICAgICAgICAgICJwYXRoIjogIi9ob21lIgogICAgICAgIH0sCiAgICAgICAgImxpYnJhcnkiOiB7CiAgICAgICAgICAgICJuYW1lIjogImFuYWx5dGljcy5qcyIsCiAgICAgICAgICAgICJ2ZXJzaW9uIjogIjMuMi4yMSIKICAgICAgICB9CiAgICB9LAogICAgImV2ZW50IjogImV4YW1wbGUgZXZlbnQiLAogICAgIm1lc3NhZ2VJZCI6ICIxMjM0NTY3ODkwIiwKICAgICJ0eXBlIjogInRyYWNrIiwKICAgICJ3cml0ZUtleSI6ICJleGFtcGxlIiwKICAgICJ1c2VySWQiOiAiMDk4NzY1NDMyMSIKfQ==
+
+```
+
+The following are the supported Tracking Pixel routes:
+- `/v1/pixel/track`
+- `/v1/pixel/page`
+- `/v1/pixel/alias`
+- `/v1/pixel/identify`
+- `/v1/pixel/group`
+
+### Webhook Endpoint
+Our API is able to receive Analytics.js formatted data from other systems from a general POST route, normally used for other platforms that can send data in this format as a Webhook.
+
+Set the URL to be used as `https://e.metarouter.io/v1/webhook` or `https://e.metarouter.io/v1/w` and add a query parameter to set the Write Key for the MetaRouter Platform to overwrite the incoming data with.
+
+For example, `https://e.metarouter.io/v1/webhook?writeKey=abcdefg` where the `writeKey` is replaced with that of the Source Write Key you have configured.
