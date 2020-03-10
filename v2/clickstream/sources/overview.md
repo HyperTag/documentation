@@ -8,6 +8,7 @@ sidebar: platform_sidebar
 * [Javascript](../sources/analyticsjs.html)
 * [Android](../sources/android.html)
 * [iOS](../sources/ios.html)
+* [React Native](../sources/react.html)
 
 ## Server-side libraries
 

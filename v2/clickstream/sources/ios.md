@@ -27,11 +27,16 @@ SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurat
 configuration.trackApplicationLifecycleEvents = YES; // Enable this to record certain application events automatically
 configuration.recordScreenViews = YES; // Enable this to record screen views automatically
 configuration.requestFactory = ^(NSURL *url) {
-    NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
-    components.host = @"e.metarouter.io";
-    NSURL *transformedURL = components.URL;
-    return [NSMutableURLRequest requestWithURL:transformedURL];
-};
+        NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
+        NSString* host = components.host;
+        if ([host isEqualToString:@"cdn-settings.segment.com"]) {
+            components.host = @"cdn.metarouter.io";
+        } else if ([host isEqualToString:@"api.segment.io"]) {
+            components.host = @"e.metarouter.io";
+        }
+        NSURL *transformedURL = components.URL;
+        return [NSMutableURLRequest requestWithURL:transformedURL];
+    };
 [SEGAnalytics setupWithConfiguration:configuration];
 ```
 

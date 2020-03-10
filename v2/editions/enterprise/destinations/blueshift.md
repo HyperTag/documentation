@@ -20,7 +20,7 @@ Integrating Blueshift with MetaRouter cuts out any need for additional implement
 
 ## Blueshift Side
 
-To get started sending events to Blueshift, first contact [Blueshift](https://blueshift.com/contact_blueshift/) to create your account.
+To get started sending events to Blueshift, first contact [Blueshift](https://blueshift.com/contact-us/) to create your account.
 
 Next you'll need to go to your [Account Page](https://app.getblueshift.com/dashboard#/app/account/api)
 And get your Event API Key.

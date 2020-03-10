@@ -63,7 +63,7 @@ This configuration file allows you to set your own configuration based on how yo
   - `disabled` - Send visitorID instead of timestamp;
   - `optional` - Use this together with `sendBoth` to send out both timestamp and visitorId.
 - `sendBoth` - Boolean, **optional**, defaults to `false`
-  - If you've set `timestampOption` to `optional`, you can opt to send *both* the timestamp and the visitorID to Adobe. However, note that this is *NOT* recommended by [Adobe](https://marketing.adobe.com/resources/help/en_US/sc/implement/timestamps-overview.html) as it may lead to out of order data.
+  - If you've set `timestampOption` to `optional`, you can opt to send *both* the timestamp and the visitorID to Adobe. However, note that this is *NOT* recommended by Adobe as it may lead to out of order data.
 - `sendContextData` - Boolean, **optional**, defaults to `false`
   - If `true`, all track properties will be attached to event as context data. Then you can use processing rules to map you Context Data Variables in Adobe to other variables with Adobe Analytics Processing Rules.
 - `productIdentifier` - String, **optional**, one of `id`, `name` or `sku`, defaults to `name`

@@ -12,7 +12,7 @@ Switching from Segment to MetaRouter is very simple. Follow the four easy steps 
 
 [Sign up for MetaRouter](https://app.metarouter.io/signup) and create a [source](https://docs.metarouter.io/v2/clickstream/sources/overview.html) in the MetaRouter UI.
 
-![segment-switch-1](../../images/segment-switch-1.png)
+![segment-switch-1](../../images/segment-switch-1-v2.png)
 
 ### Step 2
 
@@ -30,13 +30,13 @@ Remove your Segment snippet and replace it with our [analytics.js](https://docs.
 
 Step 3: Configure your integrations via the MetaRouter dashboard.
 
-![segment-switch-3](../../images/segment-switch-3.png)
+![segment-switch-3](../../images/segment-switch-3-v2.png)
 
 ### Step 4
 
 Step 4: Check the live debugger to make sure your data is flowing.
 
-![segment-switch-4](../../images/segment-switch-4.png)
+![segment-switch-4](../../images/segment-switch-4-v2.png)
 
 # Segment | MetaRouter Merge Guidelines
 

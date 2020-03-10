@@ -32,7 +32,19 @@ We recommend initializing the client in your `Application` subclass.
 Analytics analytics = new Analytics.Builder(context, YOUR_SOURCE_ID)
   .trackApplicationLifecycleEvents() // Enable this to record certain application events automatically!
   .recordScreenViews() // Enable this to record screen views automatically!
-  .endpoint("https://e.metarouter.io") // Required - Specify that events go to the MetaRouter Event Ingestion API
+  .connectionFactory(new ConnectionFactory() {
+    @Override protected HttpURLConnection openConnection(String url) throws IOException {
+      Uri parsedUri = Uri.parse(url);
+      String path = parsedUri.getPath();
+      String host = parsedUri.getHost();
+      if (host.equals("cdn-settings.segment.com")) {
+        return super.openConnection("https://cdn.metarouter.io" + path);
+      } else if (host.equals("api.segment.io")) {
+        return super.openConnection("https://e.metarouter.io" + path);
+      }
+      return super.openConnection(url);
+    }
+  })  // Required - Specify that events go to the MetaRouter Event Ingestion API
   .build();
 
 // Set the initialized instance as a globally accessible instance.

@@ -89,7 +89,7 @@ This configuration file allows you to set your own configuration based on how yo
 * `partnerId` - String, **required**
   * is your Account (Partner) ID from your Criteo account
 * `isDeduplicationOn` - Bool, **optional**
-  * will allow you to set the Criteo's `deduplication` parameter for your calls - more details on deduplication [here](https://accelerate.criteo.com/hc/en-us/articles/207474089-Deduplication-Parameter)
+  * will allow you to set the Criteo's `deduplication` parameter for your calls
   * *default value: `0`*
 * `defaultSiteType` - String, , **optional**, one of these values:
   * `m` - for mobile
@@ -372,7 +372,7 @@ If `properties.viewHome` is not present or is set to `false`, the page call is *
 
 #### Setting Emails
 
-It’s easy to associate emails with a user, if there’s an `email` property in the [`track`](https://docs.metarouter.io/v2/clickstream/calls.html#track) call, we’ll include the `setHashedEmail` event to Criteo along with your event. The email value needs to be MD5-hash of the lowercase email (i.e. MD5(user@domain.com) ). To pass the `email` property your `track` call should be trigger like this:
+It’s easy to associate emails with a user, if there’s an `email` property in the track call, we’ll include the `setHashedEmail` event to Criteo along with your event. The email value needs to be MD5-hash of the lowercase email (i.e. MD5(user@domain.com) ). To pass the `email` property your `track` call should be trigger like this:
 
 ```javascript
 analytics.track('Event Name', {
@@ -384,7 +384,7 @@ analytics.track('Event Name', {
 
 #### Setting zip codes
 
-It’s easy to set a zip code to all track calls - if there’s a `zipcode` property in the [`track`](https://docs.metarouter.io/v2/clickstream/calls.html#track) call, we’ll include the `setZipcode` event to Criteo along with your event. To pass the `zipcode` property your `track` call should be trigger like this:
+It’s easy to set a zip code to all track calls - if there’s a `zipcode` property in the `track` call, we’ll include the `setZipcode` event to Criteo along with your event. To pass the `zipcode` property your `track` call should be trigger like this:
 
 ```javascript
 analytics.track('Event Name', {
@@ -396,7 +396,7 @@ analytics.track('Event Name', {
 
 #### Setting store ids
 
-It’s easy to set a store id to all track calls - if there’s a `store_id` property in the [`track`](https://docs.metarouter.io/v2/clickstream/calls.html#track) call, we’ll include the `setStore` event to Criteo along with your event. To pass the `store_id` property your `track` call should be trigger like this:
+It’s easy to set a store id to all track calls - if there’s a `store_id` property in the `track` call, we’ll include the `setStore` event to Criteo along with your event. To pass the `store_id` property your `track` call should be trigger like this:
 
 ```javascript
 analytics.track('Event Name', {

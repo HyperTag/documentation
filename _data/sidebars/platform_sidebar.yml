@@ -344,6 +344,10 @@ entries:
       url: /v2/clickstream/sources/ios.html
       output: web
 
+    - title: React Native
+      url: /v2/clickstream/sources/react.html
+      output: web
+
     - title: Analytics Spec - Common Fields
       url: /v2/clickstream/common.html
       output: web
