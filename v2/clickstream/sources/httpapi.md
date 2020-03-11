@@ -63,15 +63,11 @@ Batch error endpoints return errors in a slightly different format.  the Errors 
 #### Max Request Size
 There is a maximum of 15KB per call (our batch endpoint accepts a maximum of 500KB per batch and 15KB per call). HTTP Tracking API will respond with 413 request entity too large if these limits are exceeded.
 
-## Calls in HTTP API
-
-Check out the below calls and their use cases to determine the calls that you need to make. We have also included examples of how you'd call specific objects in HTTP API.
-
 ### Common Fields 
 
-Some fields are common across all events a list of common fields and their description is below 
+Below are some fields are common across all events a list of common fields and their description. 
 
-#### General Fields 
+#### General Event Fields 
 
 | Field       | Required      | Type          | Explanation | 
 |-------------|---------------|---------------|-------------|
@@ -85,7 +81,7 @@ Some fields are common across all events a list of common fields and their descr
 | type | required | String | Type of message, corresponding to the API method: `identify`, `group`, `track`, `page`, `screen`, or `alias`.
 | userId | optional if anonymousID is set instead | String | Unique identifier for the user in your database. A userId or an anonymousId is required.
 
-#### Context Fields 
+#### Context Object Fields 
 
 | Field         | Type          | Explanation   |
 |---------------|---------------|---------------|
@@ -106,6 +102,10 @@ Some fields are common across all events a list of common fields and their descr
 | groupId | String | Group / Account ID.  This is useful in B2B use cases where you need to attribute your non-group calls to a company or account. It is relied on by several Customer Success and CRM tools. |
 | traits | Object | Dictionary of traits of the current user.  This is useful in cases where you need to track an event, but also associate information from a previous identify call. You should fill this object the same way you would fill traits in an identify call. |
 | userAgent | String | User-agent of the device making the request |
+
+## Standard Calls in HTTP API
+
+Check out the below `POST` calls and their use cases to determine the calls that you need to make. We have also included examples of how you'd call specific objects in HTTP API.
 
 ### Identify
 
@@ -156,7 +156,7 @@ Post `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
 }
 ```
 
-#### Page
+### Page
 
 The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing.
 
@@ -222,9 +222,13 @@ Post `https://e.metarouter.io/v1/a` or `https://e.metarouter.io/v1/alias`
 }
 ```
 
+## Utility Endpoints
+
+There are additional event collection endpoints to help with specific implementation use-cases.
+
 ### Batch
 
-The `batch` method allows for submitting multiple events with one request.  The events follow the standard message formats from above and allow for context and timestamps to be injected from the top level.
+The `batch` method allows for submitting multiple events with one request. Batching events is useful for increased performance from the application and the MetaRouter Platform.  The events follow the standard message formats from above and allow for context and timestamps to be injected from the top level.
 
 Post `https://e.metarouter.io/v1/batch` or  `https://e.metarouter.io/v1/import`
 
@@ -306,7 +310,7 @@ The following are the supported Tracking Pixel routes:
 - `/v1/pixel/identify`
 - `/v1/pixel/group`
 
-### Webhook Endpoint
+## Webhook Endpoint
 Our API is able to receive Analytics.js formatted data from other systems from a general POST route, normally used for other platforms that can send data in this format as a Webhook.
 
 Set the URL to be used as `https://e.metarouter.io/v1/webhook` or `https://e.metarouter.io/v1/w` and add a query parameter to set the Write Key for the MetaRouter Platform to overwrite the incoming data with.
