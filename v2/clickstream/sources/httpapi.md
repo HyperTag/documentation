@@ -72,7 +72,8 @@ Check out the below calls and their use cases to determine the calls that you ne
 Some fields are common across all events a list of common fields and their description is below 
 
 #### General Fields 
-| Field       | Required      | Type          | Explanation |
+
+| Field       | Required      | Type          | Explanation | 
 |-------------|---------------|---------------|-------------|
 | anonymousId | optional (if `userId` exists) | String | A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier. A userId or an anonymousId is required.
 | context | optional | Object | Dictionary of extra information that provides useful context about a message, but is not directly related to the API call like ip address or locale See the Context field docs for more details.
@@ -85,6 +86,7 @@ Some fields are common across all events a list of common fields and their descr
 | userId | optional if anonymousID is set instead | String | Unique identifier for the user in your database. A userId or an anonymousId is required.
 
 #### Context Fields 
+
 | Field         | Type          | Explanation   |
 |---------------|---------------|---------------|
 | active | Boolean | Whether a user is active. This is usually used to flag an .identify() call to just update the traits but not *last seen*. |
