@@ -57,6 +57,91 @@ Enabling this will force FB Pixel events triggered by MetaRouter to fire in trac
 
 You can find out more about the specific use-case and benefits from this [Facebook Developers article](https://developers.facebook.com/ads/blog/post/2017/11/28/event-tracking-with-multiple-pixels-tracksingle/)
 
+## Settings
+
+### Map Categories to FB Content Types
+
+If you’re using real estate, travel, or automotive [Dynamic Ads](https://www.facebook.com/business/learn/facebook-create-ad-dynamic-ads) you can map `category` values to `content_type` values. For example, you might map the category “cars” to the “vehicle” content type so Facebook promotes relevant vehicles from your catalog. To understand which content types you can map to, consult the [Facebook Dynamic Ads](https://developers.facebook.com/docs/marketing-api/dynamic-ad) documentation.
+
+For most implementations we recommend leaving these mappings blank. By default, we’ll set content_type to “product”.
+
+### Blacklist PII Properties
+
+Facebook has a strict policy prohibiting any personally identifiable information (PII) from being sent as properties of events to their API. By default, this integration will scan `track` events for [these](https://docs.metarouter.io/v2/clickstream/destinations/facebook-pixel.html#pii-blacklisting) properties and strip them from the payload that gets sent to Facebook. If your events contain other properties with PII values, you can use this setting to append to this default list. You can also use this setting to optionally hash any PII values instead of dropping them.
+
+### Client-Side Only: Advanced Match Trait Key for External ID
+
+Please indicated a user trait key which you would like MetaRouter to use to send an `external_id` to Facebook Pixel using advanced matching. MetaRouter will use the value of this trait to map it to Facebook Pixel’s `external_id`.
+
+### Legacy Conversion Pixel IDs
+
+These are your [deprecated](https://developers.facebook.com/docs/facebook-pixel/implementation/custom-audiences) Conversion Pixel IDs from Facebook Conversion Tracking. Facebook will still accept data in this format, though it’s no longer possible to create conversion Pixel IDs. Now you create conversions based on standard and custom events inside their interface. Enter your event name in the left column and your pixel ID in the right column.
+
+### Map Your Events to Standard FB Events
+
+Enter your event on the left, and the Facebook standard event to map to on the right. Facebook recognizes certain [standard events](https://developers.facebook.com/docs/marketing-api/audiences-api/pixel#standardevents) that can be used across Custom Audiences, custom conversions, conversion tracking, and conversion optimization. When you map an event to a standard Facebook event, we’ll send the event by that name. Any unmapped events will still be sent as Custom Events.
+
+### Pixel ID
+
+Your Pixel ID, from the snippet created on the [Facebook Pixel creation page](https://www.facebook.com/ads/manager/pixel/facebook_pixel/).
+
+### Standard Events custom properties
+
+Add here all the custom properties you want to send as part of your Standard Events (Order Completed, Checkout Started, etc) as `property name`.
+
+### Use UserId or Anonymous Id as External Id
+
+Enable this setting if you want to send, `userId` (or `anonymousId` if not present) as external Id to Facebook.
+
+### Value Field Identifier
+
+For pre-purchase events such as `Product Viewed` and `Product Added`, choose which MetaRouter property you would like to map to Facebook’s value property.
+
+### Whitelist PII Properties
+
+By default, MetaRouter will strip any PII from the properties of `track` events that get sent to Facebook. If you would like to override this functionality, you can input each property you would like to whitelist as a line item in this setting. **Please reference our [documentation](https://docs.metarouter.io/v2/clickstream/destinations/facebook-pixel.html#pii-blacklisting) for the exact property names we filter out.**
+
+## Troubleshooting
+
+### PII Blacklisting
+
+Facebook enforces strict guidelines around sending Personally Identifiable Information (PII) as properties of Pixel events. In order to adhere to these guidelines, MetaRouter will automatically scan `track` event properties for PII and remove any that get flagged from the event to Facebook. The following keys are currently filtered:
+
+* email
+* firstName
+* lastName
+* gender
+* city
+* country
+* phone
+* state
+* zip
+* birthday
+
+Any `track` events with properties containing those keys will be sent to Facebook with those properties omitted.
+
+If you have events that use any of those keys for non-PII properties, you can manually whitelist them using the **Whitelist PII Properties** setting. You may also add to this list and/or optionally hash blacklisted properties with the **Blacklist PII Properties** setting.
+
+### Inconsistent or Missing Conversions
+
+The most common reason for Facebook conversion pixels to fire inconsistently is that the page redirects or reloads before the pixel has time to be loaded on the page. Make sure your page does not redirect or reload for at least 300ms after the conversion event happens. In some cases a delay of 500ms is necessary.
+
+We recommend using our `trackLink` or `trackForm` helpers to delay the page redirect. You can extend the delay by setting the timeout to 500ms.
+
+### Extra or Duplicate Conversions
+
+This may be due to conversion events being sent from your development, staging, or testing environments. We recommend setting up separate source for each environment. That way you can either point events to test conversion pixels in Facebook Conversion Tracking or turn off Facebook Conversion Tracking completely in non-production environments.
+
+Double check that your mapped conversion events aren’t happening anywhere else on your site. If the user reloads the conversion page or re-triggers the tracked event they may be double counted.
+
+Facebook’s conversion reports count view-through conversions as well as click-through conversions by default. You can change that setting inside Facebook Conversion Tracking in the report attribution settings.
+
+### Facebook Conversions Not Matching Google Analytics
+
+Facebook counts conversions per person, as opposed to Google Analytics which counts per browser cookie session (unless you’re using [Google Analytics User-ID](https://docs.metarouter.io/v2/clickstream/destinations/google-analytics.html#user-id)).
+
+If someone saw or clicked on your ad on a mobile phone then later came back directly to purchase on a desktop machine Google Analytics wouldn’t know that this was the same person, but Facebook would. In that scenario Google Analytics counts 2 unique visits with a conversion last attributed to a direct visit on desktop. Facebook counts one conversion with the conversion properly attributed to the last ad click/view on mobile.
+
 ## Things to note
 
 ### What happens to revenue when an event goes to Facebook?
