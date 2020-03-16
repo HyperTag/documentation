@@ -1,6 +1,6 @@
 ---
 title: Platform Overview
-path: '/platform-overview'
+path: '/'
 ---
 
 ## MetaRouter Platform Overview

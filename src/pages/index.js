@@ -1,19 +1,35 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 
 import Layout from './../components/layout'
 import SEO from './../components/seo'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title />
+const query = graphql`
+  {
+    markdownRemark(frontmatter: { path: { eq: "/" } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`
 
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+export default () => (
+  <StaticQuery
+    query={query}
+    render={data => {
+      const { markdownRemark } = data
+      const { frontmatter, html } = markdownRemark
 
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+      return (
+        <Layout>
+          <SEO title={frontmatter.title} />
+          <h1>{frontmatter.title}</h1>
+
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </Layout>
+      )
+    }}
+  />
 )
-
-export default IndexPage
