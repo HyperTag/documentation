@@ -20,6 +20,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "gatsby-plugin-manifest": "^2.2.48",
     "prettier": "^1.19.1",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^1.2.0"

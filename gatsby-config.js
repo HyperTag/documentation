@@ -1,6 +1,8 @@
+const siteTitle = 'MetaRouter Documentation'
+
 module.exports = {
   siteMetadata: {
-    title: `MetaRouter Documentation`,
+    title: siteTitle,
     description: `MetaRouter is a data engineering platform that that helps you collect, process, and route streaming data.`,
     author: `metarouter.io`,
   },
@@ -24,6 +26,18 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: siteTitle,
+        short_name: `MetaRouter Docs`,
+        start_url: `/`,
+        background_color: `#ebf3fa`,
+        theme_color: `#292d66`,
+        display: `standalone`,
+        icon: 'src/images/logo-dark.png',
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
