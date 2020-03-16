@@ -62,6 +62,8 @@ On top of our standard calls, you're free to do a few extra things with our Mixp
     * `Categorized Pages` - This sends a `Viewed (category) Page to Mixpanel.
     * `All Pages` - This causes all `page` calls to be sent to Mixpanel, regardless of how you have customized your pages. They will appear as `Loaded A Page` in Mixpanel.
 
+- `Group Identifier Traits` - What trait Metarouter should use as your Mixpanel “group key” in group calls. If, for example, you set this to be company, then “company” will be sent as group_key and the value of traits["company"] will be sent as the group_id.
+
 - Cookies
     * `Add Cross Subdomain Cookie` - Allows Mixpanel cookiec to be read across all subdomains.
     * `Secure Cookie` - This marks the Mixpanel cookie as `secure`, meaning that this cookie will only be transmitted over https.
@@ -69,4 +71,18 @@ On top of our standard calls, you're free to do a few extra things with our Mixp
 
 - Geolocation
     * To stop geolocation from occuring based on the IP of your server side calls, add `ignoreIp: true` to the context of your `identify`, `track`, and `alias` calls. This will prevent ip and location from being updated in Mixpanel.
-  
+
+### Sending data to Mixpanel’s European Union Endpoint
+
+If you’d like to implement Mixpanel in the European Union you will need to enable the setting “Enable European Union Enpoint” within the Mixpanel settings in the app. When this setting is enabled, Segment will automatically update the endpoint for any data sent from one of our server-side libraries or from a browser using Analytics.js or the iOS SDK.
+
+If you are sending data using our Android SDK, you will need to specify the different endpoints using meta-data tags. On your app’s `AndroidManifest.xml` file, you need to add the following tags under your `<application>` tags to override the track, engage, and group endpoints:
+
+    <meta-data android:name="com.mixpanel.android.MPConfig.EventsEndpoint"
+            android:value="https://api-eu.mixpanel.com/track?ip=" />
+    <meta-data android:name="com.mixpanel.android.MPConfig.PeopleEndpoint"
+            android:value="https://api-eu.mixpanel.com/engage=" />
+    <meta-data android:name="com.mixpanel.android.MPConfig.GroupsEndpoint"
+            android:value="https://api-eu.mixpanel.com/groups" />
+
+For additional information regarding Mixpanel’s European Union endpoint, please see the [Mixpanel documentation here](https://developer.mixpanel.com/docs/implement-mixpanel#section-implementing-mixpanel-in-the-european-union-eu).
