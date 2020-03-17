@@ -1,8 +1,10 @@
-
 {
+  "css.validate": false,
+  "files.exclude": {
+    "node_modules": true
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "css.validate": false
+  }
 }

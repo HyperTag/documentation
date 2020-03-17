@@ -25,9 +25,11 @@ export default () => (
       return (
         <Layout>
           <SEO title={frontmatter.title} />
-          <h1>{frontmatter.title}</h1>
 
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <section>
+            <h1>{frontmatter.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </section>
         </Layout>
       )
     }}

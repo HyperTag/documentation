@@ -159,12 +159,12 @@ pre {
   @apply block;
   @apply float-left;
   @apply bg-no-repeat;
-  /* background-image: url(./../images/logo.png); */
-  background-position: 0 1px;
+  background-image: url(./../images/logo-light-sm.png);
+  background-size: contain;
   content: '';
-  height: 40px;
+  height: 31px;
   margin-right: 10px;
-  width: 31px;
+  width: 35px;
 }
 .nav-list h2 {
   @apply sans-bold;
@@ -244,22 +244,25 @@ footer {
   @apply mt-10;
 }
 
-.partial {
+main section {
   @apply mb-2;
   @apply py-6 px-12;
   @apply border-b border-gray-400 border-solid;
 }
-.partial:last-of-type {
+main section section {
+  @apply -mx-12; /* keep subsections and parents at same level of indentation */
+}
+main section:last-of-type {
   @apply border-none;
 }
-.partial ul {
+main section ul {
   @apply mb-4 ml-6;
 }
-.partial li {
+main section li {
   @apply ml-4 mb-1;
   @apply list-disc;
 }
-.partial img {
+main section img {
   @apply max-w-screen-lg;
   @apply mx-auto;
   @apply .w-4/5;
