@@ -1,6 +1,8 @@
 ---
 title: Enterprise Overview
-path: '/enterprise-edition'
+path: /enterprise-overview
+collectionKey: enterprise
+collectionIndex: 0
 ---
 
 ## Data Streaming on your own terms
@@ -15,11 +17,11 @@ With support for a variety of Destinations, MetaRouter Enterprise leverages Kube
 
 ## The Data Streaming Engine
 
-The primary component of our platform, consisting of three distinct layers of services, that allows for the real-time ingestion, durable processing, and monitored delivery of data from your applications. 
+The primary component of our platform, consisting of three distinct layers of services, that allows for the real-time ingestion, durable processing, and monitored delivery of data from your applications.
 
 [![MetaRouter Overview](/images/platform_overview.png)](/images/platform_overview.png)
 
-**Layer 1: Ingestion** - A high performance API, only outwardly facing component of the platform, that accepts the incoming data from your sources to write into durable stateful message queues. 
+**Layer 1: Ingestion** - A high performance API, only outwardly facing component of the platform, that accepts the incoming data from your sources to write into durable stateful message queues.
 
 **Layer 2: Routing** - Syndicates event processing among Layer 3 to ensure the sending of data to it’s destination based on the configuration you provide for that individual source.
 
@@ -29,6 +31,6 @@ As with all of our Clickstream products, you only have to implement a centralize
 
 ## Customization
 
-The design of MetaRouter Enterprise is modular and allows for an unprecedented amount of flexibility when it comes to real-time streaming data processors. It can sit downstream from existing APIs to receive data or feed data directly to your own internal data processors. 
+The design of MetaRouter Enterprise is modular and allows for an unprecedented amount of flexibility when it comes to real-time streaming data processors. It can sit downstream from existing APIs to receive data or feed data directly to your own internal data processors.
 
-Each deployment supports multi-tenancy out of the box, allowing you to implement tracking with a variety of data sources and map their data distinctly based on the configurations you set for that specific instance. 
+Each deployment supports multi-tenancy out of the box, allowing you to implement tracking with a variety of data sources and map their data distinctly based on the configurations you set for that specific instance.

@@ -1,3 +1,7 @@
+# temp dev file
+# TODO delete the physical dir
+/src/_v2
+
 # Logs
 logs
 *.log
