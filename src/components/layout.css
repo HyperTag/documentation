@@ -8,38 +8,38 @@ html {
 
 @font-face {
   font-family: montserrat;
-  src: url('/fonts/montserrat/montserrat-light.woff2') format('woff2');
+  src: url('./../fonts/montserrat/montserrat-light.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: montserrat;
-  src: url('/fonts/montserrat/montserrat-regular.woff2') format('woff2');
+  src: url('./../fonts/montserrat/montserrat-regular.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: montserrat;
-  src: url('/fonts/montserrat/montserrat-semiBold.woff2') format('woff2');
+  src: url('./../fonts/montserrat/montserrat-semiBold.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: podkova;
-  src: url('/fonts/podkova/podkova-medium.woff2') format('woff2');
+  src: url('./../fonts/podkova/podkova-medium.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: podkova;
-  src: url('/fonts/podkova/podkova-regular.woff2') format('woff2');
+  src: url('./../fonts/podkova/podkova-regular.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: podkova;
-  src: url('/fonts/podkova/podkova-extraBold.woff2') format('woff2');
+  src: url('./../fonts/podkova/podkova-extraBold.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
 }
