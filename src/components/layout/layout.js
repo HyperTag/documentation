@@ -13,14 +13,27 @@ import './layout.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
           title
         }
       }
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              navIndex
+              path
+              title
+            }
+          }
+        }
+      }
     }
   `)
+
+  const nodes = data.allMarkdownRemark.edges.map(e => e.node.frontmatter)
 
   return (
     <>
@@ -29,6 +42,16 @@ const Layout = ({ children }) => {
           <Link to="/">{data.site.siteMetadata.title}</Link>
         </h1>
         <input type="text" id="search-input" placeholder="search..." />
+        <ul>
+          {nodes
+            .filter(n => n.navIndex !== null)
+            .sort()
+            .map(n => (
+              <li>
+                <Link to={n.path}>{n.title}</Link>
+              </li>
+            ))}
+        </ul>
       </div>
 
       <main>
