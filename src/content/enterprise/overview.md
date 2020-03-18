@@ -1,5 +1,5 @@
 ---
-title: Enterprise Overview
+title: Enterprise Edition
 path: /enterprise-edition
 navIndex: 1
 collectionKey: enterprise

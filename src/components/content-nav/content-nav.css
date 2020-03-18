@@ -19,7 +19,7 @@
   @apply block;
   @apply float-left;
   @apply bg-no-repeat;
-  background-image: url(../../images/logo-light-sm.png);
+  background-image: url('https://cdn.metarouter.io/web/img/mr_icon_light.png');
   background-size: contain;
   content: '';
   height: 31px;
