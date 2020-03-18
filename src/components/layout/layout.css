@@ -1,0 +1,40 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './../content-nav/content-nav.css';
+@import './table.css';
+@import './content.css';
+@import './fonts.css';
+
+html {
+  height: 100%;
+}
+
+body,
+input,
+select,
+textarea {
+  @apply font-sans;
+  @apply text-gray-800;
+}
+
+h1,
+h2,
+h3 {
+  @apply serif-bold;
+}
+
+.header-links {
+  @apply float-right;
+  @apply mr-4;
+}
+.header-links li {
+  @apply p-2;
+  @apply inline-block;
+}
+
+footer {
+  @apply text-center text-xs;
+  @apply px-3 pt-24 pb-12;
+}

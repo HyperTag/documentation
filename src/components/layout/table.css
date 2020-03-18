@@ -1,0 +1,10 @@
+table {
+  @apply mt-4 mx-6 mb-8;
+}
+td,
+th {
+  @apply py-1 pr-2 pl-2;
+}
+td {
+  @apply border-t border-b border-solid border-blue-200;
+}
