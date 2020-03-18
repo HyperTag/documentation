@@ -1,6 +1,6 @@
 ---
 title: Enterprise Overview
-path: /enterprise-overview
+path: /enterprise-edition
 navIndex: 1
 collectionKey: enterprise
 collectionIndex: 0

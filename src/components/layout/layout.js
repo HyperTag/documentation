@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
 
-        <div id="md-content">{children}</div>
+        {children}
 
         <footer>© {new Date().getFullYear()} MetaRouter</footer>
       </main>

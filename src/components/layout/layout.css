@@ -25,7 +25,14 @@ h3 {
   @apply serif-bold;
 }
 
+p {
+  @apply mb-6;
+}
+
 .header-links {
+  @apply mb-6 mt-2;
+  @apply sans-light;
+  @apply text-sm;
   @apply float-right;
   @apply mr-4;
 }
