@@ -1,7 +1,7 @@
 ---
 title: Platform Overview
 path: '/'
-navIndex: [0]
+navIndex: 0
 ---
 
 ## MetaRouter Platform Overview

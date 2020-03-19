@@ -2,7 +2,8 @@
 title: Enterprise Requirements
 collectionKey: enterprise
 collectionIndex: 1
-navIndex: [1, 0]
+navIndex: 1
+navText: Requirements
 ---
 
 # Resource Requirements

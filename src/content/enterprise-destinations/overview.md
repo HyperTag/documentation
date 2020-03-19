@@ -1,5 +1,5 @@
 ---
 title: Enterprise Destinations
 path: /enterprise-destinations
-navIndex: [2]
+navIndex: 2
 ---

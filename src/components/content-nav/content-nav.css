@@ -44,7 +44,7 @@
 .nav-list a.selected-item {
   @apply bg-gray-100;
 }
-.nav-list li li li a {
+.nav-list li li a {
   @apply pl-1;
 }
 

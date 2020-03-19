@@ -2,7 +2,8 @@
 title: Enterprise Install
 collectionKey: enterprise
 collectionIndex: 2
-navIndex
+navIndex: 1
+navText: Installation & Updates
 ---
 
 # Before Enterprise Platform Installation

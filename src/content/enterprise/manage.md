@@ -2,7 +2,8 @@
 title: Enterprise Management
 collectionKey: enterprise
 collectionIndex: 3
-navIndex: [1, 3]
+navIndex: 1
+navText: Configuration & Management
 ---
 
 # Controlling how the MetaRouter Platform sends data
