@@ -94,12 +94,9 @@ main section *:last-child {
 main section section {
   @apply -mx-24; /* keep subsections and parents at same level of indentation */
 }
-main section:first-of-type {
-  @apply pt-16;
-}
-main section:first-of-type section:not(section + section) {
-  @apply pt-0;
-}
 main section:last-of-type {
   @apply border-none;
+}
+main section section:first-child {
+  @apply pt-0;
 }

@@ -44,18 +44,23 @@ const ContentNav = () => {
   return (
     <ul>
       {nested.map(n => (
-        <li>
-          <Link to={n.path}>{n.navText || n.title}</Link>
-          {n.children && n.children.length > 0 && (
-            <ul>
-              {n.children.map(x => (
-                <li>
-                  <Link to={x.path}>{x.navText || x.title}</Link>
-                </li>
-              ))}
-            </ul>
+        <>
+          {n.collectionIndex === 0 && (
+            <li>
+              <h2>{n.title}</h2>
+            </li>
           )}
-        </li>
+          <li>
+            <Link to={n.path}>{n.navText || n.title}</Link>
+          </li>
+
+          {n.children &&
+            n.children.map(x => (
+              <li>
+                <Link to={x.path}>{x.navText || x.title}</Link>
+              </li>
+            ))}
+        </>
       ))}
     </ul>
   )

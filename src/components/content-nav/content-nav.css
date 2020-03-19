@@ -28,7 +28,7 @@
 }
 .nav-list h2 {
   @apply sans-bold;
-  @apply mt-2;
+  @apply mt-4;
   @apply relative;
   @apply cursor-pointer;
 }
@@ -52,7 +52,7 @@
 #search-input:focus {
   @apply bg-white;
   @apply border-gray-400 border border-solid rounded;
-  @apply mb-2;
+  @apply mb-6;
   @apply p-1;
   @apply text-xs;
   @apply w-full;
