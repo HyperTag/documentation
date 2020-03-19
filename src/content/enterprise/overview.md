@@ -1,11 +1,15 @@
 ---
-title: Enterprise Edition
-path: /enterprise-edition
-navIndex: 1
-navText: Overview
 collectionKey: enterprise
 collectionIndex: 0
+collectionTitle: Enterprise Edition
+
+navIndex: 1
+navText: Overview
+
+path: '/enterprise-edition/'
 ---
+
+# MetaRouter Enterprise
 
 ## Data Streaming on your own terms
 

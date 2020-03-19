@@ -1,9 +1,11 @@
 ---
-title: Enterprise Install
 collectionKey: enterprise
 collectionIndex: 2
+
 navIndex: 1
 navText: Installation & Updates
+
+path: '/enterprise-installation/'
 ---
 
 # Before Enterprise Platform Installation

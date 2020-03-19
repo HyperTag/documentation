@@ -1,10 +1,13 @@
 ---
-title: Cloud API
 collectionKey: cloud
 collectionIndex: 1
+
+path: /cloud-api/
+
 navIndex: 3
+navText: Cloud API
 ---
 
-# MetaRouter Cloud API
+# Cloud API
 
 nothing to see here

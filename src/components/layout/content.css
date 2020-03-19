@@ -62,14 +62,6 @@ main section:last-of-type {
   @apply border-none;
 }
 
-/* subsection containers for markdown files nested in a parent file */
-main section section {
-  @apply -mx-24; /* keep subsections and parents at same level of indentation */
-}
-main section section:first-child {
-  @apply pt-0;
-}
-
 /* section content */
 main h1,
 main h2,

@@ -1,7 +1,13 @@
 ---
-title: Sources and SDKs
-path: /sources-and-sdks
+collectionIndex: 0
+collectionTitle: Sources & SDKs
+
 navIndex: 5
 navText: Overview
-collectionIndex: 0
+
+path: '/sources-and-sdks/'
 ---
+
+# Sources and SDKs
+
+nothing to see here

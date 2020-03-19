@@ -1,10 +1,14 @@
 ---
-title: 'Cloud Edition'
-path: /cloud-edition
-navIndex: 3
-navText: Overview
 collectionIndex: 0
 collectionKey: cloud
+collectionTitle: Cloud Edition
+
+navIndex: 3
+navText: Overview
+
+path: '/cloud-edition/'
 ---
+
+# MetaRouter Cloud
 
 nothing to see here

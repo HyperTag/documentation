@@ -11,6 +11,7 @@ const ContentNav = () => {
               navIndex
               navText
               collectionIndex
+              collectionTitle
               path
               title
             }
@@ -45,16 +46,16 @@ const ContentNav = () => {
     <>
       {nested.map(n => (
         <>
-          {n.collectionIndex === 0 && <h2>{n.title}</h2>}
+          {n.collectionTitle && <h2>{n.collectionTitle}</h2>}
           <ul>
-            <li key={n.title}>
-              <a href={n.path || '#'}>{n.navText || n.title}</a>
+            <li key={n.path}>
+              <a href={n.path}>{n.navText}</a>
             </li>
 
             {n.children &&
               n.children.map(x => (
                 <li key={x.title}>
-                  <a href={x.path || '#'}>{x.navText || x.title}</a>
+                  <a href={x.path}>{x.navText}</a>
                 </li>
               ))}
           </ul>

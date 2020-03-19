@@ -1,9 +1,11 @@
 ---
-title: Enterprise Management
 collectionKey: enterprise
 collectionIndex: 3
+
 navIndex: 1
 navText: Configuration & Management
+
+path: '/enterprise-management/'
 ---
 
 # Controlling how the MetaRouter Platform sends data

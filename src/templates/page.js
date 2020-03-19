@@ -12,11 +12,7 @@ export default ({ data, pageContext }) => {
     <Layout>
       <SEO title={frontmatter.title} />
 
-      <section>
-        <h1>{frontmatter.title}</h1>
-
-        <div dangerouslySetInnerHTML={{ __html: pageContext.html }} />
-      </section>
+      <div dangerouslySetInnerHTML={{ __html: pageContext.html }} />
     </Layout>
   )
 }
