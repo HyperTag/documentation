@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const ContentNav = () => {
   const data = useStaticQuery(graphql`
@@ -42,27 +42,25 @@ const ContentNav = () => {
     })
 
   return (
-    <ul>
+    <>
       {nested.map(n => (
         <>
-          {n.collectionIndex === 0 && (
-            <li>
-              <h2>{n.title}</h2>
+          {n.collectionIndex === 0 && <h2>{n.title}</h2>}
+          <ul>
+            <li key={n.title}>
+              <a href={n.path || '#'}>{n.navText || n.title}</a>
             </li>
-          )}
-          <li>
-            <Link to={n.path}>{n.navText || n.title}</Link>
-          </li>
 
-          {n.children &&
-            n.children.map(x => (
-              <li>
-                <Link to={x.path}>{x.navText || x.title}</Link>
-              </li>
-            ))}
+            {n.children &&
+              n.children.map(x => (
+                <li key={x.title}>
+                  <a href={x.path || '#'}>{x.navText || x.title}</a>
+                </li>
+              ))}
+          </ul>
         </>
       ))}
-    </ul>
+    </>
   )
 }
 

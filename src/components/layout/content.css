@@ -50,15 +50,32 @@ pre {
   @apply relative;
 }
 
-/* main content container */
-main {
-  margin-left: 16rem;
+/* section containers for each markdown file */
+main section {
+  @apply py-24 px-24;
+  @apply border-b border-gray-400 border-solid;
 }
+main section *:last-child {
+  @apply mb-0; /* remove bottom margin from last element in a section */
+}
+main section:last-of-type {
+  @apply border-none;
+}
+
+/* subsection containers for markdown files nested in a parent file */
+main section section {
+  @apply -mx-24; /* keep subsections and parents at same level of indentation */
+}
+main section section:first-child {
+  @apply pt-0;
+}
+
+/* section content */
 main h1,
 main h2,
 main h3 {
-  line-height: 1.1;
   @apply mb-4;
+  line-height: 1.1;
 }
 main h1 {
   @apply text-3xl;
@@ -72,10 +89,7 @@ main h3 {
 main a {
   @apply text-cloud-blue-medium;
 }
-main section {
-  @apply py-24 px-24;
-  @apply border-b border-gray-400 border-solid;
-}
+
 main section ul {
   @apply mb-4 ml-6;
 }
@@ -87,16 +101,4 @@ main section img {
   @apply max-w-screen-lg;
   @apply mx-auto;
   @apply .w-4/5;
-}
-main section *:last-child {
-  @apply mb-0; /* remove bottom margin from last element in a section */
-}
-main section section {
-  @apply -mx-24; /* keep subsections and parents at same level of indentation */
-}
-main section:last-of-type {
-  @apply border-none;
-}
-main section section:first-child {
-  @apply pt-0;
 }

@@ -8,7 +8,6 @@
   @apply top-0;
   @apply text-sm;
   @apply sans-light;
-  width: 16rem;
 }
 .nav-list h1 {
   @apply mb-4;
@@ -35,8 +34,19 @@
 .nav-list h2:after {
   @apply text-base;
   @apply float-right;
+  @apply inline-block;
+  @apply text-gray-500;
+  content: '⌄';
+  margin-top: 0.1rem;
+  transform: rotate(180deg);
+}
+.nav-list h2.collapsed:after {
+  @apply text-base;
+  @apply float-right;
+  @apply inline-block;
   content: '⌄';
   margin-top: -0.35rem;
+  transform: rotate(0);
 }
 .nav-list a {
   @apply block;

@@ -29,6 +29,16 @@ p {
   @apply mb-6;
 }
 
+:root {
+  --nav-width: 18rem;
+}
+.nav-list {
+  width: var(--nav-width);
+}
+main {
+  margin-left: var(--nav-width);
+}
+
 .header-links {
   @apply mb-6 mt-2;
   @apply sans-light;
