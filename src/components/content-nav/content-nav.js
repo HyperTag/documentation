@@ -11,9 +11,9 @@ const ContentNav = () => {
               navIndex
               navText
               collectionIndex
+              collectionKey
               collectionTitle
               path
-              title
             }
           }
         }
@@ -23,41 +23,30 @@ const ContentNav = () => {
 
   const nodes = data.allMarkdownRemark.edges.map(e => e.node.frontmatter)
 
-  let nested = []
+  const collections = {}
 
   nodes
     .filter(n => n.navIndex !== null)
-    .sort((a, b) => a.navIndex - b.navIndex) // sort top-level items
+    .sort((a, b) => a.navIndex - b.navIndex) // sort collections
     .forEach(n => {
-      if (n.collectionIndex === 0) {
-        n.children = nodes
-          .filter(x => x !== n && x.navIndex === n.navIndex)
-          .sort((a, b) => a.collectionIndex - b.collectionIndex) // sort sub items
-        nested.push(n)
-      }
-
-      // add any items not already in the tree
-      if (!n.collectionIndex && !n.children) {
-        nested.push(n)
+      if (n.collectionKey && !collections[n.collectionKey]) {
+        collections[n.collectionKey] = nodes
+          .filter(({ collectionKey }) => collectionKey === n.collectionKey)
+          .sort((a, b) => a.collectionIndex - b.collectionIndex) // sort items within collections
       }
     })
 
   return (
     <>
-      {nested.map(n => (
+      {Object.keys(collections).map(key => (
         <>
-          {n.collectionTitle && <h2>{n.collectionTitle}</h2>}
+          {<h2>{collections[key][0].collectionTitle}</h2>}
           <ul>
-            <li key={n.path}>
-              <a href={n.path}>{n.navText}</a>
-            </li>
-
-            {n.children &&
-              n.children.map(x => (
-                <li key={x.title}>
-                  <a href={x.path}>{x.navText}</a>
-                </li>
-              ))}
+            {collections[key].map(x => (
+              <li key={x.path}>
+                <a href={x.path}>{x.navText}</a>
+              </li>
+            ))}
           </ul>
         </>
       ))}

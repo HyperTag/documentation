@@ -1,6 +1,6 @@
 ---
 collectionIndex: 0
-collectionKey: enterprise-destionations
+collectionKey: enterprise-destinations
 collectionTitle: Enterprise Destinations
 
 navIndex: 2

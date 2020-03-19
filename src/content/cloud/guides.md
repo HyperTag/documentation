@@ -1,6 +1,6 @@
 ---
-collectionKey: cloud
 collectionIndex: 1
+collectionKey: cloud
 
 path: /cloud-api/
 

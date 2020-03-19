@@ -1,5 +1,6 @@
 ---
 collectionIndex: 0
+collectionKey: sources
 collectionTitle: Sources & SDKs
 
 navIndex: 5
