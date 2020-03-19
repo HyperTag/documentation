@@ -97,7 +97,7 @@ main section section {
 main section:first-of-type {
   @apply pt-16;
 }
-main section:first-of-type section {
+main section:first-of-type section:not(section + section) {
   @apply pt-0;
 }
 main section:last-of-type {

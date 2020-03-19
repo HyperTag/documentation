@@ -1,5 +1,5 @@
 ---
 title: Cloud Destinations
-path: 'cloud-destinations'
-navIndex: 4
+path: '/cloud-destinations'
+navIndex: [4]
 ---

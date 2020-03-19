@@ -1,7 +1,7 @@
 ---
 title: Enterprise Edition
 path: /enterprise-edition
-navIndex: 1
+navIndex: [1]
 collectionKey: enterprise
 collectionIndex: 0
 ---

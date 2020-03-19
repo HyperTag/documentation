@@ -45,7 +45,26 @@ const Layout = ({ children }) => {
         <ul>
           {nodes
             .filter(n => n.navIndex !== null)
-            .sort((a, b) => a.navIndex - b.navIndex)
+            .sort((a, b) => {
+              if (a.navIndex === b.navIndex) {
+                console.log(a.navIndex[1], b.navIndex[1])
+                if (a.navIndex[1] === undefined) {
+                  return a
+                }
+
+                return b
+              }
+
+              if (
+                a.navIndex === b.navIndex &&
+                a.navIndex.length === 2 &&
+                b.navIndex.length === 2
+              ) {
+                return a.navIndex[1] - b.navIndex[1]
+              }
+
+              return a.navIndex[0] - b.navIndex[0]
+            })
             .map(n => (
               <li>
                 <Link to={n.path}>{n.title}</Link>
