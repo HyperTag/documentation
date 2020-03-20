@@ -8,9 +8,6 @@ const query = graphql`
   {
     markdownRemark(frontmatter: { path: { eq: "/" } }) {
       html
-      frontmatter {
-        title
-      }
     }
   }
 `
@@ -24,10 +21,9 @@ export default () => (
 
       return (
         <Layout>
-          <SEO title={frontmatter.title} />
+          <SEO />
 
           <section>
-            <h1>{frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </section>
         </Layout>

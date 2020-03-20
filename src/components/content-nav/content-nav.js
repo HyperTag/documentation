@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
 const ContentNav = () => {
   const data = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ const ContentNav = () => {
           <ul>
             {collections[key].map(x => (
               <li key={x.path}>
-                <a href={x.path}>{x.navText}</a>
+                <Link to={x.path}>{x.navText}</Link>
               </li>
             ))}
           </ul>

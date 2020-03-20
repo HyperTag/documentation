@@ -1,7 +1,9 @@
 {
   "css.validate": false,
   "files.exclude": {
-    "node_modules": true
+    ".cache": true,
+    "node_modules": true,
+    "public": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
