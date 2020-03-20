@@ -40,7 +40,7 @@ main {
 }
 
 .header-links {
-  @apply mb-6 mt-2;
+  @apply mb-3 mt-2;
   @apply sans-light;
   @apply text-sm;
   @apply float-right;

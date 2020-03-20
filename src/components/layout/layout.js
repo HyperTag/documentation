@@ -7,7 +7,7 @@ import ContentNav from './../content-nav/content-nav'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       site {
         siteMetadata {
           title

@@ -19,6 +19,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               path
               collectionKey
               collectionIndex
+              collectionMerge
+              navText
             }
             html
           }
@@ -37,23 +39,48 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     .map(e => e.node)
     .filter(n => n.frontmatter.path !== '/')
 
+  const grouped = []
+
   // group related pages by collectionKey, sort by collectionIndex and merge into a single HTML string
-  const grouped = _.groupBy(nodes, n => n.frontmatter.collectionKey)
-  const sortBy = node => node.frontmatter.collectionIndex
-  let pages = grouped.null.map(page => {
-    page.html = `<section>${page.html}</section>`
-    return page
+  nodes.forEach(n => {
+    const { collectionMerge, collectionKey } = n.frontmatter
+
+    if (collectionMerge === true && !grouped[collectionKey]) {
+      grouped.push({
+        key: collectionKey,
+        nodes: nodes
+          .filter(node => collectionKey === node.frontmatter.collectionKey)
+          .sort(
+            (a, b) =>
+              a.frontmatter.collectionIndex - b.frontmatter.collectionIndex
+          ),
+      })
+    }
   })
 
-  Object.keys(grouped).forEach(key => {
-    if (key !== 'null') {
-      const sorted = _.sortBy(grouped[key], [sortBy])
+  grouped.push({
+    key: 'null',
+    nodes: _.difference(nodes, _.flatten(grouped.map(g => g.nodes))),
+  })
+
+  let pages = grouped
+    .find(g => g.key === 'null')
+    .nodes.map(n => {
+      n.html = `<section>${n.html}</section>`
+      return n
+    })
+
+  grouped
+    .filter(g => g.key !== 'null')
+    .forEach(group => {
+      const sorted = _.sortBy(group.nodes, [
+        node => node.frontmatter.collectionIndex,
+      ])
       sorted[0].html = sorted
         .map(page => `<section>${page.html}</section>`)
         .join('')
       pages = [...pages, sorted[0]]
-    }
-  })
+    })
 
   pages.forEach(({ frontmatter, html }) => {
     if (frontmatter.path) {

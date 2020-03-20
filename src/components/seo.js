@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      {
         site {
           siteMetadata {
             title
@@ -26,7 +26,9 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  title = title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title
+  title = title
+    ? `${title} | ${site.siteMetadata.title}`
+    : site.siteMetadata.title
 
   return (
     <Helmet

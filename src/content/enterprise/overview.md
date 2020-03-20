@@ -1,6 +1,7 @@
 ---
-collectionKey: enterprise
 collectionIndex: 0
+collectionKey: enterprise
+collectionMerge: true
 collectionTitle: Enterprise Edition
 
 navIndex: 1

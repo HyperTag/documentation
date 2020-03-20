@@ -1,6 +1,7 @@
 ---
 collectionIndex: 0
 collectionKey: cloud
+collectionMerge: true
 collectionTitle: Cloud Edition
 
 navIndex: 3

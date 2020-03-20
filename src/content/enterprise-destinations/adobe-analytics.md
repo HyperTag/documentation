@@ -1,7 +1,14 @@
 ---
-title: Adobe Analytics
-path: /enterprise/adobe-analytics
+collectionKey: enterprise-destinations
+collectionIndex: 1
+
+navIndex: 1
+navText: 'Adobe Analytics'
+
+path: '/enterprise-adobe-analytics/'
 ---
+
+# Adobe Analytics
 
 Adobe Analytics beats the competition with ad hoc reporting, AI and machine learning, and audience segmentation.
 

@@ -16,15 +16,14 @@ export default () => (
   <StaticQuery
     query={query}
     render={data => {
-      const { markdownRemark } = data
-      const { frontmatter, html } = markdownRemark
-
       return (
         <Layout>
           <SEO />
 
           <section>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            />
           </section>
         </Layout>
       )

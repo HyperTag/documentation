@@ -1,5 +1,6 @@
 ---
 navIndex: 0
+navText: Platform Overview
 
 path: '/'
 ---
