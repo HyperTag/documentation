@@ -2,10 +2,6 @@
   @apply bg-gray-200;
   @apply p-4;
   @apply border-r border-solid;
-  @apply fixed;
-  @apply h-full;
-  @apply left-0;
-  @apply top-0;
   @apply text-sm;
   @apply sans-light;
 }

@@ -41,9 +41,16 @@ ol {
 }
 .nav-list {
   width: var(--nav-width);
+  @apply fixed;
+  @apply h-full;
+  @apply left-0;
+  @apply top-0;
 }
 main {
   margin-left: var(--nav-width);
+}
+main section {
+  padding-right: var(--nav-width);
 }
 
 .header-links {
