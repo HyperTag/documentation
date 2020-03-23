@@ -14,9 +14,11 @@ h2 + h3 {
 /* sub headings preceded by content */
 p + h2,
 ul + h2,
+ol + h2,
 table + h2,
 p + h3,
 ul + h3,
+ol + h3,
 table + h3 {
   @apply mt-8;
 }
@@ -91,12 +93,12 @@ main h3 a.anchor.before {
   margin-top: 0.15em;
 }
 
-main section ul {
+main section ul,
+main section ol {
   @apply mb-4 ml-6;
 }
 main section li {
   @apply ml-4 mb-1;
-  @apply list-disc;
 }
 main section img {
   @apply max-w-screen-lg;
