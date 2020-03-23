@@ -5,7 +5,7 @@ collectionIndex: 3
 navIndex: 1
 navText: Configuration & Management
 
-path: '/enterprise-management/'
+path: '/config-and-management/'
 ---
 
 # Controlling how the MetaRouter Platform sends data

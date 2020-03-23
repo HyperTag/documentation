@@ -2,8 +2,16 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import _ from 'lodash'
 
+const ListItem = ({ node }) => {
+  return (
+    <li key={node.path}>
+      <Link to={node.path}>{node.navText}</Link>
+    </li>
+  )
+}
+
 const ContentNav = () => {
-  const data = useStaticQuery(graphql`
+  const { allMarkdownRemark } = useStaticQuery(graphql`
     {
       allMarkdownRemark {
         edges {
@@ -14,6 +22,7 @@ const ContentNav = () => {
               collectionIndex
               collectionKey
               collectionTitle
+              collectionMerge
               path
             }
           }
@@ -22,51 +31,65 @@ const ContentNav = () => {
     }
   `)
 
-  const nodes = data.allMarkdownRemark.edges.map(e => e.node.frontmatter)
-
   const grouped = []
+  const nodes = allMarkdownRemark.edges.map(e => e.node.frontmatter)
 
-  nodes
-    .filter(n => n.navIndex !== null)
-    .forEach(n => {
-      // group links if necessary
-      if (n.collectionKey && !grouped.find(g => g.key === n.collectionKey)) {
-        const primaryNode = nodes.find(
-          node =>
-            node.collectionIndex === 0 && node.collectionKey === n.collectionKey
-        )
+  // group links if necessary
+  nodes.forEach(n => {
+    if (n.collectionKey && !grouped.find(g => g.key === n.collectionKey)) {
+      const group = _.cloneDeep(nodes)
+        .filter(({ collectionKey }) => collectionKey === n.collectionKey)
+        .sort((a, b) => a.collectionIndex - b.collectionIndex)
 
-        grouped.push({
-          collectionTitle: primaryNode.collectionTitle,
-          navIndex: primaryNode.navIndex,
-          key: primaryNode.collectionKey,
-          nodes: nodes
-            .filter(({ collectionKey }) => collectionKey === n.collectionKey)
-            .sort((a, b) => a.collectionIndex - b.collectionIndex), // sort items within collections
-        })
-      }
-    })
+      const primaryNode = group[0]
 
-  grouped.push({
-    key: 'null',
-    navIndex: 0,
-    nodes: _.difference(nodes, _.flatten(grouped.map(g => g.nodes))), // should only contain the home page, but all ungrouped pages get dumped here by default
+      grouped.push({
+        collectionTitle: primaryNode.collectionTitle,
+        navIndex: primaryNode.navIndex,
+        key: primaryNode.collectionKey,
+        nodes: group.map((node, i) => {
+          if (i === 0 || !primaryNode.collectionMerge) {
+            return node
+          }
+
+          // overwrite provided path with fragment identifier for inline sub pages
+          node.path = `${primaryNode.path}#${node.path.replace(
+            /\//g, // remove slashes
+            ''
+          )}`
+          return node
+        }),
+      })
+    }
   })
+
+  // should only contain the root path, but all ungrouped pages get dumped here by default
+  const ungrouped = nodes.filter(n => !n.collectionIndex && !n.collectionKey)
 
   return (
     <>
-      {grouped
-        .sort((a, b) => a.navIndex - b.navIndex) // sort groups
-        .map(g => (
+      {[...grouped, ...ungrouped]
+        .sort((a, b) => a.navIndex - b.navIndex)
+        .map(node => (
           <>
-            {g.collectionTitle && <h2>{g.collectionTitle}</h2>}
-            <ul>
-              {g.nodes.map(x => (
-                <li key={x.path}>
-                  <Link to={x.path}>{x.navText}</Link>
-                </li>
-              ))}
-            </ul>
+            {node.collectionTitle && (
+              <>
+                <h2>{node.collectionTitle}</h2>
+                <ul>
+                  {node.nodes.map(subNode => (
+                    <ListItem node={subNode} />
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {!node.collectionTitle && (
+              <>
+                <ul>
+                  <ListItem node={node} />
+                </ul>
+              </>
+            )}
           </>
         ))}
     </>

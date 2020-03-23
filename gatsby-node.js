@@ -41,7 +41,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const grouped = []
 
-  // group related pages by collectionKey, sort by collectionIndex and merge into a single HTML string
+  // group related pages by collectionKey
   nodes.forEach(n => {
     const { collectionMerge, collectionKey } = n.frontmatter
 
@@ -58,39 +58,31 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   })
 
-  grouped.push({
-    key: 'null',
-    nodes: _.difference(nodes, _.flatten(grouped.map(g => g.nodes))),
-  })
-
-  let pages = grouped
-    .find(g => g.key === 'null')
-    .nodes.map(n => {
+  // start with single pages
+  let pages = nodes
+    .filter(n => n.collectionIndex)
+    .map(n => {
       n.html = `<section>${n.html}</section>`
       return n
     })
 
-  grouped
-    .filter(g => g.key !== 'null')
-    .forEach(group => {
-      const sorted = _.sortBy(group.nodes, [
-        node => node.frontmatter.collectionIndex,
-      ])
-      sorted[0].html = sorted
-        .map(page => `<section>${page.html}</section>`)
-        .join('')
-      pages = [...pages, sorted[0]]
-    })
+  grouped.forEach(group => {
+    // overwrite the first node's html with concatenated html from all nodes in the group
+    group.nodes[0].html = group.nodes
+      .map(page => `<section>${page.html}</section>`) // content of each markdown file gets its own section
+      .join('')
+    pages = [...pages, group.nodes[0]] // add merged page to the collection of pages
+  })
 
   pages.forEach(({ frontmatter, html }) => {
-    if (frontmatter.path) {
-      createPage({
-        path: frontmatter.path,
-        component: path.resolve(`src/templates/page.js`),
-        context: {
-          html,
-        },
-      })
-    }
+    html
+
+    createPage({
+      path: frontmatter.path,
+      component: path.resolve(`src/templates/page.js`),
+      context: {
+        html,
+      },
+    })
   })
 }

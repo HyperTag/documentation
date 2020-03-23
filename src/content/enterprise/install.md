@@ -5,7 +5,7 @@ collectionIndex: 2
 navIndex: 1
 navText: Installation & Updates
 
-path: '/enterprise-installation/'
+path: '/installation/'
 ---
 
 # Before Enterprise Platform Installation

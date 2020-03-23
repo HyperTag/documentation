@@ -5,7 +5,7 @@ collectionIndex: 1
 navIndex: 1
 navText: Requirements
 
-path: '/enterprise-requirements/'
+path: '/requirements/'
 ---
 
 # Resource Requirements

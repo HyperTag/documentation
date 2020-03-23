@@ -55,9 +55,6 @@ main section {
   @apply py-24 px-24;
   @apply border-b border-gray-400 border-solid;
 }
-main section *:last-child {
-  @apply mb-0; /* remove bottom margin from last element in a section */
-}
 main section:last-of-type {
   @apply border-none;
 }
@@ -80,6 +77,18 @@ main h3 {
 }
 main a {
   @apply text-cloud-blue-medium;
+}
+main a.anchor.before svg {
+  @apply mr-1;
+}
+main h1 a.anchor.before {
+  margin-top: 0.25em;
+}
+main h2 a.anchor.before {
+  margin-top: 0.2em;
+}
+main h3 a.anchor.before {
+  margin-top: 0.15em;
 }
 
 main section ul {
