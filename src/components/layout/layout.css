@@ -30,10 +30,10 @@ p {
 }
 
 ul {
-  list-style-type: disc;
+  @apply list-disc;
 }
 ol {
-  list-style-type: decimal;
+  @apply list-decimal;
 }
 
 :root {

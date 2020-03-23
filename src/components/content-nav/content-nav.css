@@ -50,12 +50,13 @@
 }
 .nav-list a {
   @apply block;
+  @apply mb-1;
 }
 .nav-list a.selected-item {
   @apply bg-gray-100;
 }
-.nav-list li li a {
-  @apply pl-1;
+.nav-list li {
+  @apply list-none;
 }
 
 #search-input,
