@@ -1,17 +1,14 @@
 ;(function() {
-  var debounce = function(func, wait, immediate) {
-    var timeout
+  var throttle = function(callback, limit) {
+    var wait = false
     return function() {
-      var context = this
-      var args = arguments
-      var later = function() {
-        timeout = null
-        if (!immediate) func.apply(context, args)
+      if (!wait) {
+        callback.call()
+        wait = true
+        setTimeout(function() {
+          wait = false
+        }, limit)
       }
-      var callNow = immediate && !timeout
-      clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-      if (callNow) func.apply(context, args)
     }
   }
 
@@ -52,15 +49,12 @@
       section.offsetTop < window.pageYOffset &&
       section.offsetTop + section.offsetHeight > window.pageYOffset
     ) {
-      history.replaceState(
-        {},
-        '',
-        '#' + section.querySelector('.section-anchor').id // TODO deal with cases where this isn't an h1
-      )
+      // TODO deal with cases where this isn't an h1
+      history.replaceState({}, '', '#' + section.querySelector('.section-anchor').id)
     }
   }
 
-  var onScroll = debounce(function() {
+  var onScroll = throttle(function() {
     document.querySelectorAll('main section').forEach(checkOffset)
   }, 250)
 
