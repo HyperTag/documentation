@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="nav-list">
-        <h1>
+        <h1 className="logo">
           <Link to="/">{data.site.siteMetadata.title}</Link>
         </h1>
         <input type="text" id="search-input" placeholder="search..." />
