@@ -17,17 +17,16 @@ exports.onRouteUpdate = () => {
   }
 
   var onClickNav = function(e) {
-    var isNav = navList.contains(e.target)
     var tag = e.target.tagName.toLowerCase()
 
     // toggle section when header is clicked
-    if (isNav && tag === 'h2') {
+    if (tag === 'h2') {
       e.target.classList.toggle('collapsed')
       e.target.nextSibling.classList.toggle('hidden')
     }
 
     // set class when link is clicked (hashchange does not get triggered)
-    else if (isNav && tag === 'a' && !e.target.classList.contains('logo')) {
+    else if (tag === 'a' && !e.target.classList.contains('logo')) {
       navList.querySelectorAll('li a').forEach(function(a) {
         a.classList.remove(selectedItem)
       })
@@ -38,10 +37,17 @@ exports.onRouteUpdate = () => {
   // find the parent heading for the subheading, get its internal anchor and highlight the corresponding menu item
   var setCurrentForSubheading = function() {
     var subheading = document.querySelector('main a[href="' + window.location.hash + '"]')
-    var parentHeading = subheading.closest('section').querySelector('.' + sectionAnchor + ' .anchor')
-    var url = new URL(parentHeading.href)
+    var parentAnchor = subheading.closest('section').querySelector('h1 .anchor')
+    var url = new URL(parentAnchor.href)
 
-    navList.querySelector('li a[href="' + url.pathname + url.hash + '"]').classList.add(selectedItem)
+    // TODO add a comment to this re-assignment
+    var navItem = navList.querySelector('li a[href="' + url.pathname + url.hash + '"]')
+
+    if (!navItem) {
+      navItem = navList.querySelector('li a[href="' + url.pathname + '"]')
+    }
+
+    navItem.classList.add(selectedItem)
   }
 
   var setCurrent = function() {
@@ -60,7 +66,7 @@ exports.onRouteUpdate = () => {
     }
   }
 
-  var checkOffset = function(section) {
+  var checkSectionOffset = function(section) {
     if (!document.querySelector('.' + sectionAnchor)) {
       return // bail out if this is a single page
     }
@@ -84,13 +90,27 @@ exports.onRouteUpdate = () => {
     }
   }
 
+  var checkSubheadingOffset = function(heading) {
+    if (heading.getBoundingClientRect().top < 100) {
+      // highlight the corresponding link in table of contents
+      var url = new URL(heading.querySelector('.anchor').href)
+      var tocLink = heading.closest('section').querySelector('.toc a[href="' + url.hash + '"]')
+
+      document.querySelectorAll('.toc a').forEach(function(a) {
+        a.classList.remove('font-bold')
+      })
+      tocLink.classList.add('font-bold')
+    }
+  }
+
   var onScroll = throttle(function() {
-    document.querySelectorAll('main section').forEach(checkOffset)
+    document.querySelectorAll('main section').forEach(checkSectionOffset)
+    document.querySelectorAll('main h2').forEach(checkSubheadingOffset)
   }, 250)
 
   setCurrent()
 
   window.addEventListener('hashchange', setCurrent)
-  document.addEventListener('click', onClickNav)
   document.addEventListener('scroll', onScroll)
+  navList.addEventListener('click', onClickNav)
 }

@@ -46,8 +46,10 @@ const section = ($, isPage) => {
   return `
     <section>
       <div class="toc">
-        <h6>${isPage ? 'On this Page' : 'In this Section'}:</h6>
-        ${tableOfContents($)}
+        <div class="toc-sticky">
+          <h6>${isPage ? 'On this Page' : 'In this Section'}:</h6>
+          ${tableOfContents($)}
+          </div>
       </div>
       ${$.html()}
     </section>

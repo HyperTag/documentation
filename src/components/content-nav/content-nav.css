@@ -64,9 +64,9 @@
 .nav-list a.selected-item:before {
   @apply absolute left-0 top-0;
   @apply bg-mr-purple;
-  content: '';
+  @apply h-full;
   width: 8px;
-  height: 100%;
+  content: '';
 }
 
 #search-input,

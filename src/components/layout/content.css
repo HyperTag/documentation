@@ -113,6 +113,11 @@ main .toc {
   @apply absolute;
   top: 6rem;
   right: 2rem;
+  height: calc(100% - 12rem);
+}
+main .toc-sticky {
+  @apply sticky;
+  top: 4rem;
 }
 main .toc ul {
   @apply ml-0;
