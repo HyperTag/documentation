@@ -41,9 +41,9 @@ Add your Source ID into the Heap connector on your MetaRouter dashboard and give
 
 When you return to your Heap account, you might get a message saying "There's no data here!" Your data might be in a different environment, so make sure to check all places (i.e. development instead of production).
 
-![heap-analytics4](../../../images/heap-analytics4.png)
+![heap-analytics4](../../../images/heap-analytics4v2.png)
 
 
 To see what specific events are coming in, go to the `Events` page on the left-hand menu bar.
 
-![heap-analytics5](../../../images/heap-analytics5.png)
+![heap-analytics5](../../../images/heap-analytics5v2.png)
