@@ -78,6 +78,10 @@ To check your version, look for `_gaq.push` in your code. If you see it, you're 
 ### Remarketing, Display Ads, and Demographic Reports
 Turn this feature on to use Google's remarketing tag (what was formerly known as DoubleClick) or to identify demographic and interest data on visitors that is displayed in Demographic & Interest reports in Google Analytics.
 
+### Reset dimensions on Page calls
+
+If you have an SPA website, and need to reset custom dimensions between page calls, add to this setting all the properties (already mapped as custom dimensions) that need to be reset for each page call.
+
 ### Cookie Domain Name
 In Google Analytics, the Cookie Domain Name setting allows you to specify the domain that the `_ga` cookie will be set on (this defaults to the top level domain: `domain.com`).
 
