@@ -91,6 +91,10 @@ exports.onRouteUpdate = () => {
   }
 
   var checkSubheadingOffset = function(heading) {
+    if (!document.querySelector('.toc')) {
+      return
+    }
+
     if (heading.getBoundingClientRect().top < 100) {
       // highlight the corresponding link in table of contents
       var url = new URL(heading.querySelector('.anchor').href)

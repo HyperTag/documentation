@@ -35,7 +35,7 @@ export default () => {
             <Link to="/sources-and-sdks/">Sources &amp; SDKs</Link>
           </li>
           <li>
-            <a href="https//metarouter.io/#contact">Help</a>
+            <a href="https://metarouter.io/#contact">Help</a>
           </li>
         </ul>
 
