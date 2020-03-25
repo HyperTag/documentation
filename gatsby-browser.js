@@ -27,7 +27,7 @@ exports.onRouteUpdate = () => {
     }
 
     // set class when link is clicked (hashchange does not get triggered)
-    else if (isNav && tag === 'a' && !e.target.parentNode.classList.contains('logo')) {
+    else if (isNav && tag === 'a' && !e.target.classList.contains('logo')) {
       navList.querySelectorAll('li a').forEach(function(a) {
         a.classList.remove(selectedItem)
       })
