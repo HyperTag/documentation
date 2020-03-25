@@ -103,7 +103,3 @@ analytics.identify({
 });
 ```
 ***Note:** This will only work from server side libraries and mobile, NOT for analytics.js.*
-
-#### Rich Link Properties
-
-To use Intercom’s Rich Link object, list the name of the exact MetaRouter property name and make sure the value of those properties only include `url` and `value` keys.
