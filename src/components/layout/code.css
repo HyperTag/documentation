@@ -2,7 +2,7 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-  @apply text-cloud-green-darkest;
+  @apply text-gray-700;
   @apply whitespace-pre;
   word-spacing: normal;
   word-break: normal;
@@ -25,6 +25,24 @@ pre[class*='language-'] {
   @apply max-w-full;
   @apply overflow-x-auto;
   @apply border border-cloud-green-darkest border-solid rounded-md;
+}
+.gatsby-highlight {
+  @apply relative;
+}
+.gatsby-highlight:before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0.3rem;
+  right: 0.5rem;
+  z-index: 5;
+  text-align: right;
+  @apply text-gray-500;
+  @apply text-xs;
+  @apply uppercase;
+}
+.gatsby-highlight[data-language='text']:before,
+.gatsby-highlight[data-language='bash']:before {
+  display: none;
 }
 pre[class*='language-'] > code {
   @apply relative;
