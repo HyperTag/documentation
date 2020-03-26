@@ -1,0 +1,83 @@
+.nav-list {
+  @apply bg-mr-light-medium;
+  @apply p-4;
+  @apply border-r border-solid;
+  @apply text-sm;
+  @apply sans-light;
+}
+.nav-list h1 {
+  @apply mb-4;
+  @apply text-lg;
+  line-height: 1.1;
+}
+.nav-list h1:before {
+  @apply block;
+  @apply float-left;
+  @apply bg-no-repeat;
+  @apply relative;
+  background-image: url('https://cdn.metarouter.io/web/img/mr_icon_light.png');
+  background-size: contain;
+  content: '';
+  height: 35px;
+  margin-right: 7px;
+  top: 2px;
+  width: 41px;
+}
+.nav-list h2 {
+  @apply sans-bold;
+  @apply mt-4;
+  @apply relative;
+  @apply cursor-pointer;
+}
+.nav-list h2:after {
+  @apply text-base;
+  @apply float-right;
+  @apply inline-block;
+  @apply text-gray-500;
+  content: '⌄';
+  margin-top: 0.1rem;
+  transform: rotate(180deg);
+}
+.nav-list h2.collapsed:after {
+  @apply text-base;
+  @apply float-right;
+  @apply inline-block;
+  content: '⌄';
+  margin-top: -0.35rem;
+  transform: rotate(0);
+}
+
+.nav-list ul {
+  @apply -mx-4;
+}
+.nav-list li {
+  @apply list-none;
+}
+.nav-list a {
+  @apply block;
+  @apply mb-1;
+  @apply px-4;
+}
+.nav-list a.selected-item {
+  @apply bg-mr-purple-lightest;
+  @apply text-white;
+  @apply relative;
+}
+.nav-list a.selected-item:before {
+  @apply absolute left-0 top-0;
+  @apply bg-mr-purple;
+  @apply h-full;
+  width: 8px;
+  content: '';
+}
+
+#search-input,
+#search-input:focus {
+  @apply bg-white;
+  @apply border-gray-400 border border-solid rounded;
+  @apply mb-6;
+  @apply p-1;
+  @apply text-xs;
+  @apply w-full;
+  @apply outline-none;
+}

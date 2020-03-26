@@ -1,0 +1,38 @@
+.cards {
+  @apply flex flex-wrap flex-col justify-between;
+  @apply m-0 mb-12;
+  height: 430px;
+  margin-left: -1%;
+  margin-right: -1%;
+}
+.cards li {
+  @apply list-none;
+  @apply relative;
+  @apply m-0;
+  left: 1.75%;
+  width: 30%;
+}
+.cards a {
+  @apply transition duration-150;
+  @apply bg-mr-light-medium;
+  @apply block;
+  @apply border border-gray-400 border-solid rounded-md;
+  @apply p-4;
+  @apply text-gray-800;
+  @apply shadow-sm;
+  height: 200px;
+
+  background-image: url(https://cdn.metarouter.io/web/img/docs/enterprise-corner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 130% 130%;
+}
+.cards a:hover {
+  @apply shadow-md;
+}
+.cards h1 {
+  @apply text-lg;
+}
+.cards p {
+  @apply text-sm;
+}

@@ -1,0 +1,174 @@
+/* custom prism.js theme for metarouter, based on https://github.com/PrismJS/prism/blob/master/themes/prism-coy.css */
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-cloud-green-darkest;
+  @apply whitespace-pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  @apply relative;
+  @apply mb-6;
+  @apply max-w-full;
+  @apply overflow-x-auto;
+  @apply border border-cloud-green-darkest border-solid rounded-md;
+}
+pre[class*='language-'] > code {
+  @apply relative;
+  @apply p-3;
+  border-left: 10px solid #95e7c3;
+  box-shadow: -1px 0px 0px 0px #95e7c3, 0px 0px 0px 1px #eefff8;
+  background-color: #eefff8;
+}
+
+code[class*='language'] {
+  max-height: inherit;
+  height: inherit;
+  padding: 0 1em;
+  display: block;
+  overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  @apply inline;
+  @apply relative;
+  @apply whitespace-normal;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3em;
+  color: #fa7a43;
+  padding: 0 0.3rem;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7d8b99;
+}
+
+.token.punctuation {
+  color: #5f6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #a83b44;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+  color: #4385bb;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #a83b44;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+  color: #64a7dd;
+}
+
+.token.regex,
+.token.important {
+  color: #ffa350;
+}
+
+.language-css .token.string,
+.style .token.string {
+  color: #a83b44;
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+  color: #e0d7d1;
+}
+
+/* Plugin styles: Line Numbers */
+pre[class*='language-'].line-numbers.line-numbers {
+  padding-left: 0;
+}
+
+pre[class*='language-'].line-numbers.line-numbers code {
+  padding-left: 3.8em;
+}
+
+pre[class*='language-'].line-numbers.line-numbers .line-numbers-rows {
+  left: 0;
+}
+
+/* Plugin styles: Line Highlight */
+pre[class*='language-'][data-line] {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+pre[data-line] code {
+  position: relative;
+  padding-left: 4em;
+}
+pre .line-highlight {
+  margin-top: 0;
+}
+
+td code,
+h1 code,
+h2 code,
+h3 code,
+h4 code {
+  @apply bg-transparent !important;
+  @apply p-0 !important;
+  @apply border-none !important;
+}
