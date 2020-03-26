@@ -30,15 +30,15 @@ pre[class*='language-'] {
   @apply relative;
 }
 .gatsby-highlight:before {
-  content: attr(data-language);
-  position: absolute;
-  top: 0.3rem;
-  right: 0.5rem;
-  z-index: 5;
-  text-align: right;
   @apply text-gray-500;
   @apply text-xs;
   @apply uppercase;
+  @apply absolute;
+  @apply text-right;
+  @apply z-10;
+  content: attr(data-language);
+  top: 0.3rem;
+  right: 0.5rem;
 }
 .gatsby-highlight[data-language='text']:before,
 .gatsby-highlight[data-language='bash']:before {

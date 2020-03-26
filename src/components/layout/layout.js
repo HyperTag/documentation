@@ -46,7 +46,32 @@ const Layout = ({ children }) => {
 
         {children}
 
-        <footer>© {new Date().getFullYear()} MetaRouter</footer>
+        <footer>
+          <p>© {new Date().getFullYear()} MetaRouter</p>
+
+          <p id="disclaimer">
+            <strong>Disclaimer:</strong> MetaRouter Cloud leverages code from several of{' '}
+            <a href="https://segment.com" target="_blank" rel="noopener noreferrer">
+              Segment's
+            </a>{' '}
+            fabulous library of open-source tools, including their{' '}
+            <a href="https://segment.com/docs/sources/" target="_blank" rel="noopener noreferrer">
+              source SDKs
+            </a>
+            ,{' '}
+            <a href="https://segment.com/docs/destinations" target="_blank" rel="noopener noreferrer">
+              destinations
+            </a>
+            , and core{' '}
+            <a href="https://segment.com/docs/sources/website/analytics.js/" target="_blank" rel="noopener noreferrer">
+              Analytics.js
+            </a>{' '}
+            library. As some of the core configurations outlined in our docs are largely identical to Segment's, we
+            often re-purpose, and in some cases copy, directly from Segment's docs. In the cases where we have forked
+            Segment's tools, we acknowledge and attribute all credit to Segment for their creation and subsequent
+            documentation.
+          </p>
+        </footer>
       </main>
     </>
   )

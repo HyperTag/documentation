@@ -69,5 +69,10 @@ main section {
 
 footer {
   @apply text-center text-xs;
-  @apply px-3 pt-24 pb-12;
+  @apply px-24 pt-24 pb-12;
+}
+#disclaimer {
+  max-width: 40rem;
+  text-align: justify;
+  margin: 0 auto;
 }
