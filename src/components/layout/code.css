@@ -31,7 +31,7 @@ pre[class*='language-'] > code {
   @apply p-3;
   border-left: 10px solid #95e7c3;
   box-shadow: -1px 0px 0px 0px #95e7c3, 0px 0px 0px 1px #eefff8;
-  background-color: #eefff8;
+  background-color: #fbfbfb;
 }
 
 code[class*='language'] {
@@ -102,7 +102,7 @@ code[class*='language'] {
 
 .token.regex,
 .token.important {
-  color: #ffa350;
+  color: #fa7a43;
 }
 
 .language-css .token.string,

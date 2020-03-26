@@ -1,10 +1,12 @@
 table {
-  @apply mt-4 mx-6 mb-8;
+  @apply mt-4 mb-8;
+  @apply w-full;
 }
 td,
 th {
   @apply py-1 pr-2 pl-2;
 }
 td {
-  @apply border-t border-b border-solid border-blue-200;
+  @apply border-t border-b border-solid border-gray-400;
+  background-color: #fbfbfb;
 }
