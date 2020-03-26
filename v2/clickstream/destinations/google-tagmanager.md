@@ -54,6 +54,28 @@ At the bottom, you'll also see an option to enable tracking for both named and c
 
 With that, you're all set!
 
+## Settings
+
+### Container ID
+
+You can find your Container ID in your [Accounts page](https://www.google.com/tagmanager/web/#management/Accounts/).
+
+### Track All Pages
+
+This will track events titled **‘Loaded A Page’** to Google Tag Manager whenever you call our `page` method.
+
+### Track Named Pages
+
+This will track events to Google Tag Manager for `page` method calls that have a `name` associated with them. For example `page('Signup')` would translate to **Viewed Signup Page**.
+
+### Track Categorized Pages
+
+This will track events to Google Tag Manager for `page` method calls that have a `category` associated with them. For example `page('Docs', 'Index')` would translate to **Viewed Docs Index Page**.
+
+### Environment
+
+If you’re using an ‘environment’ variable for gtm_preview in your tag’s query string, you can put that string here. **IMPORTANT**: make sure the string includes `gtm_auth`. For example, your string should look like `env-xx&gtm_auth=xxxxxx`
+
 ### Things to Note.
 
 Once you enable this pipeline, you'll be able to trigger MetaRouter events by entering `analytics.track` or `analytics.page` calls into GTM.
