@@ -2,7 +2,6 @@
 collectionKey: enterprise
 collectionIndex: 2
 
-navIndex: 1
 navText: Installation & Updates
 
 path: '/installation/'

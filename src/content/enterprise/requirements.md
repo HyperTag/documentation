@@ -2,7 +2,6 @@
 collectionKey: enterprise
 collectionIndex: 1
 
-navIndex: 1
 navText: Requirements
 
 path: '/requirements/'

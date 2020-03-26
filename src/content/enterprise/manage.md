@@ -2,7 +2,6 @@
 collectionKey: enterprise
 collectionIndex: 3
 
-navIndex: 1
 navText: Configuration & Management
 
 path: '/config-and-management/'
