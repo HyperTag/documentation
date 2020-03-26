@@ -23,35 +23,6 @@ table + h3 {
   @apply mt-8;
 }
 
-/* inline code and code blocks */
-code {
-  @apply px-1;
-  @apply inline-block;
-}
-code,
-pre {
-  @apply bg-mr-light-medium;
-}
-pre code {
-  @apply p-0;
-}
-pre code,
-td code,
-h1 code,
-h2 code,
-h3 code,
-h4 code {
-  @apply bg-transparent;
-}
-pre {
-  @apply p-3;
-  @apply mb-6;
-  @apply max-w-full;
-  @apply overflow-x-auto;
-  @apply border-gray-200 border-solid border;
-  @apply relative;
-}
-
 /* section containers for each markdown file */
 main section {
   @apply py-24 px-24;
@@ -100,6 +71,9 @@ main section ol {
 }
 main section li {
   @apply ml-4 mb-1;
+}
+main section li p {
+  @apply mb-2;
 }
 main section img {
   @apply max-w-screen-lg;

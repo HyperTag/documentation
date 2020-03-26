@@ -145,7 +145,7 @@ This configuration file allows you to set your own configuration based on how yo
   .track({
     …,
     properties: {
-      linkURL: ’https://foo.bar',
+      linkURL: 'https://foo.bar',
       linkType: ‘e’, // ‘d’ for downloads
       pageName: ‘Foo’
       }

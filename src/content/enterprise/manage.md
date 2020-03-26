@@ -16,26 +16,28 @@ For example, say I have two applications, one a website and another a server tha
 
 In order to create effective Source Configurations, I need to send events to Destinations. Let's say that I want events from the server to go into S3, but I want the web events to go to S3 and Google Analytics. My Source Configurations would look something like this:
 
-    "WEB01": {
-      "s3": {
-        "config": {
-          ...
-        }
-      },
-      "google-analytics": {
-        "config": {
-          ...
-        }
-      }
+```json
+"WEB01": {
+  "s3": {
+    "config": {
+      ...
     }
+  },
+  "google-analytics": {
+    "config": {
+      ...
+    }
+  }
+}
 
-    "SVR01": {
-      "s3": {
-        "config": {
-          ...
-        }
-      }
+"SVR01": {
+  "s3": {
+    "config": {
+      ...
     }
+  }
+}
+```
 
 Each configuration for a Destination can be unique per Source, but I cannot have more than one of the same Destination for a single Source. To find out what the `config` parameters are for a Destination, visit the [Destinations section](https://docs.metarouter.io/v2/clickstream/destinations/overview.html) of our Docs and look for Destinations with the _Enterprise_ tag.
 
@@ -65,33 +67,39 @@ You want to send a POST request to `localhost:8080/cache/set/WRITEKEY`, where `W
 
 Here is an example of the request body:
 
-    "WEB01": {
-      "facebook-pixel": {
-        "config": {
-          "pixelId": "348149915804750",
-          "valueFieldIdentifier": "price",
-          "whitelistPII": [
-            "email",
-            "phone"
-          ]
-        }
-      },
-      "google-analytics": {
-        "config": {
-          appId: "UA-XXXXXXXX-4",
-          searchParam: "searchRedirect",
-          baseURL: "http://www.metarouter.io/"
-        }
-      }
+```json
+"WEB01": {
+  "facebook-pixel": {
+    "config": {
+      "pixelId": "348149915804750",
+      "valueFieldIdentifier": "price",
+      "whitelistPII": [
+        "email",
+        "phone"
+      ]
     }
+  },
+  "google-analytics": {
+    "config": {
+      appId: "UA-XXXXXXXX-4",
+      searchParam: "searchRedirect",
+      baseURL: "http://www.metarouter.io/"
+    }
+  }
+}
+```
 
 And here is a cURL example of the request:
 
-    curl localhost:8080/cache/set/WRITEKEY -X POST --data "{\"google-analytics\": {\"config\": {\"appId\": \"UA-XXXXXXXX-4\"}}}" -H "Content-type: application/json"
+```bash
+curl localhost:8080/cache/set/WRITEKEY -X POST --data "{\"google-analytics\": {\"config\": {\"appId\": \"UA-XXXXXXXX-4\"}}}" -H "Content-type: application/json"
+```
 
 Or from a file:
 
-    curl localhost:8080/cache/set/WRITEKEY -X POST --data-binary "@PATH/TO/YOUR-CONFIG-FILE.json" -H "Content-type: application/json"
+```bash
+curl localhost:8080/cache/set/WRITEKEY -X POST --data-binary "@PATH/TO/YOUR-CONFIG-FILE.json" -H "Content-type: application/json"
+```
 
 #### Step 4: Verify Source Configuration
 
@@ -99,7 +107,9 @@ You can also make a GET request to Canary to read the existing Source Configurat
 
 Here is a cURL example of that request:
 
-    curl localhost:8080/cache/get/WRITEKEY
+```bash
+curl localhost:8080/cache/get/WRITEKEY
+```
 
 ### Using our Management Tools
 

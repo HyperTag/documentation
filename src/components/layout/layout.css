@@ -3,9 +3,11 @@
 @import 'tailwindcss/utilities';
 
 @import './fonts.css';
-@import './../content-nav/content-nav.css';
+@import './content-nav.css';
 @import './table.css';
 @import './content.css';
+@import './code.css';
+@import './home-page.css';
 
 html {
   height: 100%;
@@ -68,25 +70,4 @@ main section {
 footer {
   @apply text-center text-xs;
   @apply px-3 pt-24 pb-12;
-}
-
-.cards {
-  @apply flex flex-wrap flex-col justify-between;
-  @apply m-0 mb-12;
-  height: 430px;
-  margin-left: -1%;
-  margin-right: -1%;
-}
-.cards li {
-  @apply list-none;
-  @apply relative;
-  @apply m-0;
-  left: 1.75%;
-  width: 30%;
-}
-.cards a {
-  @apply block;
-  @apply border border-gray-400 border-solid rounded-md;
-  @apply p-6;
-  height: 200px;
 }

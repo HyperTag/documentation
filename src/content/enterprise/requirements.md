@@ -55,13 +55,9 @@ However, supporting those 3 Destinations at 5000 events/sec, I should expect to 
 
 ## Load Balancer
 
----
-
 Our platform will spin up an internal Load Balancer and connect it with your Cloud Provider which, depending on your Cloud Provider, may create ingress rules or spin up resources that are represented outside of Kubernetes. The only manual step that is currently required is for you to link the DNS records to Ingress instances created for the Load Balancer, as our platform takes care of the rest. [Learn more about how Kubernetes leverages Ingress with Cloud Providers on their Docs](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
 ## Message Queues
-
----
 
 We support connecting our services between different Stateful Message Queues in order to provide data durability and allow for finer connecting control for you to send data to other parts of your platform.
 

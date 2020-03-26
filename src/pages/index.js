@@ -39,7 +39,7 @@ export default () => {
           </li>
         </ul>
 
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <div id="home-content" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </section>
     </Layout>
   )
