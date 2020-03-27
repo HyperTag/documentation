@@ -19,33 +19,37 @@ Integrating Intercom with MetaRouter allows you to immediately begin messaging c
 
 ### Intercom Side
 
-Once you're on the [Get started with Intercom](http://www.intercom.io) page, you'll be asked if you want to either integrate one of their libraries or import users from another service/csv.
+Log into your account in the Intercom Developer Hub and go to Your apps page
 
-![intercom1](../../../images/intercom1.png)
+![intercom1](../../../images/intercom1v2.png)
 
-Click on `Integrate` and then `Segment` (You're still setting up MetaRouter, don't worry).
+Click on the **New App** button
 
-![intercom2](../../../images/intercom2.png)
+![intercom2](../../../images/intercom2v2.png)
 
- Go ahead and click `Next` to continue the setup.
+ Fill the App name, select an workspace and check the Internal integration option. When you're ready, click the **Create app** button.
 
-![intercom3](../../../images/intercom3.png)
+![intercom3](../../../images/intercom3v2.png)
 
-This is where you'll actually create your account and get started using Intercom.
+Click on the newly created app to open its page
 
-![intercom4](../../../images/intercom4.png)
+![intercom4](../../../images/intercom4v2.png)
 
-Skip the `Set up Intercom & Segment` prompt and click on the gear wheel icon on the top right and then into the `Integrations` option in the dropdown.
+Select **Configure** and then **Authentication**
 
-![intercom5](../../../images/intercom5.png)
+![intercom5](../../../images/intercom5v2.png)
 
-From here, click on the `API Keys` on the left hand panel to access your Source ID and API Key. Your Source ID will look something like this: `9iefb489`.
+You will now find the API Key under the workspace's name in which the app belongs
 
-![intercom6](../../../images/intercom6.png)
+![intercom6](../../../images/intercom6v2.png)
+
+Also, the App ID will be located in the URL, right after the `app.intercom.com/a/apps/` part of the URL
+
+![intercom7](../../../images/intercom10.png)
 
 ### MetaRouter Side
 
-Enter your Source ID and API Key into the Intercom connector on your MetaRouter dashboard.
+Enter your App ID and API Key into the Intercom connector on your MetaRouter dashboard.
 
 Give your new connection a unique name.
 
@@ -53,13 +57,13 @@ Click `Save` to activate your pipeline.
 
 ![intercom7](../../../images/intercom7v2.png)
 
-At this point, you'll see events coming in to your Intercom account. If you click on the `People` icon on the top of your dashboard, you'll see 1 new user. That's you!
+At this point, you'll see events coming in to your Intercom account. If you go to [app.intercom.com](https://app.intercom.com), you'll see 1 new user. That's you!
 
-![intercom8](../../../images/intercom8.png)
+![intercom8](../../../images/intercom8v2.png)
 
 Click on that new user to see the history of events being recorded.
 
-![intercom9](../../../images/intercom9.png)
+![intercom9](../../../images/intercom9v2.png)
 
 ### Additional Features
 
