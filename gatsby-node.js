@@ -53,7 +53,7 @@ const setTableColumnWidths = nodes => {
           $(this).attr('style', `width: ${columnWidths[i]}%;`)
           return $(this)
         })
-        console.log('row', row.text())
+
         // delete this row
         row.remove()
       }

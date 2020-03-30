@@ -10,6 +10,17 @@ const ListItem = ({ node }) => {
   )
 }
 
+const getSortBy = node => {
+  // trim leading period for .NET
+  let sortBy = node.navText.startsWith('.') ? node.navText.substr(1) : node.navText
+
+  if (!_.isNull(node.collectionIndex)) {
+    sortBy = node.collectionIndex
+  }
+
+  return sortBy === 'string' ? sortBy.toLowerCase() : sortBy.toString()
+}
+
 const ContentNav = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     {
@@ -39,15 +50,7 @@ const ContentNav = () => {
     if (n.collectionKey && !grouped.find(g => g.key === n.collectionKey)) {
       const group = _.cloneDeep(nodes)
         .filter(({ collectionKey }) => collectionKey === n.collectionKey)
-        .sort((a, b) => {
-          const sortA = !_.isNull(a.collectionIndex) ? a.collectionIndex : a.navText
-          const sortB = !_.isNull(b.collectionIndex) ? b.collectionIndex : b.navText
-
-          let aa = typeof sortA === 'string' ? sortA.toLowerCase() : sortA.toString()
-          let bb = typeof sortB === 'string' ? sortB.toLowerCase() : sortB.toString()
-
-          return aa.localeCompare(bb)
-        })
+        .sort((a, b) => getSortBy(a).localeCompare(getSortBy(b)))
 
       const primaryNode = group[0]
 
