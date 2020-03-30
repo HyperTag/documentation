@@ -78,7 +78,7 @@ Only the event name is required - other properties are optional. An example trac
 You should be able to see your goal appeared in the goals list:
 ![microsoftListOfGoals](../../../../images/microsoftListOfGoals.png)
 
-```
+```javascript
 // Metarouter event
 analytics.track('Order Completed', {
   action: 'purchase',

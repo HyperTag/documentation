@@ -87,17 +87,17 @@ Below is a full example of the configuration to send into the Platform, with all
 
 ```json
 {
-  "name": "amplitude"
-  "apiKey":"<yourAmplitudeAPIKey>",
-  "trackAllPages":true,
-  "trackNamedPages":true,
-  "trackCategorizedPages":true,
-  "mapQueryParams":[
-    {"user_properties":"name"},
-    {"user_properties":"email"},
-    {"event_properties":"source"},
-    {"event_properties":"other"}
+  "name": "amplitude",
+  "apiKey": "<yourAmplitudeAPIKey>",
+  "trackAllPages": true,
+  "trackNamedPages": true,
+  "trackCategorizedPages": true,
+  "mapQueryParams": [
+    { "user_properties": "name" },
+    { "user_properties": "email" },
+    { "event_properties": "source" },
+    { "event_properties": "other" }
   ],
-  "usePageDetailsForTrackCalls":true
+  "usePageDetailsForTrackCalls": true
 }
 ```

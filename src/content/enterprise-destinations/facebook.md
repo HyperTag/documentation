@@ -40,7 +40,7 @@ With that, just click `Save` to activate your pipeline.
 
 ### Configuration file
 
-```
+```YAML
 - name: "facebook-pixel"
         config:
           pixelId: "348149915804750"
@@ -165,7 +165,7 @@ All Pixel Standard Events will be mapped with the following properties.
 
 - `contents` - _Array of Objects_ detailing products
 
-  ```
+  ```javascript
   {
     id: track.productId() || track.id() || track.sku() || undefined,
     quantity: t.quantity(),

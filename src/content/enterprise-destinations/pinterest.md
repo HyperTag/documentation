@@ -55,26 +55,26 @@ The only configuration needed is the `tagId`, which represents the id that you'v
 Here is an example of `integrations.yaml`:
 
 ```yaml
-- 	name: "pinterest"
-    config:
-        tagId: "2612826764086"
-        handleCustomAsPartnerDefinedEvent: true
-        valueFieldIdentifier: "price"
-        customEventsMapping:
-          - event: "Custom Event 1"
-            mapping: "ViewContent"
-            valueFieldIdentifier: ""
-          - event: "Custom Event 2"
-            mapping: "Subscribe"
-            valueFieldIdentifier: "price"
-          - event: "ViewCategory"
-            mapping: "ViewContent"
-          - event: "Order Updated"
-            mapping: "ViewContent"
-            valueFieldIdentifier: "revenueFORtest"
-        customPropertiesForStandardEvents:
-          - "prop1"
-          - "prop2"
+- name: "pinterest"
+  config:
+      tagId: "2612826764086"
+      handleCustomAsPartnerDefinedEvent: true
+      valueFieldIdentifier: "price"
+      customEventsMapping:
+        - event: "Custom Event 1"
+          mapping: "ViewContent"
+          valueFieldIdentifier: ""
+        - event: "Custom Event 2"
+          mapping: "Subscribe"
+          valueFieldIdentifier: "price"
+        - event: "ViewCategory"
+          mapping: "ViewContent"
+        - event: "Order Updated"
+          mapping: "ViewContent"
+          valueFieldIdentifier: "revenueFORtest"
+      customPropertiesForStandardEvents:
+        - "prop1"
+        - "prop2"
 ```
 
 In this configuration, `tagId` represents the ID that you've got from the previous step.
@@ -83,7 +83,7 @@ Pinterest also allows sending _Partener Defined events_, which are additional ev
 
 Take the following request:
 
-```
+```json
 {
   "opts": {
     "clone": true,
@@ -112,7 +112,7 @@ Take the following request:
 
 When `handleCustomAsPartnerDefinedEvent` is `false`, we'll send a `event:custom` parameter with your conversion, and additionally, a `custom_event_name` parameter with your custom event's name. The conversion payload for the previous request will look like:
 
-```
+```json
 {
   "tid": "2613336903169",
   "noscript": 1,
@@ -125,7 +125,7 @@ When `handleCustomAsPartnerDefinedEvent` is `false`, we'll send a `event:custom`
 
 When `handleCustomAsPartnerDefinedEvent` is `true`, we'll send a _Partener Defined event_, with the `event` parameter the same as your custom event concatenated name. The conversion payload for the previous request will look like:
 
-```
+```json
 {
   "tid": "2613336903169",
   "noscript": 1,

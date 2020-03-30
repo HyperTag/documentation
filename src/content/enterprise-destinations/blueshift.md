@@ -80,94 +80,112 @@ Also anything can be overwritten if placed directly inside `properties` object.
 
 Given the following config:
 
-    config: {
-    	fallbackToDefault: {
-    		customer_id: true,
-    	}
-    }
+```json
+"config": {
+  "fallbackToDefault": {
+    "customer_id": true,
+  }
+}
+```
 
 Calling event with `customer_id`
 
-    analytics.track(‘event’, {
-      ...
-    	anonymousId: 'Anonumous ID value',
-    	properties: {
-    		customerId: 'My Customer Id',
-    	}
-      ...
-    })
+```javascript
+analytics.track(‘event’, {
+  ...
+  anonymousId: 'Anonumous ID value',
+  properties: {
+    customerId: 'My Customer Id',
+  }
+  ...
+})
+```
 
 will result in payload that contains:
 
-    {
-    	...
-    	anonymous_id: 'Anonymous ID value',
-    	customer_id: 'My Customer Id'
-    	...
-    }
+```JSON
+{
+  ...
+  "anonymous_id": "Anonymous ID value",
+  "customer_id": "My Customer Id"
+  ...
+}
+```
 
 Calling event without `customer_id`
 
-    analytics.track(‘event’, {
-      ...
-    	anonymousId: 'Anonymous ID value',
-      ...
-    })
+```javascript
+analytics.track(‘event’, {
+  ...
+  anonymousId: 'Anonymous ID value',
+  ...
+})
+```
 
 will result the payload that contains:
 
-    {
-    	...
-    	anonymous_id: 'Anonymous ID value',
-    	customer_id: 'Anonymous ID value'
-    	...
-    }
+```json
+{
+  ...
+  "anonymous_id": "Anonymous ID value",
+  "customer_id": "Anonymous ID value"
+  ...
+}
+```
 
 Given the following config:
 
-    config: {
-    	fallbackToDefault: {
-    		customer_id: false, // or if it's missing
-    	}
-    }
+```json
+"config": {
+  "fallbackToDefault": {
+    "customer_id": false, // or if it's missing
+  }
+}
+```
 
 Calling event with `customer_id`
 
-    analytics.track(‘event’, {
-      ...
-    	anonymousId: 'Anonymous ID value',
-    	properties: {
-    		customerId: 'My Customer Id',
-    	}
-      ...
-    })
+```javascript
+analytics.track(‘event’, {
+  ...
+  anonymousId: 'Anonymous ID value',
+  properties: {
+    customerId: 'My Customer Id',
+  }
+  ...
+})
+```
 
 will result in payload that contains `customer_id` and it's value from `properties`:
 
-    {
-    	...
-    	anonymous_id: 'Anonymous ID value',
-    	customer_id: 'My Customer Id'
-    	...
-    }
+```json
+{
+  ...
+  "anonymous_id": "Anonymous ID value",
+  "customer_id": "My Customer Id"
+  ...
+}
+```
 
 Calling event without `customer_id`
 
-    analytics.track(‘event’, {
-      ...
-    	anonymousId: 'Anonymous ID value',
-      ...
-    })
+```javascript
+analytics.track(‘event’, {
+  ...
+  anonymousId: 'Anonymous ID value',
+  ...
+})
+```
 
 will result in payload that is missing the `customer_id`:
 
-    {
-    	...
-    	anonymous_id: 'Anonymous ID value',
-    	...
-    }
-
----
+```json
+{
+  ...
+  "anonymous_id": "Anonymous ID value",
+  ...
+}
+```
 
 Below is a full example of the configuration to send into the Platform, with all of the defaults specified. Ensure to customize to match the data that you send as part of your analyitcs event.
 

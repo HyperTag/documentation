@@ -644,7 +644,7 @@ If you want to send coupon data to your `Order Completed` event when using Enhan
 
 Google Analytics documentation emphasizes on the fact that we should send a `total` field comprise of the final cost to the client, including tax, shipping etc. For better flexibility and total control over tracking, we let you decide how to calculate how coupons and discounts are applied.
 
-```
+```javascript
 analytics.track({
   userId: '019mr8mf4r',
   event: 'Order Completed',
@@ -665,7 +665,7 @@ analytics.track({
         price: 19,
         quantity: 1,
         category: 'Games',
-        coupon: '15%OFF'
+        coupon: '15%OFF',
       },
       {
         id: '505bd76785ebb509fc183733',
@@ -674,12 +674,11 @@ analytics.track({
         price: 3,
         quantity: 2,
         category: 'Games',
-        coupon: '20%OFF'
-      }
-    ]
-  }
-});
-
+        coupon: '20%OFF',
+      },
+    ],
+  },
+})
 ```
 
 ### Order Refunded
@@ -699,24 +698,24 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 For full refunds, fire this event whenever an order/transaction gets refunded:
 
-```
+```javascript
 analytics.track('Order Refunded', {
-    order_id: '50314b8e9bcf000000000000',
-  });
+  order_id: '50314b8e9bcf000000000000',
+})
 ```
 
 For partial refunds, you must include the productId and quantity for the items you want refunded:
 
-```
+```javascript
 analytics.track('Order Refunded', {
-    order_id: '50314b8e9bcf000000000000',
-    products: [
-      {
+  order_id: '50314b8e9bcf000000000000',
+  products: [
+    {
       product_id: '123abc',
-      quantity: 200
-      }
-    ]
-  });
+      quantity: 200,
+    },
+  ],
+})
 ```
 
 ## Social events
