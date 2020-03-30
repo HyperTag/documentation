@@ -27,7 +27,44 @@ const query = `
 }
 `
 
-const tableOfContents = $ => {
+const setTableColumnWidths = nodes => {
+  return nodes.map(node => {
+    const $ = cheerio.load(node.html)
+    const regex = /\[\d*\]/g // match [25] format for column width
+
+    $('table tbody tr:first-child').each(function() {
+      const row = $(this)
+      if (regex.test(row.find('td').text())) {
+        const columnWidths = row
+          .find('td')
+          .text()
+          .split('][')
+          .map(segment => segment.replace('[', '').replace(']', '')) // strip remaining brackets
+
+        const th = $(this)
+          .closest('table')
+          .find('th')
+        const td = $(this)
+          .next()
+          .find('td')
+        const cells = th.length ? th : td
+
+        cells.map(function(i) {
+          $(this).attr('style', `width: ${columnWidths[i]}%;`)
+          return $(this)
+        })
+        console.log('row', row.text())
+        // delete this row
+        row.remove()
+      }
+    })
+
+    node.html = $.html()
+    return node
+  })
+}
+
+const createTableOfContents = $ => {
   const toc = $('h2')
     .map(function() {
       const el = $(this)
@@ -48,7 +85,7 @@ const section = ($, isPage) => {
       <div class="toc">
         <div class="toc-sticky">
           <h6>${isPage ? 'On this Page' : 'In this Section'}:</h6>
-          ${tableOfContents($)}
+          ${createTableOfContents($)}
           </div>
       </div>
       ${$.html()}
@@ -78,12 +115,12 @@ const createGroups = nodes => {
 
 const mergeGroups = nodes => {
   return nodes
-    .map((page, i) => {
-      const $ = cheerio.load(page.html)
+    .map((node, i) => {
+      const $ = cheerio.load(node.html)
       const fragment =
         i === 0
           ? '' // first header doesn't need a redundant hash
-          : page.frontmatter.path.replace(
+          : node.frontmatter.path.replace(
               /\//g, // remove slashes
               ''
             )
@@ -113,7 +150,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const nodes = result.data.allMarkdownRemark.edges.map(e => e.node)
+  const nodes = setTableColumnWidths(result.data.allMarkdownRemark.edges.map(e => e.node))
   const groups = createGroups(nodes)
 
   // start with single pages

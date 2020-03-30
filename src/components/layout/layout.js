@@ -19,14 +19,18 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="nav-list">
-        <h1>
-          <Link className="logo" to="/">
-            {data.site.siteMetadata.title}
-          </Link>
-        </h1>
-        <input type="text" id="search-input" placeholder="search..." />
+        <header>
+          <h1>
+            <Link className="logo" to="/">
+              {data.site.siteMetadata.title}
+            </Link>
+          </h1>
+          <input type="text" id="search-input" placeholder="search..." />
+        </header>
 
-        <ContentNav />
+        <div className="scrollbox">
+          <ContentNav />
+        </div>
       </div>
 
       <main>

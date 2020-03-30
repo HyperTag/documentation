@@ -112,6 +112,7 @@ exports.onRouteUpdate = () => {
     document.querySelectorAll('main h2').forEach(checkSubheadingOffset)
   }, 250)
 
+  // functions to run onload
   setCurrent()
 
   window.addEventListener('hashchange', setCurrent)

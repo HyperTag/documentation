@@ -89,48 +89,48 @@ This configuration file allows you to set your own configuration based on how yo
 
 - In order to map other events, you would use the custom mapping provided by the config:
 
-  ```yaml
-  events:
-  'Product Clicked': 'event10'
-  ```
+```yaml
+events:
+'Product Clicked': 'event10'
+```
 
 ### Specifying a Marketing Cloud VisitorID
 
 - If you are using the Marketing Cloud ID Service, you can pass the Marketing Cloud Visitor ID as an destination specific setting and we will send that along with the event.
 
-  ```js
-  analytics.track({
-    userId: '019mr8mf4r',
-    event: 'Gotta catch em all',
-    properties: {
-      caught: 1738,
+```javascript
+analytics.track({
+  userId: '019mr8mf4r',
+  event: 'Gotta catch em all',
+  properties: {
+    caught: 1738,
+  },
+  integrations: {
+    'Adobe Analytics': {
+      marketingCloudVisitorId: '12345',
     },
-    integrations: {
-      'Adobe Analytics': {
-        marketingCloudVisitorId: '12345',
-      },
-    },
-  })
-  ```
+  },
+})
+```
 
 ### Manually specifying a visitorID
 
 - `visitorId` may be passed manually from the client:
 
-  ```javascript
-  analytics.track({
-    userId: '019mr8mf4r',
-    event: 'Gotta catch em all',
-    properties: {
-      caught: 1738,
+```javascript
+analytics.track({
+  userId: '019mr8mf4r',
+  event: 'Gotta catch em all',
+  properties: {
+    caught: 1738,
+  },
+  integrations: {
+    'Adobe Analytics': {
+      visitorId: '12345',
     },
-    integrations: {
-      'Adobe Analytics': {
-        visitorId: '12345',
-      },
-    },
-  })
-  ```
+  },
+})
+```
 
 ### Sending exit/download events
 
@@ -140,13 +140,13 @@ This configuration file allows you to set your own configuration based on how yo
   - `d` for Download events
   - `o` for Other events (_default_)
 
-  ```js
-  .track({
-    …,
-    properties: {
-      linkURL: 'https://foo.bar',
-      linkType: ‘e’, // ‘d’ for downloads
-      pageName: ‘Foo’
-      }
-  })
-  ```
+```javascript
+.track({
+  …,
+  properties: {
+    linkURL: 'https://foo.bar',
+    linkType: ‘e’, // ‘d’ for downloads
+    pageName: ‘Foo’
+    }
+})
+```

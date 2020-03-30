@@ -1,6 +1,7 @@
 table {
   @apply mt-4 mb-8;
   @apply w-full;
+  table-layout: fixed;
 }
 td,
 th {
@@ -9,4 +10,7 @@ th {
 td {
   @apply border-t border-b border-solid border-gray-400;
   background-color: #fbfbfb;
+}
+tr:nth-child(even) td {
+  @apply bg-white;
 }
