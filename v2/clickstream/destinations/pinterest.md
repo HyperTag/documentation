@@ -88,6 +88,21 @@ Enter your event on the left, and map it to one of the [standard Pinterest event
 | `.page()` call with no `category` | PageVisit |
 | `.page()` call with `category` | ViewCategory |
 
+#### Enable Enhanced Match
+
+MetaRouter supports Pinterest Enhanced Match in two scenarios:
+
+1. where a user is already identified when they visit your site
+2. when a user visits your site anonymously but is identified at some later point.
+
+
+To support Pinterest Enhanced Match in the first scenario, go to the Pinterest Tag destination settings in the MetaRoyter web app, and click **Enable Enhanced Match to on Page Load**. This attaches the hashed email address on the initial page load conversion event. For more information see the [Pinterest enhanced-match documentation here](https://help.pinterest.com/en/business/article/enhanced-match).
+
+To support the second scenario, where a user visits your site anonymously, but is identified at a later point, you do not need to change any of the Pinterest destination settings. Instead, you can make an `identify()` call with the user’s email address, which triggers a Pinterest `set()` method. This saves the identification parameters so they can be sent with the next event, so it’s important to `set` the values as early as possible.  
+**Note**: Nothing appears in the network tab in your browser or in the tag helper extension after `set()` is called. However, a hashed value for an `'em'` parameter is added in the next event call, in a JSON object encoded in the URL. You can also see the email box in the tag helper extension.
+
+If you use MetaRouter’s `identify()` method to enable Pinterest’s Enhanced Match, you only collect this information for events *after* you enable the setting. Pinterest does not retroactively update values for past events.
+
 ### Things to note
 
 Generate page views and trigger your custom event inside your website with `analytics.track('your event name');`. You should see confirmation of those tags sent to Pinterest inside your Pinterest for Business dashboard, under `Ads > Conversions`
