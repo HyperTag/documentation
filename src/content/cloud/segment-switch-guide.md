@@ -94,4 +94,4 @@ This has a few more steps, but will likely be less taxing on your db depending o
 
 Here, you can specify the column order of the destination table that the file should load into.
 
-Please don't hesitate to contact us with any questions as you get set up! You can reach us anytime at support@metarouter.io.
+Please don't hesitate to contact us with any questions as you get set up! You can reach us anytime at [support@metarouter.io](support@metarouter.io).

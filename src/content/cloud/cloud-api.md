@@ -214,7 +214,7 @@ This is on our roadmap and currently being built out- check back soon for update
 
 ### API Developer Console
 
-Please contact us directly at support@metarouter.io for access to the main developer console for MetaRouter’s public API.
+Please contact us directly at [support@metarouter.io](support@metarouter.io) for access to the main developer console for MetaRouter’s public API.
 
 Within the black Header Area, you want to paste the JWT into the token field and the Organization ID (found within the URL of your Organizations dashboard on app.metarouter.io - app.metarouter.io/org/). This will embed that information within the header of all of your requests within the console and will provide access to query and mutation results for your organization. Make sure you select `Prod` as your GraphQL endpoint (defaults to `Staging` on page load) to make sure you are accessing data that resides on MetaRouter's Main Platform.
 
