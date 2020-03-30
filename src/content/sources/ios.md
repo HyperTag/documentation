@@ -23,12 +23,12 @@ We recommend installing Analytics-iOS via [Cocoapods](https://cocoapods.org/pods
 Just add the Analytics dependency to your Podfile with:
 
 ```
-	Pod `'Analytics', '~> 3.0'`
+Pod `'Analytics', '~> 3.0'`
 ```
 
 Then, run a pod install inside your terminal, or from CocoaPods.app. Then, in your applicaton delegate's `application:didFinishLaunchingWithOptions:` method, set up the SDK like this:
 
-```
+```objectivec
 SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:@"YOUR_SOURCE_ID"];
 configuration.trackApplicationLifecycleEvents = YES; // Enable this to record certain application events automatically
 configuration.recordScreenViews = YES; // Enable this to record screen views automatically
@@ -52,7 +52,7 @@ Here, you'll need to place "YOUR_SOURCE_ID" with the Source ID for this particul
 
 And of course, import the SDK in the files that you use it with:
 
-```
+```objectivec
 #import <Analytics/SEGAnalytics.h>
 ```
 
@@ -66,7 +66,7 @@ The `identify` method helps you associate your users and their actions to a uniq
 
 For example, a simple `identify` looks something like this:
 
-```
+```objectivec
 [[SEGAnalytics sharedAnalytics] identify:@"123456"
                                 traits:@{ @"name": "Dagny Smith"
                                           @"email": "dagny@metarouter.io",
@@ -87,7 +87,7 @@ To start, our SDK can automatically track a few common events (e.g. Application_
 
 Setting up a `track` is very similar to the process you just went through to set up an `identify`. Here’s the basic, sample `track`:
 
-```
+```objectivec
 [[SEGAnalytics sharedAnalytics] track:@"Item Purchased",
                            properties:@{ @"item": @"Cat Feather Toy",
                                          @"revenue": @"9.99"}];
@@ -103,7 +103,7 @@ A lot of analytics tools support custom event mapping so, with `track` implement
 
 You can specify the number of events that should queue before flushing. Set this to 1 to send events as they come in (i.e. not batched) but note that it will use more battery. Also note that this is 20 by default.
 
-```
+```objectivec
 SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithSourceID:@"YOUR_SOURCE_ID"];
 configuration.flushAt = 1;
 [SEGAnalytics setupWithConfiguration:configuration];
@@ -111,7 +111,7 @@ configuration.flushAt = 1;
 
 Alternatively, you can `flush` the queue manually:
 
-```
+```objectivec
 [[SEGAnalytics sharedAnalytics] alias:@"marthastewart"];
 [[SEGAnalytics sharedAnalytics] flush]
 ```

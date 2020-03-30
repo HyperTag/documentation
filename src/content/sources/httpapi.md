@@ -41,26 +41,26 @@ The HTTP Tracking API uses several response codes to validate requests sent to t
 
 Error responses render JSON bodies that can help determine the reason the event was rejected by the system. The following is an example of a typical error response. the Errors key contains an array of error objects with a list of all of the errors encountered by the system
 
-```
+```json
 {
-    "Error": "Bad Request",
-    "Message": "Invalid or missing writekey",
-    "Details": ""
+  "Error": "Bad Request",
+  "Message": "Invalid or missing writekey",
+  "Details": ""
 }
 ```
 
 Batch error endpoints return errors in a slightly different format. the Errors key contains an array of error objects with a list of all of the errors encountered by the system
 
-```
+```json
 {
-    "Success": false,
-    "Errors": [
-      {
-        "Error" : "Bad Request",
-        "Message":"Error reading request body",
-        "Details":"HTTP request too large"
-      }
-    ]
+  "Success": false,
+  "Errors": [
+    {
+      "Error": "Bad Request",
+      "Message": "Error reading request body",
+      "Details": "HTTP request too large"
+    }
+  ]
 }
 ```
 
@@ -122,16 +122,16 @@ Post `https://e.metarouter.io/v1/i` or `https://e.metarouter.io/v1/identify`
 | ------ | -------- | ------ | -------------------------------------------------------------- |
 | traits | optional | Object | Free-form dictionary of traits of the user, like email or name |
 
-```
+```json
 {
-  'userId': '1234qwerty',
-  'traits': {
-    'name': 'Arthur Dent',
-    'email': 'earthling1@hitchhikersguide.com',
-    'hasTowel': True,
+  "userId": "1234qwerty",
+  "traits": {
+    "name": "Arthur Dent",
+    "email": "earthling1@hitchhikersguide.com",
+    "hasTowel": True,
   }
-  'timestamp': '2015-11-10T00:45:23.412Z',
-  'type': identify
+  "timestamp": "2015-11-10T00:45:23.412Z",
+  "type": identify
 }
 ```
 
@@ -146,17 +146,17 @@ Post `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
 | eventName  | required | String | Name of the action that a user has performed.                 |
 | properties | optional | Object | Free-form dictionary of properties of the event, like revenue |
 
-```
+```json
 {
-  'userId': '1234qwerty',
-  'event': 'Added File',
-  'properties': {
-    'fileTitle': 'Life, the Universe, and Everything',
-    'fileSize': '42kb',
-    'fileType': 'PDF'
+  "userId": "1234qwerty",
+  "event": "Added File",
+  "properties": {
+    "fileTitle": "Life, the Universe, and Everything",
+    "fileSize": "42kb",
+    "fileType": "PDF"
   },
-  'timestamp': '2015-11-10T00:45:23.412Z'
-  'type': track
+  "timestamp": "2015-11-10T00:45:23.412Z"
+  "type": track
 }
 ```
 
@@ -171,15 +171,15 @@ Post `https://e.metarouter.io/v1/p` or `https://e.metarouter.io/v1/page`
 | name       | optional | String | Name of the page For example, most sites have a “Signup” page that can be useful to tag, so you can see users as they move through your funnel. |
 | properties | optional | Object | Free-form dictionary of properties of the event, like revenue                                                                                   |
 
-```
+```json
 {
-  'userId': '1234qwerty',
-  'section': 'Blog',
-  'name': '10 Questions with Marvin, the clinically depressed robot',
-  'properties': {
-    'referrer': 'http://reddit.com/r/AMA'
+  "userId": "1234qwerty",
+  "section": "Blog",
+  "name": "10 Questions with Marvin, the clinically depressed robot",
+  "properties": {
+    "referrer": "http://reddit.com/r/AMA"
   }
-  'type': page
+  "type": page
 }
 ```
 
@@ -194,15 +194,15 @@ Post `https://e.metarouter.io/v1/g` or `https://e.metarouter.io/v1/group`
 | groupId  | required | String | A unique identifier for the group in your database. See the Group ID field docs for more detail.                              |
 | traits   | optional | Object | Free-form dictionary of traits of the group, like email or name See the Traits field docs for a list of reserved trait names. |
 
-```
+```json
 {
-  'userId': '1234qwerty',
-  'groupId': '5678dvorak',
-  'traits': {
-    'name': 'The Hitchhikers',
-    'relativePosition': '[39.1000 N, 84.5167 W]'
+  "userId": "1234qwerty",
+  "groupId": "5678dvorak",
+  "traits": {
+    "name": "The Hitchhikers",
+    "relativePosition": "[39.1000 N, 84.5167 W]"
     }
-  'type': group
+  "type": group
 }
 ```
 
@@ -217,7 +217,7 @@ Post `https://e.metarouter.io/v1/a` or `https://e.metarouter.io/v1/alias`
 | previousId | required                           | String | The previousId is the existing ID you’ve referred to the user by. It might be an Anonymous ID assigned to that user or a User ID you previously identified them with using our identify call. |
 | userId     | optional (if `anonymousId` exists) | String | Unique identifier for the user in your database. A userId or an anonymousId is required.                                                                                                      |
 
-```
+```json
 {
   "previousId": "anonymous_id",
   "userId": "assigned_id_or_email",
@@ -236,27 +236,27 @@ The `batch` method allows for submitting multiple events with one request. Batch
 
 Post `https://e.metarouter.io/v1/batch` or `https://e.metarouter.io/v1/import`
 
-```
+```json
 {
   "batch": [
-	  {
-		  "anonymousId": "cf09e649-fd0b-46b6-9fc1-53ab9cd05c47",
-		  "messageId": "317b11a8-8cd3-40ad-b3fb-622835c42cfd",
-		  "sentAt": "2020-03-02T18:29:53.661Z",
-		  "timestamp": "2020-03-02T18:29:27.333Z",
-		  "type": "track",
-		  "writeKey": "test1",
-		  "event": "example 1 event"
-	  },
-	  {
-		  "anonymousId": "cf09e649-fd0b-46b6-9fc1-53ab9cd05c47",
-		  "messageId": "317b11a8-8cd3-40ad-b3fb-123d417b11a8",
-		  "sentAt": "2020-03-02T18:29:53.661Z",
-		  "timestamp": "2020-03-02T18:29:27.333Z",
-		  "type": "track",
-		  "writeKey": "test1",
-		  "event": "example 1 event"
-	  }
+    {
+      "anonymousId": "cf09e649-fd0b-46b6-9fc1-53ab9cd05c47",
+      "messageId": "317b11a8-8cd3-40ad-b3fb-622835c42cfd",
+      "sentAt": "2020-03-02T18:29:53.661Z",
+      "timestamp": "2020-03-02T18:29:27.333Z",
+      "type": "track",
+      "writeKey": "test1",
+      "event": "example 1 event"
+    },
+    {
+      "anonymousId": "cf09e649-fd0b-46b6-9fc1-53ab9cd05c47",
+      "messageId": "317b11a8-8cd3-40ad-b3fb-123d417b11a8",
+      "sentAt": "2020-03-02T18:29:53.661Z",
+      "timestamp": "2020-03-02T18:29:27.333Z",
+      "type": "track",
+      "writeKey": "test1",
+      "event": "example 1 event"
+    }
   ],
   "context": {
     "page": {
@@ -280,23 +280,23 @@ The API also exposes an `/v1/pixel/...` route for each of our single event POST 
 
 For example, the following payload for a Track Event:
 
-```
+```json
 {
-    "integrations": {},
-    "context": {
-        "page": {
-            "path": "/home"
-        },
-        "library": {
-            "name": "analytics.js",
-            "version": "3.2.21"
-        }
+  "integrations": {},
+  "context": {
+    "page": {
+      "path": "/home"
     },
-    "event": "example event",
-    "messageId": "1234567890",
-    "type": "track",
-    "writeKey": "example",
-    "userId": "0987654321"
+    "library": {
+      "name": "analytics.js",
+      "version": "3.2.21"
+    }
+  },
+  "event": "example event",
+  "messageId": "1234567890",
+  "type": "track",
+  "writeKey": "example",
+  "userId": "0987654321"
 }
 ```
 

@@ -76,7 +76,7 @@ A user account is tied to a specific email address and has to be confirmed via a
 
 To create a new user account with the API, use the `createNewUser` mutation below. Note that the profile argument is optional, however email and password are required.
 
-```
+```graphql
 mutation {
   createNewUser(
     email: "someone.new@somewhere.com"
@@ -109,15 +109,14 @@ In order to create any pipelines, you must first create an `Organization` to lin
 
 Below is the mutation to create a new Organization:
 
-```
-createOrganization(
-    name: "Human-friendly Organization Name"
-    userId: "123456"
-  ) {
+```graphql
+mutation {
+  createOrganization(name: "Human-friendly Organization Name", userId: "123456") {
     success
     message
     id
   }
+}
 ```
 
 ### Clickstream Pipelines
@@ -132,17 +131,13 @@ Upon source creation, a 21 character long `Source ID` is generated to identify y
 
 Below is the mutation to generate a Clickstream Source within our system:
 
-```
+```graphql
 mutation {
-  createApplication(
-      name: "Human-friendly Source Name",
-      platform: "analytics.js",
-      orgId: "1234567890"
-    ) {
-      success
-      message
-      id
-    }
+  createApplication(name: "Human-friendly Source Name", platform: "analytics.js", orgId: "1234567890") {
+    success
+    message
+    id
+  }
 }
 ```
 
@@ -158,13 +153,11 @@ As of right now, the connection has to be saved separately before you save the c
 
 Here is an example of the two mutations needed to set up a brand new clickstream destination
 
-```
+```graphql
 mutation {
   createConnection(
-    integrationCode: "acquisio",
-    details: {
-      apiKey: "123"
-    }
+    integrationCode: "acquisio"
+    details: { apiKey: "123" }
     name: "Friendly Connection Name"
     orgId: "1234567890"
     connectionPrototypeId: "123"
@@ -176,7 +169,7 @@ mutation {
 }
 ```
 
-```
+```graphql
 mutation {
   createIntegration(
     appId: "456"

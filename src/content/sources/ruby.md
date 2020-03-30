@@ -22,13 +22,13 @@ Install the Gem by either of these two methods:
 
 - Directly into a Gemfile
 
-```
+```ruby
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 ```
 
 - Directly into environment gems
 
-```ruby
+```bash
 gem install analytics-ruby
 ```
 

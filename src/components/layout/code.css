@@ -44,9 +44,13 @@ pre[class*='language-'] {
 .gatsby-highlight[data-language='bash']:before {
   display: none;
 }
+.gatsby-highlight[data-language='csharp']:before {
+  content: 'c#';
+}
 pre[class*='language-'] > code {
   @apply relative;
-  @apply p-3;
+  @apply px-3 pt-5 pb-4;
+  @apply text-sm;
   border-left: 10px solid #95e7c3;
   box-shadow: -1px 0px 0px 0px #95e7c3, 0px 0px 0px 1px #eefff8;
   background-color: #fbfbfb;

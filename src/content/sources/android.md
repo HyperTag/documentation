@@ -32,7 +32,7 @@ dependencies {
 
 We recommend initializing the client in your `Application` subclass.
 
-```
+```java
 // Create an analytics client with the given context and MetaRouter Source ID.
 Analytics analytics = new Analytics.Builder(context, YOUR_SOURCE_ID)
   .trackApplicationLifecycleEvents() // Enable this to record certain application events automatically!
@@ -65,7 +65,7 @@ Analytics.setSingletonInstance(analytics);
 
 Ensure that the necessary permissions are declared in your application’s `AndroidManifest.xml`.
 
-```
+```xml
  <!-- Required for internet. -->
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
@@ -78,7 +78,7 @@ It's up to you to call `identify` based on how your users are authenticated, but
 
 For example, a simple `identify` looks something like this:
 
-```
+```java
 Analytics.with(context).identify("123456", new Traits().putName("Dagny Smith").putEmail("dagny@metarouter.io").putRole("buyer"));
 ```
 
@@ -92,7 +92,7 @@ To get to a more complete event tracking analytics setup, you can add a `track` 
 
 To start, our SDK can automatically track a few common events (e.g. Application_Installed, Application_Opened, and Application_Updated) - you will just need to enable this option during initialization.
 
-```
+```java
 Analytics analytics = new Analytics.Builder(context, appID)
   .trackApplicationLifecycleEvents()
   .build();
@@ -102,13 +102,13 @@ In addition to these, you will likely want to track some events that are success
 
 For example, here's a sample `track` call that records when a user signs up:
 
-```
+```java
  Analytics.with(context).track("Signed up", new Properties().putValue("plan", "Enterprise"));
 ```
 
 This `track` just tells us that your user just triggered the Signed Up event and chose your hypothetical 'Enterprise' plan. Properties are simple key-value pairs that can be anything you want to record, for example:
 
-```
+```java
 Analytics.with(context).track("Viewed Product", new Properties()
   .putValue("item", "Cat Feather Toy")
   .putValue("category", "Pet Supplies")

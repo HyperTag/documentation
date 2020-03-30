@@ -34,11 +34,15 @@ To calculate the amount of Forwarders you will need, take the amount of Destinat
 
 For example, if I want to support Google Analytics, Facebook Pixel, and Pinterest on my platform only, and I expect 500 events/sec. Then, I would expect 3 Forwarders.
 
-    (3*(500/1000)) = 1.5 < 3
+```
+(3*(500/1000)) = 1.5 < 3
+```
 
 However, supporting those 3 Destinations at 5000 events/sec, I should expect to need 15 Forwarders to handle that traffic.
 
-    (3*(5000/1000)) = 15 > 3
+```
+(3*(5000/1000)) = 15 > 3
+```
 
 ### Supported Cloud Providers
 

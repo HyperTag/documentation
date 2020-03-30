@@ -29,14 +29,14 @@ The recommended way to install Analytics for React Native is via npm, since it m
 
 First, add the @metarouter/analytics-react-native dependency to your dependencies and link it using react-native-cli, like so:
 
-```
+```bash
 yarn add @metarouter/analytics-react-native
 yarn react-native link
 ```
 
 Then change the current directory to ios:
 
-```
+```bash
 cd ios
 ```
 
@@ -44,18 +44,18 @@ and run `pod install` to install the required dependences for iOS.
 
 Then somewhere your application, setup the SDK like so:
 
-```
+```javascript
 await analytics.setup('YOUR_WRITE_KEY', {
   // Record screen views automatically!
   recordScreenViews: true,
   // Record certain application events automatically!
-  trackAppLifecycleEvents: true
+  trackAppLifecycleEvents: true,
 })
 ```
 
 And of course, import the SDK in the files that you use it with:
 
-```
+```javascript
 import analytics from '@metarouter/analytics-react-native'
 ```
 
@@ -67,9 +67,9 @@ The `identify` method helps you associate your users and their actions to a uniq
 
 For example, a simple `identify` looks something like this:
 
-```
+```javascript
 analytics.identify("a user's id", {
-  email: "a user's email address"
+  email: "a user's email address",
 })
 ```
 
@@ -91,10 +91,10 @@ To start, our SDK can automatically track a few common events (e.g. Application_
 
 Setting up a `track` is very similar to the process you just went through to set up an `identify`. Here’s the basic, sample `track`:
 
-```
+```javascript
 analytics.track('Item Purchased', {
   item: 'Cat Feather Toy',
-  revenue: 9.99
+  revenue: 9.99,
 })
 ```
 
@@ -112,9 +112,9 @@ You’ll want to record a screen event an event whenever the user opens a screen
 
 Example screen call:
 
-```
+```javascript
 analytics.screen('Photo Feed', {
-  'Feed Type': 'private'
+  'Feed Type': 'private',
 })
 ```
 
@@ -124,10 +124,10 @@ analytics.screen('Photo Feed', {
 
 Example group call:
 
-```
+```javascript
 analytics.group('group123', {
   name: 'Initech',
-  description: 'Accounting Software'
+  description: 'Accounting Software',
 })
 ```
 
@@ -137,7 +137,7 @@ analytics.group('group123', {
 
 Example alias call:
 
-```
+```javascript
 analytics.alias('some new id')
 ```
 
@@ -147,7 +147,7 @@ The reset method clears the SDK’s internal stores for the current user and gro
 
 Clearing all information about the user is as simple as calling:
 
-```
+```javascript
 analytics.reset()
 ```
 
@@ -155,15 +155,15 @@ analytics.reset()
 
 You can specify the number of events that should queue before flushing. Set this to 1 to send events as they come in (i.e. not batched) but note that it will use more battery. Also note that this is 20 by default.
 
-```
+```javascript
 await analytics.setup('YOUR_WRITE_KEY', {
-  flushAt: 1
+  flushAt: 1,
 })
 ```
 
 Alternatively, you can `flush` the queue manually:
 
-```
+```javascript
 analytics.alias('glenncoco')
 analytics.flush()
 ```
@@ -176,9 +176,9 @@ You can also use the native Analytics API to configure it. Just make sure to cal
 
 Our SDK can automatically instrument common application lifecycle events such as “Application Installed”, “Application Updated” and “Application Opened”. Simply enable this option when you initialize the SDK.
 
-```
+```javascript
 await analytics.setup('YOUR_WRITE_KEY', {
-  trackAppLifecycleEvents: true
+  trackAppLifecycleEvents: true,
 })
 ```
 
@@ -186,9 +186,9 @@ await analytics.setup('YOUR_WRITE_KEY', {
 
 To see a trace of your data going through the SDK, you can enable debug logging with the debug method:
 
-```
+```javascript
 await analytics.setup('YOUR_WRITE_KEY', {
-  debug: true
+  debug: true,
 })
 ```
 
@@ -198,13 +198,13 @@ By default, debug logging is disabled.
 
 Depending on the audience for your app (e.g. children) or the countries where you sell your app (e.g. the EU), you may need to offer the ability for users to opt-out of analytics data collection inside your app. To do that, just call the `disable` method:
 
-```
+```javascript
 analytics.disable()
 ```
 
 Or if they opt-back-in, you can re-enable data collection:
 
-```
+```javascript
 analytics.enable()
 ```
 

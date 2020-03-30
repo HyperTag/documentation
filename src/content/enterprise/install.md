@@ -23,23 +23,31 @@ _NOTE: This is a stub of an existing feature. Details coming soon._
 
 Create the namespace for the platform. We recommend creating a namespace that will be used solely by the MetaRouter Platform:
 
-    kubectl create namespace mr-ee
+```bash
+kubectl create namespace mr-ee
+```
 
 ### Install Tiller
 
 Prep cluster for installation of Tiller
 
-    kubectl -n kube-system create serviceaccount tiller
+```bash
+kubectl -n kube-system create serviceaccount tiller
 
-    kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+```
 
 Start Tiller
 
-    helm init --service-account tiller
+```bash
+helm init --service-account tiller
+```
 
 Then, verify tiller is there with:
 
-    kubectl get pods --namespace kube-system
+```bash
+kubectl get pods --namespace kube-system
+```
 
 ### Adding Custom Definitions
 

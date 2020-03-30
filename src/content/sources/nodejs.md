@@ -18,7 +18,7 @@ This library lets you record all analytics data from your node code. You can che
 
 Install the astronomer npm module.
 
-```js
+```bash
 npm install --save analytics-node
 ```
 
@@ -26,7 +26,7 @@ npm install --save analytics-node
 
 Initialize this package with the Source ID found in the settings section of your MetaRouter account.
 
-```js
+```javascript
 var Analytics = require('analytics-node')
 var analytics = new Analytics('METAROUTER_SOURCE_ID', { host: 'https://e.metarouter.io' })
 ```
@@ -45,7 +45,7 @@ Check out the below calls and their use cases to determine the calls that you ne
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
-```js
+```javascript
 analytics.identify({
   userId: '1234qwerty',
   traits: {
@@ -60,7 +60,7 @@ analytics.identify({
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your website. This will tell MetaRouter which actions you are performing on your site. With `track`, each user action triggers an “event,” which can also have associated properties.
 
-```js
+```javascript
 analytics.track({
   userId: '1234qwerty',
   event: 'Added File',
@@ -76,7 +76,7 @@ analytics.track({
 
 The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing.
 
-```js
+```javascript
 analytics.page({
   userId: '1234qwerty',
   section: 'Blog',
@@ -91,7 +91,7 @@ analytics.page({
 
 The `group` method associates an identified user with a company, organization, project, etc.
 
-```js
+```javascript
 analytics.group({
   userId: '1234qwerty',
   groupId: '5678dvorak',
@@ -106,7 +106,7 @@ analytics.group({
 
 The `alias` method combines two unassociated User IDs.
 
-```js
+```javascript
 analytics.alias({
   previousId: anonymous_id,
   userId: assigned_id_or_email,

@@ -30,7 +30,7 @@ You can also doing this by navigating through Visual Studio: `Toola-->Library Pa
 
 Now you need to initialize the .NET library so that it knows where to send data. Do this with your `Source ID`, which can be found in your MetaRouter UI once you've created a server-side source. Then you can use the `Analytics` singleton in any controller you want:
 
-```c#
+```csharp
 <%@ Application Language="C#" %>
 <%@ Import Namespace="ASP.NET_Example" %>
 <%@ Import Namespace="System.Web.Optimization" %>
@@ -54,7 +54,7 @@ Now you need to initialize the .NET library so that it knows where to send data.
 
 Now, initialize the project:
 
-```
+```csharp
 Analytics.Initialize("YOUR_SOURCE_ID");
 ```
 
@@ -68,7 +68,7 @@ Check out the below calls and their use cases to determine the calls that you ne
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
-```c#
+```csharp
 Analytics.Client.Identify("1234qwerty", new Traits() {
     { "name", "#{ user.name }" },
     { "email", "#{ user.email }" },
@@ -80,7 +80,7 @@ Analytics.Client.Identify("1234qwerty", new Traits() {
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your website. This will tell MetaRouter which actions you are performing on your site. With `track`, each user action triggers an “event,” which can also have associated properties.
 
-```
+```csharp
 Analytics.Client.Track("1234qwerty", "Add to Cart", new Properties() {
     { "price", 50.00 },
     { "size", "Medium" }
@@ -91,7 +91,7 @@ Analytics.Client.Track("1234qwerty", "Add to Cart", new Properties() {
 
 The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing.
 
-```c#
+```csharp
 Analytics.Client.Page("1234qwerty", "Login", new Properties() {
     { "path", "/login" },
     { "title", "MetaRouter Login" }
@@ -102,7 +102,7 @@ Analytics.Client.Page("1234qwerty", "Login", new Properties() {
 
 The `group` method associates an identified user with a company, organization, project, etc.
 
-```c#
+```csharp
 Analytics.Client.Group("userId", "groupId", new Traits() {
     { "name", "MetaRouter" },
     { "website", "www.metarouter.io" }
@@ -113,6 +113,6 @@ Analytics.Client.Group("userId", "groupId", new Traits() {
 
 The `alias` method combines two unassociated User IDs.
 
-```c#
+```csharp
 Analytics.Client.Alias("previousId", "userId")
 ```

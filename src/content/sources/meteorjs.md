@@ -16,7 +16,7 @@ If you're using the Meteor JavaScript app platform and haven't instrumented your
 
 **\*Note**: If you are using the package `percolatestudio:segment.io`, you will need to remove this before installing MetaRouter. This packages sets a global `analytics` object and makes the package unfunctional.\*
 
-```js
+```json
 {
   "type": "info",
   "title": "Which user actions get tracked?",
@@ -26,9 +26,9 @@ If you're using the Meteor JavaScript app platform and haven't instrumented your
 
 ### Getting Started wtih MeteorJS
 
-First, open your termal, cd to your app, and add the MetaRouter package:
+First, open your terminal, cd to your app, and add the MetaRouter package:
 
-```js
+```bash
 meteor add astronomerio:core
 ```
 
@@ -36,7 +36,7 @@ To configure your Meteor app, follow the steps below:
 
 1. Copy this snippet:
 
-```js
+```json
 {
   "public": {
     "astronomer": {

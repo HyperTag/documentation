@@ -18,7 +18,7 @@ This library lets you record analytics data from your PHP code. It is a little d
 
 Clone the PHP integration into your application directory.
 
-```php
+```bash
 git clone https://github.com/segmentio/analytics-php /my/app/folders/
 ```
 
@@ -53,20 +53,19 @@ In composer.json, add the GitHub url to the repositories section and then requir
 
 **\*Note:** you need the ‘dev-‘ prefix on the version in the require section as noted in the [composer docs](https://getcomposer.org/doc/05-repositories.md#loading-a-package-from-a-vcs-repository).
 
-```
+```json
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/segmentio/analytics-php"
-        }
-    ],
-
-    "require": {
-        "segmentio/analytics-php": "dev-master"
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/segmentio/analytics-php"
     }
-}
+  ],
 
+  "require": {
+    "segmentio/analytics-php": "dev-master"
+  }
+}
 ```
 
 ### Calls in PHP
