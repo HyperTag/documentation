@@ -1,7 +1,11 @@
 ---
-title: KISSmetrics
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Kissmetrics
+
+path: '/cloud-destinations/kissmetrics/'
 ---
+
 MetaRouter makes it easy to send your data to KISSmetrics. Once you follow the steps below, your data will be routed through our platform and pushed to KISSmetrics in the appropriate format.
 
 ## What is KISSmetrics and how does it work?
@@ -55,4 +59,3 @@ Once that's done, click on `Save` to activate your pipeline.
 Click around your application to send off some test events. It might take an hour or so for events to start populating into your project. You can check to see if events are coming in by clicking on the `Live` tab at the top of the page and looking at the `All Activity` section.
 
 ![kissmetrics3](../../../images/kissmetrics3.png)
-

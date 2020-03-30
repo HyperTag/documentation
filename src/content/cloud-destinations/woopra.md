@@ -1,7 +1,11 @@
 ---
-title: Woopra
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Woopra
+
+path: '/cloud-destinations/woopra/'
 ---
+
 MetaRouter makes it easy to send your data to Woopra. Once you follow the steps below, your data will be routed through our platform and pushed to Woopra in the appropriate format.
 
 ## What is Woopra and how does it work?
@@ -20,11 +24,9 @@ Combining Woopra's data with the data you receive from other third-party tools o
 
 ### Woopra Side
 
-Once you create your account on the Woopra [website](https://www.woopra.com/), add a new project with the domain of your website or mobile app.  
-
+Once you create your account on the Woopra [website](https://www.woopra.com/), add a new project with the domain of your website or mobile app.
 
 ![woopra1](../../../images/woopra1.png)
-
 
 ### MetaRouter Side
 
@@ -33,7 +35,6 @@ Now, add your domain name into the Woopra connector on your MetaRouter dashboard
 Click `Save` to activate your pipeline.
 
 ![woopra2](../../../images/woopra2v2.png)
-
 
 ### The Pipeline
 

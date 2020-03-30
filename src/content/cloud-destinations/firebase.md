@@ -1,6 +1,9 @@
 ---
-title: Firebase
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Firebase
+
+path: '/cloud-destinations/firebase/'
 ---
 
 Available for server-side and mobile sources, MetaRouter makes it easy to send your data to Firebase. Once you follow the steps below, your data will be routed through our platform and pushed to Firebase in the appropriate format.
@@ -23,7 +26,7 @@ With MetaRouter's Firebase integration, you will be able to push your app event 
 
 #### Installation
 
-You will need to install the iOS and/or Android Segment-Firebase SDKs (shout-out to Segment for making these available!). To do this, please see the following steps below. 
+You will need to install the iOS and/or Android Segment-Firebase SDKs (shout-out to Segment for making these available!). To do this, please see the following steps below.
 
 **Firebase for iOS**
 
@@ -45,7 +48,7 @@ By default, Segment only bundles `Firebase/Core` which is [Firebase’s Analytic
 
 If configuring for proxy HTTP calls, follow these additional steps once you have completed the above:
 
-1. Add this call: 
+1. Add this call:
 
 ```
 SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:@"YOUR_WRITE_KEY"];
@@ -67,7 +70,7 @@ configuration.requestFactory = ^(NSURL *url) {
 
 2. Then add the following Swift and objC configurations to point to MetaRouter:
 
-*Swift*
+_Swift_
 
 ```
 configuration.requestFactory = { url in
@@ -81,7 +84,8 @@ configuration.requestFactory = { url in
             return NSMutableURLRequest.init(url: components?.url ?? url)
         }
 ```
-*objC*
+
+_objC_
 
 ```
 configuration.requestFactory = ^(NSURL *url) {
@@ -120,7 +124,7 @@ buildscript {
 apply plugin: 'com.google.gms.google-services'
 ```
 
-*Project-level build.gradle*: Add Google Services dependency and their Maven repo location to repositories:
+_Project-level build.gradle_: Add Google Services dependency and their Maven repo location to repositories:
 
 ```
 buildscript {
@@ -144,6 +148,7 @@ Add these permissions to your AndroidManifest.xml:
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
+
 Finally, register the dependency with the Segment SDK in your application subclass, as seen here in [Segment's Android library documentation](https://segment.com/docs/sources/mobile/android/#packaging-device-based-destination-sdks).
 
 Periodically, Firebase updates the Android configuration requirements for loading their SDK in your app. To validate that your Android configuration is sufficient for your version of Firebase, please consult Google’s [Firebase release notes](https://firebase.google.com/support/release-notes/android#). You can find the corresponding version of the Firebase SDK Segment required in each of the Segment-Firebase SDK versions by consulting the [Segment-Firebase changelog](https://github.com/segment-integrations/analytics-android-integration-firebase/blob/master/CHANGELOG.md). For example, Segment-Firebase 1.3.1 includes Firebase Core 17.0.1 as a dependency.
@@ -159,7 +164,7 @@ By default, we bundle only Firebase/Core which is [Firebase’s Analytics offeri
 
 If configuring for proxy HTTP calls, follow these additional steps once you have completed the above:
 
-1. Add this call: 
+1. Add this call:
 
 ```
 Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
@@ -172,9 +177,10 @@ Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
         })
         .build();
 ```
+
 2. Then add the following Swift, objC and Android configurations to point to MetaRouter:
 
-*Swift* 
+_Swift_
 
 ```
 configuration.requestFactory = { url in
@@ -188,7 +194,8 @@ configuration.requestFactory = { url in
             return NSMutableURLRequest.init(url: components?.url ?? url)
         }
 ```
-*objC*
+
+_objC_
 
 ```
 configuration.requestFactory = ^(NSURL *url) {
@@ -204,7 +211,7 @@ configuration.requestFactory = ^(NSURL *url) {
     };
 ```
 
-*Android*
+_Android_
 
 ```
 Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
@@ -227,6 +234,7 @@ Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
 ```
 
 #### Identify
+
 When you call `identify` the library will map to the corresponding Firebase Analytics calls:
 
 - If there is a `userId` on your `identify call`, the library triggers `setUserId` via the Firebase SDK
@@ -257,6 +265,7 @@ You are limited to 25 unique user properties per Firebase Console.
 Firebase automatically collects these [user properties](https://support.google.com/firebase/answer/6317486).
 
 #### Track
+
 When you call `track` MetaRouter will log the event with Firebase. Firebase automatically tracks [the events listed here](https://support.google.com/firebase/answer/6317485) and it will still do so when bundling with MetaRouter.
 
 Firebase has a limit of 500 distinctly named events so you should be intentional with what you track.
@@ -272,40 +281,42 @@ Like with user properties, the library will perform the following transformation
 Event parameter values must be fewer than 100 characters.
 
 ##### Event Mappings
+
 MetaRouter adheres to Firebase’s semantic event specification and maps the following MetaRouter specced events (left) to the corresponding Firebase events (right):
 
-| MetaRouter Event | Firebase Event |
-| ----------- | ----------- |
-| Products Searched	| search | 
-| Product List Viewed | view_item_list | 
-| Product Viewed | view_item | 
-| Product Clicked | select_content | 
-| Product Shared | share | 
-| Product Added | add_to_cart | 
-| Product Added To Wishlist | add_to_wishlist | 
-| Checkout Started | begin_checkout | 
-| Promotion Viewed | present_offer | 
-| Payment Info Entered | add_payment_info | 
-| Order Completed | ecommerce_purchase | 
-| Order Refunded | purchase_refundHeader | 
+| MetaRouter Event          | Firebase Event        |
+| ------------------------- | --------------------- |
+| Products Searched         | search                |
+| Product List Viewed       | view_item_list        |
+| Product Viewed            | view_item             |
+| Product Clicked           | select_content        |
+| Product Shared            | share                 |
+| Product Added             | add_to_cart           |
+| Product Added To Wishlist | add_to_wishlist       |
+| Checkout Started          | begin_checkout        |
+| Promotion Viewed          | present_offer         |
+| Payment Info Entered      | add_payment_info      |
+| Order Completed           | ecommerce_purchase    |
+| Order Refunded            | purchase_refundHeader |
 
 ##### Property Mappings
+
 MetaRouter maps the followed Segment specced properties (left) to the corresponding Firebase event parameters (right):
 
-| MetaRouter Property	| Firebase Property | Accepted Value(s) | 
-| ----------- | ----------- | ----------- |
-| category | item_category | (String) “kitchen supplies” | 
-| product_id | item_id | (String) “p1234” | 
-| name | item_name | (String) “Le Creuset pot” | 
-| price | price | (double) 1.0 | 
-| quantity | quantity | (long) 1 | 
-| query | search_term | (String) “Le Creuset” | 
-| shipping | shipping | (double) 2.0 | 
-| tax | tax | (double) 0.5 | 
-| total | value | (double) 3.99 or (long) 3.99 | 
-| revenue | value | (double) 3.99 or (long) 3.99 | 
-| order_id | transaction_id | (String) “o555636” | 
-| currency | currency | (String) “USD” | 
+| MetaRouter Property | Firebase Property | Accepted Value(s)            |
+| ------------------- | ----------------- | ---------------------------- |
+| category            | item_category     | (String) “kitchen supplies”  |
+| product_id          | item_id           | (String) “p1234”             |
+| name                | item_name         | (String) “Le Creuset pot”    |
+| price               | price             | (double) 1.0                 |
+| quantity            | quantity          | (long) 1                     |
+| query               | search_term       | (String) “Le Creuset”        |
+| shipping            | shipping          | (double) 2.0                 |
+| tax                 | tax               | (double) 0.5                 |
+| total               | value             | (double) 3.99 or (long) 3.99 |
+| revenue             | value             | (double) 3.99 or (long) 3.99 |
+| order_id            | transaction_id    | (String) “o555636”           |
+| currency            | currency          | (String) “USD”               |
 
 ##### Passing Revenue and Currency
 
@@ -354,6 +365,6 @@ Firebase has great logging. If you are having any issues, you can enable debug m
 Not much to do here now that you already have your MetaRouter-Firebase SDKs all set up! When you set up your destination within the MetaRouter UI, you will see the below fields:
 
 ![firebaseDestination](firebasedestination.png)
-In the "Name" field, simply name your destination. 
+In the "Name" field, simply name your destination.
 
-The iOS Deep Link URL Scheme only applies if you have installed the iOS Firebase integration and are utilizing Firebase Dynamic Linking (above). If are wondering what a iOS Deep Links are, here is an [article](https://www.originate.com/thinking/stories/deeplinking-in-ios/) that explains use cases for deep link URLs and how to create them. 
+The iOS Deep Link URL Scheme only applies if you have installed the iOS Firebase integration and are utilizing Firebase Dynamic Linking (above). If are wondering what a iOS Deep Links are, here is an [article](https://www.originate.com/thinking/stories/deeplinking-in-ios/) that explains use cases for deep link URLs and how to create them.

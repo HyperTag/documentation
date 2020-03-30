@@ -1,7 +1,11 @@
 ---
-title: Lytics
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Lytics
+
+path: '/cloud-destinations/lytics/'
 ---
+
 MetaRouter makes it easy to send your data to Lytics. Once you follow the steps below, your data will be routed through our platform and pushed to Lytics in the appropriate format.
 
 ## What is Lytics and how does it work?
@@ -12,7 +16,7 @@ Lytics crawls website text and images, automating digital catalogue and scoring 
 
 Lytics also enables drag-and-drop segmentation, which allows teams to target customers based on channel, revenue, growth, or at-risk status. Plus, Lytics independently integrates with more than 65 popular platforms like Twitter, AdRoll, and Google Ads.
 
-***Notes:***
+**_Notes:_**
 
 - Lytics collects its user data (name, email address) from a JavaScript library that you'd need to load on all pages of your site. This will power an in-app messaging feature and ensure you're not asking already-known users to opt in.
 
@@ -26,7 +30,7 @@ Integrating Lytics with MetaRouter means that you won't have to write any custom
 
 MetaRouter automatically maps `page`, `identify`, and `track` calls directly to Lytics, which then uses that customer data to power its implementations.
 
-***Note:** With MetaRouter you can also easily push data from mobile apps or servers to Lytics.*
+**\*Note:** With MetaRouter you can also easily push data from mobile apps or servers to Lytics.\*
 
 ## Getting Started with Lytics and MetaRouter
 
@@ -63,4 +67,4 @@ See the image below - you can check back in on the status of your project by goi
 
 ### Additional Features
 
-* `Stream` - Allows you to organize your data in Lytics. This is only necessary when you are tracking multiple websites
+- `Stream` - Allows you to organize your data in Lytics. This is only necessary when you are tracking multiple websites

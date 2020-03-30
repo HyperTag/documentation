@@ -1,7 +1,11 @@
 ---
-title: Amazon Kinesis
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Amazon Kinesis
+
+path: '/cloud-destinations/amazon-kinesis/'
 ---
+
 MetaRouter makes it easy to send your data to Amazon Kinesis. Once you follow the steps below, your data will be routed through our platform and pushed to Kinesis in the appropriate format.
 
 ## What is Amazon Kinesis?
@@ -54,6 +58,5 @@ Now, [follow these instructions to attach the IAM policy to the IAM user](http:/
 ### Astronomer Side
 
 Now, all you need to do is enable Kinesis as a destination in your Astronomer UI. You'll need to input your `AWS Region` and `Kinesis Stream Name`. Enable the destination to watch your data flow from your source to your Kinesis stream.
-
 
 Once you've created that policy, you need to attach it to the IAM user that you have also created. Now, you can flip over to the Astronomer UI and enable your Kinesis connector.

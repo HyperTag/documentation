@@ -1,10 +1,11 @@
 ---
 collectionKey: enterprise-destinations
-collectionIndex: 1
+collectionTitle: Enterprise Destinations
 
 navText: 'Adobe Analytics'
+navIndex: 3
 
-path: '/enterprise-adobe-analytics/'
+path: '/enterprise-destinations/adobe-analytics/'
 ---
 
 # Adobe Analytics

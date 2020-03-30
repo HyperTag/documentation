@@ -1,7 +1,11 @@
 ---
-title: Netmining
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Netmining
+
+path: '/cloud-destinations/netmining/'
 ---
+
 MetaRouter makes it easy to send your data to Netmining. Once you follow the steps below, your data will be routed through our platform and pushed to Netmining in the appropriate format.
 
 ## What is Netmining and how does it work?

@@ -1,6 +1,9 @@
 ---
-title: Lucky Orange
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Lucky Orange
+
+path: '/cloud-destinations/lucky-orange/'
 ---
 
 MetaRouter makes it easy to send your data to [Lucky Orange](https://www.luckyorange.com/). Once you follow the steps below, your data will be routed through our platform and pushed to Lucky Orange in the appropriate format.
@@ -8,7 +11,6 @@ MetaRouter makes it easy to send your data to [Lucky Orange](https://www.luckyor
 ## What is Lucky Orange and how does it work?
 
 Lucky Orange lets you see users on your site and interact with them in many ways. With Lucky Orange, you can chat with visitors on your site, watch their mouse movements (eye tracking) on the screen, and scroll depth, clicks in real time, play them back as recording, generate heat maps of clicks, create quick polls, and more.
-
 
 ## Why send data to Lucky Orange using MetaRouter?
 
@@ -18,7 +20,7 @@ With MetaRouter, you can use Lucky Orange without having to install their JavaSc
 
 To get started sending events to Lucky Orange, first sign up for [an account](https://www.luckyorange.com/).
 
-***Note**: Lucky Orange is available as a client-side destination only.*
+**\*Note**: Lucky Orange is available as a client-side destination only.\*
 
 ### Lucky Orange Side
 
@@ -28,7 +30,7 @@ Begin by logging into your [Lucky Orange](https://www.luckyorange.com/) account.
 
 The generated Lucky Orange tracking code contains your site id (shown blured in the above image). Copy this value.
 
-***Note**: You can always grab this value by accessing Settings > General.*
+**\*Note**: You can always grab this value by accessing Settings > General.\*
 
 ### MetaRouter Side
 
@@ -46,14 +48,14 @@ Auto-Tagging option will send all analytics.js triggered events from your websit
 
 #### Custom mapping
 
-To map an event to a specific tag, unckeck *Auto-Tagging* option - *Map Analytics Events to Lucky Orange tags* section wiil be available. Here you can define your own mappings between an [e-commerce event](https://docs.metarouter.io/v2/clickstream/ecommerce.html) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
+To map an event to a specific tag, unckeck _Auto-Tagging_ option - _Map Analytics Events to Lucky Orange tags_ section wiil be available. Here you can define your own mappings between an [e-commerce event](https://docs.metarouter.io/v2/clickstream/ecommerce.html) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
 
-* Event name (required) - the name of your analytics.js event
-* Tag (required) the name of your Lucky Orange tag
-* Star - by checking this box, the triggered tag will be starred on your Lucky Orange's dashboard
-* Overwrite - by checking this box, the triggered tag will overwrite any existing tags on your Lucky Orange's dashboard
+- Event name (required) - the name of your analytics.js event
+- Tag (required) the name of your Lucky Orange tag
+- Star - by checking this box, the triggered tag will be starred on your Lucky Orange's dashboard
+- Overwrite - by checking this box, the triggered tag will overwrite any existing tags on your Lucky Orange's dashboard
 
-***Note:** Only triggered events that have a mapping defined will be sent to Lucky Orange's APIs.*
+**\*Note:** Only triggered events that have a mapping defined will be sent to Lucky Orange's APIs.\*
 
 ![luckyorange4](../../../images/luckyorange4.png)
 
@@ -66,10 +68,10 @@ Finally, click `Save` to activate your pipeline.
 If you haven't had a chance to review our spec, please take a look to understand what the [Identify method](https://docs.metarouter.io/v2/clickstream/calls.html#identify) does. An example call would look like:
 
 ```javascript
-analytics.identify("1205119", {
-  name: "Dagny Smith", 
-  email: "dagny@metarouter.io", 
-});
+analytics.identify('1205119', {
+  name: 'Dagny Smith',
+  email: 'dagny@metarouter.io',
+})
 ```
 
 Calling `identify()` will create/update visitors in Lucky Orange. All traits are sent to Lucky Orange and each trait will create a new column in the visitor's view. If name and email are set in an `identify()` call, Lucky Orange will also try to find an Gravatar associated with the user.
@@ -81,7 +83,7 @@ Calling `identify()` will create/update visitors in Lucky Orange. All traits are
 If you haven't had a chance to review our spec, please take a look to understand what the [Track method](https://docs.metarouter.io/v2/clickstream/calls.html#track) does. An example call would look like:
 
 ```javascript
-analytics.track("Your Event Name", {});
+analytics.track('Your Event Name', {})
 ```
 
 Based on your configuration, there are 2 possible scenarios, as described below.
@@ -91,37 +93,37 @@ Based on your configuration, there are 2 possible scenarios, as described below.
 This option allows you to fire events without needing to map it on your configurations page on MetaRouter's dashboard.
 For flexibility, there are a few ways for you to benefit of. Here are some examples:
 
-* Default `track()` usage
+- Default `track()` usage
 
   ```javascript
   analytics.track('Products Searched', {
-    query: 'white dress'
-  });
+    query: 'white dress',
+  })
   ```
 
   Since no custom data is set inside properties, default values used are as follows:
 
-  * tag - event name - for this example, tag will be 'Products Searched'
-  * star - `false`
-  * overwrite - `false`
+  - tag - event name - for this example, tag will be 'Products Searched'
+  - star - `false`
+  - overwrite - `false`
 
   ![luckyorange7](../../../images/luckyorange7.png)
 
-* Custom `track()` usage
+- Custom `track()` usage
 
   You can customize each `track()` call with these properties:
 
-  * `tag` *(optional, defaults to event's name)* - **String** - Lucky Orange tag name
-  * `star` *(optional, default `false`)* - **Boolean** - Lucky Orange star property
-  * `overwrite` *(optional, default `false`)* - **Boolean** - Lucky Orange overwrite property
+  - `tag` _(optional, defaults to event's name)_ - **String** - Lucky Orange tag name
+  - `star` _(optional, default `false`)_ - **Boolean** - Lucky Orange star property
+  - `overwrite` _(optional, default `false`)_ - **Boolean** - Lucky Orange overwrite property
 
   ```javascript
   analytics.track('Products Searched', {
     query: 'white dress',
     tag: 'Your Tag Here',
     star: true,
-    overwrite: true
-  });
+    overwrite: true,
+  })
   ```
 
   ![luckyorange8](../../../images/luckyorange8.png)

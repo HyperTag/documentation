@@ -1,9 +1,12 @@
 ---
-title: Calq
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Calq
+
+path: '/cloud-destinations/calq/'
 ---
 
-MetaRouter makes it easy to send your data to Calq. Once you follow the steps below, your data will be routed through our platform and pushed to Calq in the appropriate format. 
+MetaRouter makes it easy to send your data to Calq. Once you follow the steps below, your data will be routed through our platform and pushed to Calq in the appropriate format.
 
 ## What is Calq and how does it work?
 
@@ -27,7 +30,7 @@ Once you create an account with Calq, you'll be asked to create a new project.
 
 ![calq1](../../../images/calq1.png)
 
-After you create a new project, you will be given a write key. 
+After you create a new project, you will be given a write key.
 
 ![calq2](../../../images/calq2.png)
 

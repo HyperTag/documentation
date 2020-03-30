@@ -1,6 +1,9 @@
 ---
-title: Bing Ads
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Microsoft Advertising
+
+path: '/cloud-destinations/microsoft-advertising/'
 ---
 
 MetaRouter makes it easy to send your data to Bing Ads. Once you follow the steps below, your data will be routed through our platform and pushed to Bing Ads in the appropriate format.
@@ -21,7 +24,7 @@ With MetaRouter, send page and event data to Bing Ads without having to edit cod
 
 Bing Ads will record all of your page views and events sent via `page` and `track`, giving you access to data that you can use to create custom goals and conversions directly on Bing Ads.
 
-***Note**: Bing Ads is available as a client-side destination only.*
+**\*Note**: Bing Ads is available as a client-side destination only.\*
 
 ### Bing Side
 

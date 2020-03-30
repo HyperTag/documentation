@@ -1,6 +1,9 @@
 ---
-title: Criteo
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Criteo
+
+path: '/cloud-destinations/criteo/'
 ---
 
 MetaRouter makes it easy to send your data to Criteo. Once you follow the steps below, your data will be routed through our platform and pushed to Criteo in the appropriate format.
@@ -17,16 +20,15 @@ In order to track key conversion events, Criteo requires the installation of the
 
 Integrating Criteo with MetaRouter eliminates the need to add any Criteo code tags to your application. Once you enable Criteo in your MetaRouter UI, you will be able to automatically route all your date directly to Criteo from our servers.
 
-
 ## Getting Started with Criteo and MetaRouter
 
 ### Criteo Side
 
-To get started sending events to Criteo, you'll need to have signed up for [Criteo Remarketing](http://www.criteo.com/) and working with a Criteo Account Strategist to plan your remarketing campaign.  You'll need a few technical components from your Account Strategist to move forward with enabling this connector. Note that this destination supports the client-side analytics.js source only.
+To get started sending events to Criteo, you'll need to have signed up for [Criteo Remarketing](http://www.criteo.com/) and working with a Criteo Account Strategist to plan your remarketing campaign. You'll need a few technical components from your Account Strategist to move forward with enabling this connector. Note that this destination supports the client-side analytics.js source only.
 
-Begin by retrieving and deploying the latest version of Criteo's loader file (a `.js` file that should get loaded into your page by your servers).  You'll also need your remarketing campaign tags to enable tracking with MetaRouter.
+Begin by retrieving and deploying the latest version of Criteo's loader file (a `.js` file that should get loaded into your page by your servers). You'll also need your remarketing campaign tags to enable tracking with MetaRouter.
 
-Once your loader `.js` file is deployed on your page, you'll be ready to configure the Criteo connector within your MetaRouter UI.  
+Once your loader `.js` file is deployed on your page, you'll be ready to configure the Criteo connector within your MetaRouter UI.
 
 ### MetaRouter Side
 

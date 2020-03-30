@@ -1,6 +1,9 @@
 ---
-title: OutBrain
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: OutBrain
+
+path: '/cloud-destinations/outbrain/'
 ---
 
 MetaRouter makes it easy to send your data to OutBrain. Once you follow the steps below, your data will be routed through our platform and pushed to OutBrain in the appropriate format.
@@ -17,7 +20,7 @@ MetaRouter data will better leverage your use of the OutBrain platform, empoweri
 
 ## Getting Started with OutBrain and MetaRouter
 
-***Note:** This connector supports client-side analytics.js only.  You also need to have instrumented MetaRouter [inside your website](../sources/analyticsjs.md) prior to enabling this connector.*
+**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](../sources/analyticsjs.md) prior to enabling this connector.\*
 
 ### OutBrain Side
 
@@ -35,6 +38,6 @@ Lastly, input the OutBrain events you want to track. This is something like: `em
 
 Click on `Save` at the bottom of the form to activate your pipeline.
 
-Once your pipeline is activated, navigate over to the `Logs` or `Analytics` section to monitor live data. 
+Once your pipeline is activated, navigate over to the `Logs` or `Analytics` section to monitor live data.
 
-With that - you're ready for insights! 
+With that - you're ready for insights!

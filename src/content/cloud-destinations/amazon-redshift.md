@@ -1,7 +1,11 @@
 ---
-title: Amazon Redshift
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Amazon Redshift
+
+path: '/cloud-destinations/amazon-redshift/'
 ---
+
 MetaRouter makes it easy to send your data to Amazon Redshift. Once you follow the steps below, your data will be routed through our platform and pushed to Redshift in the appropriate format. Before we get started, there are a few important things to note about our Redshift integration.
 
 1. You will not immediately see events in your Redshift upon configuration. The first time your data is loaded into Redshift, it will take some added time to run DDL logic to create tables, add columns, etc.
@@ -22,20 +26,18 @@ This guide will explain how to integrate Redshift into MetaRouter's platform as 
 
 Our connector periodically runs an ETL (Extract - Transform - Load) process that pulls raw event data in S3, processes and transforms those raw events into a structured format, and then inserts structured event data from our bucket into your Redshift cluster.
 
-
 # Getting started with Amazon Redshift
 
 ## Step 1. Pick a cluster that fits your needs
 
-***Note**: If you already have a Redshift cluster, go ahead to step 3*
+**\*Note**: If you already have a Redshift cluster, go ahead to step 3\*
 
- Once you've logged into your AWS account and Redshift console, it's time to pick and select your cluster.
+Once you've logged into your AWS account and Redshift console, it's time to pick and select your cluster.
 
- As you do this, remember that the capacity you'll need and utilize depends primarily on the number of unique tables and columns created in the cluster, not the number of events (database records).
- Each unique `track` event creates a new table, and each property sent creates a new column in that table. For this reason, think about creating a detailed tracking plan to make sure that all events being passed to MetaRouter are necessary and consistent.
+As you do this, remember that the capacity you'll need and utilize depends primarily on the number of unique tables and columns created in the cluster, not the number of events (database records).
+Each unique `track` event creates a new table, and each property sent creates a new column in that table. For this reason, think about creating a detailed tracking plan to make sure that all events being passed to MetaRouter are necessary and consistent.
 
- There are two kinds of Redshift clusters, Dense Compute and Dense Storage.
-
+There are two kinds of Redshift clusters, Dense Compute and Dense Storage.
 
 #### Dense Compute Cluster
 
@@ -67,7 +69,7 @@ Once you provision your Redshift cluster, you'll need to configure your Redshift
 
 The <i>Username</i> and <i>Password</i> you used to initially create the cluster are the credentials you'll put into your MetaRouter account. You should NOT use your master AWS credentials here. If you want to switch clusters in the future, make sure you update your Username and Password as needed.
 
-For MetaRouter, having *distinct users* will allow you to (i) isolate queries from one another and (ii) perform audits more easily.
+For MetaRouter, having _distinct users_ will allow you to (i) isolate queries from one another and (ii) perform audits more easily.
 
 To create a new user, you'll need to log into the Redshift database directly. Here's the SQL command:
 
@@ -82,6 +84,7 @@ GRANT CREATE ON DATABASE "<enter database name here>" TO "metarouter";
 **Note: Because we do not persist or store your data, MetaRouter will be unable to recover any events lost due to improper Redshift credentials or configuration by the user.**
 
 ### Configure Security Groups
+
 Redshift clusters can either be in a EC2 Classic subnet or VPC subnet
 
 If your cluster has a field called `Cluster Security Groups`, go ahead to EC2-Classic.
@@ -91,6 +94,7 @@ If your cluster has a field called `VPC Security Groups`, go ahead to EC2 VPC.
 **EC2-Classic**
 
 1. Navigate to your Redshift Cluster settings
+
 ```
 Redshift Dashboard > Clusters > Select Your Cluster
 ```
@@ -106,6 +110,7 @@ Redshift Dashboard > Clusters > Select Your Cluster
 **EC2-VPC**
 
 1. Navigate to your Redshift Cluster settings
+
 ```
 Redshift Dashboard > Clusters > Select Your Cluster
 ```
@@ -122,9 +127,8 @@ Redshift Dashboard > Clusters > Select Your Cluster
 
 7. Make sure the "Publicly Accessible" option is set to "Yes"
 
-
-
 ### Whitelist MetaRouter's IP.
+
 Make sure that you whitelist `35.245.140.149` and `35.236.193.215` as an incoming IP Addresses so we can write to your Redshift instance without you exposing the database to everyone.
 
 ---
@@ -141,14 +145,13 @@ The Host and Port are found at the top beside the label 'Endpoint,' with Host co
 
 After you've identified the <b>Username, Password, Host, Port,</b> and <b>Database Name</b>, put all of these credentials into your MetaRouter account and give your new connection a unique name.
 
-Note that your *Database* and *Schema* are kept separate from your other connection credentials. *Schema* is required, but it's up to you to decide what value to input - think of it as a folder to store your clickstream in. Example values include `analytics_ios`, `clickstream_web`, etc.
+Note that your _Database_ and _Schema_ are kept separate from your other connection credentials. _Schema_ is required, but it's up to you to decide what value to input - think of it as a folder to store your clickstream in. Example values include `analytics_ios`, `clickstream_web`, etc.
 
 Click `Create Destination` and your pipeline will be activated.
 
 That's it! You'll now be receiving a livestream of data from your application into your private Redshift account.
 
 ![amazon-redshift1](../../../images/amazon-redshift1v2.gif)
-
 
 ## Things to note
 
@@ -162,7 +165,7 @@ The speed of your queries depends on the capabilities of your hardware, the size
 
 ### Naming Conventions
 
-Be sure that the `Database` field exactly matches your Redshift `Database Name`. MetaRouter will create a new schema within this database, but will not automatically create a new database for you. 
+Be sure that the `Database` field exactly matches your Redshift `Database Name`. MetaRouter will create a new schema within this database, but will not automatically create a new database for you.
 
 If you wish to create a completely new database for your clickstream data, you can read about how to do that [here](http://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_DATABASE.html).
 

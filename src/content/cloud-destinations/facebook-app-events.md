@@ -1,6 +1,9 @@
 ---
-title: Facebook App Events
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Facebook App Events
+
+path: '/cloud-destinations/facebook-app-events/'
 ---
 
 Available for server-side and mobile sources, MetaRouter makes it easy to send your data to Facebook App Events. Once you follow the steps below, your data will be routed through our platform and pushed to Facebook App Events in the appropriate format.
@@ -41,17 +44,17 @@ Input your `appid` and App Event Mappings. Note that we'll automatically transla
 
 The standard event mappings are listed below - any standard event fired will be translated to the corresponding Facebook event.
 
-| Value | Translation |
-|-------|-------------|
-| Application Installed | MOBILE_APP_INSTALL |
-| Application Opened | fb_mobile_activate_app |
-| Products Searched | fb_mobile_search |
-| Product Viewed | fb_mobile_content_view |
-| Product Added | fb_mobile_add_to_cart |
-| Product Added to Wishlist | fb_mobile_add_to_wishlist |
-| Payment Info Entered | fb_mobile_add_payment_info |
-| Checkout Started | fb_mobile_initiated_checkout |
-| Order Completed | fb_mobile_purchase |
+| Value                     | Translation                  |
+| ------------------------- | ---------------------------- |
+| Application Installed     | MOBILE_APP_INSTALL           |
+| Application Opened        | fb_mobile_activate_app       |
+| Products Searched         | fb_mobile_search             |
+| Product Viewed            | fb_mobile_content_view       |
+| Product Added             | fb_mobile_add_to_cart        |
+| Product Added to Wishlist | fb_mobile_add_to_wishlist    |
+| Payment Info Entered      | fb_mobile_add_payment_info   |
+| Checkout Started          | fb_mobile_initiated_checkout |
+| Order Completed           | fb_mobile_purchase           |
 
 For any event that's not listed above (a custom event that you would like to be translated to a specific Facebook standard event) you need to fill out the `event mappings` section of this destination. Place the event name of your `track` call in the `key` column on the left hand side (e.g. `Added to Cart`) and the corresponding `value` from the table above on the right hand side (e.g. `fb_mobile_add_to_cart`). Be sure that the names are spelled correctly!
 

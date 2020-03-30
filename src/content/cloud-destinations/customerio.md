@@ -1,6 +1,9 @@
 ---
-title: Customer.io
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Customer.io
+
+path: '/cloud-destinations/customer-io/'
 ---
 
 MetaRouter makes it easy to send your data to Customer.io. Once you follow the steps below, your data will be routed through our platform and pushed to Customer.io in the appropriate format.
@@ -11,7 +14,7 @@ Customer.io is an automated email based on customer behavioral data. It allows y
 
 Using Customer.io involves placing their JavaScript snippet in the footer of your website and using their client libraries.
 
-*Note that Customer.io accepts a maximum of 30 unique traits per identify call. If you have more than 30 traits attached to these calls, some will not be passed. Furthermore, Customer.io will only ingest a certain amount of data for each call sent to it. If you are not seeing specific attributes for the calls you are sending to Customer.io, ensure that you have not exceeded this limit.*
+_Note that Customer.io accepts a maximum of 30 unique traits per identify call. If you have more than 30 traits attached to these calls, some will not be passed. Furthermore, Customer.io will only ingest a certain amount of data for each call sent to it. If you are not seeing specific attributes for the calls you are sending to Customer.io, ensure that you have not exceeded this limit._
 
 [Learn more about customer.io.](https://customer.io/)
 
@@ -92,4 +95,3 @@ Remember that before we can send events to Customer.io from client-side Javascri
 ### Page events not being associated with user
 
 Page events will only be associated to a user if the user has been previously identified in Customer.io. If you identify a user after making Page calls, the previous page events will not be associated to the user in Customer.io.
-

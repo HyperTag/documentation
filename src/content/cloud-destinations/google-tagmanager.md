@@ -1,6 +1,9 @@
 ---
-title: Google Tag Manager
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Google Tag Manager
+
+path: '/cloud-destinations/google-tag-manager/'
 ---
 
 Available for client-side sources, MetaRouter makes it easy to send your data to Google Tag Manager. Once you've set up your source to start tracking data, we'll translate and route that data to Google.
@@ -17,11 +20,9 @@ GTM works through a snippet that you'd normally have to include in all of your p
 
 ## Why send data to Google Tag Manager using MetaRouter?
 
-
 With MetaRouter's GTM integration, you won't have to worry about loading GTM's snippet onto every single one of your pages or installing SKDs for iOS and Android mobile apps. Instead, GTM will be automatically loaded onto any pages where your MetaRouter snippet is initialized and your `analytics.js` page gets called in client-side JavaScript.
 
 MetaRouter's integration only requires the `Container ID` tied to your account. Skip the headache and get straight to insights.
-
 
 ## Getting Started with Google Tag Manager and MetaRouter
 
@@ -35,12 +36,11 @@ You'll immediately be given a GTM container `snippet`. Since you're using MetaRo
 
 ![google-tagmanager2](../../../images/google-tagmanager2.png)
 
-
 You'll then be taken to your "Workspace". Look to the top right of that page to find your `Container ID` - formatted GTM-XXXXXX.
 
 ![google-tagmanager3](../../../images/google-tagmanager3.png)
 
-*Still need help setting up Google Tag Manager? Check out [this page](https://support.google.com/tagmanager/answer/6103696?hl=en).*
+_Still need help setting up Google Tag Manager? Check out [this page](https://support.google.com/tagmanager/answer/6103696?hl=en)._
 
 ### MetaRouter Side
 
@@ -58,4 +58,4 @@ With that, you're all set!
 
 Once you enable this pipeline, you'll be able to trigger MetaRouter events by entering `analytics.track` or `analytics.page` calls into GTM.
 
-***Note:** Don't forget to "publish" your GTM container before trying to load it with MetaRouter.*
+**\*Note:** Don't forget to "publish" your GTM container before trying to load it with MetaRouter.\*

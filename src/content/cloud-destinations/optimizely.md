@@ -1,7 +1,11 @@
 ---
-title: Optimizely
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Optimizely
+
+path: '/cloud-destinations/optimizley/'
 ---
+
 MetaRouter makes it easy to send your data to Optimizely. Once you follow the steps below, your data will be routed through our platform and pushed to Optimizely in the appropriate format.
 
 ## What is Optimizely and how does it work?
@@ -16,38 +20,42 @@ When you use Optimizely with MetaRouter, all `track` calls are automatically sen
 
 ## Getting Started with Optimizely and MetaRouter
 
-Our Optimizely connector allows you to send events directly into Optimizely.  From there, you can record your Optimizely experiments or campaigns back into MetaRouter, enabling you to analyze Optimizely data inside any other enabled tools within your MetaRouter application.
+Our Optimizely connector allows you to send events directly into Optimizely. From there, you can record your Optimizely experiments or campaigns back into MetaRouter, enabling you to analyze Optimizely data inside any other enabled tools within your MetaRouter application.
 
 This connector supports either Classic, Optimizely X, or both.
 
 Note that the Optimizely `<script>` tag needs to be on the page right away (MetaRouter can’t load its client side library for you). In order to broadcast events, you must embed the Optimizely `<script>` tag in the `<head>` element on your page <b>before</b> the MetaRouter snippet.
 
-See [this instructional video by Optimizely](https://help.optimizely.com/Set_Up_Optimizely/Implement_the_snippet_for_Optimizely_Classic) to find and embed their JavaScript snippet.  You'll want to include this snippet on every page you want to run experiments on (and remember, BEFORE the MetaRouter snippet!). This connector supports client-side analytics.js (no server-side, iOS, or Android analytics).
+See [this instructional video by Optimizely](https://help.optimizely.com/Set_Up_Optimizely/Implement_the_snippet_for_Optimizely_Classic) to find and embed their JavaScript snippet. You'll want to include this snippet on every page you want to run experiments on (and remember, BEFORE the MetaRouter snippet!). This connector supports client-side analytics.js (no server-side, iOS, or Android analytics).
 
 To begin, create an [Optimizely](https://www.optimizely.com/) account, retrieve your [JavaScript snippet](https://help.optimizely.com/Set_Up_Optimizely/Implement_the_snippet_for_Optimizely_Classic), and embed the snippet in each page that you want to run experiments on before the MetaRouter snippet.
 
 Within your MetaRouter configuration, add the Optimizely destination connector, and give your new connection a unique name.
 
-Then, configure the Optimizely connector to support your desired features.  The steps for this will vary depending on whether you're deploying [Optimizely Classic](https://help.optimizely.com/Measure_success%3A_Track_visitor_behaviors/Custom_event_goals_in_Optimizely_Classic) or [Optimizely X Web](https://help.optimizely.com/Build_Campaigns_and_Experiments/Custom_events_in_Optimizely_X).
+Then, configure the Optimizely connector to support your desired features. The steps for this will vary depending on whether you're deploying [Optimizely Classic](https://help.optimizely.com/Measure_success%3A_Track_visitor_behaviors/Custom_event_goals_in_Optimizely_Classic) or [Optimizely X Web](https://help.optimizely.com/Build_Campaigns_and_Experiments/Custom_events_in_Optimizely_X).
 
 ### Additional Features
 
 #### Send experiment data to other tools (as an identify call)
+
 This is not recommended because if you’re running lots of experiments, this could lead to lots of unwanted properties in end tools, in addition to unwanted columns in MetaRouter-connected databases.
 
 #### Track Named Pages
+
 This will track events to Optimizely for page method calls that have a name associated with them.
 
 #### Track Categorized Pages
+
 This tracks events to Optimizely for page calls that have a category associated with them.
 
 #### Send experiment data to other tools (as a track call)
+
 Sends the experiment and variation information as properties on a track call.
 
 #### Send `Experiment Viewed` as a non-interaction event
+
 Specifies the Experiment Viewed as a non-interaction event for Google Analytics.
 
 ![optimizely1](../../../images/optimizely1v2.png)
-
 
 Click `Save` and your pipeline will be activated.

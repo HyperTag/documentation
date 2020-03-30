@@ -1,9 +1,12 @@
 ---
-title: Hotjar
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Hotjar
+
+path: '/cloud-destinations/hotjar/'
 ---
 
-MetaRouter makes it easy to send your data to Hotjar. Once you follow the steps below, your data will be routed through our platform and pushed to Hotjar in the appropriate format. 
+MetaRouter makes it easy to send your data to Hotjar. Once you follow the steps below, your data will be routed through our platform and pushed to Hotjar in the appropriate format.
 
 ## What is Hotjar and how does it work?
 
@@ -17,6 +20,6 @@ MetaRouter will automatically load the Hotjar script once you've enabled the int
 
 ## Getting Started with Hotjar and MetaRouter
 
-Hotjar automatically tracks visits and bound page events that you've defined in your Hotjar account. When MetaRouter loads the Hotjar snippet, the trigers that you've defined in your  Hotjar profile are automatically placed on your website and will function normally. 
+Hotjar automatically tracks visits and bound page events that you've defined in your Hotjar account. When MetaRouter loads the Hotjar snippet, the trigers that you've defined in your Hotjar profile are automatically placed on your website and will function normally.
 
 All you need to do to start using Hotjar with MetaRouter is input your `Hotjar Snippet Version` and your `Hotjar ID` in the MetaRouter UI. Both of these items can be found within your Hotjar account.

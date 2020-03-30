@@ -1,6 +1,9 @@
 ---
-title: Sailthru
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Sailthru
+
+path: '/cloud-destinations/sailthru/'
 ---
 
 MetaRouter makes it easy to send your data to Sailthru. Once you follow the steps below, your data will be routed through our platform and pushed to Sailthru in the appropriate format.
@@ -9,11 +12,9 @@ MetaRouter makes it easy to send your data to Sailthru. Once you follow the step
 
 [Sailthru](https://www.sailthru.com/) is the complete, unified and integrated marketing solution which allows purchases tracking, content personalization and email managing. You can visit their docs [here](https://getstarted.sailthru.com/).
 
-
 ## Why send data to Sailthru using MetaRouter?
 
 With MetaRouter, you can use Sailthru without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once your Sailthru is routed through MetaRouter, our platform translates page views and events into corresponding Sailthru events.
-
 
 ## Getting Started with Sailthru and MetaRouter
 
@@ -38,7 +39,7 @@ You must configure a `clientId` in your integration settings in order to utilize
 
 When you call page, we will hit the Sailthru page endpoint and you will see the calls populate in the **Sailthru Realtime Dashboard**.
 
-The `context.page.url` is also a required field for all page calls, so be sure this is present on each call. The url *must* be a domain name, otherwise the request will fail.
+The `context.page.url` is also a required field for all page calls, so be sure this is present on each call. The url _must_ be a domain name, otherwise the request will fail.
 
 We will automatically handle the proper identification of user’s in Sailthru via the Analytics.js `userId`.
 
@@ -46,8 +47,8 @@ Sailthru provides an out of band web scraper that will automatically collect con
 
 ```javascript
 analytics.page('Page Name', {
-  tags: ['football', 'new york giants', 'eli manning']
-});
+  tags: ['football', 'new york giants', 'eli manning'],
+})
 ```
 
 ### Identify
@@ -60,18 +61,22 @@ An identify event will appear in Sailthru’s user lookup feature if there is an
 
 ![sailthru-identify-dashboard](../../../images/sailthru-identify-dashboard.png)
 
-Or within the *Users > Lists* feature, based on the default list you configured in the Metarouter UI or passed in through the destinations object like so:
+Or within the _Users > Lists_ feature, based on the default list you configured in the Metarouter UI or passed in through the destinations object like so:
 
 ```javascript
-analytics.identify("38472034892",{
-    "name": "Hamurai",
-    "email": "Hamurai@gmail.com",
-    "quote": "Rick, you love those BBQs, Rick"
-  },{
-    Sailthru:{
-      defaultListName: "testingList"
-    }
-  });
+analytics.identify(
+  '38472034892',
+  {
+    name: 'Hamurai',
+    email: 'Hamurai@gmail.com',
+    quote: 'Rick, you love those BBQs, Rick',
+  },
+  {
+    Sailthru: {
+      defaultListName: 'testingList',
+    },
+  }
+)
 ```
 
 ![sailtrhu-default-list-name](../../../images/sailtrhu-default-list-name.png)
@@ -79,15 +84,19 @@ analytics.identify("38472034892",{
 You can also configure an `optoutValue` value in the MetaRouter UI, or pass in a value through the destinations object with one of the Sailthru expected values:
 
 ```javascript
-analytics.identify("3242351231",{
-    "name": "Duck With Muscles",
-    "email": "MusclesQuack@gmail.com",
-    "quote":  "Oh, wow...Baby Wizard was a Parasite?!"
-  },{
-    Sailthru:{
-      optoutValue: "basic"
-    }
-  });
+analytics.identify(
+  '3242351231',
+  {
+    name: 'Duck With Muscles',
+    email: 'MusclesQuack@gmail.com',
+    quote: 'Oh, wow...Baby Wizard was a Parasite?!',
+  },
+  {
+    Sailthru: {
+      optoutValue: 'basic',
+    },
+  }
+)
 ```
 
 So if you send an`identify` call without a `traits.email` and only a `userId`, the profile will be created in Sailthru but you would not be able to find that user via their **User Look Up** feature.
@@ -128,25 +137,25 @@ Sailthru does not allow the `extid` to be the main lookup identifier for their P
 
 If the user and their email does not exist in Sailthru, the event will throw an error. If the user exists, the purchase will be added to their profile. Be sure to call `identify` with an `email` passed in the `traits` object prior to the `Order Completed`, `Order Updated`, `Product Added` and `Product Removed` events. If you are sending events using one of MetaRouter’s server-side libraries and want to be sure, you can also send the email value in your `track` calls under `properties.email`.
 
-Once `Order Completed` is triggered, MetaRouter will pass in `incomplete: 0 `to signify that the order is now complete. MetaRouter will map the following Sailthru **required fields** from the **v2 Order Completed Spec**:
+Once `Order Completed` is triggered, MetaRouter will pass in `incomplete: 0`to signify that the order is now complete. MetaRouter will map the following Sailthru **required fields** from the **v2 Order Completed Spec**:
 
-| Sailthru spec | Analytics.js spec |
-| --------------------------------- | -------------------------- |
-| title                   | products.$.name               |
-| qty               | products.$.quantity   |
-| price                   |products.$.price                  |
-| id                | products.$.product_id           |
-| url                      | products.$.url             |
+| Sailthru spec | Analytics.js spec      |
+| ------------- | ---------------------- |
+| title         | products.\$.name       |
+| qty           | products.\$.quantity   |
+| price         | products.\$.price      |
+| id            | products.\$.product_id |
+| url           | products.\$.url        |
 
-*Note*: the url field is required by Sailthru for each product. If it’s not explicitly attached to the product, MetaRouter will pull this value out from the `context.page.url` for you, or if this value is not present, we'll use `productBaseUrl` value configured in Metarouter UI.
+_Note_: the url field is required by Sailthru for each product. If it’s not explicitly attached to the product, MetaRouter will pull this value out from the `context.page.url` for you, or if this value is not present, we'll use `productBaseUrl` value configured in Metarouter UI.
 
 In addition, the following optional parameters will be mapped:
 
-| Sailthru spec | Analytics.js spec |
-| --------------------------------- | -------------------------- |
-| tags                   | products.$.tags               |
-| image_url               | products.$.image_url                |
-| image_url_thumb                   |products.$.image_url_thumb          |
+| Sailthru spec   | Analytics.js spec           |
+| --------------- | --------------------------- |
+| tags            | products.\$.tags            |
+| image_url       | products.\$.image_url       |
+| image_url_thumb | products.\$.image_url_thumb |
 
 `adjustments` is not a standard Analytics.js event, but we'll apply the values from `properties.tax`, `properties.shipping` and `properties.discount`.
 
@@ -155,36 +164,41 @@ Note that purchases cannot be edited once they are posted.
 ### Purchase confirmation
 
 For `Order Completed` events you can configure an additional `sendTemplate` parameter, which will send a transactional email for purchase confirmation. `sendTemplate` parameter must match the **public name** configured in Sailthru’s UI.
+
 ```javascript
-analytics.track('Order Completed', {
-  checkout_id: 'skdjsidjsd23209euhdqj32kdj29j',
-  order_id: '50314b8e9bcf000000000000',
-  total: 21.49,
-  revenue: 18.99,
-  shipping: 3,
-  tax: 2,
-  discount: 2.5,
-  coupon: 'MAYDEALS',
-  currency: 'USD',
-  products: [
-    product_id: '507f1f77bcf86cd799439011',
-    sku: 'G-32',
-    category: 'Games',
-    name: 'Monopoly: 3rd Edition',
-    brand: 'Hasbro',
-    variant: '200 pieces',
-    price: 18.99,
-    quantity: 1,
-    
-    position: 3,
-  ]
-}, {
-  integrations: {
-    Sailthru: {
-      sendTemplate: 'test-send',
-    },
+analytics.track(
+  'Order Completed',
+  {
+    checkout_id: 'skdjsidjsd23209euhdqj32kdj29j',
+    order_id: '50314b8e9bcf000000000000',
+    total: 21.49,
+    revenue: 18.99,
+    shipping: 3,
+    tax: 2,
+    discount: 2.5,
+    coupon: 'MAYDEALS',
+    currency: 'USD',
+    products: [
+      (product_id: '507f1f77bcf86cd799439011'),
+      (sku: 'G-32'),
+      (category: 'Games'),
+      (name: 'Monopoly: 3rd Edition'),
+      (brand: 'Hasbro'),
+      (variant: '200 pieces'),
+      (price: 18.99),
+      (quantity: 1),
+
+      (position: 3),
+    ],
   },
-});
+  {
+    integrations: {
+      Sailthru: {
+        sendTemplate: 'test-send',
+      },
+    },
+  }
+)
 ```
 
 ### Abandoned Cart Events
@@ -195,28 +209,31 @@ To leverage the functionality of sending transactional emails when a user abando
 
 If you send in a `Product Added` event without a valid template, Sailthru will return an error. If you send in a `Product Added` event with the `reminderTemplate` param, it will successfully send in and appear in the user view within their **incomplete purchase cart**. Some example values for `reminderTime` are 60 minutes, 24 hrs, 2 weeks. MetaRouter will handle passing in the `+` increment.
 
-
 ```javascript
-analytics.track('Product Added', {
-  cart_id: 'skdjsidjsdkdj29j',
-  product_id: '507f1f77bcf86cd799439011',
-  sku: 'G-32',
-  category: 'Games',
-  name: 'Monopoly: 3rd Edition',
-  brand: 'Hasbro',
-  variant: '200 pieces',
-  price: 18.99,
-  quantity: 1,
-  coupon: 'MAYDEALS',
-  position: 3
-}, {
-  integrations: {
-    Sailthru: {
-    'reminderTemplate': 'abandoned cart',
-    'reminderTime': '20 minutes'
-    }
+analytics.track(
+  'Product Added',
+  {
+    cart_id: 'skdjsidjsdkdj29j',
+    product_id: '507f1f77bcf86cd799439011',
+    sku: 'G-32',
+    category: 'Games',
+    name: 'Monopoly: 3rd Edition',
+    brand: 'Hasbro',
+    variant: '200 pieces',
+    price: 18.99,
+    quantity: 1,
+    coupon: 'MAYDEALS',
+    position: 3,
+  },
+  {
+    integrations: {
+      Sailthru: {
+        reminderTemplate: 'abandoned cart',
+        reminderTime: '20 minutes',
+      },
+    },
   }
-});
+)
 ```
 
 **Note**: All `Product Added` and `Product Removed` events going into Sailthru must have a `userId`. Sailthru must understand the state of a user’s cart when updating an item within the cart. To understand this, MetaRouter makes a `get` request with the `userId` value to retrieve a user’s cart.
@@ -244,14 +261,14 @@ The default status for the optout value is `none` or you can select `all`, `basi
 You can read more about [**Optout Levels here**](https://getstarted.sailthru.com/audience/managing-users/user-optout-levels/).
 
 #### Product Base Url
+
 The default `productBaseUrl`, which will be used as a fallback for extracting a product url, if there is no `properties.url` for a product or `context.page.url`.
 
 #### Addding users to a list
 
 To configure a default list name, MetaRouter exposes a setting to configure this in the UI. You can also explicitly set your own `defaultListName` through the destination option on `identify`.
 
-
-#### Reminder Time and  Reminder/Send Template
+#### Reminder Time and Reminder/Send Template
 
 To configure a default reminder time and template, enter the **public name** of your template (configured in Sailthru’s UI) and the time frame you will want the email to send. Some example values are 60 minutes, 24 hours, 2 weeks. MetaRouter will handle passing in the `+` increment. To read more about how Sailthru calculates time, please refer to their [**time documentation**](https://getstarted.sailthru.com/developers/zephyr-functions-library/time/).
 
@@ -343,7 +360,7 @@ Sailthru best practice dicates every user be added to a list. Configure a defaul
 
 ### Default Reminder Template
 
-***Required with Reminder Time**. The **public name** of your template which you first must configure in Sailthru’s UI.
+**\*Required with Reminder Time**. The **public name** of your template which you first must configure in Sailthru’s UI.
 
 ### Default Reminder Time
 
@@ -357,9 +374,10 @@ Select whether to opt out users from email campaigns. The default status is `non
 
 The Shared Secret found in your Sailthru dashboard
 
-### Product Base Url 
+### Product Base Url
 
-Fallback url, used as a fallback to interfere  `url` value for products.
+Fallback url, used as a fallback to interfere `url` value for products.
 
 ### Default Send Template
- The **public name** of your template which is sent when for a completed purchase. You first must configure it in Sailthru’s UI.
+
+The **public name** of your template which is sent when for a completed purchase. You first must configure it in Sailthru’s UI.

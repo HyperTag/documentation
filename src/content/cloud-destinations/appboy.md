@@ -1,8 +1,12 @@
 ---
-title: Appboy
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Braze (Appboy)
+
+path: '/cloud-destinations/braze/'
 ---
-MetaRouter makes it easy to send your data to Braze, [formerly Appboy](https://www.braze.com/documentation/braze_faqs/?utm_campaign=2017-Braze-Launch&utm_medium=Appboy-Dashboard&utm_source=Dashboard-Email). Once you follow the steps below, your data will be routed through our platform and pushed to Braze in the appropriate format. 
+
+MetaRouter makes it easy to send your data to Braze, [formerly Appboy](https://www.braze.com/documentation/braze_faqs/?utm_campaign=2017-Braze-Launch&utm_medium=Appboy-Dashboard&utm_source=Dashboard-Email). Once you follow the steps below, your data will be routed through our platform and pushed to Braze in the appropriate format.
 
 ## What is Braze and how does it work?
 
@@ -20,7 +24,7 @@ Note that you can only integrate Braze with server-side and mobile sources.
 
 ### Braze Side
 
-Once you've created your Braze account, you'll need to find your `App Group Identifier`. You can find this ID in the Braze Dashboard under `App Settings-->Developer Console`. 
+Once you've created your Braze account, you'll need to find your `App Group Identifier`. You can find this ID in the Braze Dashboard under `App Settings-->Developer Console`.
 
 ### MetaRouter side
 

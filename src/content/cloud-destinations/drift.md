@@ -1,6 +1,9 @@
 ---
-title: Drift
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Drift
+
+path: '/cloud-destinations/drift/'
 ---
 
 Available for all client-side sources, MetaRouter makes it easy to send your data to Drift. Once you follow the steps below, your data will be routed through our platform and pushed to Drift Events in the appropriate format.
@@ -9,7 +12,7 @@ Available for all client-side sources, MetaRouter makes it easy to send your dat
 
 Drift is a conversational marketing and sales platform that powers enriched live chat and customer messaging.
 
-Instead of traditional platforms that rely on forms and follow-ups, Drift connects your business with the best leads in real-time, almost like a virtual assistant at scale. Specific triggers or topics automatically route conversations to appropriate agents, making for effective conversations that lead to conversions and closed deals. Plus, the behavioral data that comes out of this feature becomes incredibly valuable for customer segmentation and targeted messaging. Lastly, Drift can integrate with a variety of help-desks, CRMs, and collaboration tools so chat messages are enriched with relevant user data. 
+Instead of traditional platforms that rely on forms and follow-ups, Drift connects your business with the best leads in real-time, almost like a virtual assistant at scale. Specific triggers or topics automatically route conversations to appropriate agents, making for effective conversations that lead to conversions and closed deals. Plus, the behavioral data that comes out of this feature becomes incredibly valuable for customer segmentation and targeted messaging. Lastly, Drift can integrate with a variety of help-desks, CRMs, and collaboration tools so chat messages are enriched with relevant user data.
 
 [Learn more about Drift](https://www.drift.com/)
 
@@ -34,7 +37,6 @@ If you decide for the latter, go ahead and click on JavaScript when prompted. In
 Check out the image below for reference:
 
 ![drift2](../../../images/drift2.png)
-
 
 ### MetaRouter Side
 

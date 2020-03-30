@@ -1,11 +1,14 @@
 ---
-title: Facebook Pixel
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Facebook Pixel
+
+path: '/cloud-destinations/facebook-pixel/'
 ---
 
 MetaRouter makes it easy to send your data to Facebook Pixel. Once you follow the steps below, your data will be routed through our platform and pushed to Facebook Pixel in the appropriate format.
 
-***Note:** MetaRouter's Facebook Pixel destination consolidates what was previously Facebook's "Ads for Websites" suite, which consisted of both Facebook Custom Audiences and Facebook Conversion Tracking.*
+**\*Note:** MetaRouter's Facebook Pixel destination consolidates what was previously Facebook's "Ads for Websites" suite, which consisted of both Facebook Custom Audiences and Facebook Conversion Tracking.\*
 
 ## What is Facebook Pixel and how does it work?
 
@@ -51,7 +54,7 @@ If you are using the Facebook Pixel integration as a replacement for Conversion 
 
 ![facebook-pixel4](../../../images/facebook-pixel4v2.png)
 
-**Send all Events as Single Events** 
+**Send all Events as Single Events**
 
 Enabling this will force FB Pixel events triggered by MetaRouter to fire in trackSingle/trackSingleCustom mode to prevent them from going to other FB Pixels loaded on the page. This is helpful if there are different team managing their own pixel, or if you have installed analytics.js on a site with an existing pixel.
 
@@ -107,16 +110,16 @@ By default, MetaRouter will strip any PII from the properties of `track` events 
 
 Facebook enforces strict guidelines around sending Personally Identifiable Information (PII) as properties of Pixel events. In order to adhere to these guidelines, MetaRouter will automatically scan `track` event properties for PII and remove any that get flagged from the event to Facebook. The following keys are currently filtered:
 
-* email
-* firstName
-* lastName
-* gender
-* city
-* country
-* phone
-* state
-* zip
-* birthday
+- email
+- firstName
+- lastName
+- gender
+- city
+- country
+- phone
+- state
+- zip
+- birthday
 
 Any `track` events with properties containing those keys will be sent to Facebook with those properties omitted.
 
@@ -145,4 +148,5 @@ If someone saw or clicked on your ad on a mobile phone then later came back dire
 ## Things to note
 
 ### What happens to revenue when an event goes to Facebook?
-When our platform receives the `revenue` property within our schema, it will automatically map it to [Facebook Pixel's value property](https://www.facebook.com/business/help/392174274295227). This is to ensure that Facebook does not ignore any standard `revenue` property that would be in your events natively following our specification. Alternatively, including only `value` with eCommerce events will not make it to Facebook Pixel, as it doesn't match our specification it will not be mapped to the Facebook Pixel event properly. 
+
+When our platform receives the `revenue` property within our schema, it will automatically map it to [Facebook Pixel's value property](https://www.facebook.com/business/help/392174274295227). This is to ensure that Facebook does not ignore any standard `revenue` property that would be in your events natively following our specification. Alternatively, including only `value` with eCommerce events will not make it to Facebook Pixel, as it doesn't match our specification it will not be mapped to the Facebook Pixel event properly.

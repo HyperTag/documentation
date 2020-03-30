@@ -1,7 +1,11 @@
 ---
-title: Hubspot
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: HubSpot
+
+path: '/cloud-destinations/hubspot/'
 ---
+
 MetaRouter makes it easy to send your data to HubSpot. Once you follow the steps below, your data will be routed through our platform and pushed to HubSpot in the appropriate format.
 
 ## What is HubSpot and how does it work?

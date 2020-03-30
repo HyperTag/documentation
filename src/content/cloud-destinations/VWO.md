@@ -1,6 +1,9 @@
 ---
-title: VWO
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: VWO
+
+path: '/cloud-destinations/vwo/'
 ---
 
 MetaRouter makes it easy to send your data to VWO. Once you follow the steps below, your data will be routed through our platform and pushed to VWO in the appropriate format.
@@ -30,14 +33,17 @@ Since the VWO snippet is now on your site, all you need to do is enable the VWO 
 ## Settings
 
 #### Account ID
+
 Inside the Destination's Connection, add your VWO account ID in order to fetch your VWO async smart code.
 
-This setting is only effective if *Use Async Smart Code* is set to `true`.
+This setting is only effective if _Use Async Smart Code_ is set to `true`.
 
 #### Send Experiment Data to other Destinations (as Track)
+
 If enabled, analytics.js will fire a `track` event for other destinations when a page is loaded with an active VWO Experiment.
 
 It will automatically do the same as if you programed the following code below in your application
+
 ```
 analytics.track('Experiment Viewed', {
     experiment_id: 'Astro-home-page-title-1`
@@ -46,25 +52,31 @@ analytics.track('Experiment Viewed', {
 ```
 
 #### Send Experiment Data to other Destinations (as Identify)
+
 Akin to the above setting, enabling this option will have analytics.js fire an `identify` event for other destinations when a page is loaded with an active VWO Experiemnt.
 
 #### Library Tolerance
+
 The maximum amount of time (in milliseconds) to wait for VWO’s full library to be downloaded before simply displaying your original page.
 
-This setting is only effective if *Use Async Smart Code* is set to `true`.
+This setting is only effective if _Use Async Smart Code_ is set to `true`.
 
 #### Settings Tolerance
+
 The maximum amount of time (in milliseconds) to wait for test settings before VWO will simply display your original page.
 
-This setting is only effective if *Use Async Smart Code* is set to `true`.
+This setting is only effective if _Use Async Smart Code_ is set to `true`.
 
 #### Use Async Smart Code
+
 If you would like to utilize VWO’s asynchronous smart code, toggle on this feature. This means you will not need to include VWO’s native snippet on your page as MetaRouter will do this on your behalf. If this feature is toggled off, you will need to include VWO’s native smart code on your webpage.
 
 #### Use Existing JQuery
+
 If your page already includes JQuery, you can set this to `true`. Otherwise, VWO will include JQuery onto the page for you. VWO needs JQuery on the page to function correctly.
 
-This setting is only effective if *Use Async Smart Code* is set to `true`.
+This setting is only effective if _Use Async Smart Code_ is set to `true`.
 
 #### Single Page App Mode
-By enabling Single Page App (SPA) mode, analytics.js will load the SPA version of the VWO Async Smart Code (if that option is enabled) and will watch for new experiments that VWO loads after the app is initialized in order to trigger *Send Experiment Data to other Destinations* option correctly. By default, analytics.js will only send Experiment data to other Destinations the first time the page is loaded. However, SPA Mode will contine to watch for new Experiments and will re-trigger sending Experiment Data to other Destination on every `.page()` call. Only one "Experiment Viewed" event will be triggered per Experiment unless the user reloads the page.
+
+By enabling Single Page App (SPA) mode, analytics.js will load the SPA version of the VWO Async Smart Code (if that option is enabled) and will watch for new experiments that VWO loads after the app is initialized in order to trigger _Send Experiment Data to other Destinations_ option correctly. By default, analytics.js will only send Experiment data to other Destinations the first time the page is loaded. However, SPA Mode will contine to watch for new Experiments and will re-trigger sending Experiment Data to other Destination on every `.page()` call. Only one "Experiment Viewed" event will be triggered per Experiment unless the user reloads the page.

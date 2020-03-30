@@ -1,6 +1,9 @@
 ---
-title: Intercom
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Intercom
+
+path: '/cloud-destinations/intercom/'
 ---
 
 MetaRouter makes it easy to send your data to Intercom. Once you follow the steps below, your data will be routed through our platform and pushed to Intercom in the appropriate format.
@@ -27,7 +30,7 @@ Click on `Integrate` and then `Segment` (You're still setting up MetaRouter, don
 
 ![intercom2](../../../images/intercom2.png)
 
- Go ahead and click `Next` to continue the setup.
+Go ahead and click `Next` to continue the setup.
 
 ![intercom3](../../../images/intercom3.png)
 
@@ -102,4 +105,5 @@ analytics.identify({
   }
 });
 ```
-***Note:** This will only work from server side libraries and mobile, NOT for analytics.js.*
+
+**\*Note:** This will only work from server side libraries and mobile, NOT for analytics.js.\*

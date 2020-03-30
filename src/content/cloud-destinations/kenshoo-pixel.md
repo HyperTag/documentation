@@ -1,6 +1,9 @@
 ---
-title: Kenshoo Pixel
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Kenshoo Pixel
+
+path: '/cloud-destinations/kenshoo-pixel/'
 ---
 
 MetaRouter makes it easy to send your data to Kenshoo Conversion Pixel, which was recently enhanced with Kenshoo Infinity Tag. If you follow the steps below, your data will be routed through our platform and pushed to Kenshoo Pixel in the appropriate format.

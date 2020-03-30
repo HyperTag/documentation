@@ -1,6 +1,9 @@
 ---
-title: Mixpanel
-sidebar: platform_sidebar
+collectionKey: cloud-destinations
+
+navText: Mixpanel
+
+path: '/cloud-destinations/mixpanel/'
 ---
 
 MetaRouter makes it easy to send your data to Mixpanel. Once you follow the steps below, your data will be routed through our platform and pushed to Mixpanel in the appropriate format.
@@ -33,7 +36,6 @@ You'll need to copy these two fields into the MetaRouter App configuration for M
 
 ![mixpanel2](../../../images/mixpanel2.png)
 
-
 ### MetaRouter Side
 
 Now, head over to your MetaRouter dashboard and insert both your Token and API key into the Mixpanel destination.
@@ -49,28 +51,30 @@ Click on `View Your Data` back in the Mixpanel UI to start exploring.
 On top of our standard calls, you're free to do a few extra things with our Mixpanel integration:
 
 - `Enable Mixpanel People`: This will enable all of your analytics.identify() calls to get sent to Mixpanel's People.
-    * `Events to Increment in People` - Used for segmenting users by event counts and last event date in Mixpanel People. List the events that you want to see in Mixpanel People here.
-    * `Add People Properties` - These are set off of `identify` API calls and allow you to explicity set properties that you want to track.
-    * `Add Super Properties` - This lets you explicitly set the super properties that you wish to track.
+  - `Events to Increment in People` - Used for segmenting users by event counts and last event date in Mixpanel People. List the events that you want to see in Mixpanel People here.
+  - `Add People Properties` - These are set off of `identify` API calls and allow you to explicity set properties that you want to track.
+  - `Add Super Properties` - This lets you explicitly set the super properties that you wish to track.
 
-*Note that, if `Set All Traits by Default` is enabled, you will not need to specify explicit people or super properties.*
+_Note that, if `Set All Traits by Default` is enabled, you will not need to specify explicit people or super properties._
 
-- By default, we will track all pages to Mixpanel with a consolidated event name. This sends all `page` and `screen` calls as `Loaded a Page` or `Loaded a Screen` events. If you wish to do this in a different way, disable the `Consolidate Page Calls` option and see the additional options below. 
+- By default, we will track all pages to Mixpanel with a consolidated event name. This sends all `page` and `screen` calls as `Loaded a Page` or `Loaded a Screen` events. If you wish to do this in a different way, disable the `Consolidate Page Calls` option and see the additional options below.
 
-- *Track additional pages*, including:
-    * `Named Pages` - This sends a `Viewed (name) Page` event to Mixpanel.
-    * `Categorized Pages` - This sends a `Viewed (category) Page to Mixpanel.
-    * `All Pages` - This causes all `page` calls to be sent to Mixpanel, regardless of how you have customized your pages. They will appear as `Loaded A Page` in Mixpanel.
+- _Track additional pages_, including:
+
+  - `Named Pages` - This sends a `Viewed (name) Page` event to Mixpanel.
+  - `Categorized Pages` - This sends a `Viewed (category) Page to Mixpanel.
+  - `All Pages` - This causes all `page` calls to be sent to Mixpanel, regardless of how you have customized your pages. They will appear as `Loaded A Page` in Mixpanel.
 
 - `Group Identifier Traits` - What trait Metarouter should use as your Mixpanel “group key” in group calls. If, for example, you set this to be company, then “company” will be sent as group_key and the value of traits["company"] will be sent as the group_id.
 
 - Cookies
-    * `Add Cross Subdomain Cookie` - Allows Mixpanel cookiec to be read across all subdomains.
-    * `Secure Cookie` - This marks the Mixpanel cookie as `secure`, meaning that this cookie will only be transmitted over https.
-    * `Persistence Cookie` - This allows the Mixpanel cookie to persist between two separate pages of your application.
+
+  - `Add Cross Subdomain Cookie` - Allows Mixpanel cookiec to be read across all subdomains.
+  - `Secure Cookie` - This marks the Mixpanel cookie as `secure`, meaning that this cookie will only be transmitted over https.
+  - `Persistence Cookie` - This allows the Mixpanel cookie to persist between two separate pages of your application.
 
 - Geolocation
-    * To stop geolocation from occuring based on the IP of your server side calls, add `ignoreIp: true` to the context of your `identify`, `track`, and `alias` calls. This will prevent ip and location from being updated in Mixpanel.
+  - To stop geolocation from occuring based on the IP of your server side calls, add `ignoreIp: true` to the context of your `identify`, `track`, and `alias` calls. This will prevent ip and location from being updated in Mixpanel.
 
 ### Sending data to Mixpanel’s European Union Endpoint
 
