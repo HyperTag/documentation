@@ -47,6 +47,9 @@ pre[class*='language-'] {
 .gatsby-highlight[data-language='csharp']:before {
   content: 'c#';
 }
+.gatsby-highlight[data-language='objectivec']:before {
+  content: 'objective-c';
+}
 pre[class*='language-'] > code {
   @apply relative;
   @apply px-3 pt-5 pb-4;

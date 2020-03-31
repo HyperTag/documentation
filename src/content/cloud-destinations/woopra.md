@@ -52,24 +52,25 @@ Pass us the `wooTracker` value inside your cookie if you want your server side e
 
 To retrieve this value, input the following command:
 
-```
-analytics.ready(function(){
-  var woopraCookie = window.woopra.cookie;
+```javascript
+analytics.ready(function() {
+  var woopraCookie = window.woopra.cookie
 
   // pass this value to your server
-});
+})
 ```
 
 From the server side, you can attach it to the `integrations.Woopra.cookie` property. Here's a Ruby example that will let Woopra know that this server side event is part of the same session as the client.
 
-```
-Analytics.track(
-    user_id: '019mr8mf4r',
-    event: 'Purchased Item',
-    properties: { revenue: 39.95, shipping: '2-day' },
-    integrations: {
-      Woopra: {
-       cookie: <wooTracker value>
-      }
-    })
+```javascript
+Analytics.track({
+  user_id: '019mr8mf4r',
+  event: 'Purchased Item',
+  properties: { revenue: 39.95, shipping: '2-day' },
+  integrations: {
+    Woopra: {
+      cookie: wooTrackerValue,
+    },
+  },
+})
 ```

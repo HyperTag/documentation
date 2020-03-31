@@ -30,6 +30,13 @@ h3 {
 p {
   @apply mb-6;
 }
+b,
+strong {
+  @apply font-bold;
+}
+em {
+  @apply italic;
+}
 
 ul {
   @apply list-disc;

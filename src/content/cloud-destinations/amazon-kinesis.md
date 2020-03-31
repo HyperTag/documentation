@@ -26,7 +26,7 @@ Implementing Kinesis with MetaRouter allows you to skip the installation of a Ki
 
 Once you create your Kinesis stream, you'll need to [create an IAM user](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) to allow us to integrate with your stream. You will then need to [create an IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html), which will allow Astronomer to issue a `putRecord` request that looks like this:
 
-```
+```javascript
 kinesis.putRecord({
   Data: new Buffer(JSON.stringify(msg)).toString('base64')
   PartitionKey: msg.userId() || msg.anonymousId(),
@@ -36,20 +36,16 @@ kinesis.putRecord({
 
 Next, select the `Create Policy from JSON` option and use the code template blow in the `Policy Document` field. You'll need to change the `region`, `account-id`, and `stream-name` to reflect the appropriate values.
 
-```
+```json
 {
-   "Version": "2012-10-17",
-   "Statement": [
-       {
-           "Effect": "Allow",
-           "Action": [
-               "kinesis:PutRecord"
-           ],
-           "Resource": [
-               "arn:aws:kinesis:{region}:{account-id}:stream/{stream-name}"
-           ]
-       }
-   ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["kinesis:PutRecord"],
+      "Resource": ["arn:aws:kinesis:{region}:{account-id}:stream/{stream-name}"]
+    }
+  ]
 }
 ```
 

@@ -187,7 +187,6 @@ analytics.track(
       (variant: '200 pieces'),
       (price: 18.99),
       (quantity: 1),
-
       (position: 3),
     ],
   },
@@ -286,7 +285,7 @@ All calls are subject to rate limits.
 
 Sailthru does not accept nested custom traits or properties, so by default we will flatten any custom nested properties. For example, see the below nested properties and the flattened output:
 
-```javascript
+```json
 {
   "input": {
     "type": "track",
@@ -294,11 +293,7 @@ Sailthru does not accept nested custom traits or properties, so by default we wi
     "event": "Played Game",
     "timestamp": "2017",
     "properties": {
-      "levels": [
-        1,
-        2,
-        3
-      ],
+      "levels": [1, 2, 3],
       "arcade": {
         "blips and chitz": {
           "planet": "Parblesnops"
@@ -306,35 +301,33 @@ Sailthru does not accept nested custom traits or properties, so by default we wi
         "galaxy": {
           "coordinates": "1232.4832"
         },
-        "games": [
-          "Roy: A life well lived",
-          "Whack a mole"
-        ]
+        "games": ["Roy: A life well lived", "Whack a mole"]
       }
     }
   }
 }
 ```
 
-```javascript
-"output": {
-"id": "14092348",
-"key": "extid",
-"event": "Played Game",
-"vars": {
-"levels0": 1,
-"levels1": 2,
-"levels2": 3,
-"arcadeblips and chitzplanet": "Parblesnops",
-"arcadegalaxycoordinates": "1232.4832",
-"arcadegames0": "Roy: A life well lived",
-"arcadegames1": "Whack a mole"
-},
-"format": "json",
-"api_key": "xxxxxxxxx",
-"shared_secret": "xxxxxxxxxx",
-"sig": "70f7461c89c789688c5a0680dae6f08f"
-}
+```json
+{
+  "output": {
+    "id": "14092348",
+    "key": "extid",
+    "event": "Played Game",
+    "vars": {
+      "levels0": 1,
+      "levels1": 2,
+      "levels2": 3,
+      "arcadeblips and chitzplanet": "Parblesnops",
+      "arcadegalaxycoordinates": "1232.4832",
+      "arcadegames0": "Roy: A life well lived",
+      "arcadegames1": "Whack a mole"
+    },
+    "format": "json",
+    "api_key": "xxxxxxxxx",
+    "shared_secret": "xxxxxxxxxx",
+    "sig": "70f7461c89c789688c5a0680dae6f08f"
+  }
 }
 ```
 

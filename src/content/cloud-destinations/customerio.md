@@ -48,7 +48,9 @@ Add your Site ID and API Key into the Customer.io connector on your MetaRouter d
 
 An example call would look like:
 
-    analytics.page();
+```javascript
+analytics.page()
+```
 
 Page events will be sent to Customer.io as a `Page View` event where name and properties are optional. In the Customer.io “Activity View”, the event will have “Activity Type” set to “Page View” and “Activity Name” set to the page name. If no page name has been specified, “Activity Name” will default to the page URL.
 
@@ -56,9 +58,11 @@ Page events will be sent to Customer.io as a `Page View` event where name and pr
 
 An example call would look like:
 
-    analytics.identify('userId123', {
-    email: 'john.doe@example.com'
-    });
+```javascript
+analytics.identify('userId123', {
+  email: 'john.doe@example.com',
+})
+```
 
 An email address is not required by Customer.io. It is only needed for people you intend to send email messages to (as opposed to SMS or push notifications). If you want an email to appear in the Customer.io “People View”, you must provide an email as a trait labeled `email`.
 
@@ -66,17 +70,20 @@ When you identify a new user, the user will be subscribed to Customer.io. If the
 
 To unsubscribe a user, simply pass in `user_id` and `unsubscribed` (with a value of true) in an `identify` call. Be sure the `user_id` and `email` match the values in Customer.io, which you can find in the “Overview” section under the “Attributes” column within an individual user’s view in the Customer.io UI. Here is an example of how to unsubscribe a user:
 
-    analytics.identify('userId123', {
-        email: 'john.doe@example.com',
-        unsubscribed: true
-      }
-    )
+```javascript
+analytics.identify('userId123', {
+  email: 'john.doe@example.com',
+  unsubscribed: true,
+})
+```
 
 ### Track
 
 An example call would look like:
 
-    analytics.track('Clicked Button');
+```javascript
+analytics.track('Clicked Button')
+```
 
 Track events will be sent to Customer.io as `custom events`. In the Customer.io “Activity View”, “Activity Type” will be set to `event` and “Activity Name” will be set to the event name.
 

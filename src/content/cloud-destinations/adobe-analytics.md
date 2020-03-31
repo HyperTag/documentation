@@ -87,7 +87,7 @@ By default, the MetaRouter snippet includes an empty `page()` call. When `page()
 
    If you call the following `page()` call:
 
-   ```js
+   ```javascript
    analytics.page({
      browser: 'chrome',
      searchTerm: 'blue shirt',
@@ -118,7 +118,7 @@ Here is an example of how you might map the custom variables:
 
 Given the settings above, if you make a sample `.track()` call below:
 
-```js
+```javascript
 analytics.track('Watched Video', {
   plan: 'free',
   videoName: 'The Uptick Rule',
@@ -175,7 +175,7 @@ For all ecommerce events listed, we will send product description data to Adobe 
 
 Given the sample `Order Completed` MetaRouter event:
 
-```js
+```javascript
 analytics.track('Order Completed', {
   orderId: '50314b8e9bcf000000000000',
   total: 30.0,

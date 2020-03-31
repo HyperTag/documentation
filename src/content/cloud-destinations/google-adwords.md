@@ -36,7 +36,7 @@ After you click the wrench, you'll be prompted with a menu. Under `Measurement`,
 
 You will see a `Global Site Tag` that looks like the following:
 
-```js
+```HTML
 <!-- Global Site Tag (gtag.js) - Google AdWords: GOOGLE_CONVERSION_ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-GOOGLE_CONVERSION_ID"></script>
 <script>

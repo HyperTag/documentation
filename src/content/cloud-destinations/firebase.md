@@ -38,11 +38,15 @@ Add the following dependency to your Podfile:
 
 After adding the dependency, import the integration:
 
-`#import <Segment-Firebase/SEGFirebaseIntegrationFactory.h>`
+```objectivec
+#import <Segment-Firebase/SEGFirebaseIntegrationFactory.h>
+```
 
 Finally, register the dependency with the Segment SDK:
 
-`[config use:[SEGFirebaseIntegrationFactory instance]];`
+```objectivec
+[config use:[SEGFirebaseIntegrationFactory instance]];
+```
 
 By default, Segment only bundles `Firebase/Core` which is [Firebase’s Analytics offering](https://firebase.google.com/docs/analytics/). You can see the other available [Firebase pods and features here](https://firebase.google.com/docs/ios/setup).
 
@@ -50,7 +54,7 @@ If configuring for proxy HTTP calls, follow these additional steps once you have
 
 1. Add this call:
 
-```
+```objectivec
 SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:@"YOUR_WRITE_KEY"];
 
 // Set a custom request factory which allows you to modify the way the library creates an HTTP request.
@@ -72,7 +76,7 @@ configuration.requestFactory = ^(NSURL *url) {
 
 _Swift_
 
-```
+```swift
 configuration.requestFactory = { url in
             var components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
             let host = components?.host
@@ -87,7 +91,7 @@ configuration.requestFactory = { url in
 
 _objC_
 
-```
+```objectivec
 configuration.requestFactory = ^(NSURL *url) {
         NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
         NSString* host = components.host;
@@ -144,7 +148,7 @@ allprojects {
 
 Add these permissions to your AndroidManifest.xml:
 
-```
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
@@ -153,7 +157,7 @@ Finally, register the dependency with the Segment SDK in your application subcla
 
 Periodically, Firebase updates the Android configuration requirements for loading their SDK in your app. To validate that your Android configuration is sufficient for your version of Firebase, please consult Google’s [Firebase release notes](https://firebase.google.com/support/release-notes/android#). You can find the corresponding version of the Firebase SDK Segment required in each of the Segment-Firebase SDK versions by consulting the [Segment-Firebase changelog](https://github.com/segment-integrations/analytics-android-integration-firebase/blob/master/CHANGELOG.md). For example, Segment-Firebase 1.3.1 includes Firebase Core 17.0.1 as a dependency.
 
-```
+```java
 Analytics analytics = new Analytics.Builder(context, writeKey)
   .use(FirebaseIntegration.FACTORY)
   ...
@@ -166,7 +170,7 @@ If configuring for proxy HTTP calls, follow these additional steps once you have
 
 1. Add this call:
 
-```
+```java
 Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
         .connectionFactory(new ConnectionFactory() {
           @Override protected HttpURLConnection openConnection(String url) throws IOException {
@@ -182,7 +186,7 @@ Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
 
 _Swift_
 
-```
+```swift
 configuration.requestFactory = { url in
             var components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
             let host = components?.host
@@ -197,7 +201,7 @@ configuration.requestFactory = { url in
 
 _objC_
 
-```
+```objectivec
 configuration.requestFactory = ^(NSURL *url) {
         NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
         NSString* host = components.host;
@@ -213,7 +217,7 @@ configuration.requestFactory = ^(NSURL *url) {
 
 _Android_
 
-```
+```java
 Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
         .connectionFactory(new ConnectionFactory() {
           @Override protected HttpURLConnection openConnection(String url) throws IOException {

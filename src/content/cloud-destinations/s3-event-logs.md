@@ -44,23 +44,22 @@ Once you create the bucket, create a folder labeled `MetaRouter-logs` inside of 
 
 Add the following S3 bucket policy, which will grant MetaRouter permission to copy events into your S3 bucket using `s3:PutObject`. In the `Resource:` line of each of the two policies below, swap out `YOUR_BUCKET_NAME` for the exact name of your S3 bucket, but keep the `/*` on the end.
 
-```
+```json
 {
-    "Version": "2012-10-17",
-    "Id": "Policy1475027027703",
-    "Statement": [
-        {
-            "Sid": "MetaRouterCopyAccess",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::325517132571:user/s3-copy"
-            },
-            "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Id": "Policy1475027027703",
+  "Statement": [
+    {
+      "Sid": "MetaRouterCopyAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::325517132571:user/s3-copy"
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+    }
+  ]
 }
-
 ```
 
 ![s3-event-logs1](../../../images/s3-event-logs2.gif)

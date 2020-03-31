@@ -82,11 +82,13 @@ If you’d like to implement Mixpanel in the European Union you will need to ena
 
 If you are sending data using our Android SDK, you will need to specify the different endpoints using meta-data tags. On your app’s `AndroidManifest.xml` file, you need to add the following tags under your `<application>` tags to override the track, engage, and group endpoints:
 
-    <meta-data android:name="com.mixpanel.android.MPConfig.EventsEndpoint"
-            android:value="https://api-eu.mixpanel.com/track?ip=" />
-    <meta-data android:name="com.mixpanel.android.MPConfig.PeopleEndpoint"
-            android:value="https://api-eu.mixpanel.com/engage=" />
-    <meta-data android:name="com.mixpanel.android.MPConfig.GroupsEndpoint"
-            android:value="https://api-eu.mixpanel.com/groups" />
+```xml
+<meta-data android:name="com.mixpanel.android.MPConfig.EventsEndpoint"
+  android:value="https://api-eu.mixpanel.com/track?ip=" />
+<meta-data android:name="com.mixpanel.android.MPConfig.PeopleEndpoint"
+  android:value="https://api-eu.mixpanel.com/engage=" />
+<meta-data android:name="com.mixpanel.android.MPConfig.GroupsEndpoint"
+  android:value="https://api-eu.mixpanel.com/groups" />
+```
 
 For additional information regarding Mixpanel’s European Union endpoint, please see the [Mixpanel documentation here](https://developer.mixpanel.com/docs/implement-mixpanel#section-implementing-mixpanel-in-the-european-union-eu).

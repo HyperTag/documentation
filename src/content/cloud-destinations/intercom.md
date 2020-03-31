@@ -76,12 +76,12 @@ If you're using Intercom identity verification AND the `selective destinations f
 
 ```
 {
-     integrations: {
-         All: false,
-         Intercom: {
-            user_hash: '<%= OpenSSL::HMAC.hexdigest("sha256", "YOUR_INTERCOM_APP_SECRET", current_user.id) %>'
-         }
-     }
+  integrations: {
+    All: false,
+    Intercom: {
+      user_hash: '<%= OpenSSL::HMAC.hexdigest("sha256", "YOUR_INTERCOM_APP_SECRET", current_user.id) %>'
+    }
+  }
 }
 ```
 
@@ -91,19 +91,19 @@ With MetaRouter, you can unsubscribe users from email by setting a flag from `se
 
 `node.js` example:
 
-```
+```javascript
 analytics.identify({
   userId: '4832094283057439285723523452345',
-  anonymousId:'43254364571',
-  context:{
-    Intercom: { unsubscribedFromEmails: true }
+  anonymousId: '43254364571',
+  context: {
+    Intercom: { unsubscribedFromEmails: true },
   },
   traits: {
     firstName: 'John ',
     lastName: 'Jacob',
-    email: 'jingleheimer@schmidt.com'
-  }
-});
+    email: 'jingleheimer@schmidt.com',
+  },
+})
 ```
 
 **\*Note:** This will only work from server side libraries and mobile, NOT for analytics.js.\*

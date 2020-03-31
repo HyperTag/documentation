@@ -28,7 +28,7 @@ To get started sending events to Taboola, you'll need your script source, which 
 
 You can find your script source inside of your conversion tracking code, shown as `ScriptSrc` below:
 
-```javascript
+```html
 <script src="//cdn.taboola.com/libtrc/ScriptSrc/tfa.js"></script>
 ```
 

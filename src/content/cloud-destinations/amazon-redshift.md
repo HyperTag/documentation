@@ -73,7 +73,7 @@ For MetaRouter, having _distinct users_ will allow you to (i) isolate queries fr
 
 To create a new user, you'll need to log into the Redshift database directly. Here's the SQL command:
 
-```
+```sql
 -- create a user named "metarouter" that MetaRouter will use when connecting to your Redshift cluster.
 CREATE USER metarouter PASSWORD "<enter password here>";
 
@@ -93,27 +93,19 @@ If your cluster has a field called `VPC Security Groups`, go ahead to EC2 VPC.
 
 **EC2-Classic**
 
-1. Navigate to your Redshift Cluster settings
+1. Navigate to your Redshift Cluster settings **Redshift Dashboard > Clusters > Select Your Cluster**
 
-```
-Redshift Dashboard > Clusters > Select Your Cluster
-```
+2) Click on the Cluster Security Groups
 
-2. Click on the Cluster Security Groups
+3) Open the Cluster Security Group
 
-3. Open the Cluster Security Group
+4) Click on "Add Connection Type"
 
-4. Click on "Add Connection Type"
-
-5. Authorize MetaRouter to write into your Redshift Port by inputting our IP Addresses: `35.245.140.149` and `35.236.193.215`
+5) Authorize MetaRouter to write into your Redshift Port by inputting our IP Addresses: `35.245.140.149` and `35.236.193.215`
 
 **EC2-VPC**
 
-1. Navigate to your Redshift Cluster settings
-
-```
-Redshift Dashboard > Clusters > Select Your Cluster
-```
+1. Navigate to your Redshift Cluster settings **Redshift Dashboard > Clusters > Select Your Cluster**
 
 2. Click on the VPC Security Groups
 
