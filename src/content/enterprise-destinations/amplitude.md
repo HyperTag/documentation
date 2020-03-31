@@ -6,6 +6,8 @@ navText: 'Amplitude'
 path: '/enterprise-destinations/amplitude/'
 ---
 
+# Amplitude
+
 MetaRouter makes it easy to send your data to Amplitude. Once you follow the steps below, your data will be routed through our platform and pushed to Amplitude in the appropriate format.
 
 ## What is Amplitude and how does it work?
@@ -22,7 +24,7 @@ If you want to try out any other analytics application, implementing native even
 
 Integrating Amplitude with MetaRouter means that you will just need to install MetaRouter and enable Amplitude in your MetaRouter UI. You will only need to set up one event tracking library (MetaRouter's), and then you will be able to route and send data to Amplitude and any other destination of your choice without writing custom code for each one.
 
-## Getting Started with Amplitude and MetaRouter
+## Getting Started
 
 ### Amplitude Side
 
@@ -41,9 +43,7 @@ After this application is created, an API Key will be generated and presented in
 
 ### MetaRouter Side
 
-### Config
-
-#### `apiKey` _(Required)_
+#### `apiKey`
 
 The Amplitude Event API Key.
 

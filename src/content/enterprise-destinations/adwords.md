@@ -6,13 +6,15 @@ navText: 'Adwords'
 path: '/enterprise-destinations/adwords/'
 ---
 
+# AdWords
+
 MetaRouter makes it easy to send your data to [AdWords](https://ads.google.com) (and lots of other destinations). Once you follow the steps below, your data will be routed through our platform and pushed to AdWords in the format they understand.
 
 ## Why send data to AdWords using MetaRouter?
 
 With MetaRouter, you can use AdWords without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once AdWords is routed through MetaRouter, our platform makes calls directly to AdWords based on your mapped events.
 
-## Getting Started with AdWords and MetaRouter
+## Getting Started
 
 ### AdWords Side
 

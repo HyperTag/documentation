@@ -18,7 +18,7 @@ MetaRouter makes it easy to send your data to [Adobe Analytics](https://www.adob
 
 With MetaRouter, you can use Adobe Analytics without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once Adobe Analytics is routed through MetaRouter, our platform translates page views and events into corresponding Adobe Analytics events.
 
-## Getting Started with Adobe Analytics and MetaRouter
+## Getting Started
 
 ### Adobe Analytics Side
 

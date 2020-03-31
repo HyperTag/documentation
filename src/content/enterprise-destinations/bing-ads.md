@@ -6,6 +6,8 @@ navText: 'Microsoft Advertising'
 path: '/enterprise-destinations/microsoft-advertising/'
 ---
 
+# Microsoft Advertising
+
 ## What is Microsoft Advertising and how does it work?
 
 Microsoft Advertising is a service that provides pay per click advertising on both the Bing and Yahoo! search engines. It enables it's users to monitor and track campaigns, clicks, CTRs, spend and budget. Microsoft Advertising lets you place cross-device product ads in front of Bing, Yahoo, and MSN customers and support imported pay-per-click ad campaigns from third-party platforms like Google AdWords. With Microsoft Advertising you can also retarget ads to customers after they complete an action like leaving a shopping cart or viewing a product without purchasing.
@@ -18,7 +20,7 @@ Using MetaRouter, you can send page views and event data directly to Microsoft A
 
 Integrating Microsoft Advertising with MetaRouter cuts out any need for additional implementation resources, saving your development team valuable time.
 
-## Getting Started with Microsoft Tag and MetaRouter
+## Getting Started
 
 ### Microsoft Ads Side
 

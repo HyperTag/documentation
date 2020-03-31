@@ -10,21 +10,21 @@ path: '/enterprise-destinations/google-analytics/'
 
 MetaRouter makes is easy to send your data to Google Analytics. Once you've set up your source to start tracking data, we'll translate and route that data to Google Analytics.
 
-# What is Google Analytics and how does it work?
+## What is Google Analytics and how does it work?
 
 Google Analytics is a web analytics tool that pools real-time site information for a comprehensive view into user acquisition, audience demographics, and conversion goals. It supports targeted audience and integrates seamlessly with Google AdWords and all DoubleClick products.
 
 Google Analytics requires that you add their snippet to your site. Doing this will give you basic information such as page views, traffic sources, and user location. If you want to get more detailed user information, you'll need to write custom code in your site. In order to do this, you'll need to have a developer study the Google Analytics API to learn how to implement methods and format data correctly.
 
-# Why send data to Google Analytics using MetaRouter?
+## Why send data to Google Analytics using MetaRouter?
 
 Integrating Google Analytics with MetaRouter means that you do not need to install any Google Analytics code into your site or mobile app. It also greatly eases the processes of tracking more detailed information like what users are doing on a page, e-commerce data, and user attributes. Furthermore, many custom events can be configured directly in the MetaRouter UI, making it easy to track the data that you need.
 
-# Getting Started with Google Analytics and MetaRouter
+## Getting Started
 
 _Before you get started, note that you will need to remove Google Analytics snippet from your page if you were using it outside of MetaRouter._
 
-## Google Analytics Side
+### Google Analytics Side
 
 To get started sending events to Google Analytics, first you'll need to [create an account](https://analytics.google.com).
 
@@ -40,13 +40,13 @@ Without this step transactions will not show up in your reports.
 Most of the events are based on Enhanced Ecommerce, which allows you to derive insights by combining impression data, product data, promotion data, and action data. This is required for product-scoped custom dimensions.
 Enable Enhanced Ecommerce inside of Google Analytics by clicking: **Admin > View Settings > Enhanced Ecommerce Settings switch to ON**
 
-## MetaRouter Side
+### MetaRouter Side
 
 You can configure the Google Analytics account and the event field mappings for our Google Analytics Destination, below is the full payload you will need to send to the Platform via Canary. Keep in mind that you will also need to add the configurations of your other destinations as the Platform will overwrite any new instructions over the old one.
 
 ### Config
 
-#### `api` _(Required)_ - Object
+#### `api` (Required) - Object
 
 The purpose of this section is to allow you to define Google Analytics' specific API information.
 The structure of the `api` property is the following:
@@ -70,7 +70,7 @@ The structure of the `api` property is the following:
   - If this is set to `true`, the request's URL will include the encoded payload
   - **\*Note:** GA's API requires the payload to be included inside the URL.\*
 
-#### `events` _(Required)_ - Object
+#### `events` (Required) - Object
 
 The purpose of this section is to allow you to define event-specific information based on the event type. Because GA allows you to track `page()` and standard and custom `track()` calls, we divided this into the following sections:
 
@@ -83,7 +83,7 @@ The purpose of this section is to allow you to define event-specific information
 }
 ```
 
-##### `general` section
+#### `general` section
 
 All GA API calls require specific properties to be sent regardless of the event type that's being triggered, page or track. This section allows you to define all the properties that are common for all API calls that'll go to GA.
 
@@ -117,7 +117,7 @@ Here's how this section should look like for GA:
 
 - All other properties included in the `general` section are nice to have.
 
-##### `page` section
+#### `page` section
 
 All GA API calls require the `t` (hit type) parameter to be sent. For `page()` calls, GA is expecting a hit type `"pageview"`.
 
@@ -129,7 +129,7 @@ Here's how this section should look like for GA:
 ]
 ```
 
-##### `track` section
+#### `track` section
 
 The purpose of this section is to allow you to define the properties that you want to send over to GA for a specific event.
 
@@ -323,7 +323,7 @@ Here's how this section should look like for GA for the main standard events:
 | `ec`         | `properties.category` property                         | event category                                                                                | -     |
 | `ea`         | `properties.action` property                           | event action                                                                                  | -     |
 
-##### `customTrack` section
+#### `customTrack` section
 
 The purpose of this section is to allow you to specify if a custom event (event that is not mapped inside the `track` section) should be triggered or not. It also allows you to add a list of specific properties that should exist for all custom events.
 
@@ -354,11 +354,11 @@ The purpose of this `cookies` section is to flag if first party cookie values sh
 
 There are first party cookies available for Google Analytics, and those can be accessed and automatically added to the API's payload by setting `"cookies": "integrations.googleAnalytics"`.
 
-# Analytics.js Standard E-commerce Events to GA Enhanced E-commerce events mapping
+## Analytics.js Standard E-commerce Events to GA Enhanced E-commerce events mapping
 
 We put together a list with expected properties for each of the Standard E-commerce Events based on [Google Analytics' documentation](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters).
 
-## Products Searched
+### Products Searched
 
 This is a simple GA request, not supported out of the box by Enhanced E-Commerce. In order to send the query to the GA server you have to specify a parameter dl (Document Location) that contains the query parameter that you set in site search tracking setting of the app.
 Example query:
@@ -369,7 +369,7 @@ https://www.google-analytics.com/collect?v=1&tid=UA-1234567-1&cid=123e4567-e89b-
 
 where `searchRedirect` is the set site search query parameter and `trees` is the search query that we got from Analytics.js's Products Searched `query` property.
 
-## Product List Viewed
+### Product List Viewed
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -383,7 +383,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Product list fields](#7-product-list-fields) with `<type>` "pr" and `N` 1, because there's only one product
 
-## Promotion events
+### Promotion events
 
 Enhanced Ecommerce allows you to go beyond measuring product performance to measure the internal and external marketing efforts that support those products. To take advantage of enhance e-commerce's promotion reports, you can easily collect data about promotion impressions and promotion clicks with Analytics.js, like so:
 
@@ -405,7 +405,7 @@ analytics.track('Clicked Promotion', {
 });
 ```
 
-### Promotion Viewed
+#### Promotion Viewed
 
 Besides [the mandatory fields](#1-mandatory-fields), the parameters for this call are as follow:
 
@@ -415,7 +415,7 @@ Besides [the mandatory fields](#1-mandatory-fields), the parameters for this cal
 
 - [Promotion fields](#2-promotion-fields)
 
-### Promotion Clicked
+#### Promotion Clicked
 
 Besides [the mandatory fields](#1-mandatory-fields), the parameters for this call are as follow:
 
@@ -428,9 +428,9 @@ Besides [the mandatory fields](#1-mandatory-fields), the parameters for this cal
 
 - [Promotion fields](#2-promotion-fields)
 
-## Product Events
+### Product Events
 
-### Product Clicked
+#### Product Clicked
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -443,7 +443,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
 
-### Product Viewed
+#### Product Viewed
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -456,9 +456,9 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
 
-## Cart events
+### Cart events
 
-### Product Added
+#### Product Added
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -473,7 +473,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 **NOTE:** at this stage we can't associate a `cart_id` to send to GA.
 
-### Product Removed
+#### Product Removed
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -488,7 +488,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 **NOTE:** at this stage we can't associate a `cart_id` to send to GA.
 
-### Cart Viewed
+#### Cart Viewed
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -501,7 +501,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
 
-## Checkout events
+### Checkout events
 
 The biggest differentiator between e-commerce and enhanced e-commerce is support for checkout steps. To take advantage of tracking your checkout funnel and measuring metrics like cart abandonment, etc, you'll first need to configure your checkout funnel in the Google Analytics admin interface, giving easily readable labels to the numeric checkout steps:
 
@@ -563,7 +563,7 @@ analytics.track('Completed Checkout Step', {
 
 You can have as many or as few steps in the checkout funnel as you'd like. The 4 steps above merely serve as an example. Note that you'll still need to track the `Order Completed`event per our standard e-commerce tracking API after you've tracked the checkout steps.
 
-### Checkout Started
+#### Checkout Started
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -576,7 +576,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
 
-### Checkout Step Viewed
+#### Checkout Step Viewed
 
 Before starting down this path, Enhanced E-Commerce needs to be enabled. Furthermore, the checkout steps need to be defined in the admin section of the app.
 
@@ -588,7 +588,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Checkout fields](#3-checkout-fields)
 
-### Checkout Step Completed
+#### Checkout Step Completed
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 | GA parameter | value | Explanation |
@@ -597,7 +597,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Checkout fields](#3-checkout-fields)
 
-### Payment Info Entered
+#### Payment Info Entered
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 | GA parameter | value | Explanation |
@@ -606,9 +606,9 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Checkout fields](#3-checkout-fields)
 
-## Ordering events
+### Ordering events
 
-### Order Updated
+#### Order Updated
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -622,7 +622,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 - [Transaction fields](#4-transaction-fields)
 - [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
 
-### Order Completed
+#### Order Completed
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -677,7 +677,7 @@ analytics.track({
 })
 ```
 
-### Order Refunded
+#### Order Refunded
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -714,20 +714,9 @@ analytics.track('Order Refunded', {
 })
 ```
 
-## Social events
+### Social events
 
-### Product Shared
-
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
-
-| GA parameter | value    | Explanation    |
-| ------------ | -------- | -------------- |
-| `t`          | "social" | Hit type       |
-| `sa`         | "share"  | Product action |
-
-- [Social details fields](#5-social-details-fields)
-
-### Cart Shared
+#### Product Shared
 
 This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -738,7 +727,18 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 - [Social details fields](#5-social-details-fields)
 
-### Product Reviewed
+#### Cart Shared
+
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
+
+| GA parameter | value    | Explanation    |
+| ------------ | -------- | -------------- |
+| `t`          | "social" | Hit type       |
+| `sa`         | "share"  | Product action |
+
+- [Social details fields](#5-social-details-fields)
+
+#### Product Reviewed
 
 This query takes advantage of GA's Enhanced E-Commerce but there is no native support for this type of action. It is recommended that this action be marked as a **social** hit. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
@@ -751,7 +751,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 
 ### Fields mapping
 
-### 1. Mandatory fields
+#### 1. Mandatory fields
 
 | Ga field | Mapping                                                                                   | Explanation                              |
 | -------- | ----------------------------------------------------------------------------------------- | ---------------------------------------- |
@@ -762,7 +762,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 | `uip`    | `context.ip` property from your `track()` calls                                           | user's ip                                |
 | `ua`     | `context.userAgent` property from your `track()` calls                                    | user agent                               |
 
-### 2. Promotion fields
+#### 2. Promotion fields
 
 | GA field   | Analytics.js property from `properties` obj | Explanation        |
 | ---------- | ------------------------------------------- | ------------------ |
@@ -771,14 +771,14 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 | `promo1nm` | `name`                                      | promotion name     |
 | `promo1ps` | `position`                                  | promotion position |
 
-### 3. Checkout fields
+#### 3. Checkout fields
 
 | GA field | Analytics.js property from `properties` obj | Explanation   |
 | -------- | ------------------------------------------- | ------------- |
 | `cos`    | `step`                                      | checkout step |
 | `col`    | `checkout_id`                               | checkout id   |
 
-### 4. Transaction fields
+#### 4. Transaction fields
 
 | GA field | Analytics.js property from `properties` obj |
 | -------- | ------------------------------------------- |
@@ -791,7 +791,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 
 For `negative` transactions, we map negative values of `revenue`, `shipping`, `tax` and `coupon`
 
-### 5. Social details fields
+#### 5. Social details fields
 
 | GA field | Analytics.js property from `properties` obj                    | Observation                                                                             |
 | -------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -800,13 +800,13 @@ For `negative` transactions, we map negative values of `revenue`, `shipping`, `t
 
 For `Review events` we hardcode `sn` as `product-review`
 
-### 6. Search fields
+#### 6. Search fields
 
 | GA field | Analytics.js property from `properties` obj | Observation                                                                      |
 | -------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
 | `dl`     | `<baseURL><searchParam>=<query>`            | use `searchParam` and `baseUrl` from `integrations.yaml` to set the query string |
 
-### 7. Product list fields
+#### 7. Product list fields
 
 | GA field                  | Analytics.js property from `properties` obj | Observation      |
 | ------------------------- | ------------------------------------------- | ---------------- |
@@ -826,7 +826,7 @@ Where `<type>` is either `"pr"` - for simple products, or `il1pi` - "il" prefix 
 
 **Note 2:** besides the hard limit of 200 products do not forget about the 8kb/request hard limit that the GA collect API has.
 
-# Complete GA configurations
+## Complete GA configurations
 
 Here's a full example of the configuration file for Google Analytics with the following functionalities:
 

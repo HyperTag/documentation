@@ -6,12 +6,14 @@ navText: 'Blueshift'
 path: '/enterprise-destinations/blueshift/'
 ---
 
-# What is Blueshift and how does it work?
+# Blueshift
+
+## What is Blueshift and how does it work?
 
 Blueshift brings AI in the Hands of Every Marketer.
 It is modern AI-First platform for Cross-Channel Marketing. AI is the key to unlocking the power of fast-changing data, and delivering 1:1 personalization.
 
-# Why send data to Blueshift using MetaRouter?
+## Why send data to Blueshift using MetaRouter?
 
 The base code for each customer is unique and must be obtained from the Blueshift UI. If you want to track custom events, you'll need to familiarize yourself with the Blueshift API to both locate the correct base and event tracking code as well as install it correctly into your own site. It typically needs to be added by a webmaster or developer to prevent errors.
 
@@ -19,9 +21,9 @@ Using MetaRouter, you can send page views and event data directly to Blueshift w
 
 Integrating Blueshift with MetaRouter cuts out any need for additional implementation resources, saving your development team valuable time.
 
-# Getting Started with Blueshift and MetaRouter
+## Getting Started
 
-## Blueshift Side
+### Blueshift Side
 
 To get started sending events to Blueshift, first contact [Blueshift](https://blueshift.com/contact-us/) to create your account.
 
@@ -30,13 +32,11 @@ And get your Event API Key.
 
 The easiest way to setup and test the events stream is to observe events coming to [clickstream events dashboard](https://app.getblueshift.com/dashboard#/app/click_stream/index).
 
-## MetaRouter Side
+### MetaRouter Side
 
 You can configure the Blueshift account and the event field mappings for our Blueshift Destination, below is the full payload you will need to send to the Platform via Canary. Keep in mind that you will also need to add the configurations of your other destinations as the Platform will overwrite any new instructions over the old one.
 
-### Config
-
-#### `eventApiKey` _(Required)_
+#### `eventApiKey`
 
 The Blueshift Event API Key from your Account Page
 
@@ -57,11 +57,11 @@ Replaces the key of an event payload's property object into the value specified 
 Allows you to control the default fall-back behaviour.
 Possible fields to control:
 
-- "customer_id": [boolean],
-- "username": [boolean],
-- "currency": [boolean],
-- "phones": [boolean],
-- "websites": [boolean],
+- `customer_id`: [boolean],
+- `username`: [boolean],
+- `currency`: [boolean],
+- `phones`: [boolean],
+- `websites`: [boolean],
 
 If following properties are enabled in `config.fallbackToDefault` , next behavior should be expected:
 
@@ -74,7 +74,7 @@ If following properties are enabled in `config.fallbackToDefault` , next behavio
 
 Except the `session_id`. It is disabled totally in request payload/config, since it is the same as `anonymous_id` . If you want to send `session_id` , simply place it to `properties`.
 
-Also anything can be overwritten if placed directly inside `properties` object.
+Also, anything can be overwritten if placed directly inside `properties` object.
 
 ## Examples:
 

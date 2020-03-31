@@ -6,13 +6,15 @@ navText: 'DoubleClick Floodlight'
 path: '/enterprise-destinations/doubleclick-floodlight/'
 ---
 
+# DoubleClick Floodlight
+
 MetaRouter makes it easy to send your data to [DoubleClick Floodlight](https://www.google.com/dfa/trafficking) (and lots of other destinations). Once you follow the steps below, your data will be routed through our platform and pushed to DoubleClick Floodlight in the format they understand.
 
 ## Why send data to DoubleClick Floodlight using MetaRouter?
 
 With MetaRouter, you can use DoubleClick Floodlight without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once DoubleClick Floodlight is routed through MetaRouter, our platform makes calls directly to Floodlight based on your mapped events.
 
-## Getting Started with DoubleClick Floodlight and MetaRouter
+## Getting Started
 
 ### DoubleClick Floodlight Side
 
@@ -77,7 +79,7 @@ This configuration file allows you to set your own configuration based on how yo
   - `ord` - String, **optional**
     - For Sales tags only, please specify which property value should be used for the `ord`. You must **enable reporting on ord** inside DoubleClick Floodlight if you decide to use this feature. A good example would be something like `order_id`.
 
-### Sending Personally Identifiable Information (PII)
+## Sending Personally Identifiable Information (PII)
 
 Please refrain from mapping custom variables that are PII. Please refer to the [warning](https://support.google.com/dcm/answer/2604612?hl=en) by DoubleClick:
 The terms of your DoubleClick contract prohibit passing any information to us that we could use or recognize as personally identifiable information (PII). If you enter certain key-values into a field in a DoubleClick product, you may see a warning that reminds you that you must not use key-values to pass data that we would recognize as PII. Key-values that trigger this warning include, for example, email and username. Note that it is okay to use these key-values if your purpose is not to collect information that DoubleClick could use or recognize as PII. (For example, email=weekly is fine, but passing a user’s email address is not.) If you do choose one of these key-values, DoubleClick may contact you in the future to confirm that you are not using them in a way that is prohibited.

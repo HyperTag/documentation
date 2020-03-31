@@ -6,6 +6,8 @@ navText: 'Pinterest Tag'
 path: '/enterprise-destinations/pinterest-tag/'
 ---
 
+# Pinterest
+
 MetaRouter makes it easy to send your data to Pinterest Tag. Once you follow the steps below, your data will be routed through our platform and pushed to Pinterest Tag in the appropriate format.
 
 ## What is Pinterest Tag and how does it work?
@@ -24,7 +26,7 @@ Using MetaRouter, you can send page views and event data directly to Pinterest w
 
 Integrating Pinterest with MetaRouter cuts out any need for additional implementation resources, saving your development team valuable time.
 
-## Getting Started with Pinterest Tag and MetaRouter
+## Getting Started
 
 To get started sending events to Pinterest, first sign up for [Pinterest for Business](https://business.pinterest.com/en).
 
@@ -55,26 +57,26 @@ The only configuration needed is the `tagId`, which represents the id that you'v
 Here is an example of `integrations.yaml`:
 
 ```yaml
-- name: "pinterest"
+- name: 'pinterest'
   config:
-      tagId: "2612826764086"
-      handleCustomAsPartnerDefinedEvent: true
-      valueFieldIdentifier: "price"
-      customEventsMapping:
-        - event: "Custom Event 1"
-          mapping: "ViewContent"
-          valueFieldIdentifier: ""
-        - event: "Custom Event 2"
-          mapping: "Subscribe"
-          valueFieldIdentifier: "price"
-        - event: "ViewCategory"
-          mapping: "ViewContent"
-        - event: "Order Updated"
-          mapping: "ViewContent"
-          valueFieldIdentifier: "revenueFORtest"
-      customPropertiesForStandardEvents:
-        - "prop1"
-        - "prop2"
+    tagId: '2612826764086'
+    handleCustomAsPartnerDefinedEvent: true
+    valueFieldIdentifier: 'price'
+    customEventsMapping:
+      - event: 'Custom Event 1'
+        mapping: 'ViewContent'
+        valueFieldIdentifier: ''
+      - event: 'Custom Event 2'
+        mapping: 'Subscribe'
+        valueFieldIdentifier: 'price'
+      - event: 'ViewCategory'
+        mapping: 'ViewContent'
+      - event: 'Order Updated'
+        mapping: 'ViewContent'
+        valueFieldIdentifier: 'revenueFORtest'
+    customPropertiesForStandardEvents:
+      - 'prop1'
+      - 'prop2'
 ```
 
 In this configuration, `tagId` represents the ID that you've got from the previous step.

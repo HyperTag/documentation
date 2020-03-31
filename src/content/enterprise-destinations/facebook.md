@@ -22,7 +22,7 @@ Facebook Pixel uses a JavaScript Tag API to track audiences and custom user even
 
 With MetaRouter, you can use Facebook Pixel without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once your Facebook Pixel is routed through MetaRouter, our platform translates page views and events into corresponding Facebook Pixel events.
 
-## Getting Started with Facebook Pixel and MetaRouter
+## Getting Started
 
 ### Facebook Pixel Side
 
@@ -40,7 +40,7 @@ Put your Facebook Pixel ID into your MetaRouter account and give your new connec
 
 With that, just click `Save` to activate your pipeline.
 
-### Configuration file
+#### Configuration file
 
 ```YAML
 - name: "facebook-pixel"
@@ -78,6 +78,8 @@ With that, just click `Save` to activate your pipeline.
 - `customEventsMapping` - Enter your event on the `event` property, and the **Facebook Standard Event** to map to on `mapping` properties. Facebook recognizes certain standard events that can be used across Custom Audiences, custom conversions, conversion tracking, and conversion optimization. When you map an event to a standard Facebook event, we’ll send the event by that name. Any unmapped events will still be sent as Custom Events. Acording to [Facebook Pixel Documentation](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking/#standard-events), accepted Standard Events, and therfore `mapping` values are: `AddPaymentInfo`, `AddToCart`, `AddToWishlist`, `CompleteRegistration`, `Contact`, `CustomizeProduct`, `Donate`, `FindLocation`, `InitiateCheckout`, `Lead`, `PageView`, `Purchase`, `Schedule`, `Search`, `StartTrial`, `SubmitApplication`, `Subscribe`, `ViewContent`.
 
 - `customPropertiesForStandardEvents` - If you send a custom property with your `track()` calls and you want to send it to your Facebook Pixel events you can add it here.
+
+## Events
 
 ### Default properties
 
@@ -196,13 +198,13 @@ All Pixel Standard Events will be mapped with the following properties.
 
 ### Adding your own events
 
-To send _Standard_ events, use the Analytitcs.js destination setting (from `integratinons.yaml` ) named `customEventsMapping` . Then, any time Analytics.js receives one of the events in that mapping, it will be sent to Facebook as the standard event you specified. All properties you included in the event will be sent as event properties.
+To send _Standard_ events, use the Analytics.js destination setting (from `integratinons.yaml` ) named `customEventsMapping` . Then, any time Analytics.js receives one of the events in that mapping, it will be sent to Facebook as the standard event you specified. All properties you included in the event will be sent as event properties.
 
 ### Custom events
 
 To send Custom events, send any event that does not appear in either mapping. All properties you included in the event will be included as event properties.
 
-### Timestamps
+## Timestamps
 
 Facebook Pixel uses a custom timestamp format: an ISO 8601 timestamp without timezone information. For the following event fields, if you pass in a JavaScript `Date` object, it will be converted to this custom format:
 _ `checkinDate`
@@ -214,7 +216,7 @@ _ `returningDepartureDate`
 _ `travelEnd`
 _ `travelStart`
 
-### PII Blacklisting
+## PII Blacklisting
 
 Facebook enforces strict guidelines around sending Personally Identifiable Information (PII) as properties of Pixel events. In order to adhere to these guidelines, Analytics.js will automatically scan `track` event properties for PII and remove any that get flagged from the event to Facebook. The following keys are currently filtered:
 

@@ -6,6 +6,8 @@ navText: 'Criteo'
 path: '/enterprise-destinations/criteo/'
 ---
 
+# Criteo
+
 Criteo drives sales for e-commerce businesses, intelligently converting shoppers with dynamic, personalized ads.
 
 MetaRouter makes it easy to send your data to [Criteo](http://www.criteo.com/) (and lots of other destinations). Once you follow the steps below, your data will be routed through our platform and pushed to Criteo in the format they understand.
@@ -14,7 +16,7 @@ MetaRouter makes it easy to send your data to [Criteo](http://www.criteo.com/) (
 
 With MetaRouter, you can use Criteo without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once Criteo is routed through MetaRouter, our platform translates page views and events into corresponding Criteo events.
 
-## Getting Started with Criteo and MetaRouter
+## Getting Started
 
 ### Criteo Side
 
@@ -111,79 +113,80 @@ This configuration file allows you to set your own configuration based on how yo
         - `tid` - will send a String representing transaction / order ID
         - if **no `type` provided**, we'll search for `property.[name]` and we'll use this value for this param
 
-  - Example:
-    Let's assume you will add the following `standardEvents` value:
+  ## Examples
 
-    ```yaml
-    standardEvents:
-      - event: 'Order Updated'
-        to: 'viewListing'
-        params:
-          - name: 'product'
-            type: 'pids'
-      - event: 'Modal Opened'
-        to: 'viewProduct'
-        params:
-          - name: 'modal'
-    ```
+  Let's assume you will add the following `standardEvents` value:
 
-    Here's how the events will be mapped:
+  ```yaml
+  standardEvents:
+    - event: 'Order Updated'
+      to: 'viewListing'
+      params:
+        - name: 'product'
+          type: 'pids'
+    - event: 'Modal Opened'
+      to: 'viewProduct'
+      params:
+        - name: 'modal'
+  ```
 
-    **Triggered Analytics.js event**
+  Here's how the events will be mapped:
 
-    ```javascript
-    analytics.track('Order Updated', {
-      order_id: '50314b8e9bcf000000000000',
-      revenue: 25.0,
-      currency: 'USD',
-      products: [
-        {
-          product_id: '507f1f77bcf86cd799439011',
-          sku: '45790-32',
-          name: 'Monopoly: 3rd Edition',
-          price: 19,
-          quantity: 1,
-          category: 'Games',
-        },
-        {
-          product_id: '505bd76785ebb509fc183733',
-          sku: '46493-32',
-          name: 'Uno Card Game',
-          price: 3,
-          quantity: 2,
-          category: 'Games',
-        },
-      ],
-    })
-    ```
+  **Triggered Analytics.js event**
 
-    **Mapped Criteo event**
+  ```javascript
+  analytics.track('Order Updated', {
+    order_id: '50314b8e9bcf000000000000',
+    revenue: 25.0,
+    currency: 'USD',
+    products: [
+      {
+        product_id: '507f1f77bcf86cd799439011',
+        sku: '45790-32',
+        name: 'Monopoly: 3rd Edition',
+        price: 19,
+        quantity: 1,
+        category: 'Games',
+      },
+      {
+        product_id: '505bd76785ebb509fc183733',
+        sku: '46493-32',
+        name: 'Uno Card Game',
+        price: 3,
+        quantity: 2,
+        category: 'Games',
+      },
+    ],
+  })
+  ```
 
-    ```json
-    {
-      "event": "viewListing",
-      "product": ["507f1f77bcf86cd799439011", "505bd76785ebb509fc183733"]
-    }
-    ```
+  **Mapped Criteo event**
 
-    **Triggered Analytics.js event**
+  ```json
+  {
+    "event": "viewListing",
+    "product": ["507f1f77bcf86cd799439011", "505bd76785ebb509fc183733"]
+  }
+  ```
 
-    ```javascript
-    analytics.track('Modal Opened', {
-      modal: '6cd799439011507f1f77bcf8',
-      price: 25.0,
-      currency: 'USD',
-    })
-    ```
+  **Triggered Analytics.js event**
 
-    **Mapped Criteo event**
+  ```javascript
+  analytics.track('Modal Opened', {
+    modal: '6cd799439011507f1f77bcf8',
+    price: 25.0,
+    currency: 'USD',
+  })
+  ```
 
-    ```json
-    {
-      "event": "viewProduct",
-      "modal": "6cd799439011507f1f77bcf8"
-    }
-    ```
+  **Mapped Criteo event**
+
+  ```json
+  {
+    "event": "viewProduct",
+    "modal": "6cd799439011507f1f77bcf8"
+  }
+  ```
 
 * `additionalEvents` - Array of Objects, **optional**
 
@@ -350,7 +353,6 @@ If `properties.viewHome` is not present or is set to `false`, the page call is *
             </tr>
         </tbody>
     </table>
-
 
 * Custom events - For any custom event call, Criteo's API is responding with a `200 ok` status, but **any custom event is dropped by Criteo**. To avoid triggering a call that is eventually dropped by Criteo, we're **dropping** any custom event.
 

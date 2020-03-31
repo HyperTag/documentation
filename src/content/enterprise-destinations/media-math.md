@@ -6,13 +6,15 @@ navText: 'Media Math'
 path: '/enterprise-destinations/media-math/'
 ---
 
+# Media Math
+
 MetaRouter makes it easy to send your data to [Media Math](https://www.mediamath.com/) (and lots of other destinations). Once you follow the steps below, your data will be routed through our platform and pushed to Media Math in the format they understand.
 
 ## Why send data to Media Math using MetaRouter?
 
 With MetaRouter, you can use Media Math without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once Media Math is routed through MetaRouter, our platform translates page views and events into corresponding Media Math events.
 
-## Getting Started with Media Math and MetaRouter
+## Getting Started
 
 ### Media Math Side
 
@@ -22,7 +24,7 @@ To get started with this integration, you’ll first need to have access to a Me
 
 Media Math allows you to track conversions. When you `analytics.track('Event Name')` we will map that event to the `mt_id` and `mt_adid` that you provide. We'll map other data like properties to `s` and `v` parameters. Our configuration file allows you to set both the general `mt_id` and `mt_adid` values, and individual values based on the triggered event.
 
-#### Configuration file
+### Configuration file
 
 This configuration file allows you to set your own configuration based on how you interact with Media Math. Here's a configuration file that includes all the settings that you can apply - `ADVERTISER_ID` is the only mandatory field, everything else is optional.
 
