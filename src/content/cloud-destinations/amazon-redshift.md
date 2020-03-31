@@ -47,8 +47,6 @@ Dense Compute clusters maximize query speed and performance, but in turn have le
 
 Dense storage clusters maximize storage capacity and allow customers with hundreds of millions of events to save money on Redshift hosting costs by using disk-based storage, slower CPU's, and less RAM. A single DS2 node cluster includes 2TB of space, with a max size of 16TB.
 
----
-
 ## Step 2. Provision your cluster
 
 1. Open the Redshift Console
@@ -58,8 +56,6 @@ Dense storage clusters maximize storage capacity and allow customers with hundre
 5. Set up your cluster Security Group or VPC and proceed to review
 
 If you're having trouble, check out the configuration steps [here](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html).
-
----
 
 ## Step 3. Permission MetaRouter to Redshift
 
@@ -123,15 +119,12 @@ If your cluster has a field called `VPC Security Groups`, go ahead to EC2 VPC.
 
 Make sure that you whitelist `35.245.140.149` and `35.236.193.215` as an incoming IP Addresses so we can write to your Redshift instance without you exposing the database to everyone.
 
----
-
 ## Step 4: Identify Your Host, Port, and Database Name
 
 The Host and Port are found at the top beside the label 'Endpoint,' with Host coming before the ':' and Port coming afterwards. The Database Name is found at the bottom besides a title of the same name.
 
 ![amazon-redshift3](../../../images/amazon-redshift3.png)
 
----
 
 ## Step 5: Activate Integration on MetaRouter
 

@@ -36,8 +36,6 @@ Follow [Google's guide](https://cloud.google.com/bigquery/docs/datasets#bigquery
 
 **\*Note**: Each unique `track` event will create a new table, and each property sent creates a new column in that table. For this reason, think about creating a detailed tracking plan to make sure that all events being passed to MetaRouter are necessary and consistent.\*
 
----
-
 ## Setting up your authentication service account
 
 **\*Note**: If you already have your auth json, you can skip this step\*
@@ -56,8 +54,6 @@ Once completed, you should have the following items ready to go:
 If this list looks good, you are ready to jump over to the MetaRouter UI and create the destination!
 
 Ensure that you give the Service Account the `BigQuery Editor` role in roder for us to have proper permissions to load data into your cloud.
-
----
 
 ## Activating your BigQuery integration on MetaRouter
 

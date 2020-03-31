@@ -46,8 +46,6 @@ You can configure the Google Analytics account and the event field mappings for 
 
 #### `api` _(Required)_ - Object
 
----
-
 The purpose of this section is to allow you to define Google Analytics' specific API information.
 The structure of the `api` property is the following:
 
@@ -71,8 +69,6 @@ The structure of the `api` property is the following:
   - **\*Note:** GA's API requires the payload to be included inside the URL.\*
 
 #### `events` _(Required)_ - Object
-
----
 
 The purpose of this section is to allow you to define event-specific information based on the event type. Because GA allows you to track `page()` and standard and custom `track()` calls, we divided this into the following sections:
 
@@ -349,8 +345,6 @@ Here's how this section should look like for GA:
 - `mappedProperties` allows you to define properties that you want to add to all your custom track calls
 
 #### `cookies` _(Optional)_ - String
-
----
 
 Our Analytics.js library includes a sync-injector. The purpose of this sync-injector is to load the minimal 3rd party tag in order for it to drop it's first party cookies. It will then grab these values and include those into the event's final structure.
 
@@ -831,8 +825,6 @@ Where `<type>` is either `"pr"` - for simple products, or `il1pi` - "il" prefix 
 **Note 2:** besides the hard limit of 200 products do not forget about the 8kb/request hard limit that the GA collect API has.
 
 # Complete GA configurations
-
----
 
 Here's a full example of the configuration file for Google Analytics with the following functionalities:
 
