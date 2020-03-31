@@ -16,7 +16,7 @@ This library lets you record analytics data from your ASP.NET, C#, F#, and Visua
 
 #### Step 1
 
-To start, you must install our client-side library, analytics.js, to your ASP.NET master page. Follow the steps outlined in our [analytics.js doc](../analyticsjs.md) and place your snippet directly in your ASP.NET Site.master. This will allow you to use `page` calls.
+To start, you must install our client-side library, analytics.js, to your ASP.NET master page. Follow the steps outlined in our [analytics.js doc](/sources/analytics-js/) and place your snippet directly in your ASP.NET Site.master. This will allow you to use `page` calls.
 
 #### Step 2
 

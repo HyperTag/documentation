@@ -170,9 +170,9 @@ This will have analytics.js log out all the actions that it takes, as well as wh
 
 ### Debugging within the MetaRouter App
 
-We provide a live event logger within your Source's dashboard. Select the Source you would want to inspect your [Sources list](https://app.metarouter.io/clickstream), then click on the **Logs** tab. This will show a copy of each event and it's payload to help you understand what our platform receives. Even if you are only using client-side sources, a copy of your event should show in this list.
+We provide a live event logger within your Source's dashboard. Select the Source you want to inspect from your [Sources list](https://app.metarouter.io/clickstream), then click on the **Logs** tab. This will show a copy of each event and it's payload to help you understand what our platform receives. Even if you are only using client-side sources, a copy of your event should show in this list.
 
-The Logger can only display events that are triggered while it is open, and their may be a delay of a few seconds as our platform processes the event. If your event or events do not show, then use the **Debugging within the Browser** steps to ensure that the event is being sent in the first place.
+The Logger can only display events that are triggered while it is open, and their may be a delay of a few seconds as our platform processes the event. If your event or events do not show, then use the **Debugging within the Browser** steps to ensure that the event is being sent.
 
 ## FAQ
 
@@ -184,7 +184,7 @@ There are three types of conflict resolution to expect across all destinations t
 
 1. **Automatic Conflict Resolution** - These are destinations that expect that a separate, duplicate copy can exist at the same time. Google Analytics is an example of this.
 
-2. **Manual Conflict Resolution** - These are destinations that require a setting to be specified in order to prevent conflicts. Facebook Pixel's [Send All Events as Single Events](https://docs.metarouter.io/v2/clickstream/destinations/facebook-pixel.html#additional-features) is an example of this.
+2. **Manual Conflict Resolution** - These are destinations that require a setting to be specified in order to prevent conflicts. Facebook Pixel's [Send All Events as Single Events](/cloud-destinations/facebook-pixel/#additional-features) is an example of this.
 
 3. **No Conflict Resolution** - These destinations do not have any functionality to handle multiple versions of themselves being loaded in at the same time.
 

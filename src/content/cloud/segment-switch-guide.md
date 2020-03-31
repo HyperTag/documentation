@@ -21,7 +21,7 @@ Switching from Segment to MetaRouter is very simple. Follow the four easy steps 
 
 ### Step 2
 
-Remove your Segment snippet and replace it with our [analytics.js](https://docs.metarouter.io/v2/clickstream/sources/analyticsjs.html) snippet:
+Remove your Segment snippet and replace it with our [analytics.js](/sources/analytics-js/) snippet:
 
 ```javascript
 <script type="text/javascript">

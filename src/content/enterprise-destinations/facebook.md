@@ -6,6 +6,8 @@ navText: 'Facebook'
 path: '/enterprise-destinations/facebook/'
 ---
 
+# Facebook
+
 MetaRouter makes it easy to send your data to Facebook Pixel. Once you follow the steps below, your data will be routed through our platform and pushed to Facebook Pixel in the appropriate format.
 
 **\*Note:** MetaRouter's Facebook Pixel destination consolidates what was previously Facebook's "Ads for Websites" suite, which consisted of both Facebook Custom Audiences and Facebook Conversion Tracking.\*
@@ -69,7 +71,7 @@ With that, just click `Save` to activate your pipeline.
 - `pixelId` - the id you've got from the Facebook Dashboard
 - `valueFieldIdentifier` - if no `valueFieldIdentifier` is set on standard events mappings or on any custom event mapped as custom, we’ll use this to get the value parameter.
 
-- `whitelistPII` - By default, we will strip any [PII](###pii-blacklisting) from the properties of track events that get sent to Facebook. If you would like to override this functionality, you can input each property you would like to whitelist as a line item in this setting.
+- `whitelistPII` - By default, we will strip any [PII](#pii-blacklisting) from the properties of track events that get sent to Facebook. If you would like to override this functionality, you can input each property you would like to whitelist as a line item in this setting.
 
 - `categoryToContentTypeMapping` - Enter your category value on the left, and the Facebook content type to map to on the right. Facebook recognizes certain event types that can help deliver relevant ads. If no category values are mapped we’ll default to product and product_group, depending on the event.
 

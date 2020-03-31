@@ -6,6 +6,8 @@ navText: 'Google Analytics'
 path: '/enterprise-destinations/google-analytics/'
 ---
 
+# Google Analytics
+
 MetaRouter makes is easy to send your data to Google Analytics. Once you've set up your source to start tracking data, we'll translate and route that data to Google Analytics.
 
 # What is Google Analytics and how does it work?
@@ -369,7 +371,7 @@ where `searchRedirect` is the set site search query parameter and `trees` is the
 
 ## Product List Viewed
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value                             | Explanation    |
 | ------------ | --------------------------------- | -------------- |
@@ -379,7 +381,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `pa`         | "detail"                          | Product action |
 | `il1nm`      | `category` from your `track` call | List name      |
 
-- [Product list fields](#product-list-fields) with `<type>` "pr" and `N` 1, because there's only one product
+- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `N` 1, because there's only one product
 
 ## Promotion events
 
@@ -405,17 +407,17 @@ analytics.track('Clicked Promotion', {
 
 ### Promotion Viewed
 
-Besides [the mandatory fields](#mandatory-fields), the parameters for this call are as follow:
+Besides [the mandatory fields](#1-mandatory-fields), the parameters for this call are as follow:
 
 | GA parameter | value   | Explanation |
 | ------------ | ------- | ----------- |
 | `t`          | "event" | Hit type    |
 
-- [Promotion fields](#promotion-fields)
+- [Promotion fields](#2-promotion-fields)
 
 ### Promotion Clicked
 
-Besides [the mandatory fields](#mandatory-fields), the parameters for this call are as follow:
+Besides [the mandatory fields](#1-mandatory-fields), the parameters for this call are as follow:
 
 | GA parameter | value         | Explanation    |
 | ------------ | ------------- | -------------- |
@@ -424,13 +426,13 @@ Besides [the mandatory fields](#mandatory-fields), the parameters for this call 
 | `ec`         | "interaction" | Event category |
 | `pa`         | "click"       | Product action |
 
-- [Promotion fields](#promotion-fields)
+- [Promotion fields](#2-promotion-fields)
 
 ## Product Events
 
 ### Product Clicked
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value      | Explanation    |
 | ------------ | ---------- | -------------- |
@@ -439,11 +441,11 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "ordering" | Event category |
 | `pa`         | "click"    | Product action |
 
-- [Product list fields](#product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
 
 ### Product Viewed
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value      | Explanation    |
 | ------------ | ---------- | -------------- |
@@ -452,13 +454,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "ordering" | Event category |
 | `pa`         | "detail"   | Product action |
 
-- [Product list fields](#product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
 
 ## Cart events
 
 ### Product Added
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value      | Explanation    |
 | ------------ | ---------- | -------------- |
@@ -467,13 +469,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "ordering" | Event category |
 | `pa`         | "add"      | Product action |
 
-- [Product list fields](#product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
 
 **NOTE:** at this stage we can't associate a `cart_id` to send to GA.
 
 ### Product Removed
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value    | Explanation    |
 | ------------ | -------- | -------------- |
@@ -482,13 +484,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "cart"   | Event category |
 | `pa`         | "remove" | Product action |
 
-- [Product list fields](#product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
 
 **NOTE:** at this stage we can't associate a `cart_id` to send to GA.
 
 ### Cart Viewed
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value      | Explanation    |
 | ------------ | ---------- | -------------- |
@@ -497,7 +499,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "cart"     | Event category |
 | `pa`         | "checkout" | Product action |
 
-- [Product list fields](#product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
+- [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
 
 ## Checkout events
 
@@ -563,7 +565,7 @@ You can have as many or as few steps in the checkout funnel as you'd like. The 4
 
 ### Checkout Started
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value           | Explanation    |
 | ------------ | --------------- | -------------- |
@@ -572,43 +574,43 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "cart"          | Event category |
 | `pa`         | "checkout"      | Product action |
 
-- [Product list fields](#product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
+- [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
 
 ### Checkout Step Viewed
 
 Before starting down this path, Enhanced E-Commerce needs to be enabled. Furthermore, the checkout steps need to be defined in the admin section of the app.
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value      | Explanation    |
 | ------------ | ---------- | -------------- |
 | `pa`         | "checkout" | Product action |
 
-- [Checkout fields](#checkout-fields)
+- [Checkout fields](#3-checkout-fields)
 
 ### Checkout Step Completed
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 | GA parameter | value | Explanation |
 | ---- | ---- | --- |
 | `pa` | "checkout_option" | Product action |
 
-- [Checkout fields](#checkout-fields)
+- [Checkout fields](#3-checkout-fields)
 
 ### Payment Info Entered
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 | GA parameter | value | Explanation |
 | ---- | ---- | --- |
 | `pa` | "checkout_option" | Product action |
 
-- [Checkout fields](#checkout-fields)
+- [Checkout fields](#3-checkout-fields)
 
 ## Ordering events
 
 ### Order Updated
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value         | Explanation    |
 | ------------ | ------------- | -------------- |
@@ -617,12 +619,12 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "cart"        | Event category |
 | `pa`         | "checkout"    | Product action |
 
-- [Transaction fields](#transaction-fields)
-- [Product list fields](#product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
+- [Transaction fields](#4-transaction-fields)
+- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
 
 ### Order Completed
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value             | Explanation    |
 | ------------ | ----------------- | -------------- |
@@ -631,8 +633,8 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "cart"            | Event category |
 | `pa`         | "purchase"        | Product action |
 
-- [Transaction fields](#transaction-fields)
-- [Product list fields](#product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
+- [Transaction fields](#4-transaction-fields)
+- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
 
 If you want to send coupon data to your `Order Completed` event when using Enhanced E-commerce, you can simply add the `coupon` property on the order level or the product level or both.
 
@@ -677,7 +679,7 @@ analytics.track({
 
 ### Order Refunded
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value         | Explanation    |
 | ------------ | ------------- | -------------- |
@@ -686,9 +688,9 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "cart"        | Event category |
 | `pa`         | "refund"      | Product action |
 
-- [Transaction fields](#transaction-fields) for `negative` transasctions
+- [Transaction fields](#4-transaction-fields) for `negative` transasctions
 
-* [Product list fields](#product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
+* [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
 
 For full refunds, fire this event whenever an order/transaction gets refunded:
 
@@ -716,36 +718,36 @@ analytics.track('Order Refunded', {
 
 ### Product Shared
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value    | Explanation    |
 | ------------ | -------- | -------------- |
 | `t`          | "social" | Hit type       |
 | `sa`         | "share"  | Product action |
 
-- [Social details fields](#social-details-fields)
+- [Social details fields](#5-social-details-fields)
 
 ### Cart Shared
 
-This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value    | Explanation    |
 | ------------ | -------- | -------------- |
 | `t`          | "social" | Hit type       |
 | `sa`         | "share"  | Product action |
 
-- [Social details fields](#social-details-fields)
+- [Social details fields](#5-social-details-fields)
 
 ### Product Reviewed
 
-This query takes advantage of GA's Enhanced E-Commerce but there is no native support for this type of action. It is recommended that this action be marked as a **social** hit. Besides [the mandatory fields](#mandatory-fields), these other parameters will be used:
+This query takes advantage of GA's Enhanced E-Commerce but there is no native support for this type of action. It is recommended that this action be marked as a **social** hit. Besides [the mandatory fields](#1-mandatory-fields), these other parameters will be used:
 
 | GA parameter | value    | Explanation    |
 | ------------ | -------- | -------------- |
 | `t`          | "social" | Hit type       |
 | `sa`         | "share"  | Product action |
 
-- [Review fields](#social-details-fields) with `sn` hardcoded
+- [Review fields](#5-social-details-fields) with `sn` hardcoded
 
 ### Fields mapping
 

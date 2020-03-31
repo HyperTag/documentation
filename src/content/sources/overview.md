@@ -13,22 +13,22 @@ path: '/sources-and-sdks/'
 
 ## Client-side libraries
 
-- [Javascript](../sources/analyticsjs.html)
-- [Android](../sources/android.html)
-- [iOS](../sources/ios.html)
-- [React Native](../sources/react.html)
+- [JavaScript](/sources/analytics-js/)
+- [Android](/sources/android/)
+- [iOS](/sources/ios/)
+- [React Native](/sources/react-native/)
 
 ## Server-side libraries
 
-- [HTTP API](../sources/httpapi.html)
-- [Java](../sources/java.html)
-- [MeteorJS](../sources/meteorjs.html)
-- [Node.js](../sources/nodejs.html)
-- [.NET](../sources/net.html)
-- [PHP](../sources/php.html)
-- [Python](../sources/python.html)
-- [Ruby](../sources/ruby.html)
-- [Segment Webhook](../sources/segment-webhook.html)
+- [HTTP API](/sources/http-api/)
+- [Java](/sources/java/)
+- [MeteorJS](/sources/meteor-js/)
+- [Node.js](/sources/node-js/)
+- [.NET](/sources/dot-net/)
+- [PHP](/sources/php/)
+- [Python](/sources/python/)
+- [Ruby](/sources/ruby/)
+- [Segment Webhook](/sources/segment-webhook/)
 
 > NOTE: Server-side ingestion allows you to send data to MetaRouter directly from your application's server. We recommend using these sources only when client sources will not work, as client sources generally pass additional data about the user's browser and environment. Use cases will include payment events, data that needs to be calculated from a database query, or sensitive information.
 

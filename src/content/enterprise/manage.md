@@ -80,9 +80,9 @@ Here is an example of the request body:
   },
   "google-analytics": {
     "config": {
-      appId: "UA-XXXXXXXX-4",
-      searchParam: "searchRedirect",
-      baseURL: "http://www.metarouter.io/"
+      "appId": "UA-XXXXXXXX-4",
+      "searchParam": "searchRedirect",
+      "baseURL": "http://www.metarouter.io/"
     }
   }
 }
