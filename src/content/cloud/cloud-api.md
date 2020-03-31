@@ -31,7 +31,7 @@ We recommend using these projects while connecting to GraphQL:
 
 JSON Web Tokens (JWT) encrypt important user session data in a way for our system to validate into a string that you can pass with every request. These tokens are set to expire on our system 24 hours after they are created.
 
-#### Requesting JWT Access
+### Requesting JWT Access
 
 In order to generate a JWT, you will first need a [user account](https://app.metarouter.io) with MetaRouter. Once you have a user account, the follow mutation (updated with your email, as the username, and password) will respond with your Token string for you to pass to our API.
 
@@ -48,15 +48,15 @@ mutation createToken {
 }
 ```
 
-### Gaining Access to the Public API
+## Accessing the Public API
 
-#### Using a JWT
+### Using a JWT
 
 Once you have created a JSON Web Token, you need to embed it in the header of each request as authorization. Additionally, any operation to edit an Organization or any Connection or pipeline that an Organization controls will require that Organization’s ID in the header of your request as well, under organization.
 
 JWT will expire after 24 hours. Once it is expired, you will need to generate a new JWT and replace the expired one with it.
 
-#### Using an API Key
+### Using an API Key
 
 We’re working to provide trusted partners with API Keys that provide access to the Public API and do not self-expire. Stay tuned for updates, or send us a note at [support@metarouter.io](support@metarouter.io) if you would like to be notified when this feature is made available.
 
@@ -119,11 +119,11 @@ mutation {
 }
 ```
 
-### Clickstream Pipelines
+## Clickstream Pipelines
 
 Clickstream Pipelines focus on extracting or loading events in as close to real-time as possible.
 
-#### Sources and Applications
+### Sources and Applications
 
 We currently support analytics.js, servers, analytics-android, analytics-ios and analytics-react-native as sources in our Clickstream module. The SDKs we offer for those platforms forward events to our Clickstream API to be ingested and distributed by our system. These sources are grouped under an `Organization`, to allow you and other contributers that you specify to have access to view and/or edit them.
 
@@ -141,7 +141,7 @@ mutation {
 }
 ```
 
-#### Destinations and Integrations
+### Destinations and Integrations
 
 To find how to build the form for a Clickstream Pipeline, you want to query against `clickstreamPrototypes`. Within that response is a `connectionPrototype` and `configPrototype` array that list all the fields can use to configure a destination.
 
@@ -189,13 +189,13 @@ mutation {
 }
 ```
 
-### Query & Mutation Response
+## Query & Mutation Response
 
-#### Query Response
+### Query Response
 
 Queries typically respond as an array of objects, even if the arguments you pass would limit the response to a single object. For instance, the query organizations will return an array with a single object if you search by orgId, but possibly multiple objects if you search by userId.
 
-#### Mutation Response
+### Mutation Response
 
 Mutations typically respond with a `statusMessage` object to alert you on if the mutation you triggered was successful or not. This contains:
 
@@ -206,7 +206,7 @@ Mutations typically respond with a `statusMessage` object to alert you on if the
 
 Actions to mutate data within MetaRouter’s platform tend to follow a "create and update" pattern, where we separate out the functions to make a new object with the ability to change or delete it in order to have strict control over the permissions over data control. For example, anyone can run `createOrganization` and make a new `Organization` where they are the owner. However, only `Organization` owners can run `updateOrganization` that allows for adding/removing users, updating details, or deleting the org.
 
-#### Error Response
+### Error Response
 
 This is on our roadmap and currently being built out- check back soon for updates!
 
@@ -218,7 +218,7 @@ Please contact us directly at [support@metarouter.io](support@metarouter.io) for
 
 Within the black Header Area, you want to paste the JWT into the token field and the Organization ID (found within the URL of your Organizations dashboard on app.metarouter.io - app.metarouter.io/org/). This will embed that information within the header of all of your requests within the console and will provide access to query and mutation results for your organization. Make sure you select `Prod` as your GraphQL endpoint (defaults to `Staging` on page load) to make sure you are accessing data that resides on MetaRouter's Main Platform.
 
-## API Reference Materials
+### API Reference Materials
 
 - [API Schema](https://super-collider.github.io/houston/schema/public-API-schema-0.3.0.html)
 - [API Roadmap](https://super-collider.github.io/houston/roadmap.html) coming soon...

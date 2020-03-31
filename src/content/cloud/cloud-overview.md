@@ -16,13 +16,13 @@ MetaRouter Cloud Edition is our SaaS offering. This is different from our [Enter
 
 Cloud is where many of our customers start their journey with streaming data, while Enterprise is typically used by larger companies that have outgrown SaaS and would like to keep all of their data in their own environment. To get started setting up, sign up for MetaRouter Cloud [here](https://app.metarouter.io/signup).
 
-# Why Cloud?
+## Why Cloud?
 
 The key to delighting customers is understanding them. Since identifying what they do-or don't do-is crucial to understanding their actions, thousands of tools exist to help marketers and product managers analyze user engagement with a website or app. As if selecting the right tools isn't challenging enough, accessing the fast-accumulating data for internal analysis is often a struggle, and the cost of switching to a better tool down the road can result in a major loss of data.
 
 The MetaRouter Cloud Platform allows you to capture every user event from web, mobile, and server side sources. Once those events are ingested into our platform, we can push them to a data warehouse, CRM, or analytics tool of your choice. Implementing our Cloud Platform allows you to better understand how exactly users are interacting with your web and mobile apps so that you can tailor marketing and product focus accordingly.
 
-# Getting Started
+## Getting Started
 
 Once you've [signed up](https://app.metarouter.io/signup) for an account, it only takes a few minutes to start collecting valuable behavior data with MetaRouter.
 
