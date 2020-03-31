@@ -28,7 +28,7 @@ _Before you get started, note that you will need to remove Google Analytics snip
 
 To start, you'll need your Google Analytics `Tracking ID`. This can be found in the Admin panel and should abide by the following structure: `UA-XXXXXXXX-X`.
 
-![google-analytics1](../../../images/google-analytics1.png)
+![google-analytics1](/images/google-analytics1.png)
 
 ### MetaRouter Side
 
@@ -36,7 +36,7 @@ Next, head to app.metarouter.io and add a new destination for the source you wan
 
 Here, you'll need to create a Friendly Name and enter your Google Analytics Tracking ID for the application. With just these two pieces of information, you can click `Create Destination` and MetaRouter will start sending your data to Google Analytics.
 
-![google-analytics1](../../../images/google-analytics2v2.png)
+![google-analytics1](/images/google-analytics2v2.png)
 
 **\*Note:** Unless you specify otherwise, MetaRouter will automatically enable `Track Named Pages` and `Track Categorized Pages`.\*
 

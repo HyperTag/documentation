@@ -33,7 +33,7 @@ To get started sending events to Acquisio, you'll need to sign up for [Acquisio]
 
 Once you receive your `Advertiser ID` from your account manager, paste it into the `Advertiser ID` field in the MetaRouter UI. In the `Events` area, paste in any conversion event names given to you by Acquisio. If you have more than one custom event, choose the `+` icon to add more.
 
-![acquisio1](../../../images/acquisio1v2.png)
+![acquisio1](/images/acquisio1v2.png)
 
 With your configuration entered, choose `Save.`
 

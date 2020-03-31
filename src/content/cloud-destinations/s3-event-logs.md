@@ -34,7 +34,7 @@ MetaRouter makes it easy to copy broadcasted events to an [Amazon Simple Storage
 
 #### Create an [Amazon S3 bucket](https://aws.amazon.com/s3/) within your AWS account.
 
-![s3-event-logs1](../../../images/s3-event-logs1.png)
+![s3-event-logs1](/images/s3-event-logs1.png)
 
 **\*Note:** See below to confirm your region.\*
 
@@ -62,7 +62,7 @@ Add the following S3 bucket policy, which will grant MetaRouter permission to co
 }
 ```
 
-![s3-event-logs1](../../../images/s3-event-logs2.gif)
+![s3-event-logs1](/images/s3-event-logs2.gif)
 
 ### MetaRouter Side
 
@@ -81,4 +81,4 @@ Either configure a new S3 connection in your MetaRouter dashboard with a unique 
 3. _Path Prefix (optional)_
    The file path at which your S3 events will be stored.
 
-![s3-event-logs1](../../../images/s3-event-logs3v2.png)
+![s3-event-logs1](/images/s3-event-logs3v2.png)

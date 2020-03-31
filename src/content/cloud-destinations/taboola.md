@@ -40,6 +40,6 @@ Give your new connection a unique name and click `Save` to activate your pipelin
 
 **\*Note:** You can specify custom event names in the Conversion Events section, shown as `my_custom_event` in the example below.\*
 
-![taboola1](../../../images/taboola1v2.png)
+![taboola1](/images/taboola1v2.png)
 
 With that, you're ready to start pushing data to Taboola!

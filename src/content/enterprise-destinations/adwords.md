@@ -72,4 +72,4 @@ Authorization between an AdWords account and a third-party-application is done v
 
 Once this step is complete, you should see a screen that looks like this showing the new Link Id:
 
-![adwords-linkid](../../../../images/adwords-linkid.jpg)
+![adwords-linkid](/images/adwords-linkid.jpg)

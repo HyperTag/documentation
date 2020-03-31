@@ -46,7 +46,7 @@ The Project ID is what tells MetaRouter which project within KISSmetrics are you
 
 See the below for more details on how to find your API key. This will be a 40 character string found in the JavaScript snippet that they suggest adding to your application.
 
-![kissmetrics1](../../../images/kissmetrics1.png)
+![kissmetrics1](/images/kissmetrics1.png)
 
 ### MetaRouter Side
 
@@ -54,8 +54,8 @@ Now that you have your API Key, go ahead and enter it into the KISSmetrics conne
 
 Once that's done, click on `Save` to activate your pipeline.
 
-![kissmetrics2](../../../images/kissmetrics2v2.png)
+![kissmetrics2](/images/kissmetrics2v2.png)
 
 Click around your application to send off some test events. It might take an hour or so for events to start populating into your project. You can check to see if events are coming in by clicking on the `Live` tab at the top of the page and looking at the `All Activity` section.
 
-![kissmetrics3](../../../images/kissmetrics3.png)
+![kissmetrics3](/images/kissmetrics3.png)

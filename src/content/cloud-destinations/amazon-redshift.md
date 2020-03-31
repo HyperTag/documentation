@@ -123,8 +123,7 @@ Make sure that you whitelist `35.245.140.149` and `35.236.193.215` as an incomin
 
 The Host and Port are found at the top beside the label 'Endpoint,' with Host coming before the ':' and Port coming afterwards. The Database Name is found at the bottom besides a title of the same name.
 
-![amazon-redshift3](../../../images/amazon-redshift3.png)
-
+![amazon-redshift3](/images/amazon-redshift3.png)
 
 ## Step 5: Activate Integration on MetaRouter
 
@@ -136,7 +135,7 @@ Click `Create Destination` and your pipeline will be activated.
 
 That's it! You'll now be receiving a livestream of data from your application into your private Redshift account.
 
-![amazon-redshift1](../../../images/amazon-redshift1v2.gif)
+![amazon-redshift1](/images/amazon-redshift1v2.gif)
 
 ## Things to note
 

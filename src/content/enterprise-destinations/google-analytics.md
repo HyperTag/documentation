@@ -30,7 +30,7 @@ To get started sending events to Google Analytics, first you'll need to [create 
 
 The first step is to get your Google Analytics `Tracking ID`. This can be found in the Admin panel and should abide by the following structure: `UA-XXXXXXXX-X`.
 
-![google-analytics1](../../../../images/google-analytics1.png)
+![google-analytics1](/images/google-analytics1.png)
 
 Next, you'll need to enable e-commerce tracking for the view you want to track transactions to.
 This can be done inside of Google Analytics by clicking: **Admin > View Settings > Ecommerce Settings switch to ON**
@@ -505,7 +505,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 The biggest differentiator between e-commerce and enhanced e-commerce is support for checkout steps. To take advantage of tracking your checkout funnel and measuring metrics like cart abandonment, etc, you'll first need to configure your checkout funnel in the Google Analytics admin interface, giving easily readable labels to the numeric checkout steps:
 
-![checkout-funnel](../../../../images/google-analytics-checkout-funnel.png)
+![checkout-funnel](/images/google-analytics-checkout-funnel.png)
 
 Then you'll instrument your checkout flow with `Viewed Checkout Step` and `Completed Checkout Step` for each step of the funnel you configured in the Google Analytics admin interface, passing the step number and step-specific options through as a property of those events:
 

@@ -55,7 +55,7 @@ Next, you'll need to provide your page impression tag event key, as well as any 
 
 Give your new Resonate connection a name, and choose `Save`.
 
-![resonate1](../../../images/resonate1v2.png)
+![resonate1](/images/resonate1v2.png)
 
 ### Final Step.
 

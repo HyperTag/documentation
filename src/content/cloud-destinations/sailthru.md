@@ -59,7 +59,7 @@ MetaRouter will automatically alias users for you so if you `identify` a user wh
 
 An identify event will appear in Sailthru’s user lookup feature if there is an `email` present (Sailthru only allows a user lookup up based on an email):
 
-![sailthru-identify-dashboard](../../../images/sailthru-identify-dashboard.png)
+![sailthru-identify-dashboard](/images/sailthru-identify-dashboard.png)
 
 Or within the _Users > Lists_ feature, based on the default list you configured in the Metarouter UI or passed in through the destinations object like so:
 
@@ -79,7 +79,7 @@ analytics.identify(
 )
 ```
 
-![sailtrhu-default-list-name](../../../images/sailtrhu-default-list-name.png)
+![sailtrhu-default-list-name](/images/sailtrhu-default-list-name.png)
 
 You can also configure an `optoutValue` value in the MetaRouter UI, or pass in a value through the destinations object with one of the Sailthru expected values:
 
@@ -105,17 +105,17 @@ So if you send an`identify` call without a `traits.email` and only a `userId`, t
 
 We map `Product Added`, `Product Removed`, `Order Completed` and `Order Updated` events to the `/purchase` endpoint. All other Analytics.js Ecommerce Events will be sent to the `/event` endpoint, with the same name. . **Important**: You must have each event mapped in Sailthru within **Communications > Lifecycle Optimizer** in order to leverage the custom event. Be sure that the **Status** is set to **Active**:
 
-![sailthru-lifecycle-optimizer-1](../../../images/sailthru-lifecycle-optimizer-1.png)
+![sailthru-lifecycle-optimizer-1](/images/sailthru-lifecycle-optimizer-1.png)
 
 Your account must have triggers or lifecycle optimizer enabled. This should be enabled when the account is setup, however, just to be sure you may need to reach out to your account representative to confirm it is enabled.
 
 A custom event will hit the **Sailthru Lifecycle Optimizer** feature. Navigate to **Communications > Lifecycle Optimizer** in your Sailthru dashboard:
 
-![sailthru-lifecycle-optimizer-2](../../../images/sailthru-lifecycle-optimizer-2.png)
+![sailthru-lifecycle-optimizer-2](/images/sailthru-lifecycle-optimizer-2.png)
 
 Configure a custom event to a new flow and trigger a follow up action to the event:
 
-![sailthru-lifecycle-optimizer-3](../../../images/sailthru-lifecycle-optimizer-3.png)
+![sailthru-lifecycle-optimizer-3](/images/sailthru-lifecycle-optimizer-3.png)
 
 For instance, in the above example notice that the `Registered` event will add the user who trigger the event to a list.
 
@@ -123,15 +123,15 @@ For instance, in the above example notice that the `Registered` event will add t
 
 When you `track` an event with the name `Order Completed` or `Order Updated` using the **e-commerce tracking API**, we will send the products you’ve listed to Sailthru’s purchase log:
 
-![sailthru-purchase-1](../../../images/sailthru-purchase-1.png)
+![sailthru-purchase-1](/images/sailthru-purchase-1.png)
 
 In addition, it will also appear within the user view under purchase history:
 
-![sailthru-purchase-2](../../../images/sailthru-purchase-2.png)
+![sailthru-purchase-2](/images/sailthru-purchase-2.png)
 
 Note that the main identifier is `email` not `id`
 
-![sailthru-purchase-3](../../../images/sailthru-purchase-3.png)
+![sailthru-purchase-3](/images/sailthru-purchase-3.png)
 
 Sailthru does not allow the `extid` to be the main lookup identifier for their Purchase API. Instead, Sailthru requires an `email` as the primary identifier. MetaRouter will make a GET request to retrieve the user’s email based on their `userId`, which is their `extid` in Sailthru.
 

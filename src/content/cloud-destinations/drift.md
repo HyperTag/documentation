@@ -30,13 +30,13 @@ MetaRouter's Drift destination supports the Drift JavaScript SDK as well as data
 
 Once you have an account on Drift, you'll be prompted with a few install options. The only thing we're looking for here is an `Embed Id`, which is what you need to input on your MetaRouter dashboard. To retrieve the Id, you can either reach out to the support team directly, or find it yourself within the JavaScript snippet.
 
-![drift1](../../../images/drift1.png)
+![drift1](/images/drift1.png)
 
 If you decide for the latter, go ahead and click on JavaScript when prompted. In that code, the Embed Id will be within text that reads `drift.load ('<Embed Id here>')`.
 
 Check out the image below for reference:
 
-![drift2](../../../images/drift2.png)
+![drift2](/images/drift2.png)
 
 ### MetaRouter Side
 
@@ -44,7 +44,7 @@ With that `Embed Id` in hand, jump right to your MetaRouter dashboard and add Dr
 
 Give your connection a unique name enter your `Embed Id` as seen below:
 
-![drift3](../../../images/drift3v2.png)
+![drift3](/images/drift3v2.png)
 
 Now, just click `Save` to activate your pipeline.
 

@@ -77,10 +77,14 @@ main section li p {
 }
 main section img {
   @apply max-w-screen-lg;
-  @apply mx-auto;
-  @apply .w-4/5;
+  @apply mx-auto mt-6 mb-12;
+  @apply .w-5/6;
+  @apply shadow-md;
+  @apply border border-solid rounded-md border-gray-200;
 }
-
+.gatsby-highlight + p > img {
+  @apply mt-12;
+}
 main .toc {
   @apply text-xs;
   @apply w-56;

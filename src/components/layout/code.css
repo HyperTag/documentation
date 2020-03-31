@@ -21,7 +21,7 @@ pre[class*='language-'] {
 /* Code blocks */
 pre[class*='language-'] {
   @apply relative;
-  @apply mb-6;
+  @apply mb-10;
   @apply max-w-full;
   @apply overflow-x-auto;
   @apply border border-cloud-green-darkest border-solid rounded-md;

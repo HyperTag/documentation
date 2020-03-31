@@ -32,17 +32,17 @@ To get started sending events to Customer.io, you're going to need your Site ID 
 
 Once you create a [Customer.io](customer.io) account, you'll be asked to create an organization.
 
-![customerio1](../../../images/customerio1.png)
+![customerio1](/images/customerio1.png)
 
 You will find both your Site ID and API Key clearly presented and labeled once you click on the 'Integration' tab within the 'Configuration' section of the left hand menu.
 
-![customerio2](../../../images/customerio2.png)
+![customerio2](/images/customerio2.png)
 
 ### MetaRouter
 
 Add your Site ID and API Key into the Customer.io connector on your MetaRouter dashboard and give your new connection a unique name. Click 'Save' and your pipeline will be activated.
 
-![customerio3](../../../images/customerio3v2.png)
+![customerio3](/images/customerio3v2.png)
 
 ### Page
 

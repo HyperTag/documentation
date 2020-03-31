@@ -30,11 +30,11 @@ Once you enable Mixpanel in your MetaRouter UI, we'll route your data directly t
 
 Once you've made a Mixpanel account and find yourself on the site, go ahead to project settings. Here, you'll find your Token and API key.
 
-![mixpanel1](../../../images/mixpanel1.png)
+![mixpanel1](/images/mixpanel1.png)
 
 You'll need to copy these two fields into the MetaRouter App configuration for Mixpanel.
 
-![mixpanel2](../../../images/mixpanel2.png)
+![mixpanel2](/images/mixpanel2.png)
 
 ### MetaRouter Side
 

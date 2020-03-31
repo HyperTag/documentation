@@ -34,15 +34,15 @@ To get started sending events to Pinterest, first sign up for [Pinterest for Bus
 
 Begin by logging into your [Pinterest for Business Ads account](https://ads.pinterest.com) account. Create your conversion tracking tags by choosing from the `Ads` dropdown and selecting `Conversion Tracking`.
 
-![pinterest1](../../../images/pinterest-tag-1.png)
+![pinterest1](/images/pinterest-tag-1.png)
 
 On the next page, click `Create Pinterest Tag`.
 
-![pinterest2](../../../images/pinterest-tag-2.png)
+![pinterest2](/images/pinterest-tag-2.png)
 
 This next page will show your Pinterest Tag Id (shown in red in the image below - copy this value) and allows you to choose a custom name for it.
 
-![pinterest3](../../../images/pinterest-tag-3.png)
+![pinterest3](/images/pinterest-tag-3.png)
 
 **\*Note:** We will fire `page` views for you, but you'll need to map in your custom events in order to fire those off.\*
 
@@ -54,7 +54,7 @@ The next mandatory step is to add you Pinterest Tag Id as the connection of the 
 
 In addition, you can choose to customize your destination using the following fields available on our UI, under _Destination Details_ section:
 
-![pinterest4](../../../images/pinterest-tag-4.png)
+![pinterest4](/images/pinterest-tag-4.png)
 
 #### `Pinterest Custom Properties`
 

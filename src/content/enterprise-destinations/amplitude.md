@@ -28,16 +28,16 @@ Integrating Amplitude with MetaRouter means that you will just need to install M
 
 To get started sending events to Amplitude, all you need is your API Key. After signing up for an Amplitude account, a page will load asking you to create an organization.
 
-![amplitude1](../../../../images/amp-ee-1.png)
+![amplitude1](/images/amp-ee-1.png)
 
 Hit Manage Data and Create Project. This will allow you to get your API Key.
 
-![amplitude2](../../../../images/amp-ee-2.png)
-![amplitude3](../../../../images/amp-ee-3.png)
+![amplitude2](/images/amp-ee-2.png)
+![amplitude3](/images/amp-ee-3.png)
 
 After this application is created, an API Key will be generated and presented in your dashboard.
 
-![amplitude4](../../../../images/amp-ee-4.png)
+![amplitude4](/images/amp-ee-4.png)
 
 ### MetaRouter Side
 
@@ -80,8 +80,6 @@ When sending data via server side, you can send the custom query params that are
 ]
 ...
 ```
-
----
 
 Below is a full example of the configuration to send into the Platform, with all of the defaults specified. Ensure to customize to match the data that you send as part of your analyitcs event.
 

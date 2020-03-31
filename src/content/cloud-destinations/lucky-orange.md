@@ -26,7 +26,7 @@ To get started sending events to Lucky Orange, first sign up for [an account](ht
 
 Begin by logging into your [Lucky Orange](https://www.luckyorange.com/) account. Create a new site by clicking `Add a New Site` button from top right. The next page will show your Lucky Orange tracking code for your site.
 
-![luckyorange1](../../../images/luckyorange1.png)
+![luckyorange1](/images/luckyorange1.png)
 
 The generated Lucky Orange tracking code contains your site id (shown blured in the above image). Copy this value.
 
@@ -36,7 +36,7 @@ The generated Lucky Orange tracking code contains your site id (shown blured in 
 
 Back in the MetaRouter UI, select Lucky Orange as a destination and give your new pipeline a unique name. Add your Site Id into the Lucky Orange connector on your MetaRouter dashboard and give your new connection a unique name.
 
-![luckyorange2](../../../images/luckyorange2.png)
+![luckyorange2](/images/luckyorange2.png)
 
 This settings page allows you to connect an [e-commerce event](/sources/analytics-js-ecommerce-spec/) with a Lucky Orange tag - you don't need to create the behavior tag on you Lucky Orange dashboard, triggering an event will automatically assign it the tag you defined on the MetaRouter dashboard.
 
@@ -44,7 +44,7 @@ This settings page allows you to connect an [e-commerce event](/sources/analytic
 
 Auto-Tagging option will send all analytics.js triggered events from your website to Lucky Orange's API. You can customize your tags with each `track()` call - more details on [Track section](#track).
 
-![luckyorange3](../../../images/luckyorange3.png)
+![luckyorange3](/images/luckyorange3.png)
 
 #### Custom mapping
 
@@ -57,7 +57,7 @@ To map an event to a specific tag, unckeck _Auto-Tagging_ option - _Map Analytic
 
 **\*Note:** Only triggered events that have a mapping defined will be sent to Lucky Orange's APIs.\*
 
-![luckyorange4](../../../images/luckyorange4.png)
+![luckyorange4](/images/luckyorange4.png)
 
 You can map as many events you need.
 
@@ -76,7 +76,7 @@ analytics.identify('1205119', {
 
 Calling `identify()` will create/update visitors in Lucky Orange. All traits are sent to Lucky Orange and each trait will create a new column in the visitor's view. If name and email are set in an `identify()` call, Lucky Orange will also try to find an Gravatar associated with the user.
 
-![luckyorange5](../../../images/luckyorange5.png)
+![luckyorange5](/images/luckyorange5.png)
 
 ### Track
 
@@ -107,7 +107,7 @@ For flexibility, there are a few ways for you to benefit of. Here are some examp
   - star - `false`
   - overwrite - `false`
 
-  ![luckyorange7](../../../images/luckyorange7.png)
+  ![luckyorange7](/images/luckyorange7.png)
 
 - Custom `track()` usage
 
@@ -126,12 +126,12 @@ For flexibility, there are a few ways for you to benefit of. Here are some examp
   })
   ```
 
-  ![luckyorange8](../../../images/luckyorange8.png)
+  ![luckyorange8](/images/luckyorange8.png)
 
 #### Auto-Tagging disabled & Mapped Analytics Events to Lucky Orange tags available
 
 Calling track will create or use an already existing Lucky Orange behavior tag based on your defined mapping. If an event is triggered and there's no corresponding mapping for it, it won't reflect on Lucky Orange's dashboard.
 
-![luckyorange6](../../../images/luckyorange6.png)
+![luckyorange6](/images/luckyorange6.png)
 
 With that, you're all set! Get ready for insights.

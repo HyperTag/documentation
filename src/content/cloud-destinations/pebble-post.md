@@ -37,7 +37,7 @@ Log back into your MetaRouter app, and add the Pebble Post destination to your p
 
 Once you're there, input that Site ID and any applicable end URL mappings where prompted. Check out the image below to see what this page looks like:
 
-![Pebblepost1](../../../images/pebblepost1v2.png)
+![Pebblepost1](/images/pebblepost1v2.png)
 
 Now, all you have to do is give your connection a unique name and activate the destination.
 

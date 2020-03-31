@@ -36,11 +36,11 @@ To get started, all you need is your Twitter Pixel ID, which you can retrieve by
 
 Once you have a [Twitter Ads account](https://ads.twitter.com/), choose `Conversion Tracking` from the `Tools` drop down menu.
 
-![twitterads1](../../../images/twitterads1.png)
+![twitterads1](/images/twitterads1.png)
 
 A page will load asking you to accept Twitter Ads' conversion tracking policy. If you agree, check that box and choose `Generate website tag for conversion tracking`.
 
-![twitterads2](../../../images/twitterads2.png)
+![twitterads2](/images/twitterads2.png)
 
 You'll be taken to a page with instructions on how to set up your universal website tag, along with a code snippet.
 
@@ -48,7 +48,7 @@ You'll be taken to a page with instructions on how to set up your universal webs
 
 If you want to use the universal tag, simply copy your Twitter Pixel ID from the code snippet (identified below).
 
-![twitterads3](../../../images/twitterads3.png)
+![twitterads3](/images/twitterads3.png)
 
 **\*Reminder:** Twitter doesn't recognize custom events, just pixel IDs. Anytime that you `analytics.track(event, properties)` an event that represents a Twitter conversion, you need to map the event name on the left to its corresponding Twitter Pixel ID on the right.\*
 
@@ -66,7 +66,7 @@ Paste your Twitter Pixel ID into the `Twitter Pixel ID` field in your MetaRouter
 
 If you’d like to use the Single Event Website Tags, you must map the event names to your Single Event Website Tags’ respective conversion pixel IDs.
 
-![twitterads5](../../../images/twitterads4v2.png)
+![twitterads5](/images/twitterads4v2.png)
 
 ### Final Step
 

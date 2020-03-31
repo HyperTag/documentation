@@ -69,9 +69,8 @@ const createTableOfContents = $ => {
     .map(function() {
       const el = $(this)
       const href = el.find('.anchor').attr('href')
-      const className = `level-${el.prop('tagName')}`
 
-      return `<li><a href="${href}" class="${className}">${el.text()}</a></li>`
+      return `<li><a href="${href}">${el.text()}</a></li>`
     })
     .get()
     .join(' ')

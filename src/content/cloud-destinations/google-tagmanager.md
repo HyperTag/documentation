@@ -30,15 +30,15 @@ MetaRouter's integration only requires the `Container ID` tied to your account. 
 
 First, you'll need to sign up for a Google Tag Manager account directly on [GTM](https://www.google.com/analytics/tag-manager/) and create a new 'container' for your site.
 
-![google-tagmanager1](../../../images/google-tagmanager1.png)
+![google-tagmanager1](/images/google-tagmanager1.png)
 
 You'll immediately be given a GTM container `snippet`. Since you're using MetaRouter's integration and snippet, you can skip this step - just press `OK`.
 
-![google-tagmanager2](../../../images/google-tagmanager2.png)
+![google-tagmanager2](/images/google-tagmanager2.png)
 
 You'll then be taken to your "Workspace". Look to the top right of that page to find your `Container ID` - formatted GTM-XXXXXX.
 
-![google-tagmanager3](../../../images/google-tagmanager3.png)
+![google-tagmanager3](/images/google-tagmanager3.png)
 
 _Still need help setting up Google Tag Manager? Check out [this page](https://support.google.com/tagmanager/answer/6103696?hl=en)._
 
@@ -50,7 +50,7 @@ Input your `Container ID` and give your connection a unique name.
 
 At the bottom, you'll also see an option to enable tracking for both named and categorized pages. Once that's set, go ahead and click `Save` to activate your pipeline.
 
-![google-tagmanager4](../../../images/google-tagmanager4v2.png)
+![google-tagmanager4](/images/google-tagmanager4v2.png)
 
 With that, you're all set!
 

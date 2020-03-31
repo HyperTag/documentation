@@ -32,17 +32,17 @@ To set up your pipeline, you'll need to create your Bing Universal Event Trackin
 
 To do so, first create an account and make a campaign. Here, you'll also have the option to import a Google AdWords campaign.
 
-![bing-ads1](../../../images/bing-ads1.png).
+![bing-ads1](/images/bing-ads1.png).
 
 Once you create a campaign, you'll be taken to your `Campaign` page. On the lefthand bar, click on `Conversion Tracking` > `UET Tags`.
 
 Now, go ahead and create a UET Tag by choosing a name and description.
 
-![bing-ads2](../../../images/bing-ads2.png).
+![bing-ads2](/images/bing-ads2.png).
 
 If you click on `View Tag`, you'll be able to see both the JavaScript code and the 7-digit `Tag Id`. With that, jump over to your MetaRouter dashboard to activate your pipeline directly from our UI.
 
-![bing-ads3](../../../images/bing-ads3.png).
+![bing-ads3](/images/bing-ads3.png).
 
 For more help on getting Bing Ads set up, check out [this Bing Ads support page](http://help.bingads.microsoft.com/apex/index/3/en/56705).
 
@@ -52,7 +52,7 @@ If you're ready with your `Tag Id` at hand, go ahead and log into your MetaRoute
 
 Add Bing Ads as a destination. From there, give your connection a unique name and input your `Tag Id` where prompted.
 
-![bing-ads4](../../../images/bing-ads4v2.png)
+![bing-ads4](/images/bing-ads4v2.png)
 
 Now, just click on `Save` to activate your pipeline.
 

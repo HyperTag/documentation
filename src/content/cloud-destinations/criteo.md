@@ -38,4 +38,4 @@ Copy your Criteo Account ID into the "Account ID" field in your MetaRouter Crite
 
 You can also map custom event names to a few of Criteo's reserved keywords in the Conversion Events section. In the example shown, `myEventName` is a custom event mapped to Criteo's `trackTransaction`.
 
-![criteo1](../../../images/criteo1v2.png)
+![criteo1](/images/criteo1v2.png)

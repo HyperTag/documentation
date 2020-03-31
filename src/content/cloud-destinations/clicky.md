@@ -26,14 +26,14 @@ Integrating Clicky with MetaRouter avoids the painstaking process of installing 
 
 Once you've made an account with Clicky, you will land on a page outlining basic information. Click the blue 'Preferences' button on the right side of the main menu bar.
 
-![clicky3](../../../images/clicky3.png)
+![clicky3](/images/clicky3.png)
 
 Your site ID will be at the top of this page. Copy this ID to your clipboard.
 
 ### MetaRouter Side
 
-![clicky4](../../../images/clicky4.png)
+![clicky4](/images/clicky4.png)
 
 Paste this ID into the MetaRouter UI to begin sending data to Clicky. Your pipeline will be activated once you click 'Save.'
 
-![clicky5](../../../images/clicky5v2.png)
+![clicky5](/images/clicky5v2.png)

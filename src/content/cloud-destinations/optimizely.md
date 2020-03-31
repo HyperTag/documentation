@@ -56,6 +56,6 @@ Sends the experiment and variation information as properties on a track call.
 
 Specifies the Experiment Viewed as a non-interaction event for Google Analytics.
 
-![optimizely1](../../../images/optimizely1v2.png)
+![optimizely1](/images/optimizely1v2.png)
 
 Click `Save` and your pipeline will be activated.

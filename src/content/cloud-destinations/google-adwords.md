@@ -30,7 +30,7 @@ Furthermore, you do not need to learn the AdWords SDK methods if you want to sen
 
 Once you create an Adwords account, you'll need to find your Conversion ID. To do this, you'll need to click the wrench icon in the upper right hand corner of your screen. It should look something like this:
 
-![Adwords1](../../../images/Adwords1.png)
+![Adwords1](/images/Adwords1.png)
 
 After you click the wrench, you'll be prompted with a menu. Under `Measurement`, select `Conversions`. Create a new conversion by clicking the plus icon in the upper left hand corner of the screen.
 

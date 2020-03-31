@@ -59,24 +59,24 @@ Because Microsoft Advertising offers Standard Event `custom` that is available f
 In order for us to map your track events to Microsoft Advertising Conversion Goal, you’ll first need to [create the Conversion Goal](https://help.bingads.microsoft.com/#apex/3/en/56689/2) on your Microsoft Advertising account:
 
 On the left pane, click Conversion Tracking.
-![microsoftConversionTrackingSidenav](../../../../images/microsoftConversionTrackingSidenav.png)
+![microsoftConversionTrackingSidenav](/images/microsoftConversionTrackingSidenav.png)
 
 Under Conversion Tracking, click View Conversion Goals Page.
-![microsoftConversionGoalButton](../../../../images/microsoftConversionGoalButton.png)
+![microsoftConversionGoalButton](/images/microsoftConversionGoalButton.png)
 
 On the conversion goals page, click Create conversion goal.
-![microsoftCreateConversionGoal](../../../../images/microsoftCreateConversionGoal.png)
+![microsoftCreateConversionGoal](/images/microsoftCreateConversionGoal.png)
 
 Enter a name for your goal in the Goal name box. When naming your goal, use a descriptive name that makes sense to you. (For example, Order Completed)
 Choose the `Event` type of conversion and click Next.
-![microsoftSelectConversionType](../../../../images/microsoftSelectConversionType.png)
+![microsoftSelectConversionType](/images/microsoftSelectConversionType.png)
 
 Fill in the appropriate values. Make sure to add the Metarouter event name as the label field and to associate the goal to the correct Tag (UET Tag) that is set up in your Metarouter source.
 Only the event name is required - other properties are optional. An example track call is shown below:
-![microsoftGoalDetails](../../../../images/microsoftGoalDetails.png)
+![microsoftGoalDetails](/images/microsoftGoalDetails.png)
 
 You should be able to see your goal appeared in the goals list:
-![microsoftListOfGoals](../../../../images/microsoftListOfGoals.png)
+![microsoftListOfGoals](/images/microsoftListOfGoals.png)
 
 ```javascript
 // Metarouter event

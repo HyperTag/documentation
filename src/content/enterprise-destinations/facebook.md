@@ -30,7 +30,7 @@ To get started with this integration, you'll first need to create a Facebook for
 
 You'll only create one pixel for your site (typically labeled with the name of your business). This pixel will [replace all the functionality](https://www.facebook.com/business/help/1686199411616919) previously given to Facebook Audiences and Facebook Conversions (as well as allowing some additional features, such as custom conversions).
 
-![facebook-pixel1](../../../../images/facebook-pixel1.png)
+![facebook-pixel1](/images/facebook-pixel1.png)
 
 Once that's set up, identify your unique `pixelId`, a 15 digit number that uniquely identifies your site.
 

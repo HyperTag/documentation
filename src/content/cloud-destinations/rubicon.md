@@ -35,7 +35,7 @@ Within your MetaRoter Rubicon connector UI, give your new connection a unique na
 
 Then, paste your Page ID into the `pid` field, and your Conversion ID into the `Conversion ID` field. In the `Conversion Events` area, paste in any conversion event names given to you by Rubicon. If you have more than one conversion event, choose the `+` icon to add more.
 
-![rubicon1](../../../images/rubicon1v2.png)
+![rubicon1](/images/rubicon1v2.png)
 
 With your configuration entered, choose `Save`.
 

@@ -17,7 +17,7 @@ Switching from Segment to MetaRouter is very simple. Follow the four easy steps 
 
 [Sign up for MetaRouter](https://app.metarouter.io/signup) and create a [source](/sources-and-sdks/) in the MetaRouter UI.
 
-![segment-switch-1](../../images/segment-switch-1-v2.png)
+![segment-switch-1](/images/segment-switch-1-v2.png)
 
 ### Step 2
 
@@ -36,13 +36,13 @@ Remove your Segment snippet and replace it with our [analytics.js](/sources/anal
 
 Step 3: Configure your integrations via the MetaRouter dashboard.
 
-![segment-switch-3](../../images/segment-switch-3-v2.png)
+![segment-switch-3](/images/segment-switch-3-v2.png)
 
 ### Step 4
 
 Step 4: Check the live debugger to make sure your data is flowing.
 
-![segment-switch-4](../../images/segment-switch-4-v2.png)
+![segment-switch-4](/images/segment-switch-4-v2.png)
 
 # Segment | MetaRouter Merge Guidelines
 
@@ -64,7 +64,7 @@ AND table_name = 'example_table_name'
 
 If you do identify some datatype conflicts, it's likely that your destination column will be able to accommodate the previous datatype (e.g. varchar(256) or varchar(512) or timestamp with timezone. Check out the following example:
 
-![clickstream-merge1](../../images/clickstream-merge1.png)
+![clickstream-merge1](/images/clickstream-merge1.png)
 
 ## Non-Existent Destination Columns
 
@@ -82,7 +82,7 @@ From here, you'll have 2 options:
 
 Here, use the specific column order as the destination tables rather than`SELECT` (see below)
 
-![clickstream-merge2](../..//images/clickstream-merge2.png)
+![clickstream-merge2](/images/clickstream-merge2.png)
 
 **B) Unload to S3 and then Copy**
 

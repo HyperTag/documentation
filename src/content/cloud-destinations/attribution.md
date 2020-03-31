@@ -30,7 +30,7 @@ In short, MetaRouter gives you the benefits of Attribution's platform without th
 
 All you'll need from Attribution once you have an account is your `Project ID`, which you can find at the top-right of your integration settings page. Check out the image below:
 
-![attribution1](../../../images/Attribution1.png)
+![attribution1](/images/Attribution1.png)
 
 With that 8-character ID, go right ahead to your MetaRouter dashboard to finish setting up the pipeline.
 
@@ -40,6 +40,6 @@ Once you're on our UI, add Attribution as a destination on your client-side or s
 
 Finally, click `Save` to activate your pipeline.
 
-![attribution2](../../../images/Attribution2v2.png)
+![attribution2](/images/Attribution2v2.png)
 
 And that's it! You're ready for insights.

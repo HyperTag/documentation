@@ -38,7 +38,7 @@ If you do not whitelist any traits, no Identify event will be sent to Slack.
 
 This field allows you to customize the message that appears for Identify events that match whitelisting. You can automatically use [Handlebars](http://handlebarsjs.com/expressions.html) to template data within your Slack messages.
 
-Everything within the Identify event `traits` are available, as well as `\{{ name }}` that will attempt to display an identifier of the user with all available information.
+Everything within the Identify event `traits` are available, as well as `{{ name }}` that will attempt to display an identifier of the user with all available information.
 
 By default, Identify events print out all traits.
 
@@ -46,11 +46,11 @@ By default, Identify events print out all traits.
 
 This field allows you to customize the message that appears for specific Track events that match the name that you provide. You can automatically use [Handlebars](http://handlebarsjs.com/expressions.html) to template data within your Slack messages.
 
-Everything within the Track event is available, as well as `\{{ name }}` that will attempt to display an identifier of the user with all available information and `\{{ event }}` with handles converting the event name into something Slack friendly.
+Everything within the Track event is available, as well as `{{ name }}` that will attempt to display an identifier of the user with all available information and `{{ event }}` with handles converting the event name into something Slack friendly.
 
-For instance, if you want to add the page path that the event was triggered on, you can use this template `\{{ context.page.path }}`
+For instance, if you want to add the page path that the event was triggered on, you can use this template `{{ context.page.path }}`
 
-By default, Track events print out `\{{ name}} did \{{ event }}}.`
+By default, Track events print out `{{ name}} did {{ event }}}.`
 
 **Track Event Channels**
 
@@ -60,6 +60,6 @@ This field allows you to specify sending events to specific channels, instead of
 
 By checking this field, we will automatically drop all Track events that you have not created a custom template for. This helps you prevent a large amount of message volume from going into a Slack Channel.
 
-If you'd prefer not to customize the message for each filtered event, just add the default template `\{{ name}} did {{ event }}.`
+If you'd prefer not to customize the message for each filtered event, just add the default template `{{ name}} did {{ event }}.`
 
 _Note:_ Events filtered this way will still count towards your monthly event usage.

@@ -14,7 +14,7 @@ If you'd like to get your data from Segment to MetaRouter, you can do this throu
 
 Begin by creating a server-side source in your MetaRouter app. There, you'll find a `Source ID`, which is a long string of letters and numbers.
 
-![segment-webhook-1](../../../images/segment-webhook-1.png)
+![segment-webhook-1](/images/segment-webhook-1.png)
 
 In your Segment UI, add a `Web Hook` integration. You can filter by integrations to "raw data" to expedite this process. Once you've created this destination, paste in this URL: `https://e.metarouter.io/v1/webhook?appId=YOUR_SOURCE_ID`, substituting `YOUR_SOURCE_ID` with the `Source ID` from your source settings.
 

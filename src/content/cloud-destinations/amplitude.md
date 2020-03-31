@@ -28,15 +28,15 @@ Integrating Amplitude with MetaRouter means that you will just need to install M
 
 To get started sending events to Amplitude, all you need is your API Key. After signing up for an Amplitude account, a page will load asking you to create an organization.
 
-![amplitude1](../../../images/amplitude1.png)
+![amplitude1](/images/amplitude1.png)
 
 You will then be prompted to create your first application. This application will function as your project to receive events from MetaRouter.
 
-![amplitude2](../../../images/amplitude2.png)
+![amplitude2](/images/amplitude2.png)
 
 After this application is created, an API Key will be generated and presented in your dashboard.
 
-![amplitude3](../../../images/amplitude3.png)
+![amplitude3](/images/amplitude3.png)
 
 ### MetaRouter Side
 

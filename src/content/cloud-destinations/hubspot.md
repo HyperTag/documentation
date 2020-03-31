@@ -38,20 +38,20 @@ Now, go to `Settings` -> `Configuration`.
 
 Select the `Integrations` option and you'll be brought to a screen that looks like the one below. Next, click the option on the left hand menu labeled `Get your HubSpot API Key`.
 
-![hubspot1](../../../images/hubspot1.png)
+![hubspot1](/images/hubspot1.png)
 
 On this page you'll see a large blue button appropriately labeled `Generate New Key`.
 
-![hubspot2](../../../images/hubspot2.png)
+![hubspot2](/images/hubspot2.png)
 
 One handy feature of HubSpot is the full API Key History, including creation, viewing, and deactivation dates.
 
-![hubspot3](../../../images/hubspot3.png)
+![hubspot3](/images/hubspot3.png)
 
 ### MetaRouter Side
 
 Now, all you have to do is add both of these credentials (your Portal ID and your newly created API Key) into the MetaRouter UI and give your new connection a unique name.
 
-![hubspot4](../../../images/hubspot4v2.png)
+![hubspot4](/images/hubspot4v2.png)
 
 Once you do that, just click `Save` to activate your pipeline.

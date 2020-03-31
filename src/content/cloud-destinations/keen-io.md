@@ -38,7 +38,7 @@ To get started sending events to Keen IO, you'll need two things:
 
 You can find your Write Key by clicking on `Show API Keys`.
 
-![keen-io1](../../../images/keen-io1.png)
+![keen-io1](/images/keen-io1.png)
 
 ### MetaRouter Side
 

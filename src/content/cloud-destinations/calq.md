@@ -28,18 +28,18 @@ Integrating Calq with MetaRouter means that you won't need to install a Calq SDK
 
 Once you create an account with Calq, you'll be asked to create a new project.
 
-![calq1](../../../images/calq1.png)
+![calq1](/images/calq1.png)
 
 After you create a new project, you will be given a write key.
 
-![calq2](../../../images/calq2.png)
+![calq2](/images/calq2.png)
 
 ### MetaRouter Side
 
 Copy this key and add it into your MetaRouter UI to get started. Click 'Save' to activate your pipeline.
 
-![calq3](../../../images/calq3v2.png)
+![calq3](/images/calq3v2.png)
 
 If you look back at your Calq account, you should see a message confirming that events have been received.
 
-![calq4](../../../images/calq4.png)
+![calq4](/images/calq4.png)

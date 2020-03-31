@@ -83,7 +83,7 @@ By default, the MetaRouter snippet includes an empty `page()` call. When `page()
 
    Given the mapping setting below:
 
-   ![adobe-analytics-page-mapping-settings](../../../images/adobe-analytics-page-mapping-settings.png)
+   ![adobe-analytics-page-mapping-settings](/images/adobe-analytics-page-mapping-settings.png)
 
    If you call the following `page()` call:
 
@@ -114,7 +114,7 @@ This means that you **must** map each event and property to a corresponding Adob
 
 Here is an example of how you might map the custom variables:
 
-![adobe-analytics-track-mapping-settings](../../../images/adobe-analytics-track-mapping-settings.png)
+![adobe-analytics-track-mapping-settings](/images/adobe-analytics-track-mapping-settings.png)
 
 Given the settings above, if you make a sample `.track()` call below:
 

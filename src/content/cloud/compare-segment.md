@@ -17,7 +17,7 @@ If you are unable to test MetaRouter against Segment using an A/B testing method
 
 In order to complete a successful test, integrations need to be moved to cloud mode from inside of your Segment account. This will prevent unforeseen collisions from integration specific libraries accessing global variables.
 
-![aa-test1](../../../images/aa_test1.png)
+![aa-test1](/images/aa_test1.png)
 
 **\*Note:** Please be aware if Segment does not allow for cloud mode for a particular integration there is a risk of client-side collision occurring which may result in bad test results.\*
 

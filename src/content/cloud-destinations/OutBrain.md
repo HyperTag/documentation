@@ -32,7 +32,7 @@ Once you've identified your `Advertiser ID`, go ahead to your [MetaRouter dashbo
 
 Give your connection a unique name and input that `Advertiser ID` where asked.
 
-![OutBrain1-v2](../../../images/outbrain1v2.png)
+![OutBrain1-v2](/images/outbrain1v2.png)
 
 Lastly, input the OutBrain events you want to track. This is something like: `email_sign_up`.
 

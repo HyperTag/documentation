@@ -28,24 +28,24 @@ Integrating Heap with MetaRouter allows you to collect valuable data without man
 
 Once you create a Heap account, a page will load suggesting that you install Heap into your application. If you're using MetaRouter for a web application, this isn't necessary as you'll be able to copy over the Source ID into your MetaRouter account. Your Source ID will be located at the end of the JavaScript snippet they provide with the `heap.load()` function.
 
-![heap-analytics1](../../../images/heap-analytics1.png)
+![heap-analytics1](/images/heap-analytics1.png)
 
 It's important to note here that Heap automatically sets you up with a Development and Production project when you create an account. Make sure you're copying over the right ID as that will affect which project within Heap your data gets sent to.
 
-![heap-analytics2](../../../images/heap-analytics2.png)
+![heap-analytics2](/images/heap-analytics2.png)
 
 ### MetaRouter Side
 
 Add your Source ID into the Heap connector on your MetaRouter dashboard and give your new connection a unique name. Click `Save` and your pipeline will be activated.
 
-![heap-analytics3](../../../images/heap-analytics3v2.png)
+![heap-analytics3](/images/heap-analytics3v2.png)
 
 ### Things to Note.
 
 When you return to your Heap account, you might get a message saying "There's no data here!" Your data might be in a different environment, so make sure to check all places (i.e. development instead of production).
 
-![heap-analytics4](../../../images/heap-analytics4.png)
+![heap-analytics4](/images/heap-analytics4.png)
 
 To see what specific events are coming in, go to the `Events` page on the left-hand menu bar.
 
-![heap-analytics5](../../../images/heap-analytics5.png)
+![heap-analytics5](/images/heap-analytics5.png)
