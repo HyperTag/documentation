@@ -6,19 +6,17 @@ navText: .NET
 path: '/sources/dot-net/'
 ---
 
-# h1
+# .NET
 
-## .NET
+## Getting Started
 
 This library lets you record analytics data from your ASP.NET, C#, F#, and Visual Basic code. Just pop this library into your web server controller code and it will take care of hitting our servers so that we can route your data to an analytics service of your choice.
 
-### Getting Started with .NET
-
-#### Step 1
+### Step 1
 
 To start, you must install our client-side library, analytics.js, to your ASP.NET master page. Follow the steps outlined in our [analytics.js doc](/sources/analytics-js/) and place your snippet directly in your ASP.NET Site.master. This will allow you to use `page` calls.
 
-#### Step 2
+### Step 2
 
 Next, you'll want to install our .net library to start using the `identify` and `track` calls. We recommend using [NuGet](https://docs.microsoft.com/en-us/nuget/tools/package-manager-console) to do this.
 
@@ -60,11 +58,11 @@ Analytics.Initialize("YOUR_SOURCE_ID");
 
 You will only need to perform this initialization once.
 
-### Calls in .NET
+## Calls in .NET
 
 Check out the below calls and their use cases to determine the calls that you need to make. We have also included examples of how you'd call specific objects in .NET.
 
-#### Identify
+### Identify
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
@@ -76,7 +74,7 @@ Analytics.Client.Identify("1234qwerty", new Traits() {
 });
 ```
 
-#### Track
+### Track
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your website. This will tell MetaRouter which actions you are performing on your site. With `track`, each user action triggers an “event,” which can also have associated properties.
 
@@ -87,7 +85,7 @@ Analytics.Client.Track("1234qwerty", "Add to Cart", new Properties() {
 });
 ```
 
-#### Page
+### Page
 
 The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing.
 
@@ -98,7 +96,7 @@ Analytics.Client.Page("1234qwerty", "Login", new Properties() {
 });
 ```
 
-#### Group
+### Group
 
 The `group` method associates an identified user with a company, organization, project, etc.
 
@@ -109,7 +107,7 @@ Analytics.Client.Group("userId", "groupId", new Traits() {
 });
 ```
 
-#### Alias
+### Alias
 
 The `alias` method combines two unassociated User IDs.
 

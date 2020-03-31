@@ -49,6 +49,9 @@ main h2 {
 main h3 {
   @apply text-xl;
 }
+main h4 {
+  @apply text-base;
+}
 main a {
   @apply text-cloud-blue-medium;
 }
@@ -83,7 +86,7 @@ main section img {
   @apply border border-solid rounded-md border-gray-200;
 }
 .gatsby-highlight + p > img {
-  @apply mt-12;
+  @apply mt-10;
 }
 main .toc {
   @apply text-xs;

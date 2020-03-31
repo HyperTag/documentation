@@ -6,7 +6,7 @@ navText: Analytics.js Common Fields
 path: '/sources/analytics-js-common-fields/'
 ---
 
-# Common Fields of API Calls
+# Common Fields of Analytics.js API Calls
 
 Every [API call](../v2/clickstream/calls.html) from the Analytics.js based Analytics spec has a common structure. While some specific calls pass extra information, they will all pass the information detailed in this document. Note that, while MetaRouter will send all of these fields, not every destination will accept every field listed below.
 

@@ -64,8 +64,8 @@ const setTableColumnWidths = nodes => {
   })
 }
 
-const createTableOfContents = $ => {
-  const toc = $('h2')
+const tableOfContentsItems = $ => {
+  const items = $('h2')
     .map(function() {
       const el = $(this)
       const href = el.find('.anchor').attr('href')
@@ -75,18 +75,23 @@ const createTableOfContents = $ => {
     .get()
     .join(' ')
 
-  return `<ul>${toc}</ul>`
+  return items
 }
 
 const section = ($, isPage) => {
+  const tocItems = tableOfContentsItems($)
+  let toc = `
+    <div class="toc">
+      <div class="toc-sticky">
+        <h6>${isPage ? 'On this Page' : 'In this Section'}:</h6>
+        <ul>${tocItems}</ul>
+      </div>
+    </div>
+  `
+
   return `
     <section>
-      <div class="toc">
-        <div class="toc-sticky">
-          <h6>${isPage ? 'On this Page' : 'In this Section'}:</h6>
-          ${createTableOfContents($)}
-          </div>
-      </div>
+      ${tocItems.length ? toc : ''}
       ${$.html()}
     </section>
   `

@@ -10,7 +10,7 @@ path: '/sources/http-api/'
 
 This document review the basic structure of our HTTP Tracking API endpoints and how to connect and send information into the system via the API.
 
-## Getting Started with HTTP API
+## Getting Started
 
 ### Authentication (optional)
 
@@ -64,7 +64,7 @@ Batch error endpoints return errors in a slightly different format. the Errors k
 }
 ```
 
-#### Max Request Size
+### Max Request Size
 
 There is a maximum of 15KB per call (our batch endpoint accepts a maximum of 500KB per batch and 15KB per call). HTTP Tracking API will respond with 413 request entity too large if these limits are exceeded.
 

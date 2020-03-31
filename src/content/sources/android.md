@@ -6,9 +6,9 @@ navText: Android
 path: '/sources/android/'
 ---
 
-# h1
+# Android
 
-## Getting Started with MetaRouter - Android
+## Getting Started
 
 Using our analytics-android library, you can start sending customer data from your app to MetaRouter, giving you valuable user data that yields actionable insights for your business. Follow the instructions below to get started in only a few minutes.
 
@@ -16,7 +16,7 @@ Using our analytics-android library, you can start sending customer data from yo
 
 After logging in with your MetaRouter credentials, add a new `Source → Android`. Give your source a friendly name and copy that `Source ID` for the next step.
 
-### Install the SDK
+## Install the SDK
 
 We recommend installing the library for Android with a build system like Gradle to make upgrading versions and adding destinations simple. The library is distributed via [Maven Central](http://search.maven.org/).
 
@@ -28,7 +28,7 @@ dependencies {
 }
 ```
 
-### Initialize the Client
+## Initialize the Client
 
 We recommend initializing the client in your `Application` subclass.
 
@@ -61,7 +61,7 @@ Analytics.setSingletonInstance(analytics);
 - Automatically tracking lifecycle events (`Application Opened`, `Application Installed`, `Application Updated`) is optional, but we highly recommending doing so to ensure you get the most out of MetaRouter!
 - This only installs the MetaRouter destination, meaning all your data will be sent server side to tools.
 
-### Add Permissions
+## Add Permissions
 
 Ensure that the necessary permissions are declared in your application’s `AndroidManifest.xml`.
 
@@ -70,7 +70,7 @@ Ensure that the necessary permissions are declared in your application’s `Andr
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-### Identify Your Users
+## Identify Your Users
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
@@ -86,7 +86,7 @@ This call is identifying a user by her unique `userID` (from your database) and 
 
 Once you have the `identify` call implemented, you're ready to move on to the `track` call.
 
-### Track Your Users' Actions
+## Track Your Users' Actions
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your app. This will tell MetaRouter which actions users are performing in your app. With `track`, each user action triggers an “event”, which can also have associated properties.
 

@@ -6,9 +6,9 @@ navText: iOS
 path: '/sources/ios/'
 ---
 
-# h1
+# iOS
 
-## Getting Started with MetaRouter - iOS
+## Getting Started
 
 Using our analytics-iOS library, you can start sending customer data from your app to MetaRouter, giving you valuable user data that yields actionable insights for your business. Follow the steps below to get started in only a few minutes.
 
@@ -16,7 +16,7 @@ Using our analytics-iOS library, you can start sending customer data from your a
 
 After logging in with your MetaRouter credentials, add a new `Source → iOS`. Give your source a friendly name and copy that `Source ID` for the next step.
 
-### Install the SDK
+## Install the SDK
 
 We recommend installing Analytics-iOS via [Cocoapods](https://cocoapods.org/pods/AstronomerAnalytics) as it allows you to create a build with specific destinations and makes it simple to install and upgrade.
 
@@ -58,7 +58,7 @@ And of course, import the SDK in the files that you use it with:
 
 Now that you have the SDK installed and setup, you are ready to start building out functionality. Keep reading to learn how to use the `identify` call on your app.
 
-### Identify Your Users
+## Identify Your Users
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
@@ -79,7 +79,7 @@ This call is identifying a user by her unique `userID` (from your database) and 
 
 Once you have the `identify` call implemented, you're ready to move on to the `track` call.
 
-### Track Your Users’ Actions
+## Track Your Users’ Actions
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your app. This will tell MetaRouter which actions users are performing in your app. With `track`, each user action triggers an “event”, which can also have associated properties.
 
@@ -99,7 +99,7 @@ This example `track` call tells us that a user just triggered an "Item Purchased
 
 A lot of analytics tools support custom event mapping so, with `track` implemented, you’ll be able to attribute events to your users and start targeting them in a more informed and relevant way.
 
-### Flushing
+## Event Flushing
 
 You can specify the number of events that should queue before flushing. Set this to 1 to send events as they come in (i.e. not batched) but note that it will use more battery. Also note that this is 20 by default.
 
@@ -116,7 +116,7 @@ Alternatively, you can `flush` the queue manually:
 [[SEGAnalytics sharedAnalytics] flush]
 ```
 
-### Submitting to the App Store
+## Submitting to the App Store
 
 When submitting to the App Store, beware that MetaRouter collects the IDFA for use in doing mobile install attribution with destinations like Mobile App Tracking. Even if you’re not currently doing mobile install attribution, if you get asked, “Does this app use the Advertising Identifier (IDFA)?” on this page, you’ll want to check the following three boxes:
 

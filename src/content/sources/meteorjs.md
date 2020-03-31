@@ -6,9 +6,7 @@ navText: MeteorJS
 path: '/sources/meteor-js/'
 ---
 
-# h1
-
-## MeteorJS
+# MeteorJS
 
 **\*Note**: This package is not being actively developed or maintained by MetaRouter. However, it is still functional. If you would like to contribute to the package, please submit a pull request or email pete@astronomer.io.\*
 
@@ -24,7 +22,7 @@ If you're using the Meteor JavaScript app platform and haven't instrumented your
 }
 ```
 
-### Getting Started wtih MeteorJS
+## Getting Started
 
 First, open your terminal, cd to your app, and add the MetaRouter package:
 
@@ -56,7 +54,7 @@ To configure your Meteor app, follow the steps below:
 
 4. Restart your Meteor Application
 
-### Additional MeteorJS Features
+## Additional MeteorJS Features
 
 `disableUserTracking:` `true` or `false`: This tracks aliased users.
 

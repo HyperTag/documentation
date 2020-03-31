@@ -1,5 +1,5 @@
 table {
-  @apply mt-4 mb-8;
+  @apply mt-4 mb-10;
   @apply w-full;
   table-layout: fixed;
 }

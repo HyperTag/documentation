@@ -6,9 +6,9 @@ navText: React Native
 path: '/sources/react-native/'
 ---
 
-# h1
+# React Native
 
-## Getting Started with MetaRouter - React Native
+## Getting Started
 
 Using our analytics-react-native library, you can start sending customer data from your app to MetaRouter, giving you valuable user data that yields actionable insights for your business. Follow the steps below to get started in only a few minutes.
 
@@ -16,14 +16,12 @@ Using our analytics-react-native library, you can start sending customer data fr
 
 After logging in with your MetaRouter credentials, add a new `Source → Client-Side`. Give your source a friendly name and copy that `Source ID` for the next step.
 
-### Prerequisite
-
 ### iOS
 
 - CocoaPods
   - To add CocoaPods to your app, follow [these instructions](https://facebook.github.io/react-native/docs/integration-with-existing-apps#configuring-cocoapods-dependencies).
 
-### Installing and configuring the SDK
+## Installing and configuring the SDK
 
 The recommended way to install Analytics for React Native is via npm, since it means you can create a build with specific destinations, and because it makes it dead simple to install and upgrade.
 
@@ -58,6 +56,8 @@ And of course, import the SDK in the files that you use it with:
 ```javascript
 import analytics from '@metarouter/analytics-react-native'
 ```
+
+## Calls in React Native
 
 ### Identify Your Users
 
@@ -168,7 +168,7 @@ analytics.alias('glenncoco')
 analytics.flush()
 ```
 
-### Native configuration
+## Native Configuration
 
 You can also use the native Analytics API to configure it. Just make sure to call `analytics.useNativeConfiguration()` in your JavaScript code so that Analytics doesn’t wait for you to configure it.
 

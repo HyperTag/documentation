@@ -6,7 +6,7 @@ navText: Segment Webhook
 path: '/sources/segment-webhook/'
 ---
 
-# h1
+# Segment
 
 ## Getting data from Segment into MetaRouter Clickstream
 
