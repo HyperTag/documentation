@@ -63,7 +63,7 @@ Once you provision your Redshift cluster, you'll need to configure your Redshift
 
 ### Confirm and Insert Credentials
 
-The <i>Username</i> and <i>Password</i> you used to initially create the cluster are the credentials you'll put into your MetaRouter account. You should NOT use your master AWS credentials here. If you want to switch clusters in the future, make sure you update your Username and Password as needed.
+The **Username** and **Password** you used to initially create the cluster are the credentials you'll put into your MetaRouter account. You should NOT use your master AWS credentials here. If you want to switch clusters in the future, make sure you update your Username and Password as needed.
 
 For MetaRouter, having _distinct users_ will allow you to (i) isolate queries from one another and (ii) perform audits more easily.
 

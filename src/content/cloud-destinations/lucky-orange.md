@@ -38,7 +38,7 @@ Back in the MetaRouter UI, select Lucky Orange as a destination and give your ne
 
 ![luckyorange2](../../../images/luckyorange2.png)
 
-This settings page allows you to connect an [e-commerce event](https://docs.metarouter.io/v2/clickstream/ecommerce.html) with a Lucky Orange tag - you don't need to create the behavior tag on you Lucky Orange dashboard, triggering an event will automatically assign it the tag you defined on the MetaRouter dashboard.
+This settings page allows you to connect an [e-commerce event](/sources/analytics-js-ecommerce-spec/) with a Lucky Orange tag - you don't need to create the behavior tag on you Lucky Orange dashboard, triggering an event will automatically assign it the tag you defined on the MetaRouter dashboard.
 
 #### Auto-Tagging
 
@@ -48,7 +48,7 @@ Auto-Tagging option will send all analytics.js triggered events from your websit
 
 #### Custom mapping
 
-To map an event to a specific tag, unckeck _Auto-Tagging_ option - _Map Analytics Events to Lucky Orange tags_ section wiil be available. Here you can define your own mappings between an [e-commerce event](https://docs.metarouter.io/v2/clickstream/ecommerce.html) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
+To map an event to a specific tag, unckeck _Auto-Tagging_ option - _Map Analytics Events to Lucky Orange tags_ section wiil be available. Here you can define your own mappings between an [e-commerce event](/sources/analytics-js-ecommerce-spec/) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
 
 - Event name (required) - the name of your analytics.js event
 - Tag (required) the name of your Lucky Orange tag

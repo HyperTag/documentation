@@ -6,6 +6,8 @@ navText: Facebook Pixel
 path: '/cloud-destinations/facebook-pixel/'
 ---
 
+# Facebook Pixel
+
 MetaRouter makes it easy to send your data to Facebook Pixel. Once you follow the steps below, your data will be routed through our platform and pushed to Facebook Pixel in the appropriate format.
 
 **\*Note:** MetaRouter's Facebook Pixel destination consolidates what was previously Facebook's "Ads for Websites" suite, which consisted of both Facebook Custom Audiences and Facebook Conversion Tracking.\*
@@ -58,7 +60,7 @@ If you are using the Facebook Pixel integration as a replacement for Conversion 
 
 Enabling this will force FB Pixel events triggered by MetaRouter to fire in trackSingle/trackSingleCustom mode to prevent them from going to other FB Pixels loaded on the page. This is helpful if there are different team managing their own pixel, or if you have installed analytics.js on a site with an existing pixel.
 
-You can find out more about the specific use-case and benefits from this [Facebook Developers article](https://developers.facebook.com/ads/blog/post/2017/11/28/event-tracking-with-multiple-pixels-tracksingle/)
+You can find out more about the specific use-case and benefits from this [Facebook Developers article](https://developers.facebook.com/ads/blog/post/2017/11/28/event-tracking-with-multiple-pixels-tracksingle/).
 
 ## Settings
 
@@ -70,7 +72,7 @@ For most implementations we recommend leaving these mappings blank. By default, 
 
 ### Blacklist PII Properties
 
-Facebook has a strict policy prohibiting any personally identifiable information (PII) from being sent as properties of events to their API. By default, this integration will scan `track` events for [these](https://docs.metarouter.io/v2/clickstream/destinations/facebook-pixel.html#pii-blacklisting) properties and strip them from the payload that gets sent to Facebook. If your events contain other properties with PII values, you can use this setting to append to this default list. You can also use this setting to optionally hash any PII values instead of dropping them.
+Facebook has a strict policy prohibiting any personally identifiable information (PII) from being sent as properties of events to their API. By default, this integration will scan `track` events for [these](/cloud-destinations/facebook-pixel/#blacklist-pii-properties) properties and strip them from the payload that gets sent to Facebook. If your events contain other properties with PII values, you can use this setting to append to this default list. You can also use this setting to optionally hash any PII values instead of dropping them.
 
 ### Client-Side Only: Advanced Match Trait Key for External ID
 
@@ -102,7 +104,7 @@ For pre-purchase events such as `Product Viewed` and `Product Added`, choose whi
 
 ### Whitelist PII Properties
 
-By default, MetaRouter will strip any PII from the properties of `track` events that get sent to Facebook. If you would like to override this functionality, you can input each property you would like to whitelist as a line item in this setting. **Please reference our [documentation](https://docs.metarouter.io/v2/clickstream/destinations/facebook-pixel.html#pii-blacklisting) for the exact property names we filter out.**
+By default, MetaRouter will strip any PII from the properties of `track` events that get sent to Facebook. If you would like to override this functionality, you can input each property you would like to whitelist as a line item in this setting. **Please reference our [documentation](/cloud-destinations/facebook-pixel/#blacklist-pii-properties) for the exact property names we filter out.**
 
 ## Troubleshooting
 
@@ -141,7 +143,7 @@ Facebook’s conversion reports count view-through conversions as well as click-
 
 ### Facebook Conversions Not Matching Google Analytics
 
-Facebook counts conversions per person, as opposed to Google Analytics which counts per browser cookie session (unless you’re using [Google Analytics User-ID](https://docs.metarouter.io/v2/clickstream/destinations/google-analytics.html#user-id)).
+Facebook counts conversions per person, as opposed to Google Analytics which counts per browser cookie session (unless you’re using [Google Analytics User-ID](/cloud-destinations/google-analytics/#user-id).
 
 If someone saw or clicked on your ad on a mobile phone then later came back directly to purchase on a desktop machine Google Analytics wouldn’t know that this was the same person, but Facebook would. In that scenario Google Analytics counts 2 unique visits with a conversion last attributed to a direct visit on desktop. Facebook counts one conversion with the conversion properly attributed to the last ad click/view on mobile.
 

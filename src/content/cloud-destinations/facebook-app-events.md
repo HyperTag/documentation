@@ -24,7 +24,7 @@ It's also worth noting that Facebook has a standard set of events that need to b
 
 ## Why send data to Facebook App Events using MetaRouter?
 
-With MetaRouter's Facebook App Events integration, you won't need to write custom code or bundle Facebook SDKs. Just integrate one of MetaRouter's latest mobile SDKs into your app and we'll send all the data we collect to Facebook via our servers. Plus, you'll be able to map any of your existing MetaRouter events to other Facebook App Event event names. User traits like birthday, city, gender, etc. get passed directly through to [Facebook Pixel](facebook-pixel.md).
+With MetaRouter's Facebook App Events integration, you won't need to write custom code or bundle Facebook SDKs. Just integrate one of MetaRouter's latest mobile SDKs into your app and we'll send all the data we collect to Facebook via our servers. Plus, you'll be able to map any of your existing MetaRouter events to other Facebook App Event event names. User traits like birthday, city, gender, etc. get passed directly through to [Facebook Pixel](/cloud-destinations/facebook-pixel/).
 
 In short, skip the manual headache and get straight to insights with MetaRouter.
 

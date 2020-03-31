@@ -16,7 +16,7 @@ Amazon Simple Storage Service (S3) is a scalable web-based cloud storage service
 - Network-optimized, physical disk-based, or third-party connector methods for easy data imports and exports
 - Object tagging for easy category customization
 
-Getting data into your S3 bucket natively requires quite a bit of developer work; you'd need to use an analytics tool like [Google Analytics](google-analytics.md) and write an ETL pipeline to bring the data from that analytics tool to S3. This is inefficient in that it utilizes your engineering resources and dumps pre-formatted data into your S3 bucket rather than raw data.
+Getting data into your S3 bucket natively requires quite a bit of developer work; you'd need to use an analytics tool like [Google Analytics](/cloud-destinations/google-analytics) and write an ETL pipeline to bring the data from that analytics tool to S3. This is inefficient in that it utilizes your engineering resources and dumps pre-formatted data into your S3 bucket rather than raw data.
 
 ## Why send data to Amazon S3 using MetaRouter?
 

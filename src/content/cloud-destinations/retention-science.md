@@ -29,7 +29,7 @@ Once you have an account on [Retention Science](https://www.retentionscience.com
 - Create your company's specific remarketing campaign
 - Identify your Site ID and tracking `<script>` tags
 
-**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](../sources/analyticsjs.md) prior to enabling this connector.\*
+**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.\*
 
 ### MetaRouter Side
 

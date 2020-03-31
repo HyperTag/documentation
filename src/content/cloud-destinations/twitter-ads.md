@@ -28,7 +28,7 @@ For e-commerce sites, you won't need to worry about creating custom code to trac
 
 To get started, all you need is your Twitter Pixel ID, which you can retrieve by creating a Twitter Ads conversion tracking website tag.
 
-**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](../sources/analyticsjs.md) prior to enabling this connector.\*
+**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.\*
 
 ### Twitter Side
 

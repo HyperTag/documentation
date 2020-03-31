@@ -34,7 +34,8 @@ If you want to pass in specific track events to DoubleClick, you can do so withi
 
 In the past, we've seen Floodlight tags that look something like this:
 
-```
+```HTML
+<!--
 Start of DoubleClick Floodlight Tag: Please do not remove
 
 Activity name of this tag: MYACTIVITYNAME - Conversion Tag
@@ -50,13 +51,11 @@ Creation Date: 02/08/2017
 <iframe src="https://1234567.fls.doubleclick.net/activityi;src=1234567;type=myurl00;cat=myurl0;qty=1;cost=[Revenue];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>
 
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
-
-***How to implement the Floodlight tag
-
-Insert the Floodlight tags between the <body> and </body> tags, as close to the top of the page as possible.
-
-Add Comment Collapse
 ```
+
+### How to implement the Floodlight tag
+
+Insert the Floodlight tags between the `<body>` and `</body>` tags, as close to the top of the page as possible.
 
 In this example, `mytype00` is your `type` and `mycat0` is your `cat` in the MetaRouter UI.
 

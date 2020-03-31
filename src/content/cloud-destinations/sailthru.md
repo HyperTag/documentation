@@ -20,14 +20,14 @@ With MetaRouter, you can use Sailthru without having to install their JavaScript
 
 ### Initialization
 
-The Sailthru server-side destination will allow you to add users, send custom events and purchase events. Once you have configured a source and our MetaRouter [snippet](http://127.0.0.1:4000/v2/clickstream/sources/analyticsjs.html) is installed, enable and configure Sailthru as a destination and add your API Key and Shared Secret, which you can find in the Sailthru Dashboard under **App Settings > Setup > API & Postbacks**.
+The Sailthru server-side destination will allow you to add users, send custom events and purchase events. Once you have configured a source and our MetaRouter [snippet](/sources/analytics-js/) is installed, enable and configure Sailthru as a destination and add your API Key and Shared Secret, which you can find in the Sailthru Dashboard under **App Settings > Setup > API & Postbacks**.
 
 ### Implementation checklist
 
 **Important**: In order for this destination to work, you must have a few prerequisite configurations.
 
 - You must have `extid` lookup enabled in Sailthru, which usually needs to be requested from Sailthru. This is critical to enabling full functionality.
-- Use the [**Ecommerce**](https://docs.metarouter.io/v2/clickstream/ecommerce.html) event spec to track `Order Completed`,`Order Updated`, `Product Added`, and `Product Removed`.
+- Use the [**Ecommerce**](/sources/analytics-js-ecommerce-spec/) event spec to track `Order Completed`,`Order Updated`, `Product Added`, and `Product Removed`.
 - For `Product Added` and `Product Removed` events, whether there is an `email` or not, we need to make a request to grab the items in the user’s cart. We rely on the `userId` value for this request. It is essential that you have a `userId` on these calls, otherwise they will not make it to Sailthru.
   - To trigger abandoned cart campaigns, you must pass in a `reminder_time` and `reminder_template` on the `Product Added` and `Product Removed` events.
   - The template passed through as `reminder_template` must match the public name configured in Sailthru’s UI.

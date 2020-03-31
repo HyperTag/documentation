@@ -44,10 +44,10 @@ If enabled, analytics.js will fire a `track` event for other destinations when a
 
 It will automatically do the same as if you programed the following code below in your application
 
-```
+```javascript
 analytics.track('Experiment Viewed', {
-    experiment_id: 'Astro-home-page-title-1`
-    variation_name: 'Stop wondering what your users want.'
+  experiment_id: 'Astro-home-page-title-1`,
+  variation_name: 'Stop wondering what your users want.'
 });
 ```
 

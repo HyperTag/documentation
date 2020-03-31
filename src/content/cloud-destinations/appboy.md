@@ -1,7 +1,7 @@
 ---
 collectionKey: cloud-destinations
 
-navText: Braze (Appboy)
+navText: Braze
 
 path: '/cloud-destinations/braze/'
 ---

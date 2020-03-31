@@ -6,6 +6,8 @@ navText: Google Analytics
 path: '/cloud-destinations/google-analytics/'
 ---
 
+# Google Analytics
+
 MetaRouter makes is easy to send your data to Google Analytics. Once you've set up your source to start tracking data, we'll translate and route that data to Google Analytics.
 
 ## What is Google Analytics and how does it work?
