@@ -6,6 +6,8 @@ navText: Kenshoo Pixel
 path: '/cloud-destinations/kenshoo-pixel/'
 ---
 
+# Kenshoo Pixel
+
 MetaRouter makes it easy to send your data to Kenshoo Conversion Pixel, which was recently enhanced with Kenshoo Infinity Tag. If you follow the steps below, your data will be routed through our platform and pushed to Kenshoo Pixel in the appropriate format.
 
 ## What is Kenshoo Infinity Tag and how does it work?

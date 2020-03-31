@@ -24,7 +24,7 @@ If you want to try out any other analytics application, implementing native even
 
 Integrating Amplitude with MetaRouter means that you will just need to install MetaRouter and enable Amplitude in your MetaRouter UI. You will only need to set up one event tracking library (MetaRouter's), and then you will be able to route and send data to Amplitude and any other destination of your choice without writing custom code for each one.
 
-## Getting Started
+## Getting Started with Amplitude and MetaRouter
 
 ### Amplitude Side
 

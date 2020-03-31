@@ -6,6 +6,8 @@ navText: Optimizely
 path: '/cloud-destinations/optimizely/'
 ---
 
+# Optimizely
+
 MetaRouter makes it easy to send your data to Optimizely. Once you follow the steps below, your data will be routed through our platform and pushed to Optimizely in the appropriate format.
 
 ## What is Optimizely and how does it work?
@@ -34,25 +36,25 @@ Within your MetaRouter configuration, add the Optimizely destination connector, 
 
 Then, configure the Optimizely connector to support your desired features. The steps for this will vary depending on whether you're deploying [Optimizely Classic](https://help.optimizely.com/Measure_success%3A_Track_visitor_behaviors/Custom_event_goals_in_Optimizely_Classic) or [Optimizely X Web](https://help.optimizely.com/Build_Campaigns_and_Experiments/Custom_events_in_Optimizely_X).
 
-### Additional Features
+## Additional Features
 
-#### Send experiment data to other tools (as an identify call)
+### Send experiment data to other tools (as an identify call)
 
 This is not recommended because if you’re running lots of experiments, this could lead to lots of unwanted properties in end tools, in addition to unwanted columns in MetaRouter-connected databases.
 
-#### Track Named Pages
+### Track Named Pages
 
 This will track events to Optimizely for page method calls that have a name associated with them.
 
-#### Track Categorized Pages
+### Track Categorized Pages
 
 This tracks events to Optimizely for page calls that have a category associated with them.
 
-#### Send experiment data to other tools (as a track call)
+### Send experiment data to other tools (as a track call)
 
 Sends the experiment and variation information as properties on a track call.
 
-#### Send `Experiment Viewed` as a non-interaction event
+### Send `Experiment Viewed` as a non-interaction event
 
 Specifies the Experiment Viewed as a non-interaction event for Google Analytics.
 

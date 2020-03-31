@@ -6,6 +6,8 @@ navText: Resonate
 path: '/cloud-destinations/resonate/'
 ---
 
+# Resonate
+
 MetaRouter makes it easy to send your data to Resonate. Once you follow the steps below, your data will be routed through our platform and pushed to Resonate in the appropriate format.
 
 ## What is Resonate and how does it work?
@@ -57,6 +59,6 @@ Give your new Resonate connection a name, and choose `Save`.
 
 ![resonate1](/images/resonate1v2.png)
 
-### Final Step.
+## Final Step
 
 Confirm with your Resonate professional services director that the `<img>` tags for your specific campaign are being received as expected.

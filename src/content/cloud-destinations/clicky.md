@@ -6,6 +6,8 @@ navText: Clicky
 path: '/cloud-destinations/clicky/'
 ---
 
+# Clicky
+
 MetaRouter makes it easy to send your data to Clicky. Once you follow the steps below, your data will be routed through our platform and pushed to Clicky in the appropriate format.
 
 ## What is Clicky and how does it work?

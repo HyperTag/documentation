@@ -6,6 +6,8 @@ navText: Google Tag Manager
 path: '/cloud-destinations/google-tag-manager/'
 ---
 
+# Google Tag Manager
+
 Available for client-side sources, MetaRouter makes it easy to send your data to Google Tag Manager. Once you've set up your source to start tracking data, we'll translate and route that data to Google.
 
 ## What is Google Tag Manager and how does it work?
@@ -54,7 +56,7 @@ At the bottom, you'll also see an option to enable tracking for both named and c
 
 With that, you're all set!
 
-### Things to Note.
+## Things to Note
 
 Once you enable this pipeline, you'll be able to trigger MetaRouter events by entering `analytics.track` or `analytics.page` calls into GTM.
 

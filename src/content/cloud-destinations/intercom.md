@@ -6,6 +6,8 @@ navText: Intercom
 path: '/cloud-destinations/intercom/'
 ---
 
+# Intercom
+
 MetaRouter makes it easy to send your data to Intercom. Once you follow the steps below, your data will be routed through our platform and pushed to Intercom in the appropriate format.
 
 ## What is Intercom and how does it work?
@@ -64,13 +66,13 @@ Click on that new user to see the history of events being recorded.
 
 ![intercom9](/images/intercom9.png)
 
-### Additional Features
+## Additional Features
 
-#### Disassociating Users from a Company (server-side only)
+### Disassociating Users from a Company (server-side only)
 
 You can disassociate a user from a company by passing in a field inside the `company` trait with `remove: true` in your `identify` calls.
 
-#### Identity verification plus filtering via Destinations Object
+### Identity verification plus filtering via Destinations Object
 
 If you're using Intercom identity verification AND the `selective destinations functionality`, the context object will look like this:
 
@@ -85,7 +87,7 @@ If you're using Intercom identity verification AND the `selective destinations f
 }
 ```
 
-#### Unsubscribe Users
+### Unsubscribe Users
 
 With MetaRouter, you can unsubscribe users from email by setting a flag from `server side` libraries `unsubscribedFromEmails`, inside `context` object.
 

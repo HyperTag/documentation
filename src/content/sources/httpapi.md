@@ -108,9 +108,9 @@ Below are some fields are common across all events a list of common fields and t
 | traits    | Object  | Dictionary of traits of the current user. This is useful in cases where you need to track an event, but also associate information from a previous identify call. You should fill this object the same way you would fill traits in an identify call. |
 | userAgent | String  | User-agent of the device making the request                                                                                                                                                                                                           |
 
-## Standard Calls in HTTP API
+## Standard Calls
 
-Check out the below `POST` calls and their use cases to determine the calls that you need to make. We have also included examples of how you'd call specific objects in HTTP API.
+Check out the `POST` calls below and their use cases to determine the calls that you need to make. We have also included examples of how you'd call specific objects using the HTTP API.
 
 ### Identify
 

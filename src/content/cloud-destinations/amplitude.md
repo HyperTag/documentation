@@ -6,6 +6,8 @@ navText: Amplitude
 path: '/cloud-destinations/amplitude/'
 ---
 
+# Amplitude
+
 MetaRouter makes it easy to send your data to Amplitude. Once you follow the steps below, your data will be routed through our platform and pushed to Amplitude in the appropriate format.
 
 ## What is Amplitude and how does it work?
@@ -44,11 +46,11 @@ Add this API Key to the Amplitude connector on the MetaRouter dashboard and give
 
 You can now go back into your Amplitude account and see your user activity! To see exactly what events are being sent over, you can click around the `Events` and `User Activity` tabs.
 
-### Additional Features
+## Additional Features
 
 Note that MetaRouter will not pass `page` or `screen` calls by default. See the options below for enabling those specific calls.
 
-#### Page View Tracking Settings
+### Page View Tracking Settings
 
 - `Default Tracking` - Checking this box sends all `page` and `screen` calls to Amplitude as `Loaded a Page`. This feature works with all source types.
 - `Custom Tracking` - Allows you to choose both or one of the following options: `Send Page Category`, `Send Page Name`. Depending on your selections, we handle the following scenarios:
@@ -56,7 +58,7 @@ Note that MetaRouter will not pass `page` or `screen` calls by default. See the 
   - `Send Page Category` set to **ON** and `Send Page Name` set to **OFF** => will send all `page` and `screen` calls to Amplitude as `Viewed [Category] Page`
   - `Send Page Category` set to **OFF** and `Send Page Name` set to **ON** => will send all `page` and `screen` calls to Amplitude as `Viewed [Name] Page`
 
-#### Other Settings
+### Other Settings
 
 - `Track UTM Properties` - Checking this box will track UTM properties found in the querystring to Amplitude. This feature is only available for Web sources.
 - `Track Referrer` - Checking this box will send referrer information as a user property to Amplitude when you call a `page()` method.

@@ -6,6 +6,8 @@ navText: Microsoft Advertising
 path: '/cloud-destinations/microsoft-advertising/'
 ---
 
+# Microsoft Advertising
+
 MetaRouter makes it easy to send your data to Bing Ads. Once you follow the steps below, your data will be routed through our platform and pushed to Bing Ads in the appropriate format.
 
 ## What is Bing Ads and how does it work?

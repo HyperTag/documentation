@@ -6,6 +6,8 @@ navText: Amazon Kinesis
 path: '/cloud-destinations/amazon-kinesis/'
 ---
 
+# Amazon Kinesis
+
 MetaRouter makes it easy to send your data to Amazon Kinesis. Once you follow the steps below, your data will be routed through our platform and pushed to Kinesis in the appropriate format.
 
 ## What is Amazon Kinesis?

@@ -6,11 +6,13 @@ navText: Keen IO
 path: '/cloud-destinations/keen-io/'
 ---
 
+# Keen.io
+
 MetaRouter makes it easy to send your data to Keen.io. Once you follow the steps below, your data will be routed through our platform and pushed to Keen.io in the appropriate format.
 
-```
-Alert: Our server-side version of Keen.io has been disabled without a date set for it to be re-enabled. If you are interested in using Keen.io server-side, please contact us so we may evaluate. Thanks!
-```
+<div class="warning">
+Our server-side version of Keen.io has been disabled. If you are interested in using Keen.io server-side, please contact us so we may evaluate. Thanks!
+</div>
 
 ## What is Keen.io and how does it work?
 

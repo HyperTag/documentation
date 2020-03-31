@@ -6,6 +6,8 @@ navText: Google BigQuery
 path: '/cloud-destinations/google-bigquery/'
 ---
 
+# Google BigQuery
+
 MetaRouter makes it easy to send your data to Google BigQuery. Once you follow the steps below, your data will be routed through our platform and pushed to BigQuery in the appropriate format. Before we get started, there are a couple important things to note about this integration.
 
 1. You will not immediately see events in your BigQuery upon configuration. The first time your data is loaded, it will take some added time before data will start flowing as our system establishes a connection.
@@ -14,19 +16,19 @@ MetaRouter makes it easy to send your data to Google BigQuery. Once you follow t
 
 Now, to the good stuff!
 
-# What is Google BigQuery?
+## What is Google BigQuery?
 
 BigQuery is Google Cloud Platform's custom take on a traditional Postgres database. In Google's words, "[Google BigQuery is an enterprise data warehouse that solves this problem by enabling super-fast SQL queries using the processing power of Google's infrastructure.](https://cloud.google.com/bigquery/what-is-bigquery)" It's cost-effective at nearly any level, capable of scaling from gigabytes to petabytes without a loss in performance.
 
-# Why send data to Google BigQuery using MetaRouter?
+## Why send data to Google BigQuery using MetaRouter?
 
 This guide will explain how to integrate BigQuery into MetaRouter's platform as a destination, allowing you to leverage Google's technology to access, store, and query your customer data.
 
 Our connector periodically runs an ETL (Extract - Transform - Load) process that pulls raw event data in our data bucket, processes and transforms those raw events into a structured format, and then inserts structured event data from our bucket into your BigQuery cluster.
 
-# Getting Google BigQuery set up with MetaRouter
+## Getting Started with Google BigQuery and MetaRouter
 
-## Setting up your BigQuery dataset
+### Setting up your BigQuery dataset
 
 **\*Note**: If you already have your dataset created, you can skip this step\*
 
@@ -36,7 +38,7 @@ Follow [Google's guide](https://cloud.google.com/bigquery/docs/datasets#bigquery
 
 **\*Note**: Each unique `track` event will create a new table, and each property sent creates a new column in that table. For this reason, think about creating a detailed tracking plan to make sure that all events being passed to MetaRouter are necessary and consistent.\*
 
-## Setting up your authentication service account
+### Setting up your authentication service account
 
 **\*Note**: If you already have your auth json, you can skip this step\*
 
@@ -55,7 +57,7 @@ If this list looks good, you are ready to jump over to the MetaRouter UI and cre
 
 Ensure that you give the Service Account the `BigQuery Editor` role in roder for us to have proper permissions to load data into your cloud.
 
-## Activating your BigQuery integration on MetaRouter
+### Activating your BigQuery integration on MetaRouter
 
 In the [MetaRouter app](https://app.metarouter.io/), head to the pipeline you will be added BigQuery to, and under `Destinations` click `New Destination`. From there, click on `Google BigQuery` and create a name for your destination (e.g. "Production BigQuery").
 
@@ -68,8 +70,6 @@ With those details in, you can go on to _Create Connection_. This is where you a
 That's it! You'll now be receiving a livestream of data from your application into your BigQuery dataset.
 
 If you run into any issues using this or any of our destinations, feel free to reach out to us at [support@metarouter.io](mailto:support@metarouter.io). Happy routing!
-
-# Additional Notes
 
 ## Whitelisting Access
 

@@ -6,6 +6,8 @@ navText: Amazon Redshift
 path: '/cloud-destinations/amazon-redshift/'
 ---
 
+# Amazon Redshift
+
 MetaRouter makes it easy to send your data to Amazon Redshift. Once you follow the steps below, your data will be routed through our platform and pushed to Redshift in the appropriate format. Before we get started, there are a few important things to note about our Redshift integration.
 
 1. You will not immediately see events in your Redshift upon configuration. The first time your data is loaded into Redshift, it will take some added time to run DDL logic to create tables, add columns, etc.
@@ -39,11 +41,11 @@ Each unique `track` event creates a new table, and each property sent creates a 
 
 There are two kinds of Redshift clusters, Dense Compute and Dense Storage.
 
-#### Dense Compute Cluster
+### Dense Compute Cluster
 
 Dense Compute clusters maximize query speed and performance, but in turn have less capacity for storage. While there is no set process to size a cluster, most customers with less than 20 million monthly events start with a single DC1 cluster and add nodes as needed. A single node cluster includes 200GB of storage and a maximum side of 2.56TB.
 
-#### Dense Storage Cluster
+### Dense Storage Cluster
 
 Dense storage clusters maximize storage capacity and allow customers with hundreds of millions of events to save money on Redshift hosting costs by using disk-based storage, slower CPU's, and less RAM. A single DS2 node cluster includes 2TB of space, with a max size of 16TB.
 

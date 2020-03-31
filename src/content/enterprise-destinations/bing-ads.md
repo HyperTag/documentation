@@ -20,7 +20,7 @@ Using MetaRouter, you can send page views and event data directly to Microsoft A
 
 Integrating Microsoft Advertising with MetaRouter cuts out any need for additional implementation resources, saving your development team valuable time.
 
-## Getting Started
+## Getting Started with Microsoft Ads and MetaRouter
 
 ### Microsoft Ads Side
 

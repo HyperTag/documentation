@@ -6,6 +6,8 @@ navText: Lucky Orange
 path: '/cloud-destinations/lucky-orange/'
 ---
 
+# Lucky Orange
+
 MetaRouter makes it easy to send your data to [Lucky Orange](https://www.luckyorange.com/). Once you follow the steps below, your data will be routed through our platform and pushed to Lucky Orange in the appropriate format.
 
 ## What is Lucky Orange and how does it work?

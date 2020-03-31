@@ -21,7 +21,7 @@ Using MetaRouter, you can send page views and event data directly to Blueshift w
 
 Integrating Blueshift with MetaRouter cuts out any need for additional implementation resources, saving your development team valuable time.
 
-## Getting Started
+## Getting Started with Blueshift and MetaRouter
 
 ### Blueshift Side
 

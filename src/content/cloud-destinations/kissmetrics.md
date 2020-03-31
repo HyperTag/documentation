@@ -1,10 +1,12 @@
 ---
 collectionKey: cloud-destinations
 
-navText: Kissmetrics
+navText: KiSSmetrics
 
 path: '/cloud-destinations/kissmetrics/'
 ---
+
+# KISSmetrics
 
 MetaRouter makes it easy to send your data to KISSmetrics. Once you follow the steps below, your data will be routed through our platform and pushed to KISSmetrics in the appropriate format.
 

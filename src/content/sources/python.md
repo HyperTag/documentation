@@ -8,7 +8,7 @@ path: '/sources/python/'
 
 # Python
 
-## Getting Started with Python
+## Getting Started
 
 This library lets you record analytics data from your Python code. You can use this library in your web server controller code. It is high-performing in that it uses an internal queue to make 'identify' and 'track' calls non-blocking and fast. It also batches messages and flushes asynchronously to our servers.
 

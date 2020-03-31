@@ -6,6 +6,8 @@ navText: S3 Event Logs
 path: '/cloud-destinations/s3-event-logs/'
 ---
 
+# Amazon S3 Event Logs
+
 MetaRouter makes it easy to send your data to an Amazon S3 bucket. Once you follow the steps below, your data will be routed through our platform and pushed to Amazon S3 in the appropriate format.
 
 ## What is Amazon S3 and how does it work?
@@ -70,15 +72,18 @@ Navigate to the `Clickstream` pane and select the pipeline you would like to add
 
 Either configure a new S3 connection in your MetaRouter dashboard with a unique name or use an existing one. This connection holds your `AWS Region`, `Bucket Name`, and `Server Side Encryption` (as needed). Click `Save` to activate your pipeline.
 
-### Things to Note:
+## Things to Note
 
-1. _AWS Region (required)_
-   The region in which your S3 bucket resides. You can find a list of regions for [Amazon S3 under the "Region" column here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). Enter your region exactly as it's shown (i.e. `us-east-1`).
+### 1. AWS Region (required):
 
-2. _Server Side Encryption (optional)_
-   AWS S3 supports [server side encryption](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). If your bucket policy requires the server side encryption header to be set, you can specify that here. Example values for this field are 'AES256' or 'aws:kms'.
+The region in which your S3 bucket resides. You can find a list of regions for [Amazon S3 under the "Region" column here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). Enter your region exactly as it's shown (i.e. `us-east-1`).
 
-3. _Path Prefix (optional)_
-   The file path at which your S3 events will be stored.
+### 2. Server Side Encryption (optional):
+
+AWS S3 supports [server side encryption](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). If your bucket policy requires the server side encryption header to be set, you can specify that here. Example values for this field are 'AES256' or 'aws:kms'.
+
+### 3. Path Prefix (optional):
+
+The file path at which your S3 events will be stored.
 
 ![s3-event-logs1](/images/s3-event-logs3v2.png)

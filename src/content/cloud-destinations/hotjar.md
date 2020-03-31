@@ -6,6 +6,8 @@ navText: Hotjar
 path: '/cloud-destinations/hotjar/'
 ---
 
+# Hotjar
+
 MetaRouter makes it easy to send your data to Hotjar. Once you follow the steps below, your data will be routed through our platform and pushed to Hotjar in the appropriate format.
 
 ## What is Hotjar and how does it work?

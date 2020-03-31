@@ -6,6 +6,8 @@ navText: Taboola
 path: '/cloud-destinations/taboola/'
 ---
 
+# Taboola
+
 MetaRouter makes it easy to send your data to Taboola. Once you follow the steps below, your data will be routed through our platform and pushed to Taboola in the appropriate format.
 
 ## What is Taboola?

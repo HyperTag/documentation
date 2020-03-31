@@ -6,6 +6,8 @@ navText: Twitter Ads
 path: '/cloud-destinations/twitter-ads/'
 ---
 
+# Twitter Ads
+
 MetaRouter makes it easy to send your data to Twitter Ads. Once you follow the steps below, your data will be routed through our platform and pushed to Twitter Ads in the appropriate format.
 
 ## What are Twitter Ads and how do they work?
@@ -68,7 +70,7 @@ If you’d like to use the Single Event Website Tags, you must map the event nam
 
 ![twitterads5](/images/twitterads4v2.png)
 
-### Final Step
+## Final Step
 
 You should now be able to refresh your website and see the Twitter Ads pixel firing for page views.
 

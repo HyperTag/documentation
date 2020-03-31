@@ -14,7 +14,7 @@ MetaRouter makes it easy to send your data to [Media Math](https://www.mediamath
 
 With MetaRouter, you can use Media Math without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once Media Math is routed through MetaRouter, our platform translates page views and events into corresponding Media Math events.
 
-## Getting Started
+## Getting Started with Media Math and MetaRouter
 
 ### Media Math Side
 

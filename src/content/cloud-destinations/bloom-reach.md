@@ -6,6 +6,8 @@ navText: Bloom Reach
 path: '/cloud-destinations/bloom-reach/'
 ---
 
+# Bloom Reach
+
 MetaRouter makes it easy to send your data to Bloom Reach. Once you follow the steps below, your data will be routed through our platform and pushed to Bloom Reach in the appropriate format.
 
 ## What is Bloom Reach and how does it work?

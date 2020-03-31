@@ -36,7 +36,8 @@ main section:last-of-type {
 /* section content */
 main h1,
 main h2,
-main h3 {
+main h3,
+main h4 {
   @apply mb-4;
   line-height: 1.1;
 }
@@ -50,7 +51,7 @@ main h3 {
   @apply text-xl;
 }
 main h4 {
-  @apply text-base;
+  @apply text-lg;
 }
 main a {
   @apply text-cloud-blue-medium;
@@ -85,6 +86,13 @@ main section img {
   @apply shadow-md;
   @apply border border-solid rounded-md border-gray-200;
 }
+main section .warning {
+  @apply bg-yellow-200;
+  @apply text-sm;
+  @apply py-3 px-6;
+  @apply mb-8;
+  @apply rounded;
+}
 .gatsby-highlight + p > img {
   @apply mt-10;
 }
@@ -104,4 +112,8 @@ main .toc ul {
   @apply ml-0;
   @apply mt-1;
   list-style-type: '-  ';
+}
+
+main .toc li:hover {
+  @apply bg-mr-light-medium;
 }

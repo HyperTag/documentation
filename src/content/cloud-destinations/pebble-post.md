@@ -6,6 +6,8 @@ navText: Pebble Post
 path: '/cloud-destinations/pebble-post/'
 ---
 
+# Pebble Post
+
 MetaRouter makes it easy to send your data to Pebble Post. Once you follow the steps below, your data will be routed through our platform and pushed to Pebble Post in the appropriate format.
 
 ## What is Pebble Post and how does it work?

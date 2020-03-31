@@ -6,6 +6,8 @@ navText: Customer.io
 path: '/cloud-destinations/customer-io/'
 ---
 
+# Customer.io
+
 MetaRouter makes it easy to send your data to Customer.io. Once you follow the steps below, your data will be routed through our platform and pushed to Customer.io in the appropriate format.
 
 ## What is Customer.io and how does it work?
@@ -43,6 +45,8 @@ You will find both your Site ID and API Key clearly presented and labeled once y
 Add your Site ID and API Key into the Customer.io connector on your MetaRouter dashboard and give your new connection a unique name. Click 'Save' and your pipeline will be activated.
 
 ![customerio3](/images/customerio3v2.png)
+
+## Examples
 
 ### Page
 
@@ -87,9 +91,7 @@ analytics.track('Clicked Button')
 
 Track events will be sent to Customer.io as `custom events`. In the Customer.io “Activity View”, “Activity Type” will be set to `event` and “Activity Name” will be set to the event name.
 
-## Best Practices
-
-### Rate Limits
+## Rate Limits
 
 Customer.io has limits on the data collected by their API. To ensure your events arrive in Customer.io, please ensure that you are respecting the limits placed on the [Customer.io API](https://customer.io/docs/api/#api-documentationlimits).
 

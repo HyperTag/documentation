@@ -6,6 +6,8 @@ navText: OutBrain
 path: '/cloud-destinations/outbrain/'
 ---
 
+# OutBrain
+
 MetaRouter makes it easy to send your data to OutBrain. Once you follow the steps below, your data will be routed through our platform and pushed to OutBrain in the appropriate format.
 
 ## What is OutBrain and how does it work?

@@ -8,7 +8,7 @@ path: '/sources/node-js/'
 
 # Node.js
 
-## Getting Started with Node.js
+## Getting Started
 
 This library lets you record all analytics data from your node code. You can check out it's open source code [here](https://github.com/segmentio/analytics-node). You can use this library in your web server controller code. It is high-performing in that it uses an internal queue to make `identify` and `track` calls non-blocking and fast. It also batches messages and flushes asynchronously to our servers.
 

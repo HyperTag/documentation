@@ -6,6 +6,8 @@ navText: Lytics
 path: '/cloud-destinations/lytics/'
 ---
 
+# Lytics
+
 MetaRouter makes it easy to send your data to Lytics. Once you follow the steps below, your data will be routed through our platform and pushed to Lytics in the appropriate format.
 
 ## What is Lytics and how does it work?
@@ -65,6 +67,6 @@ See the image below - you can check back in on the status of your project by goi
 
 ![lytics4](/images/lytics4.png)
 
-### Additional Features
+## Additional Features
 
 - `Stream` - Allows you to organize your data in Lytics. This is only necessary when you are tracking multiple websites

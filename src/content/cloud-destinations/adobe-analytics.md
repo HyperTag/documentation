@@ -6,6 +6,8 @@ navText: Adobe Analytics
 path: '/cloud-destinations/adobe-analytics/'
 ---
 
+# Adobe Analytics
+
 MetaRouter makes it easy to send your data to Adobe Analytics. Once you follow the steps below, your data will be routed through our platform and pushed to Adobe Analytics in the appropriate format.
 
 ## What is Adobe Analytics and how does it work?

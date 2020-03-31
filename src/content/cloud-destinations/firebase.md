@@ -1,10 +1,12 @@
 ---
 collectionKey: cloud-destinations
 
-navText: Firebase
+navText: Google Firebase
 
 path: '/cloud-destinations/firebase/'
 ---
+
+# Google Firebase
 
 Available for server-side and mobile sources, MetaRouter makes it easy to send your data to Firebase. Once you follow the steps below, your data will be routed through our platform and pushed to Firebase in the appropriate format.
 
@@ -24,11 +26,9 @@ With MetaRouter's Firebase integration, you will be able to push your app event 
 
 ### Firebase Side
 
-#### Installation
-
 You will need to install the iOS and/or Android Segment-Firebase SDKs (shout-out to Segment for making these available!). To do this, please see the following steps below.
 
-**Firebase for iOS**
+#### Firebase for iOS
 
 Register your app in the [Firebase Console](https://console.firebase.google.com/) and add the `GoogleService-Info.plist` to the root of your Xcode project.
 
@@ -74,8 +74,6 @@ configuration.requestFactory = ^(NSURL *url) {
 
 2. Then add the following Swift and objC configurations to point to MetaRouter:
 
-_Swift_
-
 ```swift
 configuration.requestFactory = { url in
             var components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
@@ -88,8 +86,6 @@ configuration.requestFactory = { url in
             return NSMutableURLRequest.init(url: components?.url ?? url)
         }
 ```
-
-_objC_
 
 ```objectivec
 configuration.requestFactory = ^(NSURL *url) {
@@ -105,7 +101,7 @@ configuration.requestFactory = ^(NSURL *url) {
     };
 ```
 
-**Firebase for Android**
+#### Firebase for Android
 
 To start sending data to Firebase Analytics from your Android project, you’ll need to follow a few simple steps:
 
@@ -166,6 +162,8 @@ Analytics analytics = new Analytics.Builder(context, writeKey)
 
 By default, we bundle only Firebase/Core which is [Firebase’s Analytics offering](https://firebase.google.com/docs/analytics/). You can see the other available [Firebase dependencies and features here](https://firebase.google.com/docs/android/setup).
 
+#### Proxy HTTP calls
+
 If configuring for proxy HTTP calls, follow these additional steps once you have completed the above:
 
 1. Add this call:
@@ -184,8 +182,6 @@ Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
 
 2. Then add the following Swift, objC and Android configurations to point to MetaRouter:
 
-_Swift_
-
 ```swift
 configuration.requestFactory = { url in
             var components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
@@ -198,8 +194,6 @@ configuration.requestFactory = { url in
             return NSMutableURLRequest.init(url: components?.url ?? url)
         }
 ```
-
-_objC_
 
 ```objectivec
 configuration.requestFactory = ^(NSURL *url) {
@@ -214,8 +208,6 @@ configuration.requestFactory = ^(NSURL *url) {
         return [NSMutableURLRequest requestWithURL:transformedURL];
     };
 ```
-
-_Android_
 
 ```java
 Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
@@ -237,7 +229,9 @@ Analytics analytics = new Analytics.Builder(this, ANALYTICS_WRITE_KEY) //
         .build();
 ```
 
-#### Identify
+## Examples
+
+### Identify
 
 When you call `identify` the library will map to the corresponding Firebase Analytics calls:
 
@@ -268,7 +262,7 @@ You are limited to 25 unique user properties per Firebase Console.
 
 Firebase automatically collects these [user properties](https://support.google.com/firebase/answer/6317486).
 
-#### Track
+### Track
 
 When you call `track` MetaRouter will log the event with Firebase. Firebase automatically tracks [the events listed here](https://support.google.com/firebase/answer/6317485) and it will still do so when bundling with MetaRouter.
 
@@ -284,7 +278,7 @@ Like with user properties, the library will perform the following transformation
 
 Event parameter values must be fewer than 100 characters.
 
-##### Event Mappings
+#### Event Mappings
 
 MetaRouter adheres to Firebase’s semantic event specification and maps the following MetaRouter specced events (left) to the corresponding Firebase events (right):
 
@@ -303,7 +297,7 @@ MetaRouter adheres to Firebase’s semantic event specification and maps the fol
 | Order Completed           | ecommerce_purchase    |
 | Order Refunded            | purchase_refundHeader |
 
-##### Property Mappings
+#### Property Mappings
 
 MetaRouter maps the followed Segment specced properties (left) to the corresponding Firebase event parameters (right):
 
@@ -322,7 +316,7 @@ MetaRouter maps the followed Segment specced properties (left) to the correspond
 | order_id            | transaction_id    | (String) “o555636”           |
 | currency            | currency          | (String) “USD”               |
 
-##### Passing Revenue and Currency
+#### Passing Revenue and Currency
 
 Ecommerce events containing “revenue” or “total” must also include the appropriate ISO 4217 “currency” string for revenue data to populate to the Firebase dashboard. If a “currency” value is not included, the library defaults to “USD”.
 
@@ -345,7 +339,8 @@ For iOS, you can configure `recordScreenViews` which will automatically track sc
 
 Google Analytics for Firebase iOS does NOT support the case of manual-only screen reporting. Firebase only supports automatic + manual screen reporting or no screen reporting at all.
 
-**Firebase Dynamic Linking** (iOS only)
+#### Firebase Dynamic Linking (iOS only)
+
 Firebase Dynamic Links are smart URLs that can change behavior dynamically depending on the platform where the user clicks them. Use them in web, email, social media, referral and physical promotions to increase user acquisition, retention and lifetime value. Key features include ability to survive app installs, controlling user experience depending on what platform they access the link on and knowing which content and campaigns are working via tracking in the Firebase console. Check out [Firebase’s Docs here](https://firebase.google.com/docs/dynamic-links/). [Here’s a sample app delegate that shows how to implement the Dynamic Linking Logic](https://github.com/firebase/quickstart-ios/blob/master/dynamiclinks/DynamicLinksExample/AppDelegate.m#L41-L135).
 
 To use Firebase Dynamic Links, add the below to your podfile.
@@ -354,15 +349,13 @@ To use Firebase Dynamic Links, add the below to your podfile.
 pod 'Firebase/DynamicLinks'
 ```
 
-##### Conversion Tracking and Adwords Conversions
+#### Conversion Tracking and Adwords Conversions
 
 Firebase is now Google’s recommended method for reporting conversions to Adwords! To do so, simply track the conversion events as you normally would with the mobile library and it will will send them through to Firebase! Follow [this documentation from Firebase to set up your conversions in Firebase and to have them forwarded to Adwords](https://firebase.google.com/docs/adwords/).
 
-##### Troubleshooting
+#### Troubleshooting
 
 Firebase has great logging. If you are having any issues, you can enable debug mode as outlined [here](https://support.google.com/firebase/answer/7201382/?hl=en&authuser=0).
-
-##### Changes from iOS v1 to v2 Beta
 
 ### MetaRouter Side
 

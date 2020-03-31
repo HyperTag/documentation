@@ -6,6 +6,8 @@ navText: Kenshoo
 path: '/cloud-destinations/kenshoo/'
 ---
 
+# Kenshoo
+
 MetaRouter makes it easy to send your data to Kenshoo. Once you follow the steps below, your data will be routed through our platform and pushed to Kenshoo in the appropriate format.
 
 ## What is Kenshoo and how does it work?

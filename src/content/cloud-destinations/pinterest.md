@@ -6,6 +6,8 @@ navText: Pinterest
 path: '/cloud-destinations/pinterest/'
 ---
 
+# Pinterest
+
 MetaRouter makes it easy to send your data to Pinterest Tag. Once you follow the steps below, your data will be routed through our platform and pushed to Pinterest Tag in the appropriate format.
 
 ## What is Pinterest Tag and how does it work?
@@ -92,6 +94,6 @@ Enter your event on the left, and map it to one of the [standard Pinterest event
 | `.page()` call with no `category` | PageVisit                |
 | `.page()` call with `category`    | ViewCategory             |
 
-### Things to note
+## Things to note
 
 Generate page views and trigger your custom event inside your website with `analytics.track('your event name');`. You should see confirmation of those tags sent to Pinterest inside your Pinterest for Business dashboard, under `Ads > Conversions`

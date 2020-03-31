@@ -8,7 +8,7 @@ path: '/sources/php/'
 
 # PHP
 
-## Getting Started with PHP
+## Getting Started
 
 This library lets you record analytics data from your PHP code. It is a little different than other server-side libraries in that PHP is a single-threaded language, meaning it only processes once language at a time.
 

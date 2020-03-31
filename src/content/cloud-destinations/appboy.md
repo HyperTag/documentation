@@ -6,6 +6,8 @@ navText: Braze
 path: '/cloud-destinations/braze/'
 ---
 
+# Braze
+
 MetaRouter makes it easy to send your data to Braze, [formerly Appboy](https://www.braze.com/documentation/braze_faqs/?utm_campaign=2017-Braze-Launch&utm_medium=Appboy-Dashboard&utm_source=Dashboard-Email). Once you follow the steps below, your data will be routed through our platform and pushed to Braze in the appropriate format.
 
 ## What is Braze and how does it work?

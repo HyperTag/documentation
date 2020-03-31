@@ -6,6 +6,8 @@ navText: Heap Analytics
 path: '/cloud-destinations/heap-analytics/'
 ---
 
+# Heap Analytics
+
 MetaRouter makes it easy to send your data to Heap. Once you follow the steps below, your data will be routed through our platform and pushed to Heap in the appropriate format.
 
 ## What is Heap and how does it work?
@@ -40,7 +42,7 @@ Add your Source ID into the Heap connector on your MetaRouter dashboard and give
 
 ![heap-analytics3](/images/heap-analytics3v2.png)
 
-### Things to Note.
+## Things to Note
 
 When you return to your Heap account, you might get a message saying "There's no data here!" Your data might be in a different environment, so make sure to check all places (i.e. development instead of production).
 

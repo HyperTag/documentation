@@ -99,7 +99,7 @@ This example `track` call tells us that a user just triggered an "Item Purchased
 
 A lot of analytics tools support custom event mapping so, with `track` implemented, you’ll be able to attribute events to your users and start targeting them in a more informed and relevant way.
 
-## Event Flushing
+## Queue Flushing
 
 You can specify the number of events that should queue before flushing. Set this to 1 to send events as they come in (i.e. not batched) but note that it will use more battery. Also note that this is 20 by default.
 

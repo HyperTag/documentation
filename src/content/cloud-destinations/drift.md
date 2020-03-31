@@ -6,6 +6,8 @@ navText: Drift
 path: '/cloud-destinations/drift/'
 ---
 
+# Drift
+
 Available for all client-side sources, MetaRouter makes it easy to send your data to Drift. Once you follow the steps below, your data will be routed through our platform and pushed to Drift Events in the appropriate format.
 
 ## What is Drift and how does it work?

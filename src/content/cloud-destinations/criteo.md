@@ -6,6 +6,8 @@ navText: Criteo
 path: '/cloud-destinations/criteo/'
 ---
 
+# Criteo
+
 MetaRouter makes it easy to send your data to Criteo. Once you follow the steps below, your data will be routed through our platform and pushed to Criteo in the appropriate format.
 
 ## What is Criteo and how does it work?

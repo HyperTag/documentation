@@ -14,7 +14,7 @@ MetaRouter makes it easy to send your data to [DoubleClick Floodlight](https://w
 
 With MetaRouter, you can use DoubleClick Floodlight without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once DoubleClick Floodlight is routed through MetaRouter, our platform makes calls directly to Floodlight based on your mapped events.
 
-## Getting Started
+## Getting Started with DoubleClick Floodlight and MetaRouter
 
 ### DoubleClick Floodlight Side
 

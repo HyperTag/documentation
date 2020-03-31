@@ -6,6 +6,8 @@ navText: Sailthru
 path: '/cloud-destinations/sailthru/'
 ---
 
+# Sailthru
+
 MetaRouter makes it easy to send your data to Sailthru. Once you follow the steps below, your data will be routed through our platform and pushed to Sailthru in the appropriate format.
 
 ## What is Sailthru and how does it work?
@@ -271,9 +273,9 @@ To configure a default list name, MetaRouter exposes a setting to configure this
 
 To configure a default reminder time and template, enter the **public name** of your template (configured in Sailthru’s UI) and the time frame you will want the email to send. Some example values are 60 minutes, 24 hours, 2 weeks. MetaRouter will handle passing in the `+` increment. To read more about how Sailthru calculates time, please refer to their [**time documentation**](https://getstarted.sailthru.com/developers/zephyr-functions-library/time/).
 
-### FAQ
+## FAQ
 
-#### Rate limits
+### Rate limits
 
 All calls are subject to rate limits.
 
@@ -281,7 +283,7 @@ All calls are subject to rate limits.
 - All others allow 40 requests/second.
 - Limits can be raised on a case-by-case basis in order to support valid business practices. Reach out to your Sailthru account representative for more.
 
-#### Nested Traits and Property Handling
+### Nested Traits and Property Handling
 
 Sailthru does not accept nested custom traits or properties, so by default we will flatten any custom nested properties. For example, see the below nested properties and the flattened output:
 
@@ -331,11 +333,11 @@ Sailthru does not accept nested custom traits or properties, so by default we wi
 }
 ```
 
-#### Replays
+### Replays
 
 Note that Sailthru does not support historical replay.
 
-### Settings
+## Settings
 
 MetaRouter lets you change these destination settings via your MetaRouter dashboard without having to touch any code.
 

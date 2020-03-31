@@ -26,7 +26,7 @@ Using MetaRouter, you can send page views and event data directly to Pinterest w
 
 Integrating Pinterest with MetaRouter cuts out any need for additional implementation resources, saving your development team valuable time.
 
-## Getting Started
+## Getting Started with Pinterest Tag and MetaRouter
 
 To get started sending events to Pinterest, first sign up for [Pinterest for Business](https://business.pinterest.com/en).
 

@@ -6,6 +6,8 @@ navText: VWO
 path: '/cloud-destinations/vwo/'
 ---
 
+# VWO
+
 MetaRouter makes it easy to send your data to VWO. Once you follow the steps below, your data will be routed through our platform and pushed to VWO in the appropriate format.
 
 ## What is VWO and how does it work?
@@ -30,7 +32,7 @@ If you would like for analytics.js to manage the loading of the snippet for you,
 
 Since the VWO snippet is now on your site, all you need to do is enable the VWO integration in your MetaRouter UI to get started. Note that there are a few different custom metrics you can track to VWO. We have outlined how to set up those methods below.
 
-## Settings
+### Settings
 
 #### Account ID
 
@@ -71,11 +73,11 @@ This setting is only effective if _Use Async Smart Code_ is set to `true`.
 
 If you would like to utilize VWO’s asynchronous smart code, toggle on this feature. This means you will not need to include VWO’s native snippet on your page as MetaRouter will do this on your behalf. If this feature is toggled off, you will need to include VWO’s native smart code on your webpage.
 
-#### Use Existing JQuery
+#### Use Existing jQuery
 
-If your page already includes JQuery, you can set this to `true`. Otherwise, VWO will include JQuery onto the page for you. VWO needs JQuery on the page to function correctly.
+If your page already includes jQuery, you can set this to `true`. Otherwise, VWO will include jQuery onto the page for you. VWO needs jQuery on the page to function correctly.
 
-This setting is only effective if _Use Async Smart Code_ is set to `true`.
+This setting is only effective if **Use Async Smart Code** is set to `true`.
 
 #### Single Page App Mode
 

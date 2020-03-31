@@ -6,6 +6,8 @@ navText: Facebook App Events
 path: '/cloud-destinations/facebook-app-events/'
 ---
 
+# Facebook App Events
+
 Available for server-side and mobile sources, MetaRouter makes it easy to send your data to Facebook App Events. Once you follow the steps below, your data will be routed through our platform and pushed to Facebook App Events in the appropriate format.
 
 ## What is Facebook App Events and how does it work?

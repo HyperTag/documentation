@@ -6,6 +6,8 @@ navText: Mixpanel
 path: '/cloud-destinations/mixpanel/'
 ---
 
+# Mixpanel
+
 MetaRouter makes it easy to send your data to Mixpanel. Once you follow the steps below, your data will be routed through our platform and pushed to Mixpanel in the appropriate format.
 
 ## What is Mixpanel and how does it work?
@@ -46,7 +48,7 @@ With that, you're set! Your data should start flowing almost immediately.
 
 Click on `View Your Data` back in the Mixpanel UI to start exploring.
 
-### Additional Features
+## Additional Features
 
 On top of our standard calls, you're free to do a few extra things with our Mixpanel integration:
 

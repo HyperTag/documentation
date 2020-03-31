@@ -6,6 +6,8 @@ navText: DoubleClick Floodlight
 path: '/cloud-destinations/doubleclick-floodlight/'
 ---
 
+# DoubleClick Floodlight
+
 MetaRouter makes it easy to send your data to DoubleClick Floodlight. Once you follow the steps below, your data will be routed through our platform and pushed to DoubleClick Floodlight in the appropriate format.
 
 ## What is DoubleClick Floodlight and how does it work?

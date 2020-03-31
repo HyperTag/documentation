@@ -6,6 +6,8 @@ navText: Woopra
 path: '/cloud-destinations/woopra/'
 ---
 
+# Woopra
+
 MetaRouter makes it easy to send your data to Woopra. Once you follow the steps below, your data will be routed through our platform and pushed to Woopra in the appropriate format.
 
 ## What is Woopra and how does it work?

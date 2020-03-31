@@ -22,7 +22,7 @@ Facebook Pixel uses a JavaScript Tag API to track audiences and custom user even
 
 With MetaRouter, you can use Facebook Pixel without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once your Facebook Pixel is routed through MetaRouter, our platform translates page views and events into corresponding Facebook Pixel events.
 
-## Getting Started
+## Getting Started with Facebook and MetaRouter
 
 ### Facebook Pixel Side
 

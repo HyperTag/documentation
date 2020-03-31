@@ -20,7 +20,7 @@ Google Analytics requires that you add their snippet to your site. Doing this wi
 
 Integrating Google Analytics with MetaRouter means that you do not need to install any Google Analytics code into your site or mobile app. It also greatly eases the processes of tracking more detailed information like what users are doing on a page, e-commerce data, and user attributes. Furthermore, many custom events can be configured directly in the MetaRouter UI, making it easy to track the data that you need.
 
-## Getting Started
+## Getting Started with Google Analytics and MetaRouter
 
 _Before you get started, note that you will need to remove Google Analytics snippet from your page if you were using it outside of MetaRouter._
 

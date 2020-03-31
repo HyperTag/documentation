@@ -16,7 +16,7 @@ MetaRouter makes it easy to send your data to [Criteo](http://www.criteo.com/) (
 
 With MetaRouter, you can use Criteo without having to install their JavaScript library on every page of your site. We also eliminate the need to write custom code to track user event data. Once Criteo is routed through MetaRouter, our platform translates page views and events into corresponding Criteo events.
 
-## Getting Started
+## Getting Started with Criteo and MetaRouter
 
 ### Criteo Side
 

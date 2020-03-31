@@ -40,7 +40,7 @@ Put your Facebook Pixel ID into your MetaRouter account and give your new connec
 
 With that, just click `Save` to activate your pipeline.
 
-### Additional Features
+## Additional Features
 
 **Standard Events**
 

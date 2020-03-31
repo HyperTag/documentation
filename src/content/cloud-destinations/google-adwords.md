@@ -6,6 +6,8 @@ navText: Google AdWords
 path: '/cloud-destinations/google-adwords/'
 ---
 
+# Google AdWords
+
 MetaRouter makes it easy to send your data to Google AdWords. Once you follow the steps below, your data will be routed through our platform and pushed to Adwords in the appropriate format.
 
 ## What is Google AdWords and how does it work?
@@ -68,7 +70,7 @@ For example, the event `analytics.track("Red Rover", {...})` and the AdWords Con
 - **Event**: `Red Rover`
 - **Label**: `ABC-123...`
 
-### Additional Features
+## Additional Features
 
 You are also now able to click a `Remarketing` checkbox. If you enable this feature, MetaRouter sends an additional remarketing tag for each of your conversion labels and for every `page` API call.
 

@@ -6,6 +6,8 @@ navText: Calq
 path: '/cloud-destinations/calq/'
 ---
 
+# Calq
+
 MetaRouter makes it easy to send your data to Calq. Once you follow the steps below, your data will be routed through our platform and pushed to Calq in the appropriate format.
 
 ## What is Calq and how does it work?
