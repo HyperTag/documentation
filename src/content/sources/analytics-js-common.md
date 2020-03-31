@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Analytics.js Common Fields
 
-path: '/analytics-js-common-fields/'
+path: '/sources/analytics-js-common-fields/'
 ---
 
 # Common Fields of API Calls

@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Ruby
 
-path: '/sources-ruby/'
+path: '/sources/ruby/'
 ---
 
 # h1

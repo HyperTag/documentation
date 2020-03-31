@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Node.js
 
-path: '/sources-node-js/'
+path: '/sources/node-js/'
 ---
 
 # h1

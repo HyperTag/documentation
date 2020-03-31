@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: HTTP API
 
-path: '/sources-http-api/'
+path: '/sources/http-api/'
 ---
 
 # HTTP Tracking API

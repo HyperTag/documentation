@@ -15,7 +15,7 @@ Switching from Segment to MetaRouter is very simple. Follow the four easy steps 
 
 ### Step 1
 
-[Sign up for MetaRouter](https://app.metarouter.io/signup) and create a [source](https://docs.metarouter.io/v2/clickstream/sources/overview.html) in the MetaRouter UI.
+[Sign up for MetaRouter](https://app.metarouter.io/signup) and create a [source](/sources-and-sdks/) in the MetaRouter UI.
 
 ![segment-switch-1](../../images/segment-switch-1-v2.png)
 

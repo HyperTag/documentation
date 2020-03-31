@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Java
 
-path: '/sources-java/'
+path: '/sources/java/'
 ---
 
 # h1

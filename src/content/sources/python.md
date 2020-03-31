@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Python
 
-path: '/sources-python/'
+path: '/sources/python/'
 ---
 
 # h1

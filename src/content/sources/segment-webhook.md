@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Segment Webhook
 
-path: '/sources-segment-webhook/'
+path: '/sources/segment-webhook/'
 ---
 
 # h1

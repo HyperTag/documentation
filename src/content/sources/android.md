@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Android
 
-path: '/sources-android/'
+path: '/sources/android/'
 ---
 
 # h1

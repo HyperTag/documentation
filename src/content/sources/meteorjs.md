@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: MeteorJS
 
-path: '/sources-meteor-js/'
+path: '/sources/meteor-js/'
 ---
 
 # h1

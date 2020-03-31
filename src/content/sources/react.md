@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: React Native
 
-path: '/sources-react-native/'
+path: '/sources/react-native/'
 ---
 
 # h1

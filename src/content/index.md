@@ -13,7 +13,7 @@ MetaRouter is a data engineering platform that helps you collect user events fro
 
 ## Editions
 
-[Cloud](/v2/editions/cloud/overview.html) - an Analytics.js-based module, which helps you collect data from your web and mobile applications, and route those events to your tools and to your data lake. Signup for an account at https://app.metarouter.io/ and get started with the platform quickly.
+[Cloud](/cloud-edition/) - an Analytics.js-based module, which helps you collect data from your web and mobile applications, and route those events to your tools and to your data lake. Signup for an account at https://app.metarouter.io/ and get started with the platform quickly.
 
 - Best suited for those:
   - Just getting started collecting user data
@@ -26,7 +26,7 @@ MetaRouter is a data engineering platform that helps you collect user events fro
   - Marketing automation
   - User data tracking and warehousing
 
-[Enterprise](/v2/editions/enterprise/overview.html) - our full platform deployable via Kubernetes to your preferred cloud (AWS, Google Cloud, Azure).
+[Enterprise](/enterprise-edition/) - our full platform deployable via Kubernetes to your preferred cloud (AWS, Google Cloud, Azure).
 
 - Best suited for those:
   - With very high user data volumes

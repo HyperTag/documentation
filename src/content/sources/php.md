@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: PHP
 
-path: '/sources-php/'
+path: '/sources/php/'
 ---
 
 # h1

@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: .NET
 
-path: '/sources-dot-net/'
+path: '/sources/dot-net/'
 ---
 
 # h1

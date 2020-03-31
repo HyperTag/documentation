@@ -52,7 +52,10 @@ kubectl get pods --namespace kube-system
 ### Adding Custom Definitions
 
 Ensure Cluster has access to cert-manager definitions
+
+```bash
 kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.6/deploy/manifests/00-crds.yaml
+```
 
 ## Message Queue Preparations
 

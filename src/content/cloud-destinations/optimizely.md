@@ -3,7 +3,7 @@ collectionKey: cloud-destinations
 
 navText: Optimizely
 
-path: '/cloud-destinations/optimizley/'
+path: '/cloud-destinations/optimizely/'
 ---
 
 MetaRouter makes it easy to send your data to Optimizely. Once you follow the steps below, your data will be routed through our platform and pushed to Optimizely in the appropriate format.

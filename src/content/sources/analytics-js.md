@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Analytics.js
 
-path: '/analytics-js/'
+path: '/sources/analytics-js/'
 ---
 
 Using the Javascript analytics.js library, you can start sending customer data directly from your website or web application to MetaRouter. Accessing this user data will yield rich, actionable insights, and it only takes a few minutes to get set up.

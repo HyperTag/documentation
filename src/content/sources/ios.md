@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: iOS
 
-path: '/sources-ios/'
+path: '/sources/ios/'
 ---
 
 # h1

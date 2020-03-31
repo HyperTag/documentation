@@ -3,7 +3,7 @@ collectionKey: sources
 
 navText: Analytics.js Ecommerce Spec
 
-path: '/analytics-js-ecommerce-spec/'
+path: '/sources/analytics-js-ecommerce-spec/'
 ---
 
 # Analytics.js Ecommerce Spec
