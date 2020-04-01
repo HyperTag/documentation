@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'DoubleClick Floodlight'
 
 path: '/enterprise-destinations/doubleclick-floodlight/'
+
+tags: [enterprise, destinations]
 ---
 
 # DoubleClick Floodlight

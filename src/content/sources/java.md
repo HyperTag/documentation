@@ -4,6 +4,8 @@ collectionKey: sources
 navText: Java
 
 path: '/sources/java/'
+
+tags: [sources]
 ---
 
 # Java

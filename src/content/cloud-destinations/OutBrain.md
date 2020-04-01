@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: OutBrain
 
 path: '/cloud-destinations/outbrain/'
+
+tags: [cloud, destinations]
 ---
 
 # OutBrain

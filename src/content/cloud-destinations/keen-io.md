@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Keen IO
 
 path: '/cloud-destinations/keen-io/'
+
+tags: [cloud, destinations]
 ---
 
 # Keen.io

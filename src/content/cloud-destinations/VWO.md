@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: VWO
 
 path: '/cloud-destinations/vwo/'
+
+tags: [cloud, destinations]
 ---
 
 # VWO

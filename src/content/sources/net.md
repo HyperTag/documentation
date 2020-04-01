@@ -4,6 +4,8 @@ collectionKey: sources
 navText: .NET
 
 path: '/sources/dot-net/'
+
+tags: [sources]
 ---
 
 # .NET

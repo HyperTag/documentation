@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Google Analytics
 
 path: '/cloud-destinations/google-analytics/'
+
+tags: [cloud, destinations]
 ---
 
 # Google Analytics

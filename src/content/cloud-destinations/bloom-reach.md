@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Bloom Reach
 
 path: '/cloud-destinations/bloom-reach/'
+
+tags: [cloud, destinations]
 ---
 
 # Bloom Reach

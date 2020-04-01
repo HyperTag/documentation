@@ -4,6 +4,8 @@ collectionKey: sources
 navText: MeteorJS
 
 path: '/sources/meteor-js/'
+
+tags: [sources]
 ---
 
 # MeteorJS

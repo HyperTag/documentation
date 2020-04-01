@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Netmining
 
 path: '/cloud-destinations/netmining/'
+
+tags: [cloud, destinations]
 ---
 
 # Netmining

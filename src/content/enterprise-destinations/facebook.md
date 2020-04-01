@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Facebook'
 
 path: '/enterprise-destinations/facebook/'
+
+tags: [enterprise, destinations]
 ---
 
 # Facebook

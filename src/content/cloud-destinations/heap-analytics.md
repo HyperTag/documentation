@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Heap Analytics
 
 path: '/cloud-destinations/heap-analytics/'
+
+tags: [cloud, destinations]
 ---
 
 # Heap Analytics

@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Google Analytics'
 
 path: '/enterprise-destinations/google-analytics/'
+
+tags: [enterprise, destinations]
 ---
 
 # Google Analytics

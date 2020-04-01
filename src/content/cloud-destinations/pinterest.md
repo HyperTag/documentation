@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Pinterest
 
 path: '/cloud-destinations/pinterest/'
+
+tags: [cloud, destinations]
 ---
 
 # Pinterest

@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Pebble Post
 
 path: '/cloud-destinations/pebble-post/'
+
+tags: [cloud, destinations]
 ---
 
 # Pebble Post

@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Google Firebase
 
 path: '/cloud-destinations/firebase/'
+
+tags: [cloud, destinations]
 ---
 
 # Google Firebase

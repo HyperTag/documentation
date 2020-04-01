@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Google AdWords
 
 path: '/cloud-destinations/google-adwords/'
+
+tags: [cloud, destinations]
 ---
 
 # Google AdWords

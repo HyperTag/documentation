@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Webhooks
 
 path: '/cloud-destinations/webhooks/'
+
+tags: [cloud, destinations]
 ---
 
 # Webhooks

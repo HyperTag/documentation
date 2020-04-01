@@ -4,6 +4,8 @@ collectionKey: sources
 navText: iOS
 
 path: '/sources/ios/'
+
+tags: [sources]
 ---
 
 # iOS

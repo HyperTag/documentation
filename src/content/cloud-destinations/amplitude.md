@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Amplitude
 
 path: '/cloud-destinations/amplitude/'
+
+tags: [cloud, destinations]
 ---
 
 # Amplitude

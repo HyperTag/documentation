@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Optimizely
 
 path: '/cloud-destinations/optimizely/'
+
+tags: [cloud, destinations]
 ---
 
 # Optimizely

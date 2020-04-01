@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Adobe Analytics
 
 path: '/cloud-destinations/adobe-analytics/'
+
+tags: [cloud, destinations]
 ---
 
 # Adobe Analytics

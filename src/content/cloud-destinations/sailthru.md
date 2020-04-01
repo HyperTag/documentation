@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Sailthru
 
 path: '/cloud-destinations/sailthru/'
+
+tags: [cloud, destinations]
 ---
 
 # Sailthru

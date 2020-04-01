@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Calq
 
 path: '/cloud-destinations/calq/'
+
+tags: [cloud, destinations]
 ---
 
 # Calq

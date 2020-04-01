@@ -6,6 +6,8 @@ navText: 'Adobe Analytics'
 navIndex: 3
 
 path: '/enterprise-destinations/adobe-analytics/'
+
+tags: [enterprise, destinations]
 ---
 
 # Adobe Analytics

@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Criteo'
 
 path: '/enterprise-destinations/criteo/'
+
+tags: [enterprise, destinations]
 ---
 
 # Criteo

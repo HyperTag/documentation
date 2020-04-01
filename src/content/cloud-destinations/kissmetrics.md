@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: KiSSmetrics
 
 path: '/cloud-destinations/kissmetrics/'
+
+tags: [cloud, destinations]
 ---
 
 # KISSmetrics

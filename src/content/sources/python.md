@@ -4,6 +4,8 @@ collectionKey: sources
 navText: Python
 
 path: '/sources/python/'
+
+tags: [sources]
 ---
 
 # Python

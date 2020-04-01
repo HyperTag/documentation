@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Acquisio
 
 path: '/cloud-destinations/acquisio/'
+
+tags: [cloud, destinations]
 ---
 
 # Acquisio

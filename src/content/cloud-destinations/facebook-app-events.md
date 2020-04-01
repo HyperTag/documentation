@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Facebook App Events
 
 path: '/cloud-destinations/facebook-app-events/'
+
+tags: [cloud, destinations]
 ---
 
 # Facebook App Events

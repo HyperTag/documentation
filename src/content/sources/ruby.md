@@ -4,6 +4,8 @@ collectionKey: sources
 navText: Ruby
 
 path: '/sources/ruby/'
+
+tags: [sources]
 ---
 
 # Ruby

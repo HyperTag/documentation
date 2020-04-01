@@ -4,6 +4,8 @@ collectionKey: sources
 navText: HTTP API
 
 path: '/sources/http-api/'
+
+tags: [sources]
 ---
 
 # HTTP Tracking API

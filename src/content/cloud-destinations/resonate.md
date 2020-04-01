@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Resonate
 
 path: '/cloud-destinations/resonate/'
+
+tags: [cloud, destinations]
 ---
 
 # Resonate

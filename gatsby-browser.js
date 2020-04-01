@@ -16,6 +16,16 @@ exports.onRouteUpdate = () => {
     }
   }
 
+  var stringToHTML = function(str) {
+    var parser = new DOMParser()
+    var doc = parser.parseFromString(str, 'text/html')
+    return doc.body
+  }
+
+  var insertAfter = function(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling)
+  }
+
   var onClickNav = function(e) {
     var tag = e.target.tagName.toLowerCase()
 
@@ -112,8 +122,28 @@ exports.onRouteUpdate = () => {
     document.querySelectorAll('main h2').forEach(checkSubheadingOffset)
   }, 250)
 
+  // appends a list of tags to the primary heading, with values taken from its data attrs
+  var renderTags = function() {
+    var h1 = document.querySelector('main h1')
+
+    if (h1.dataset.tags) {
+      var tags = `<ul class="tags">${h1.dataset.tags
+        .split(',')
+        .map(function(tag) {
+          var text = tag === 'sources' ? 'sources &amp; SDKs' : tag
+
+          return `<li class="${tag}">${text}</li>`
+        })
+        .join('')}</ul>`
+
+      var tagsList = stringToHTML(tags).querySelector('ul') // get the list from the new document returned by stringToHTML
+      insertAfter(tagsList, h1)
+    }
+  }
+
   // functions to run onload
   setCurrent()
+  renderTags()
 
   window.addEventListener('hashchange', setCurrent)
   document.addEventListener('scroll', onScroll)

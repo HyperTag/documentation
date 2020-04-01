@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Criteo
 
 path: '/cloud-destinations/criteo/'
+
+tags: [cloud, destinations]
 ---
 
 # Criteo

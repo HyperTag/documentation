@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Mixpanel
 
 path: '/cloud-destinations/mixpanel/'
+
+tags: [cloud, destinations]
 ---
 
 # Mixpanel

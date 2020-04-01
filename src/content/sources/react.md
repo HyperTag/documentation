@@ -4,6 +4,8 @@ collectionKey: sources
 navText: React Native
 
 path: '/sources/react-native/'
+
+tags: [sources]
 ---
 
 # React Native

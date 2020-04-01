@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Rubicon
 
 path: '/cloud-destinations/rubicon/'
+
+tags: [cloud, destinations]
 ---
 
 # Rubicon

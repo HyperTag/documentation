@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Facebook Pixel
 
 path: '/cloud-destinations/facebook-pixel/'
+
+tags: [cloud, destinations]
 ---
 
 # Facebook Pixel

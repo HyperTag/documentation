@@ -4,6 +4,8 @@ collectionKey: sources
 navText: Node.js
 
 path: '/sources/node-js/'
+
+tags: [sources]
 ---
 
 # Node.js

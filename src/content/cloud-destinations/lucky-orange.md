@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Lucky Orange
 
 path: '/cloud-destinations/lucky-orange/'
+
+tags: [cloud, destinations]
 ---
 
 # Lucky Orange

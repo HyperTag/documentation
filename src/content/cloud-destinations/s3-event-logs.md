@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: S3 Event Logs
 
 path: '/cloud-destinations/s3-event-logs/'
+
+tags: [cloud, destinations]
 ---
 
 # Amazon S3 Event Logs

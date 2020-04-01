@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Braze
 
 path: '/cloud-destinations/braze/'
+
+tags: [cloud, destinations]
 ---
 
 # Braze

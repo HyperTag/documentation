@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Clicky
 
 path: '/cloud-destinations/clicky/'
+
+tags: [cloud, destinations]
 ---
 
 # Clicky

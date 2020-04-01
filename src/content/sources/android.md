@@ -4,6 +4,8 @@ collectionKey: sources
 navText: Android
 
 path: '/sources/android/'
+
+tags: [sources]
 ---
 
 # Android

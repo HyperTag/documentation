@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Google BigQuery
 
 path: '/cloud-destinations/google-bigquery/'
+
+tags: [cloud, destinations]
 ---
 
 # Google BigQuery

@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Pinterest Tag'
 
 path: '/enterprise-destinations/pinterest-tag/'
+
+tags: [enterprise, destinations]
 ---
 
 # Pinterest

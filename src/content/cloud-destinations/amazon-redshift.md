@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Amazon Redshift
 
 path: '/cloud-destinations/amazon-redshift/'
+
+tags: [cloud, destinations]
 ---
 
 # Amazon Redshift

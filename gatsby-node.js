@@ -19,6 +19,7 @@ const query = `
           collectionIndex
           collectionMerge
           navText
+          tags
         }
         html
       }
@@ -144,6 +145,23 @@ const mergeGroups = nodes => {
     .join('')
 }
 
+// add tags from frontmatter as data attrs to primary heading
+const addTags = nodes => {
+  return nodes.map(node => {
+    if (node.frontmatter.tags) {
+      const $ = cheerio.load(node.html)
+
+      $('h1')
+        .first()
+        .attr('data-tags', node.frontmatter.tags)
+
+      node.html = $.html()
+    }
+
+    return node
+  })
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(query)
@@ -154,7 +172,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const nodes = setTableColumnWidths(result.data.allMarkdownRemark.edges.map(e => e.node))
+  let nodes = result.data.allMarkdownRemark.edges.map(e => e.node)
+  // nodes = setTableColumnWidths(nodes)
+  nodes = addTags(nodes)
+
   const groups = createGroups(nodes)
 
   // start with single pages

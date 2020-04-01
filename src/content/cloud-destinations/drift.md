@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Drift
 
 path: '/cloud-destinations/drift/'
+
+tags: [cloud, destinations]
 ---
 
 # Drift

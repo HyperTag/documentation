@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: DoubleClick Floodlight
 
 path: '/cloud-destinations/doubleclick-floodlight/'
+
+tags: [cloud, destinations]
 ---
 
 # DoubleClick Floodlight

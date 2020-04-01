@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Slack
 
 path: '/cloud-destinations/slack/'
+
+tags: [cloud, destinations]
 ---
 
 # Slack

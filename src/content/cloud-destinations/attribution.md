@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Attribution
 
 path: '/cloud-destinations/attribution/'
+
+tags: [cloud, destinations]
 ---
 
 # Attribution

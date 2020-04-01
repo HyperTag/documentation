@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Taboola
 
 path: '/cloud-destinations/taboola/'
+
+tags: [cloud, destinations]
 ---
 
 # Taboola

@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Google Tag Manager
 
 path: '/cloud-destinations/google-tag-manager/'
+
+tags: [cloud, destinations]
 ---
 
 # Google Tag Manager

@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Blueshift'
 
 path: '/enterprise-destinations/blueshift/'
+
+tags: [enterprise, destinations]
 ---
 
 # Blueshift

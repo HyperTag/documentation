@@ -4,6 +4,8 @@ collectionKey: sources
 navText: Analytics.js
 
 path: '/sources/analytics-js/'
+
+tags: [sources]
 ---
 
 # Analytics.js

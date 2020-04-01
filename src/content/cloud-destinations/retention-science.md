@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Retention Science
 
 path: '/cloud-destinations/retention-science/'
+
+tags: [cloud, destinations]
 ---
 
 # Retention Science

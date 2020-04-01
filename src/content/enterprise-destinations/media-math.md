@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Media Math'
 
 path: '/enterprise-destinations/media-math/'
+
+tags: [enterprise, destinations]
 ---
 
 # Media Math

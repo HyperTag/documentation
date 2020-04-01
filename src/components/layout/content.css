@@ -44,6 +44,11 @@ main h4 {
 main h1 {
   @apply text-3xl;
 }
+main section h1:first-of-type {
+  @apply border-b border-solid border-gray-300;
+  @apply mb-6;
+  padding-bottom: 2px; /* space between border and characters with descenders */
+}
 main h2 {
   @apply text-2xl;
 }
@@ -116,4 +121,28 @@ main .toc ul {
 
 main .toc li:hover {
   @apply bg-mr-light-medium;
+}
+
+main section .tags {
+  @apply p-0;
+  @apply -mt-5 mx-0 mb-6;
+}
+main .tags li {
+  @apply inline-block;
+  @apply rounded;
+  @apply bg-gray-600;
+  @apply text-gray-100 uppercase;
+  @apply m-0 mr-2;
+  font-size: 11px;
+  font-variant: small-caps;
+  padding: 1px 5px;
+}
+main .tags li.enterprise {
+  @apply bg-enterprise-orange;
+}
+main .tags li.cloud {
+  @apply bg-cloud-blue-medium;
+}
+main .tags li.sources {
+  @apply bg-mr-purple;
 }

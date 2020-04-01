@@ -4,6 +4,8 @@ collectionKey: sources
 navText: PHP
 
 path: '/sources/php/'
+
+tags: [sources]
 ---
 
 # PHP

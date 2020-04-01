@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Woopra
 
 path: '/cloud-destinations/woopra/'
+
+tags: [cloud, destinations]
 ---
 
 # Woopra

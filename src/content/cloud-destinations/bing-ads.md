@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Microsoft Advertising
 
 path: '/cloud-destinations/microsoft-advertising/'
+
+tags: [cloud, destinations]
 ---
 
 # Microsoft Advertising

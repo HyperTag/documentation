@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Lytics
 
 path: '/cloud-destinations/lytics/'
+
+tags: [cloud, destinations]
 ---
 
 # Lytics

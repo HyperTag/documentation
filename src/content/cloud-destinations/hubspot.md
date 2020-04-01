@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: HubSpot
 
 path: '/cloud-destinations/hubspot/'
+
+tags: [cloud, destinations]
 ---
 
 # Hubspot

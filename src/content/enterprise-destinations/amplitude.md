@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Amplitude'
 
 path: '/enterprise-destinations/amplitude/'
+
+tags: [enterprise, destinations]
 ---
 
 # Amplitude

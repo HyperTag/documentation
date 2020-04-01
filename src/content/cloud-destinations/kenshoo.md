@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Kenshoo
 
 path: '/cloud-destinations/kenshoo/'
+
+tags: [cloud, destinations]
 ---
 
 # Kenshoo

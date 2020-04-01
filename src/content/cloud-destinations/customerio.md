@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Customer.io
 
 path: '/cloud-destinations/customer-io/'
+
+tags: [cloud, destinations]
 ---
 
 # Customer.io

@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Amazon Kinesis
 
 path: '/cloud-destinations/amazon-kinesis/'
+
+tags: [cloud, destinations]
 ---
 
 # Amazon Kinesis

@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Intercom
 
 path: '/cloud-destinations/intercom/'
+
+tags: [cloud, destinations]
 ---
 
 # Intercom

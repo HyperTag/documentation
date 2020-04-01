@@ -4,6 +4,8 @@ collectionKey: enterprise-destinations
 navText: 'Adwords'
 
 path: '/enterprise-destinations/adwords/'
+
+tags: [enterprise, destinations]
 ---
 
 # AdWords

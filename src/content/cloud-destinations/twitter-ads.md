@@ -4,6 +4,8 @@ collectionKey: cloud-destinations
 navText: Twitter Ads
 
 path: '/cloud-destinations/twitter-ads/'
+
+tags: [cloud, destinations]
 ---
 
 # Twitter Ads

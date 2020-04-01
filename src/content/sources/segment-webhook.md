@@ -4,6 +4,8 @@ collectionKey: sources
 navText: Segment Webhook
 
 path: '/sources/segment-webhook/'
+
+tags: [sources]
 ---
 
 # Segment
