@@ -1,43 +1,43 @@
 ---
 collectionKey: cloud-destinations
 
-navText: Keen IO
+navText: Keen
 
 path: '/cloud-destinations/keen-io/'
 
 tags: [cloud, destinations]
 ---
 
-# Keen.io
+# Keen
 
-MetaRouter makes it easy to send your data to Keen.io. Once you follow the steps below, your data will be routed through our platform and pushed to Keen.io in the appropriate format.
+MetaRouter makes it easy to send your data to Keen. Once you follow the steps below, your data will be routed through our platform and pushed to Keen in the appropriate format.
 
 <div class="warning">
-Our server-side version of Keen.io has been disabled. If you are interested in using Keen.io server-side, please contact us so we may evaluate. Thanks!
+Our server-side version of Keen has been disabled. If you are interested in using Keen server-side, please contact us so we may evaluate. Thanks!
 </div>
 
-## What is Keen.io and how does it work?
+## What is Keen and how does it work?
 
-Built for developers, Keen.io is an event data platform for real-time, intelligent data application. The platform allows you to collect and send event data wherever you need, directly build powerful analytics features into your tools and products, and programmatically provision role-based data access for your users and customers.
+Built for developers, Keen is an event data platform for real-time, intelligent data application. The platform allows you to collect and send event data wherever you need, directly build powerful analytics features into your tools and products, and programmatically provision role-based data access for your users and customers.
 
-Keen.io supports customizable APIs and a charting library, which gives developers room to build and customize native analytics tools. Plus, their third-party integrations will allow your team to pinpoint key behavior metrics and pull customer data accordingly.
+Keen supports customizable APIs and a charting library, which gives developers room to build and customize native analytics tools. Plus, their third-party integrations will allow your team to pinpoint key behavior metrics and pull customer data accordingly.
 
-[Learn more about Keen.io](https://keen.io/)
+[Learn more about Keen](https://keen.io/)
 
-## Why send data to Keen.io using MetaRouter?
+## Why send data to Keen using MetaRouter?
 
-Instead of having to manually adapt your code, MetaRouter's integration automatically collects and transforms data for Keen.io directly from web applications, mobile applications, and server-side implementations.
+Instead of having to manually adapt your code, MetaRouter's integration automatically collects and transforms data for Keen directly from web applications, mobile applications, and server-side implementations.
 
-Plus, with MetaRouter, there is no need to manually install the Keen.io SDK in your web application.
+Plus, with MetaRouter, there is no need to manually install the Keen SDK in your web application.
 
-## Getting Started with Keen IO and MetaRouter
+## Getting Started with Keen and MetaRouter
 
-### Keen.io Side
+### Keen Side
 
-To get started sending events to Keen IO, you'll need two things:
+To get started sending events to Keen, you'll need two things:
 
-- `Project ID`: This tells MetaRouter which project within Keen IO is yours
-- `Write Key`: This gives MetaRouter permission to send data to your Keen IO dashboard
+- `Project ID`: This tells MetaRouter which project within Keen is yours
+- `Write Key`: This gives MetaRouter permission to send data to your Keen dashboard
   Both of these things will be long strings of random characters.
 
 You can find your Write Key by clicking on `Show API Keys`.

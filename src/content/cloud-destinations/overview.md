@@ -28,10 +28,9 @@ Check out our source/destination compatibility matrix below to see which destina
 | Amazon Kinesis      | ✔      | ✔      | ✔      |
 | Amazon Redshift     | ✔      | ✔      | ✔      |
 | Amplitude           | ✔      | ✔      | ✔      |
-| Appboy              | ✔      | ✔      | x      |
 | Attribution         | ✔      | ✔      | x      |
-| Bing Ads            | ✔      | x      | x      |
 | Bloom Reach         | ✔      | x      | x      |
+| Braze               | ✔      | ✔      | x      |
 | Calq                | x      | ✔      | ✔      |
 | Clicky              | ✔      | x      | x      |
 | Criteo              | ✔      | x      | x      |
@@ -47,11 +46,12 @@ Check out our source/destination compatibility matrix below to see which destina
 | Heap Analytics      | ✔      | ✔      | ✔      |
 | Hubspot             | ✔      | ✔      | ✔      |
 | Intercom            | ✔      | ✔      | ✔      |
-| Keen IO             | ✔      | ✔      | ✔      |
+| Keen                | ✔      | ✔      | ✔      |
 | Kenshoo             | ✔      | x      | x      |
 | KISSmetrics         | ✔      | ✔      | ✔      |
 | Lucky Orange        | ✔      | x      | x      |
 | Lytics              | ✔      | ✔      | ✔      |
+| Microsoft Ads       | ✔      | x      | x      |
 | Mixpanel            | ✔      | ✔      | ✔      |
 | Netmining           | ✔      | x      | x      |
 | Optimizely          | ✔      | x      | x      |

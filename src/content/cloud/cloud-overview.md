@@ -73,7 +73,7 @@ Check out the list below to explore all of the destinations available with MetaR
 - [Heap Analytics](/cloud-destinations/heap-analytics/)
 - [Hubspot](/cloud-destinations/hubspot/)
 - [Intercom](/cloud-destinations/intercom/)
-- [Keen IO](/cloud-destinations/keen-io/)
+- [Keen](/cloud-destinations/keen-io/)
 - [KISSmetrics](/cloud-destinations/kissmetrics/)
 - [Lucky Orange](/cloud-destinations/lucky-orange/)
 - [Lytics](/cloud-destinations/lytics/)
@@ -105,10 +105,9 @@ Check out the list below to explore all of the destinations available with MetaR
 | Amazon Kinesis      |   ✔    |   ✔    |   ✔    |
 | Amazon Redshift     |   ✔    |   ✔    |   ✔    |
 | Amplitude           |   ✔    |   ✔    |   ✔    |
-| Appboy              |   ✔    |   ✔    |   x    |
 | Attribution         |   ✔    |   ✔    |   x    |
-| Bing Ads            |   ✔    |   x    |   x    |
 | Bloom Reach         |   ✔    |   x    |   x    |
+| Braze               |   ✔    |   ✔    |   x    |
 | Calq                |   x    |   ✔    |   ✔    |
 | Clicky              |   ✔    |   x    |   x    |
 | Criteo              |   ✔    |   x    |   x    |
@@ -125,11 +124,12 @@ Check out the list below to explore all of the destinations available with MetaR
 | Heap Analytics      |   ✔    |   ✔    |   ✔    |
 | Hubspot             |   ✔    |   ✔    |   ✔    |
 | Intercom            |   ✔    |   ✔    |   ✔    |
-| Keen IO             |   ✔    |   ✔    |   ✔    |
+| Keen                |   ✔    |   ✔    |   ✔    |
 | Kenshoo             |   ✔    |   x    |   x    |
 | KISSmetrics         |   ✔    |   ✔    |   ✔    |
 | Lucky Orange        |   ✔    |   x    |   x    |
 | Lytics              |   ✔    |   ✔    |   ✔    |
+| Microsoft Ads       |   ✔    |   x    |   x    |
 | Mixpanel            |   ✔    |   ✔    |   ✔    |
 | Netmining           |   ✔    |   x    |   x    |
 | Optimizely          |   ✔    |   x    |   x    |
