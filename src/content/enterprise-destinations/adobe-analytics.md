@@ -1,9 +1,7 @@
 ---
 collectionKey: enterprise-destinations
-collectionTitle: Enterprise Destinations
 
 navText: 'Adobe Analytics'
-navIndex: 3
 
 path: '/enterprise-destinations/adobe-analytics/'
 
