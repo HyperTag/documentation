@@ -79,6 +79,7 @@ const tableOfContentsItems = $ => {
   return items
 }
 
+// renders a content section
 const section = ($, isPage) => {
   const tocItems = tableOfContentsItems($)
   let toc = `
@@ -98,10 +99,10 @@ const section = ($, isPage) => {
   `
 }
 
+// group related pages by key when collectionMerge is set to true
 const createGroups = nodes => {
   const groups = []
 
-  // group related pages by collectionKey
   nodes.forEach(n => {
     const { collectionMerge, collectionKey } = n.frontmatter
 
@@ -118,6 +119,7 @@ const createGroups = nodes => {
   return groups
 }
 
+// render a section for each markdown node and concat the results into a single string of HTML
 const mergeGroups = nodes => {
   return nodes
     .map((node, i) => {

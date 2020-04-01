@@ -122,7 +122,7 @@ exports.onRouteUpdate = () => {
     document.querySelectorAll('main h2').forEach(checkSubheadingOffset)
   }, 250)
 
-  // appends a list of tags to the primary heading, with values taken from its data attrs
+  // append a list of tags to the primary heading, with values taken from its data attrs
   var renderTags = function() {
     var h1 = document.querySelector('main h1')
 
@@ -145,6 +145,7 @@ exports.onRouteUpdate = () => {
   setCurrent()
   renderTags()
 
+  // event handlers
   window.addEventListener('hashchange', setCurrent)
   document.addEventListener('scroll', onScroll)
   navList.addEventListener('click', onClickNav)
