@@ -18,6 +18,8 @@ export default () => {
       <SEO />
 
       <section>
+        <h1>MetaRouter Documentation</h1>
+
         <ul className="cards">
           <li>
             <Link to="/enterprise-edition/">

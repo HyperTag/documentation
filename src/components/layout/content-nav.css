@@ -101,7 +101,7 @@
   @apply overflow-y-scroll;
   @apply pt-6;
   @apply pb-32;
-  height: 86vh;
+  height: 88vh;
 }
 
 .scrollbox::-webkit-scrollbar {

@@ -141,9 +141,21 @@ exports.onRouteUpdate = () => {
     }
   }
 
+  // add cloud green for table checkmarks
+  var styleTableCells = function() {
+    var cells = document.querySelectorAll('main table td')
+
+    cells.forEach(function(cell) {
+      if (cell.innerText === '✔') {
+        cell.style.color = '#5fa284'
+      }
+    })
+  }
+
   // functions to run onload
   setCurrent()
   renderTags()
+  styleTableCells()
 
   // event handlers
   window.addEventListener('hashchange', setCurrent)

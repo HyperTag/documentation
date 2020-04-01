@@ -29,6 +29,9 @@ main section {
   @apply border-b border-gray-400 border-solid;
   @apply relative;
 }
+main section:first-of-type {
+  margin-top: -6px; /* align first section with first nav item */
+}
 main section:last-of-type {
   @apply border-none;
 }
