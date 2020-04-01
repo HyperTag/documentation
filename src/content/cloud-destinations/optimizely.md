@@ -14,7 +14,7 @@ MetaRouter makes it easy to send your data to Optimizely. Once you follow the st
 
 ## What is Optimizely and how does it work?
 
-Optimizely is an A/B testing and experimentation tool that allows you to run multivariate experiments across web and mobile web. There is also iOS and Android integration that allows you to run similar experiments on your mobile apps. All of the informatiomn gathered from your experiments is presented by Optimizely in a "Stats Engine" dashboard that monitors performance and statistical significance so that your decision is made easy.
+Optimizely is an A/B testing and experimentation tool that allows you to run multivariate experiments across web and mobile web. There is also iOS and Android integration that allows you to run similar experiments on your mobile apps. All of the information gathered from your experiments is presented by Optimizely in a "Stats Engine" dashboard that monitors performance and statistical significance so that your decision is made easy.
 
 Optimizely is installed client-side by adding a snippet directly into your site's code. Once this snippet is added, you can start running experiments for the web and install the Optimizely SDK for mobile experimentation. For web-based experiments, each project must have its own unique line of JavaScript placed in the `<head>` of your site. If you want to send conversion events directly into Optimizely, you'll need to implement duplicate event tracking alongside advertising pixels, email marketing tools, analytics tools, and attribution tools.
 

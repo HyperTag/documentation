@@ -24,7 +24,7 @@ Infinity Tag enhances campaign performance by moving beyond currently accepted K
 
 ### Kenshoo Side
 
-All you'll need from Kenshoo is your `Acount Id`. Once you have this code, copy it to your clipboard and head over to your [MetaRouter dashboard](https://app.metarouter.io)
+All you'll need from Kenshoo is your `Account Id`. Once you have this code, copy it to your clipboard and head over to your [MetaRouter dashboard](https://app.metarouter.io)
 
 ### MetaRouter Side
 

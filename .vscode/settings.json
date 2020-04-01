@@ -8,5 +8,19 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": [
+    "acquisio",
+    "clickstream",
+    "dataset",
+    "heatmaps",
+    "metarouter",
+    "postgres",
+    "remarketing",
+    "sdks",
+    "acquisio",
+    "ecommerce",
+    "sailthru",
+    "sailthru's"
+  ]
 }

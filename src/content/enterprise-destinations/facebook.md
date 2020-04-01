@@ -77,7 +77,7 @@ With that, just click `Save` to activate your pipeline.
 
 - `categoryToContentTypeMapping` - Enter your category value on the left, and the Facebook content type to map to on the right. Facebook recognizes certain event types that can help deliver relevant ads. If no category values are mapped we’ll default to product and product_group, depending on the event.
 
-- `customEventsMapping` - Enter your event on the `event` property, and the **Facebook Standard Event** to map to on `mapping` properties. Facebook recognizes certain standard events that can be used across Custom Audiences, custom conversions, conversion tracking, and conversion optimization. When you map an event to a standard Facebook event, we’ll send the event by that name. Any unmapped events will still be sent as Custom Events. Acording to [Facebook Pixel Documentation](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking/#standard-events), accepted Standard Events, and therfore `mapping` values are: `AddPaymentInfo`, `AddToCart`, `AddToWishlist`, `CompleteRegistration`, `Contact`, `CustomizeProduct`, `Donate`, `FindLocation`, `InitiateCheckout`, `Lead`, `PageView`, `Purchase`, `Schedule`, `Search`, `StartTrial`, `SubmitApplication`, `Subscribe`, `ViewContent`.
+- `customEventsMapping` - Enter your event on the `event` property, and the **Facebook Standard Event** to map to on `mapping` properties. Facebook recognizes certain standard events that can be used across Custom Audiences, custom conversions, conversion tracking, and conversion optimization. When you map an event to a standard Facebook event, we’ll send the event by that name. Any unmapped events will still be sent as Custom Events. According to [Facebook Pixel Documentation](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking/#standard-events), accepted Standard Events, and therefore `mapping` values are: `AddPaymentInfo`, `AddToCart`, `AddToWishlist`, `CompleteRegistration`, `Contact`, `CustomizeProduct`, `Donate`, `FindLocation`, `InitiateCheckout`, `Lead`, `PageView`, `Purchase`, `Schedule`, `Search`, `StartTrial`, `SubmitApplication`, `Subscribe`, `ViewContent`.
 
 - `customPropertiesForStandardEvents` - If you send a custom property with your `track()` calls and you want to send it to your Facebook Pixel events you can add it here.
 
@@ -99,11 +99,11 @@ For all of the events sent to Facebook Pixel (including your `track()`, `identif
 
 ### Identify
 
-We'll map your `page()` calls to the `UserProperties` Pixel Standard event, wihout additional data
+We'll map your `page()` calls to the `UserProperties` Pixel Standard event, without additional data
 
 ### Page
 
-We'll map your `page()` calls to the `PageView` Pixel Standard event, wihout additional data.
+We'll map your `page()` calls to the `PageView` Pixel Standard event, without additional data.
 
 ### Default Analytics.js Standard E-commerce events to Pixel Standard Events
 
@@ -200,7 +200,7 @@ All Pixel Standard Events will be mapped with the following properties.
 
 ### Adding your own events
 
-To send _Standard_ events, use the Analytics.js destination setting (from `integratinons.yaml` ) named `customEventsMapping` . Then, any time Analytics.js receives one of the events in that mapping, it will be sent to Facebook as the standard event you specified. All properties you included in the event will be sent as event properties.
+To send _Standard_ events, use the Analytics.js destination setting (from `integrations.yaml` ) named `customEventsMapping` . Then, any time Analytics.js receives one of the events in that mapping, it will be sent to Facebook as the standard event you specified. All properties you included in the event will be sent as event properties.
 
 ### Custom events
 

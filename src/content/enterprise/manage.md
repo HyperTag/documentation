@@ -102,7 +102,7 @@ curl localhost:8080/cache/set/WRITEKEY -X POST --data-binary "@PATH/TO/YOUR-CONF
 
 #### Step 4: Verify Source Configuration
 
-You can also make a GET request to Canary to read the existing Source Configuration by the Source's Write Key. Simply make a GET request to `localhost:8080/cache/get/WRITEKEY` and Canary will respond with a JSON playload it has for that configuration.
+You can also make a GET request to Canary to read the existing Source Configuration by the Source's Write Key. Simply make a GET request to `localhost:8080/cache/get/WRITEKEY` and Canary will respond with a JSON payload it has for that configuration.
 
 Here is a cURL example of that request:
 

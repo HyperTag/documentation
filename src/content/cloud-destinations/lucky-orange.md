@@ -32,7 +32,7 @@ Begin by logging into your [Lucky Orange](https://www.luckyorange.com/) account.
 
 ![luckyorange1](/images/luckyorange1.png)
 
-The generated Lucky Orange tracking code contains your site id (shown blured in the above image). Copy this value.
+The generated Lucky Orange tracking code contains your site id (shown blurred in the above image). Copy this value.
 
 **\*Note**: You can always grab this value by accessing Settings > General.\*
 
@@ -52,7 +52,7 @@ Auto-Tagging option will send all analytics.js triggered events from your websit
 
 #### Custom mapping
 
-To map an event to a specific tag, unckeck _Auto-Tagging_ option - _Map Analytics Events to Lucky Orange tags_ section wiil be available. Here you can define your own mappings between an [e-commerce event](/sources/analytics-js-ecommerce-spec/) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
+To map an event to a specific tag, uncheck _Auto-Tagging_ option - _Map Analytics Events to Lucky Orange tags_ section will be available. Here you can define your own mappings between an [e-commerce event](/sources/analytics-js-ecommerce-spec/) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
 
 - Event name (required) - the name of your analytics.js event
 - Tag (required) the name of your Lucky Orange tag
@@ -78,7 +78,7 @@ analytics.identify('1205119', {
 })
 ```
 
-Calling `identify()` will create/update visitors in Lucky Orange. All traits are sent to Lucky Orange and each trait will create a new column in the visitor's view. If name and email are set in an `identify()` call, Lucky Orange will also try to find an Gravatar associated with the user.
+Calling `identify()` will create/update visitors in Lucky Orange. All traits are sent to Lucky Orange and each trait will create a new column in the visitor's view. If name and email are set in an `identify()` call, Lucky Orange will also try to find a Gravatar associated with the user.
 
 ![luckyorange5](/images/luckyorange5.png)
 

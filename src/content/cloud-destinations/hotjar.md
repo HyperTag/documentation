@@ -14,7 +14,7 @@ MetaRouter makes it easy to send your data to Hotjar. Once you follow the steps 
 
 ## What is Hotjar and how does it work?
 
-Hotjar is a web and mobile behavioral analytics product that creates heatmaps that turns user clicks into a heatmap of your website or mobile app. It provides responsive surveys to help collect customer isights after key events like conversion or cart abandonment, and enables user testing so that marketers can create custom messages based on specific events.
+Hotjar is a web and mobile behavioral analytics product that creates heatmaps that turns user clicks into a heatmap of your website or mobile app. It provides responsive surveys to help collect customer insights after key events like conversion or cart abandonment, and enables user testing so that marketers can create custom messages based on specific events.
 
 In order to use Hotjar, you need to manually install its tracking code directly into your site.
 

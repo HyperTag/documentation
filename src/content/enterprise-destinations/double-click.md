@@ -75,9 +75,9 @@ This configuration file allows you to set your own configuration based on how yo
 - `defaultPageviewEvent` - Object, **optional**
   - This settings allows you to define default `cat`, `type` and `ord` values for a standard page view. If a pageview is triggered and is not found defined inside `events` object, we'll use these values as defaults.
   - `cat` - String, **optional**
-    - Doubleclick Floodlight container activity tag (or `cat`) string.
+    - DoubleClick Floodlight container activity tag (or `cat`) string.
   - `type` - String, **optional**
-    - Doubleclick Floodlight container group tag (the `type` parameter) string.
+    - DoubleClick Floodlight container group tag (the `type` parameter) string.
   - `ord` - String, **optional**
     - For Sales tags only, please specify which property value should be used for the `ord`. You must **enable reporting on ord** inside DoubleClick Floodlight if you decide to use this feature. A good example would be something like `order_id`.
 

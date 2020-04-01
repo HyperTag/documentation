@@ -10,7 +10,7 @@ tags: [cloud, destinations]
 
 # Google AdWords
 
-MetaRouter makes it easy to send your data to Google AdWords. Once you follow the steps below, your data will be routed through our platform and pushed to Adwords in the appropriate format.
+MetaRouter makes it easy to send your data to Google AdWords. Once you follow the steps below, your data will be routed through our platform and pushed to AdWords in the appropriate format.
 
 ## What is Google AdWords and how does it work?
 
@@ -30,9 +30,9 @@ Furthermore, you do not need to learn the AdWords SDK methods if you want to sen
 
 ## Getting Started with Google AdWords and MetaRouter
 
-### Adwords Side
+### AdWords Side
 
-Once you create an Adwords account, you'll need to find your Conversion ID. To do this, you'll need to click the wrench icon in the upper right hand corner of your screen. It should look something like this:
+Once you create an AdWords account, you'll need to find your Conversion ID. To do this, you'll need to click the wrench icon in the upper right hand corner of your screen. It should look something like this:
 
 ![Adwords1](/images/Adwords1.png)
 
@@ -54,17 +54,17 @@ You will see a `Global Site Tag` that looks like the following:
 
 [Source](https://developers.google.com/adwords-remarketing-tag/)
 
-In the code snippet above, the conversion ID has been replaced with `AW-Google_Conversion_ID`. In your new conversion, this will be a unique numerical ID that is tied to your Adwords account. Copy this to your clipboard and navigate back to your MetaRouter app.
+In the code snippet above, the conversion ID has been replaced with `AW-Google_Conversion_ID`. In your new conversion, this will be a unique numerical ID that is tied to your AdWords account. Copy this to your clipboard and navigate back to your MetaRouter app.
 
 ### MetaRouter Side
 
 Once you've obtained your Conversion ID, copy and paste it into the corresponding field in your MetaRouter UI. You can now enable the pipeline and watch your data flow into AdWords!
 
-#### Event Mapping to Adwords
+#### Event Mapping to AdWords
 
-In you MetaRouter UI, you'll need to map your conversion `track` events to your Adwords `google_conversion_label`s. To do this, enter the name of your track event _exactly_ as you've named for both the **Key** and **Event** fields.
+In you MetaRouter UI, you'll need to map your conversion `track` events to your AdWords `google_conversion_label`s. To do this, enter the name of your track event _exactly_ as you've named for both the **Key** and **Event** fields.
 
-Then, add the `Conversion Label` from your Adwords conversion event to the **Label** field inside the MetaRouter UI. For more information on where to find your `google_Converion_id` and `google_conversion_label`, check out [this forum](https://www.en.advertisercommunity.com/t5/AdWords-Tracking-and-Reporting/Find-conversion-ID-and-Conversion-label/td-p/364894#).
+Then, add the `Conversion Label` from your AdWords conversion event to the **Label** field inside the MetaRouter UI. For more information on where to find your `google_Converion_id` and `google_conversion_label`, check out [this forum](https://www.en.advertisercommunity.com/t5/AdWords-Tracking-and-Reporting/Find-conversion-ID-and-Conversion-label/td-p/364894#).
 
 For example, the event `analytics.track("Red Rover", {...})` and the AdWords Conversion label `ABC-123...` would be entered as:
 

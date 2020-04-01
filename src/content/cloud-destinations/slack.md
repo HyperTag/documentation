@@ -16,11 +16,11 @@ MetaRouter makes it easy to send your events to your Slack workspace. This Desti
 
 Slack has a more in-depth guide to [Getting Started with WebHooks](https://api.slack.com/incoming-webhooks#getting-started) that goes over creating your first webhook and all of the steps needed for your account. Once you have a Webhook URL, that is all of the necessary steps in order to send events to your Slack Workspace.
 
-If you've alreay have made a webhook, go to **Manage Apps** within your Workspace Settings and select **Custom Integrations** on the side-nav. Within Custom Integrations, select **Incoming Webhooks** and select **Add Configuration**.
+If you've already have made a webhook, go to **Manage Apps** within your Workspace Settings and select **Custom Integrations** on the side-nav. Within Custom Integrations, select **Incoming Webhooks** and select **Add Configuration**.
 
 ## MetaRouter Settings
 
-Below are the settings needed to sucessfully connect and configure MetaRouter to send events to your Slack Workspace.
+Below are the settings needed to successfully connect and configure MetaRouter to send events to your Slack Workspace.
 
 ### Connection
 
@@ -56,7 +56,7 @@ By default, Track events print out `{{ name}} did {{ event }}}.`
 
 #### Track Event Channels
 
-This field allows you to specify sending events to specific channels, instead of the one specified by default for the Slack Webhook. For instance, you can set up your Slack Webhook to send messages to #cloud_events but specifiy here to send the `Purchase` event to the #sales channel.
+This field allows you to specify sending events to specific channels, instead of the one specified by default for the Slack Webhook. For instance, you can set up your Slack Webhook to send messages to #cloud_events but specify here to send the `Purchase` event to the #sales channel.
 
 #### Only Send Templated Track Events
 

@@ -16,7 +16,7 @@ MetaRouter makes it easy to send your data to Amazon Redshift. Once you follow t
 
 2. Data is not streamed into Redshift in real time as it is for our other destinations. Rather, our Redshift loader operates on an hourly basis and each hourly job is queued up 15 minutes after the next hour starts. For example, the load for 2-3 PM will queue at 3:15 PM.
 
-3. You will need to whitelist our IP address in order for us to load data into your Redshift. The whitelist IP's are listed below.
+3. You will need to whitelist our IP address in order for us to load data into your Redshift. The whitelist IPs are listed below.
 
 Now, to the good stuff!
 
@@ -137,7 +137,7 @@ Note that your _Database_ and _Schema_ are kept separate from your other connect
 
 Click `Create Destination` and your pipeline will be activated.
 
-That's it! You'll now be receiving a livestream of data from your application into your private Redshift account.
+That's it! You'll now be receiving a live stream of data from your application into your private Redshift account.
 
 ![amazon-redshift1](/images/amazon-redshift1v2.gif)
 

@@ -22,7 +22,7 @@ By tracking the efficiency of your search engine marketing/PPC campaigns, Acquis
 
 ## Why send data to Acquisio using MetaRouter?
 
-Having your user event data incorporated into your marketing automation can be invaluable. Knowing exactly how your users are interacting with your site and mobile appplications can provide more robust A/B experimentation results, generate insights regarding ad effectiveness, and highlight your customer acquision data.
+Having your user event data incorporated into your marketing automation can be invaluable. Knowing exactly how your users are interacting with your site and mobile applications can provide more robust A/B experimentation results, generate insights regarding ad effectiveness, and highlight your customer acquisition data.
 
 ## Getting Started with Acquisio and MetaRouter
 

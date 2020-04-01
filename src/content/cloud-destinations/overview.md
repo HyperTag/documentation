@@ -44,7 +44,7 @@ Check out our source/destination compatibility matrix below to see which destina
 | Google BigQuery     | ✔      | ✔      | ✔      |
 | Google Tag Manager  | ✔      | x      | x      |
 | Heap Analytics      | ✔      | ✔      | ✔      |
-| Hubspot             | ✔      | ✔      | ✔      |
+| HubSpot             | ✔      | ✔      | ✔      |
 | Intercom            | ✔      | ✔      | ✔      |
 | Keen                | ✔      | ✔      | ✔      |
 | Kenshoo             | ✔      | x      | x      |

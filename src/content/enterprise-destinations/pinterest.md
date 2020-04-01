@@ -16,7 +16,7 @@ MetaRouter makes it easy to send your data to Pinterest Tag. Once you follow the
 
 Pinterest Tag is an ad management platform that creates JavaScript tags to track user actions once they click on or view an ad. In doing this, it is able to record website conversions tied to your specific ad campaigns. Using this platform enables audience targeting based on user behavior such as page views, videos watched, or orders completed. It also enables campaign optimization based on promoted pin performance and downstream user behavior such as products liked, shared, or purchased.
 
-The Pinterest Tag allows you to track user events on your website after viewing your promoted Pin. You can then use this information to gauge the effectiveness of your ad campaign and create audiences to target on Pinterest. In order to use this tag, you must implement two separate components. First, you need to add JavaScript base code to every page of your website. Second, you need to add JavaScript event tracking code on specific pages where you want to track conversion events. You can provide additional information about an event by attaching an object that contains event data such as `value` or `quantity`. In order to do this, you'll have to hardcode values or pass them back dynamically.
+The Pinterest Tag allows you to track user events on your website after viewing your promoted Pin. You can then use this information to gauge the effectiveness of your ad campaign and create audiences to target on Pinterest. In order to use this tag, you must implement two separate components. First, you need to add JavaScript base code to every page of your website. Second, you need to add JavaScript event tracking code on specific pages where you want to track conversion events. You can provide additional information about an event by attaching an object that contains event data such as `value` or `quantity`. In order to do this, you'll have to hard-code values or pass them back dynamically.
 
 [Learn more about Pinterest](https://business.pinterest.com/en)
 
@@ -83,7 +83,7 @@ Here is an example of `integrations.yaml`:
 
 In this configuration, `tagId` represents the ID that you've got from the previous step.
 
-Pinterest also allows sending _Partener Defined events_, which are additional evensts that you've defined for the purpose of audience targeting. When `handleCustomAsPartnerDefinedEvent` is `true` we'll send your custom's event concatenated name as the event parameter.
+Pinterest also allows sending _Partner Defined events_, which are additional events that you've defined for the purpose of audience targeting. When `handleCustomAsPartnerDefinedEvent` is `true` we'll send your custom's event concatenated name as the event parameter.
 
 Take the following request:
 
@@ -127,7 +127,7 @@ When `handleCustomAsPartnerDefinedEvent` is `false`, we'll send a `event:custom`
 }
 ```
 
-When `handleCustomAsPartnerDefinedEvent` is `true`, we'll send a _Partener Defined event_, with the `event` parameter the same as your custom event concatenated name. The conversion payload for the previous request will look like:
+When `handleCustomAsPartnerDefinedEvent` is `true`, we'll send a _Partner Defined event_, with the `event` parameter the same as your custom event concatenated name. The conversion payload for the previous request will look like:
 
 ```json
 {

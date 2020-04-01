@@ -35,5 +35,5 @@ MetaRouter is a data engineering platform that helps you collect user events fro
 - Use Cases for Clickstream:
   - Large-scale ecommerce companies
   - Financial or Medical data managers
-  - Desire to inject or leverage ingesting, routing, queuing or forawrding tools into an existing data platform
+  - Desire to inject or leverage ingesting, routing, queuing or forwarding tools into an existing data platform
   - Those who are averse to 3rd party processors, or have very specific cloud environment preferences

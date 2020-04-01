@@ -14,7 +14,7 @@ Available for server-side and mobile sources, MetaRouter makes it easy to send y
 
 ## What is Firebase and how does it work?
 
-Firebase is an app development platform owned by Google that allows users to build, monitor and improve apps based on valuable app performance feedback. Google is migrating their app development monitoring to Firebase, and in the process sunsetting the Google Analytics Mobile SDKs. A major advantage of this change is that while apps were previsouly limited to 10MM events per month before requiring Google's Analytics 360 subscription, Firebase users will now be allowed unlimited hits on his/her app within the free Google Analytics platform.
+Firebase is an app development platform owned by Google that allows users to build, monitor and improve apps based on valuable app performance feedback. Google is migrating their app development monitoring to Firebase, and in the process sunsetting the Google Analytics Mobile SDKs. A major advantage of this change is that while apps were previously limited to 10MM events per month before requiring Google's Analytics 360 subscription, Firebase users will now be allowed unlimited hits on his/her app within the free Google Analytics platform.
 
 Firebase is powered by Google Firebase SDKs that require installation for both iOS and Android apps. These SDKs are entirely separate from the previous Google Analytics Services SDKs, and will need to be installed if you wish to track event data for your apps through Google Analytics.
 
@@ -22,7 +22,7 @@ Firebase is powered by Google Firebase SDKs that require installation for both i
 
 ## Why send data to Firebase using MetaRouter?
 
-With MetaRouter's Firebase integration, you will be able to push your app event data in Google Analytics once the Google Analytics Services SDKs are sunsetted. Just like with the Google Analytics destination, Firebase passes along all of the essential information to GA that you need to effectively measure app performance, such as app screens viewed, user attributes, and more. You can also configure the custom fields that you are familar with, making it just as easy to track the data you need.
+With MetaRouter's Firebase integration, you will be able to push your app event data in Google Analytics once the Google Analytics Services SDKs are sunsetted. Just like with the Google Analytics destination, Firebase passes along all of the essential information to GA that you need to effectively measure app performance, such as app screens viewed, user attributes, and more. You can also configure the custom fields that you are familiar with, making it just as easy to track the data you need.
 
 ## Getting Started with Firebase and MetaRouter
 
@@ -351,9 +351,9 @@ To use Firebase Dynamic Links, add the below to your podfile.
 pod 'Firebase/DynamicLinks'
 ```
 
-#### Conversion Tracking and Adwords Conversions
+#### Conversion Tracking and AdWords Conversions
 
-Firebase is now Google’s recommended method for reporting conversions to Adwords! To do so, simply track the conversion events as you normally would with the mobile library and it will will send them through to Firebase! Follow [this documentation from Firebase to set up your conversions in Firebase and to have them forwarded to Adwords](https://firebase.google.com/docs/adwords/).
+Firebase is now Google’s recommended method for reporting conversions to AdWords! To do so, simply track the conversion events as you normally would with the mobile library and it will will send them through to Firebase! Follow [this documentation from Firebase to set up your conversions in Firebase and to have them forwarded to AdWords](https://firebase.google.com/docs/adwords/).
 
 #### Troubleshooting
 

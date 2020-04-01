@@ -71,7 +71,7 @@ Check out the list below to explore all of the destinations available with MetaR
 - [Google Tag Manager](/cloud-destinations/google-tag-manager/)
 - [Google Firebase](/cloud-destinations/firebase/)
 - [Heap Analytics](/cloud-destinations/heap-analytics/)
-- [Hubspot](/cloud-destinations/hubspot/)
+- [HubSpot](/cloud-destinations/hubspot/)
 - [Intercom](/cloud-destinations/intercom/)
 - [Keen](/cloud-destinations/keen-io/)
 - [KISSmetrics](/cloud-destinations/kissmetrics/)
@@ -122,7 +122,7 @@ Check out the list below to explore all of the destinations available with MetaR
 | Google Tag Manager  |   ✔    |   x    |   x    |
 | Google Firebase     |   x    |   x    |   ✔    |
 | Heap Analytics      |   ✔    |   ✔    |   ✔    |
-| Hubspot             |   ✔    |   ✔    |   ✔    |
+| HubSpot             |   ✔    |   ✔    |   ✔    |
 | Intercom            |   ✔    |   ✔    |   ✔    |
 | Keen                |   ✔    |   ✔    |   ✔    |
 | Kenshoo             |   ✔    |   x    |   x    |

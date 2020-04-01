@@ -236,7 +236,7 @@ analytics.track('Order Completed', {
 
 7. Attach the `timestamp` as `window.s.timestamp` if your **Timestamp Option** is **Timestamp Enabled** or **Timestamp Optional**.
 
-8. Set `window.s.linkTrackEvents` to the Adobe Analyics event name, which would be `purchase` for the above example.
+8. Set `window.s.linkTrackEvents` to the Adobe Analytics event name, which would be `purchase` for the above example.
 
 9. Set `window.s.linkTrackVars` which is a string of keys we want Adobe Analytics to read from the `window.s`object when the request is sent. For the example above, the value of `linkTrackVars` would be set as `'pageName,events,products,purchaseID,transactionID,timestamp'`.
 

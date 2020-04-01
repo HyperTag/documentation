@@ -56,7 +56,7 @@ On top of our standard calls, you're free to do a few extra things with our Mixp
 
 - `Enable Mixpanel People`: This will enable all of your analytics.identify() calls to get sent to Mixpanel's People.
   - `Events to Increment in People` - Used for segmenting users by event counts and last event date in Mixpanel People. List the events that you want to see in Mixpanel People here.
-  - `Add People Properties` - These are set off of `identify` API calls and allow you to explicity set properties that you want to track.
+  - `Add People Properties` - These are set off of `identify` API calls and allow you to explicitly set properties that you want to track.
   - `Add Super Properties` - This lets you explicitly set the super properties that you wish to track.
 
 _Note that, if `Set All Traits by Default` is enabled, you will not need to specify explicit people or super properties._
@@ -73,7 +73,7 @@ _Note that, if `Set All Traits by Default` is enabled, you will not need to spec
 
 - Cookies
 
-  - `Add Cross Subdomain Cookie` - Allows Mixpanel cookiec to be read across all subdomains.
+  - `Add Cross Subdomain Cookie` - Allows Mixpanel cookie to be read across all subdomains.
   - `Secure Cookie` - This marks the Mixpanel cookie as `secure`, meaning that this cookie will only be transmitted over https.
   - `Persistence Cookie` - This allows the Mixpanel cookie to persist between two separate pages of your application.
 

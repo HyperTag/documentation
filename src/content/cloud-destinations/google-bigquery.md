@@ -57,7 +57,7 @@ Once completed, you should have the following items ready to go:
 
 If this list looks good, you are ready to jump over to the MetaRouter UI and create the destination!
 
-Ensure that you give the Service Account the `BigQuery Editor` role in roder for us to have proper permissions to load data into your cloud.
+Ensure that you give the Service Account the `BigQuery Editor` role in order for us to have proper permissions to load data into your cloud.
 
 ### Activating your BigQuery integration on MetaRouter
 
@@ -69,10 +69,10 @@ Now it is time to input the information from GCP and BigQuery into the _Destinat
 
 With those details in, you can go on to _Create Connection_. This is where you are granting MetaRouter teh ability to interface with your GCP account using that service account JSON. Under `Friendly Name`, enter in your connection name (e.g. Production GCP Connection). Then, copy the contents of that service account JSON file into the field for `Google Cloud Auth JSON`. Once that is completed, hit `Save` at the bottom of the form.
 
-That's it! You'll now be receiving a livestream of data from your application into your BigQuery dataset.
+That's it! You'll now be receiving a live stream of data from your application into your BigQuery dataset.
 
 If you run into any issues using this or any of our destinations, feel free to reach out to us at [support@metarouter.io](mailto:support@metarouter.io). Happy routing!
 
 ## Whitelisting Access
 
-Your Bigquery Database will need to be free to receive traffic from our IP Addresses: `35.245.140.149` and `35.236.193.215`. Please ensure that if you are restircting traffic, to allow access from those IPs for proper loading of data.
+Your BigQuery Database will need to be free to receive traffic from our IP Addresses: `35.245.140.149` and `35.236.193.215`. Please ensure that if you are restricting traffic, to allow access from those IPs for proper loading of data.

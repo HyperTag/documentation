@@ -1,7 +1,7 @@
 ---
 collectionKey: enterprise-destinations
 
-navText: 'Adwords'
+navText: 'AdWords'
 
 path: '/enterprise-destinations/adwords/'
 

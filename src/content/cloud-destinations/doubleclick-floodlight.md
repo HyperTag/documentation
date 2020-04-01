@@ -63,7 +63,7 @@ Insert the Floodlight tags between the `<body>` and `</body>` tags, as close to 
 
 In this example, `mytype00` is your `type` and `mycat0` is your `cat` in the MetaRouter UI.
 
-Custom properties can be added to the events sent to Doubleclick by specifying the specific property and mapping to the corresponding property label in Doubleclick (e.g. u1, u2, etc.)
+Custom properties can be added to the events sent to DoubleClick by specifying the specific property and mapping to the corresponding property label in DoubleClick (e.g. u1, u2, etc.)
 
 **Note**: When adding new events to track with DoubleClick, make sure the `Event key` matches the `Event name` exactly.
 

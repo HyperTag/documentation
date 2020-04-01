@@ -206,9 +206,9 @@ analytics.track(
 
 ### Abandoned Cart Events
 
-In addition to `Order Completed` events, we support the concept of **Sailthru’s Abandonded Carts** via MetaRouter’s `Product Added`, `Product Removed` and `Order Updated` events. When these events are triggered, MetaRouter will pass in `incomplete: 1` to signify that the order is incomplete.
+In addition to `Order Completed` events, we support the concept of **Sailthru’s Abandoned Carts** via MetaRouter’s `Product Added`, `Product Removed` and `Order Updated` events. When these events are triggered, MetaRouter will pass in `incomplete: 1` to signify that the order is incomplete.
 
-To leverage the functionality of sending transactional emails when a user abandonds his or her cart, you must pass in a `reminderTime` and `reminderTemplate` on these events. The template passed through as `reminderTemplate` must match the **public name** configured in Sailthru’s UI.
+To leverage the functionality of sending transactional emails when a user abandons his or her cart, you must pass in a `reminderTime` and `reminderTemplate` on these events. The template passed through as `reminderTemplate` must match the **public name** configured in Sailthru’s UI.
 
 If you send in a `Product Added` event without a valid template, Sailthru will return an error. If you send in a `Product Added` event with the `reminderTemplate` param, it will successfully send in and appear in the user view within their **incomplete purchase cart**. Some example values for `reminderTime` are 60 minutes, 24 hrs, 2 weeks. MetaRouter will handle passing in the `+` increment.
 
@@ -267,7 +267,7 @@ You can read more about [**Optout Levels here**](https://getstarted.sailthru.com
 
 The default `productBaseUrl`, which will be used as a fallback for extracting a product url, if there is no `properties.url` for a product or `context.page.url`.
 
-#### Addding users to a list
+#### Adding users to a list
 
 To configure a default list name, MetaRouter exposes a setting to configure this in the UI. You can also explicitly set your own `defaultListName` through the destination option on `identify`.
 
@@ -353,7 +353,7 @@ The API key found in your Sailthru dashboard.
 
 ### Default List Name
 
-Sailthru best practice dicates every user be added to a list. Configure a default here.
+Sailthru best practice dictates every user be added to a list. Configure a default here.
 
 ### Default Reminder Template
 

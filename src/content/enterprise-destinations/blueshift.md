@@ -56,7 +56,7 @@ Replaces the key of an event payload's property object into the value specified 
 
 #### `fallbackToDefault`
 
-Allows you to control the default fall-back behaviour.
+Allows you to control the default fall-back behavior.
 Possible fields to control:
 
 - `customer_id`: [boolean],
@@ -95,7 +95,7 @@ Calling event with `customer_id`
 ```javascript
 analytics.track(‘event’, {
   ...
-  anonymousId: 'Anonumous ID value',
+  anonymousId: 'Anonymous ID value',
   properties: {
     customerId: 'My Customer Id',
   }
@@ -189,7 +189,7 @@ will result in payload that is missing the `customer_id`:
 }
 ```
 
-Below is a full example of the configuration to send into the Platform, with all of the defaults specified. Ensure to customize to match the data that you send as part of your analyitcs event.
+Below is a full example of the configuration to send into the Platform, with all of the defaults specified. Ensure to customize to match the data that you send as part of your analytics event.
 
 ```json
 {

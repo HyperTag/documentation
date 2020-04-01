@@ -32,7 +32,7 @@ Using HubSpot with MetaRouter allows you to automatically keep all of the custom
 
 To get started sending events to [HubSpot](http://www.hubspot.com), all you'll need is your Portal ID and API, both of which can be found shortly after you create an account.
 
-### Hubspot Side
+### HubSpot Side
 
 Create a HubSpot account via their [website](http://www.hubspot.com).
 

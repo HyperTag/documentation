@@ -38,7 +38,7 @@ To do so, first create an account and make a campaign. Here, you'll also have th
 
 ![bing-ads1](/images/bing-ads1.png).
 
-Once you create a campaign, you'll be taken to your `Campaign` page. On the lefthand bar, click on `Conversion Tracking` > `UET Tags`.
+Once you create a campaign, you'll be taken to your `Campaign` page. On the left sidebar, click on `Conversion Tracking` > `UET Tags`.
 
 Now, go ahead and create a UET Tag by choosing a name and description.
 

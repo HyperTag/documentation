@@ -57,7 +57,7 @@ analytics.track('Experiment Viewed', {
 
 #### Send Experiment Data to other Destinations (as Identify)
 
-Akin to the above setting, enabling this option will have analytics.js fire an `identify` event for other destinations when a page is loaded with an active VWO Experiemnt.
+Akin to the above setting, enabling this option will have analytics.js fire an `identify` event for other destinations when a page is loaded with an active VWO Experiment.
 
 #### Library Tolerance
 

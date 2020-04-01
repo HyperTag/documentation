@@ -20,7 +20,7 @@ Rubicon is an ad tech company used by publishers to perform transactions with to
 
 ## Why send data to Rubicon using MetaRouter
 
-Using MetaRouter data to power or complement your Rubicon platform will allow you to more insightfully gauge the way your customers engage with your ads. Automating this pipeline with MetaRouter will not only save you a headache, but also will allow you to make more informed business decisions.
+Using MetaRouter data to power or complement your Rubicon platform will allow you to better gauge the way your customers engage with your ads. Automating this pipeline with MetaRouter will not only save you a headache, but also will allow you to make more informed business decisions.
 
 ## Getting Started with Rubicon and MetaRouter
 
@@ -35,7 +35,7 @@ Once you're signed up on [Rubicon Project](http://rubiconproject.com/), work wit
 
 ### MetaRouter Side
 
-Within your MetaRoter Rubicon connector UI, give your new connection a unique name.
+Within your MetaRouter Rubicon connector UI, give your new connection a unique name.
 
 Then, paste your Page ID into the `pid` field, and your Conversion ID into the `Conversion ID` field. In the `Conversion Events` area, paste in any conversion event names given to you by Rubicon. If you have more than one conversion event, choose the `+` icon to add more.
 

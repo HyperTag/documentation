@@ -23,7 +23,7 @@ In order to complete a successful test, integrations need to be moved to cloud m
 
 ### Update Your MetaRouter Snippet
 
-Next update your metarouter snippent to point to the testing metalytics snippet:
+Next update your metarouter snippet to point to the testing metalytics snippet:
 
 ```javascript
 <script type="text/javascript">

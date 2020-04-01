@@ -65,7 +65,7 @@ Check out the matrix below if you're wondering which sources are compatible with
 | Google BigQuery     | ✔      | ✔      | ✔      |
 | Google Tag Manager  | ✔      | x      | x      |
 | Heap Analytics      | ✔      | ✔      | ✔      |
-| Hubspot             | ✔      | ✔      | ✔      |
+| HubSpot             | ✔      | ✔      | ✔      |
 | Intercom            | ✔      | ✔      | ✔      |
 | Keen                | ✔      | ✔      | ✔      |
 | Kenshoo             | ✔      | x      | x      |

@@ -58,7 +58,7 @@ The structure of the `api` property is the following:
   - **\*Note:** This is GA's API endpoint and should not be altered.\*
 - `"method": "post"` _(optional)_ - String
   - Request's method
-  - Availavle values: `"get"`, `"post"`
+  - Available values: `"get"`, `"post"`
   - Default value: `"get"`
   - **\*Note:** GA's API is expecting a POST request, this should not be altered.\*
 - `"keepAliveAgent": true` _(optional)_ - Bool / Object
@@ -369,7 +369,7 @@ Example query:
 https://www.google-analytics.com/collect?v=1&tid=UA-1234567-1&cid=123e4567-e89b-12d3-a456-426655440000&t=pageview&dl=http://mywebsite.com/searchRedirect=trees
 ```
 
-where `searchRedirect` is the set site search query parameter and `trees` is the search query that we got from Analytics.js's Products Searched `query` property.
+where `searchRedirect` is the site search query parameter and `trees` is the search query that we got from Analytics.js Products Searched `query` property.
 
 ### Product List Viewed
 
@@ -690,7 +690,7 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 | `ec`         | "cart"        | Event category |
 | `pa`         | "refund"      | Product action |
 
-- [Transaction fields](#4-transaction-fields) for `negative` transasctions
+- [Transaction fields](#4-transaction-fields) for `negative` transactions
 
 * [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
 
@@ -749,7 +749,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 | `t`          | "social" | Hit type       |
 | `sa`         | "share"  | Product action |
 
-- [Review fields](#5-social-details-fields) with `sn` hardcoded
+- [Review fields](#5-social-details-fields) with `sn` hard-coded
 
 ### Fields mapping
 
@@ -797,10 +797,10 @@ For `negative` transactions, we map negative values of `revenue`, `shipping`, `t
 
 | GA field | Analytics.js property from `properties` obj                    | Observation                                                                             |
 | -------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `sn`     | `share_via`                                                    | share network - hardcoded as `product-review` for [Product Reviewed](#product-reviewed) |
+| `sn`     | `share_via`                                                    | share network - hard-coded as `product-review` for [Product Reviewed](#product-reviewed) |
 | `st`     | `cart-<cart_id>:<product_id1>:<product_id2>:...:<product_idn>` |
 
-For `Review events` we hardcode `sn` as `product-review`
+For `Review events` we hard-code `sn` as `product-review`
 
 #### 6. Search fields
 
