@@ -1,14 +1,14 @@
 ---
 collectionKey: cloud-destinations
 
-navText: Pinterest
+navText: Pinterest Tag
 
 path: '/cloud-destinations/pinterest/'
 
 tags: [cloud, destinations]
 ---
 
-# Pinterest
+# Pinterest Tag
 
 MetaRouter makes it easy to send your data to Pinterest Tag. Once you follow the steps below, your data will be routed through our platform and pushed to Pinterest Tag in the appropriate format.
 
@@ -66,28 +66,28 @@ If you wish to send any extra custom properties to Pinterest - in addition to th
 
 MetaRouter automatically binds the following properties to Pinterest Event Data:
 
-| Analytics Spec Property                                   | Pinterest Tag Event Data |
-| --------------------------------------------------------- | ------------------------ |
-| query                                                     | search_query             |
-| order_id                                                  | order_id                 |
-| coupon                                                    | coupon                   |
-| value                                                     | value                    |
-| currency                                                  | currency                 |
-| _nested within the e-commerce products array:_ name       | product_name             |
-| _nested within the e-commerce products array:_ product_id | product_id               |
-| _nested within the e-commerce products array:_ sku        | product_id               |
-| _nested within the e-commerce products array:_ category   | product_category         |
-| _nested within the e-commerce products array:_ variant    | product_variant          |
-| _nested within the e-commerce products array:_ price      | product_price            |
-| _nested within the e-commerce products array:_ quantity   | product_quantity         |
-| _nested within the e-commerce products array:_ brand      | product_brand            |
+| Analytics.js Spec Property | Pinterest Tag Event Data |
+| :------------------------- | :----------------------- |
+| `query`                    | `search_query`           |
+| `order_id`                 | `order_id`               |
+| `coupon`                   | `coupon`                 |
+| `value`                    | `value`                  |
+| `currency`                 | `currency`               |
+| `products.{}.name`         | `product_name`           |
+| `products.{}.product_id`   | `product_id`             |
+| `products.{}.sku`          | `product_id`             |
+| `products.{}.category`     | `product_category`       |
+| `products.{}.variant`      | `product_variant`        |
+| `products.{}.price`        | `product_price`          |
+| `products.{}.quantity`     | `product_quantity`       |
+| `products.{}.brand`        | `product_brand`          |
 
 #### `Map Your Events to Pinterest`
 
 Enter your event on the left, and map it to one of the [standard Pinterest events](https://help.pinterest.com/sites/help/files/pinterest_tag_instructions.pdf) on the right. Some Pinterest events, such as `AddToCart` are already mapped to the Analytics Spec (in this case, to `Product Added`). In the MetaRouter Pinterest Tag destination settings, one can define their own events for Pinterest Tag’s `Signup`, `Lead`, and `Custom` events. Any events sent that aren’t bound to any of these events will still be sent as a _Partner-defined_ event. However, they will not be available for conversion tracking; only for audience creation.
 
-| Analytics Spec Event              | Pinterest Tag Event Type |
-| --------------------------------- | ------------------------ |
+| Analytics.js Spec Event           | Pinterest Tag Event Type |
+| :-------------------------------- | :----------------------- |
 | Products Searched                 | Search                   |
 | Product List Filtered             | Search                   |
 | Product Added                     | AddToCart                |
@@ -98,4 +98,4 @@ Enter your event on the left, and map it to one of the [standard Pinterest event
 
 ## Things to note
 
-Generate page views and trigger your custom event inside your website with `analytics.track('your event name');`. You should see confirmation of those tags sent to Pinterest inside your Pinterest for Business dashboard, under `Ads > Conversions`
+Generate page views and trigger your custom event inside your website with `analytics.track('your event name');`. You should see confirmation of those tags sent to Pinterest inside your Pinterest for Business dashboard, under **Ads > Conversions**.

@@ -284,39 +284,39 @@ Event parameter values must be fewer than 100 characters.
 
 MetaRouter adheres to Firebase’s semantic event specification and maps the following MetaRouter specced events (left) to the corresponding Firebase events (right):
 
-| MetaRouter Event          | Firebase Event        |
-| ------------------------- | --------------------- |
-| Products Searched         | search                |
-| Product List Viewed       | view_item_list        |
-| Product Viewed            | view_item             |
-| Product Clicked           | select_content        |
-| Product Shared            | share                 |
-| Product Added             | add_to_cart           |
-| Product Added To Wishlist | add_to_wishlist       |
-| Checkout Started          | begin_checkout        |
-| Promotion Viewed          | present_offer         |
-| Payment Info Entered      | add_payment_info      |
-| Order Completed           | ecommerce_purchase    |
-| Order Refunded            | purchase_refundHeader |
+| MetaRouter Event          | Firebase Event          |
+| :------------------------ | :---------------------- |
+| Products Searched         | `search`                |
+| Product List Viewed       | `view_item_list`        |
+| Product Viewed            | `view_item`             |
+| Product Clicked           | `select_content`        |
+| Product Shared            | `share`                 |
+| Product Added             | `add_to_cart`           |
+| Product Added To Wishlist | `add_to_wishlist`       |
+| Checkout Started          | `begin_checkout`        |
+| Promotion Viewed          | `present_offer`         |
+| Payment Info Entered      | `add_payment_info`      |
+| Order Completed           | `ecommerce_purchase`    |
+| Order Refunded            | `purchase_refundHeader` |
 
 #### Property Mappings
 
 MetaRouter maps the followed Segment specced properties (left) to the corresponding Firebase event parameters (right):
 
 | MetaRouter Property | Firebase Property | Accepted Value(s)            |
-| ------------------- | ----------------- | ---------------------------- |
-| category            | item_category     | (String) “kitchen supplies”  |
-| product_id          | item_id           | (String) “p1234”             |
-| name                | item_name         | (String) “Le Creuset pot”    |
-| price               | price             | (double) 1.0                 |
-| quantity            | quantity          | (long) 1                     |
-| query               | search_term       | (String) “Le Creuset”        |
-| shipping            | shipping          | (double) 2.0                 |
-| tax                 | tax               | (double) 0.5                 |
-| total               | value             | (double) 3.99 or (long) 3.99 |
-| revenue             | value             | (double) 3.99 or (long) 3.99 |
-| order_id            | transaction_id    | (String) “o555636”           |
-| currency            | currency          | (String) “USD”               |
+| :------------------ | :---------------- | :--------------------------- |
+| `category`          | `item_category`   | (String) “kitchen supplies”  |
+| `product_id`        | `item_id`         | (String) “p1234”             |
+| `name`              | `item_name`       | (String) “Le Creuset pot”    |
+| `price`             | `price`           | (double) 1.0                 |
+| `quantity`          | `quantity`        | (long) 1                     |
+| `query`             | `search_term`     | (String) “Le Creuset”        |
+| `shipping`          | `shipping`        | (double) 2.0                 |
+| `tax`               | `tax`             | (double) 0.5                 |
+| `total`             | `value`           | (double) 3.99 or (long) 3.99 |
+| `revenue`           | `value`           | (double) 3.99 or (long) 3.99 |
+| `order_id`          | `transaction_id`  | (String) “o555636”           |
+| `currency`          | `currency`        | (String) “USD”               |
 
 #### Passing Revenue and Currency
 

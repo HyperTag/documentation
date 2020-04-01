@@ -61,14 +61,14 @@ This configuration file allows you to set your own configuration based on how yo
 
   - By default, we map some of the Analytics.js Standard E-commerce events to AdWords events, as follows:
 
-    | **Analytics.js event**  | **AdWords event**     |
-    | ----------------------- | --------------------- |
-    | `Application Installed` | `first_open`          |
-    | `Product List Viewed`   | `view_item_list`      |
-    | `Product Added`         | `add_to_cart`         |
-    | `Product Viewed`        | `view_item`           |
-    | `Products Searched`     | `view_search_results` |
-    | `Order Completed`       | `ecommerce_purchase`  |
+    | Analytics.js event    | AdWords event         |
+    | :-------------------- | :-------------------- |
+    | Application Installed | `first_open`          |
+    | Product List Viewed   | `view_item_list`      |
+    | Product Added         | `add_to_cart`         |
+    | Product Viewed        | `view_item`           |
+    | Products Searched     | `view_search_results` |
+    | Order Completed       | `ecommerce_purchase`  |
 
 ### Generate a Link ID in your AdWords Account
 

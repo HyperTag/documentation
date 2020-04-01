@@ -26,7 +26,7 @@ Since VWO loads data synchronously, we can't add their JavaScript snippet for yo
 
 ### VWO Side
 
-To get started, you'll need to add the VWO JavaScript snippet to the pages that you want to track. You can check out their docs on how to do that [here](https://vwo.com/knowledge/add-vwo-smartcode-to-your-website/). Keep in mind, they use different Javascript snippets based on if your Application is a Single-Page Application or not. Make sure you load the correct one.
+To get started, you'll need to add the VWO JavaScript snippet to the pages that you want to track. You can check out their docs on how to do that [here](https://vwo.com/knowledge/add-vwo-smartcode-to-your-website/). Keep in mind, they use different JavaScript snippets based on if your application is a Single-Page Application or not. Make sure you load the correct one.
 
 If you would like for analytics.js to manage the loading of the snippet for you, ensure that you have **Use Async Smart Code** enabled in your Destination settings.
 

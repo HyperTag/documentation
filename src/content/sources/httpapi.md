@@ -10,7 +10,7 @@ tags: [sources]
 
 # HTTP Tracking API
 
-This document review the basic structure of our HTTP Tracking API endpoints and how to connect and send information into the system via the API.
+This document covers the basic structure of our HTTP Tracking API endpoints and how to connect and send information into the system via the API.
 
 ## Getting Started
 
@@ -34,12 +34,12 @@ Make sure to set the content-type header to `application/json`.
 
 The HTTP Tracking API uses several response codes to validate requests sent to the API. The following are response codes render by the server and what they mean
 
-| Status Code                  | Explanation                                                                                                 |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| 200 OK                       | Event data is valid and has been accepted in the system                                                     |
-| 207 Multi-Status             | Used by the batch endpoint to signify partial success indicating some events were valid while others failed |
-| 400 Bad Request              | Event data contains errors and can not be processed by the system                                           |
-| 413 Request Entity Too Large | Used to signify the event payload is too large to be received                                               |
+| Status Code                    | Explanation                                                                                                 |
+| :----------------------------- | :---------------------------------------------------------------------------------------------------------- |
+| `200 OK`                       | Event data is valid and has been accepted in the system                                                     |
+| `207 Multi-Status`             | Used by the batch endpoint to signify partial success indicating some events were valid while others failed |
+| `400 Bad Request`              | Event data contains errors and can not be processed by the system                                           |
+| `413 Request Entity Too Large` | Used to signify the event payload is too large to be received                                               |
 
 Error responses render JSON bodies that can help determine the reason the event was rejected by the system. The following is an example of a typical error response. the Errors key contains an array of error objects with a list of all of the errors encountered by the system
 
@@ -76,39 +76,39 @@ Below are some fields are common across all events a list of common fields and t
 
 #### General Event Fields
 
-| Field        | Required                               | Type   | Explanation                                                                                                                                                                                                                                                                                 |
-| ------------ | -------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| anonymousId  | optional (if `userId` exists)          | String | A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier. A userId or an anonymousId is required.                                                                                                                                            |
-| context      | optional                               | Object | Dictionary of extra information that provides useful context about a message, but is not directly related to the API call like ip address or locale See the Context field docs for more details.                                                                                            |
-| integrations | optional                               | Object | Dictionary of destinations to either enable or disable See the Destinations field docs for more details.                                                                                                                                                                                    |
-| messageId    | Required                               | String | A unique identifier for each message that lets you find an individual message across the API.                                                                                                                                                                                               |
-| receivedAt   | implicit                               | Date   | Automatically set by HTTP Tracking API, the timestamp of when a message is received by HTTP Tracking API It is an ISO-8601 date string.                                                                                                                                                     |
-| sentAt       | optional                               | Date   | Timestamp of when a message is sent to HTTP Tracking API, used for clock skew correction It is set automatically by the tracking libraries. It is an ISO-8601 date string.                                                                                                                  |
-| timestamp    | optional                               | Date   | Timestamp when the message itself took place, defaulted to the current time by the HTTP Tracking API, as a ISO-8601 format date string. If the event just happened, leave it out and we’ll use the server’s time. If you’re importing data from the past, make sure to provide a timestamp. |
-| type         | required                               | String | Type of message, corresponding to the API method: `identify`, `group`, `track`, `page`, `screen`, or `alias`.                                                                                                                                                                               |
-| userId       | optional if anonymousID is set instead | String | Unique identifier for the user in your database. A userId or an anonymousId is required.                                                                                                                                                                                                    |
+| Field          | Required                                   | Type   | Explanation                                                                                                                                                                                                                                                                                 |
+| :------------- | :----------------------------------------- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `anonymousId`  | optional (if `userId` exists)              | String | A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier. A userId or an anonymousId is required.                                                                                                                                            |
+| `context`      | optional                                   | Object | Dictionary of extra information that provides useful context about a message, but is not directly related to the API call like ip address or locale See the Context field docs for more details.                                                                                            |
+| `integrations` | optional                                   | Object | Dictionary of destinations to either enable or disable See the Destinations field docs for more details.                                                                                                                                                                                    |
+| `messageId`    | Required                                   | String | A unique identifier for each message that lets you find an individual message across the API.                                                                                                                                                                                               |
+| `receivedAt`   | implicit                                   | Date   | Automatically set by HTTP Tracking API, the timestamp of when a message is received by HTTP Tracking API It is an ISO-8601 date string.                                                                                                                                                     |
+| `sentAt`       | optional                                   | Date   | Timestamp of when a message is sent to HTTP Tracking API, used for clock skew correction It is set automatically by the tracking libraries. It is an ISO-8601 date string.                                                                                                                  |
+| `timestamp`    | optional                                   | Date   | Timestamp when the message itself took place, defaulted to the current time by the HTTP Tracking API, as a ISO-8601 format date string. If the event just happened, leave it out and we’ll use the server’s time. If you’re importing data from the past, make sure to provide a timestamp. |
+| `type`         | required                                   | String | Type of message, corresponding to the API method: `identify`, `group`, `track`, `page`, `screen`, or `alias`.                                                                                                                                                                               |
+| `userId`       | optional (if `anonymousID` is set instead) | String | Unique identifier for the user in your database. A userId or an anonymousId is required.                                                                                                                                                                                                    |
 
 #### Context Object Fields
 
-| Field     | Type    | Explanation                                                                                                                                                                                                                                           |
-| --------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| active    | Boolean | Whether a user is active. This is usually used to flag an .identify() call to just update the traits but not _last seen_.                                                                                                                             |
-| app       | Object  | dictionary of information about the current application, containing name, version and build. This is collected automatically from our mobile libraries when possible.                                                                                 |
-| campaign  | Object  | Dictionary of information about the campaign that resulted in the API call, containing name, source, medium, term, and content. This maps directly to the common UTM campaign parameters.                                                             |
-| device    | Object  | Dictionary of information about the device, containing id, manufacturer, model, name, type and version.                                                                                                                                               |
-| ip        | String  | Current user’s IP address.                                                                                                                                                                                                                            |
-| library   | Object  | Dictionary of information about the library making the requests to the API, containing name and version.                                                                                                                                              |
-| locale    | String  | Locale string for the current user. For example, `en-US`.                                                                                                                                                                                             |
-| location  | Object  | Dictionary of information about the user’s current location, containing city, country, latitude, longitude, region, and speed.                                                                                                                        |
-| network   | Object  | Dictionary of information about the current network connection, containing bluetooth, carrier, cellular, and wifi                                                                                                                                     |
-| os        | Object  | Dictionary of information about the operating system, containing name and version                                                                                                                                                                     |
-| page      | Object  | Dictionary of information about the current page in the browser, containing hash, path, referrer, search, title, and url. This is automatically collected by Analytics.js.                                                                            |
-| referrer  | Object  | Dictionary of information about the way the user was referred to the website or app, containing type, name, url, and link                                                                                                                             |
-| screen    | Object  | Dictionary of information about the device’s screen, containing density, height, and width                                                                                                                                                            |
-| timezone  | String  | Timezones are sent as tzdata strings to add user timezone information which might be stripped from the timestamp. For example, `America/New_York`                                                                                                     |
-| groupId   | String  | Group / Account ID. This is useful in B2B use cases where you need to attribute your non-group calls to a company or account. It is relied on by several Customer Success and CRM tools.                                                              |
-| traits    | Object  | Dictionary of traits of the current user. This is useful in cases where you need to track an event, but also associate information from a previous identify call. You should fill this object the same way you would fill traits in an identify call. |
-| userAgent | String  | User-agent of the device making the request                                                                                                                                                                                                           |
+| Field       | Type    | Explanation                                                                                                                                                                                                                                           |
+| :---------- | :------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `active`    | Boolean | Whether a user is active. This is usually used to flag an .identify() call to just update the traits but not _last seen_.                                                                                                                             |
+| `app`       | Object  | Dictionary of information about the current application, containing name, version and build. This is collected automatically from our mobile libraries when possible.                                                                                 |
+| `campaign`  | Object  | Dictionary of information about the campaign that resulted in the API call, containing name, source, medium, term, and content. This maps directly to the common UTM campaign parameters.                                                             |
+| `device`    | Object  | Dictionary of information about the device, containing id, manufacturer, model, name, type and version.                                                                                                                                               |
+| `ip`        | String  | Current user’s IP address.                                                                                                                                                                                                                            |
+| `library`   | Object  | Dictionary of information about the library making the requests to the API, containing name and version.                                                                                                                                              |
+| `locale`    | String  | Locale string for the current user. For example, `en-US`.                                                                                                                                                                                             |
+| `location`  | Object  | Dictionary of information about the user’s current location, containing city, country, latitude, longitude, region, and speed.                                                                                                                        |
+| `network`   | Object  | Dictionary of information about the current network connection, containing bluetooth, carrier, cellular, and wifi                                                                                                                                     |
+| `os`        | Object  | Dictionary of information about the operating system, containing name and version                                                                                                                                                                     |
+| `page`      | Object  | Dictionary of information about the current page in the browser, containing hash, path, referrer, search, title, and url. This is automatically collected by Analytics.js.                                                                            |
+| `referrer`  | Object  | Dictionary of information about the way the user was referred to the website or app, containing type, name, url, and link                                                                                                                             |
+| `screen`    | Object  | Dictionary of information about the device’s screen, containing density, height, and width                                                                                                                                                            |
+| `timezone`  | String  | Timezones are sent as tzdata strings to add user timezone information which might be stripped from the timestamp. For example, `America/New_York`                                                                                                     |
+| `groupId`   | String  | Group / Account ID. This is useful in B2B use cases where you need to attribute your non-group calls to a company or account. It is relied on by several Customer Success and CRM tools.                                                              |
+| `traits`    | Object  | Dictionary of traits of the current user. This is useful in cases where you need to track an event, but also associate information from a previous identify call. You should fill this object the same way you would fill traits in an identify call. |
+| `userAgent` | String  | User-agent of the device making the request                                                                                                                                                                                                           |
 
 ## Standard Calls
 
@@ -120,9 +120,9 @@ The `identify` method helps you associate your users and their actions to a uniq
 
 Post `https://e.metarouter.io/v1/i` or `https://e.metarouter.io/v1/identify`
 
-| Field  | Required | Type   | Explanation                                                    |
-| ------ | -------- | ------ | -------------------------------------------------------------- |
-| traits | optional | Object | Free-form dictionary of traits of the user, like email or name |
+| Field    | Required | Type   | Explanation                                                    |
+| :------- | :------- | :----- | :------------------------------------------------------------- |
+| `traits` | optional | Object | Free-form dictionary of traits of the user, like email or name |
 
 ```json
 {
@@ -143,10 +143,10 @@ To get to a more complete event tracking analytics setup, you can add a `track` 
 
 Post `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
 
-| Property   | Required | Type   | Explanation                                                   |
-| ---------- | -------- | ------ | ------------------------------------------------------------- |
-| eventName  | required | String | Name of the action that a user has performed.                 |
-| properties | optional | Object | Free-form dictionary of properties of the event, like revenue |
+| Property     | Required | Type   | Explanation                                                   |
+| :----------- | :------- | :----- | :------------------------------------------------------------ |
+| `eventName`  | required | String | Name of the action that a user has performed                  |
+| `properties` | optional | Object | Free-form dictionary of properties of the event, like revenue |
 
 ```json
 {
@@ -168,10 +168,10 @@ The `page` method allows you to record page views on your website. It also allow
 
 Post `https://e.metarouter.io/v1/p` or `https://e.metarouter.io/v1/page`
 
-| Property   | Required | Type   | Explanation                                                                                                                                     |
-| ---------- | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| name       | optional | String | Name of the page For example, most sites have a “Signup” page that can be useful to tag, so you can see users as they move through your funnel. |
-| properties | optional | Object | Free-form dictionary of properties of the event, like revenue                                                                                   |
+| Property     | Required | Type   | Explanation                                                                                                                                     |
+| :----------- | :------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`       | optional | String | Name of the page For example, most sites have a “Signup” page that can be useful to tag, so you can see users as they move through your funnel. |
+| `properties` | optional | Object | Free-form dictionary of properties of the event, like revenue                                                                                   |
 
 ```json
 {
@@ -191,10 +191,10 @@ The `group` method associates an identified user with a company, organization, p
 
 Post `https://e.metarouter.io/v1/g` or `https://e.metarouter.io/v1/group`
 
-| Property | Required | Type   | Explanation                                                                                                                   |
-| -------- | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| groupId  | required | String | A unique identifier for the group in your database. See the Group ID field docs for more detail.                              |
-| traits   | optional | Object | Free-form dictionary of traits of the group, like email or name See the Traits field docs for a list of reserved trait names. |
+| Property  | Required | Type   | Explanation                                                                                                                   |
+| :-------- | :------- | :----- | :---------------------------------------------------------------------------------------------------------------------------- |
+| `groupId` | required | String | A unique identifier for the group in your database. See the Group ID field docs for more detail.                              |
+| `traits`  | optional | Object | Free-form dictionary of traits of the group, like email or name See the Traits field docs for a list of reserved trait names. |
 
 ```json
 {
@@ -214,10 +214,10 @@ The `alias` method combines two unassociated User IDs.
 
 Post `https://e.metarouter.io/v1/a` or `https://e.metarouter.io/v1/alias`
 
-| Property   | Required                           | Type   | Explanation                                                                                                                                                                                   |
-| ---------- | ---------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| previousId | required                           | String | The previousId is the existing ID you’ve referred to the user by. It might be an Anonymous ID assigned to that user or a User ID you previously identified them with using our identify call. |
-| userId     | optional (if `anonymousId` exists) | String | Unique identifier for the user in your database. A userId or an anonymousId is required.                                                                                                      |
+| Property     | Required                           | Type   | Explanation                                                                                                                                                                                   |
+| :----------- | :--------------------------------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `previousId` | required                           | String | The previousId is the existing ID you’ve referred to the user by. It might be an Anonymous ID assigned to that user or a User ID you previously identified them with using our identify call. |
+| `userId`     | optional (if `anonymousId` exists) | String | Unique identifier for the user in your database. A userId or an anonymousId is required.                                                                                                      |
 
 ```json
 {

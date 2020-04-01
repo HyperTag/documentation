@@ -8,7 +8,7 @@ path: '/enterprise-destinations/pinterest-tag/'
 tags: [enterprise, destinations]
 ---
 
-# Pinterest
+# Pinterest Tag
 
 MetaRouter makes it easy to send your data to Pinterest Tag. Once you follow the steps below, your data will be routed through our platform and pushed to Pinterest Tag in the appropriate format.
 

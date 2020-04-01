@@ -101,7 +101,7 @@ Customer.io has limits on the data collected by their API. To ensure your events
 
 ### No Events in Customer.io from the Browser
 
-Remember that before we can send events to Customer.io from client-side Javascript the current user must be identified with their `userId`. The user’s email address can only be used to identify them if that is the id on record for them in Customer.io.
+Remember that before we can send events to Customer.io from client-side JavaScript the current user must be identified with their `userId`. The user’s email address can only be used to identify them if that is the id on record for them in Customer.io.
 
 ### Page events not being associated with user
 

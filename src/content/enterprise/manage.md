@@ -112,8 +112,8 @@ curl localhost:8080/cache/get/WRITEKEY
 
 ### Using our Management Tools
 
-_NOTE: This is a stub of a future feature. Coming Soon._
+**Note:** This is a stub of a future feature. Coming Soon.
 
 ### Using our Remote Management Connection
 
-_NOTE: This is a stub of a future feature. Coming Soon._
+**Note:** This is a stub of a future feature. Coming Soon.

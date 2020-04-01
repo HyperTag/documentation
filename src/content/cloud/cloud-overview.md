@@ -98,7 +98,7 @@ Check out the list below to explore all of the destinations available with MetaR
 <!-- TODO: Figure out how to get EE edition destinations into this matrix -->
 
 |                     | Client | Server | Mobile |
-| ------------------- | :----: | :----: | :----: |
+| :------------------ | :----: | :----: | :----: |
 | [40]                |  [20]  |  [20]  |  [20]  |
 | Acquisio            |   ✔    |   x    |   x    |
 | Adobe Analytics     |   ✔    |   x    |   x    |

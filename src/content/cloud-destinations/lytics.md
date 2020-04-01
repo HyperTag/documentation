@@ -20,7 +20,7 @@ Lytics crawls website text and images, automating digital catalogue and scoring 
 
 Lytics also enables drag-and-drop segmentation, which allows teams to target customers based on channel, revenue, growth, or at-risk status. Plus, Lytics independently integrates with more than 65 popular platforms like Twitter, AdRoll, and Google Ads.
 
-**_Notes:_**
+**Notes:**
 
 - Lytics collects its user data (name, email address) from a JavaScript library that you'd need to load on all pages of your site. This will power an in-app messaging feature and ensure you're not asking already-known users to opt in.
 

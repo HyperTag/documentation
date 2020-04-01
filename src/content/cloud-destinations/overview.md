@@ -22,48 +22,48 @@ Check out our source/destination compatibility matrix below to see which destina
 <!-- TODO: Figure out how to get EE edition destinations into this matrix -->
 
 |                     | Client | Server | Mobile |
-| ------------------- | ------ | ------ | ------ |
-| Acquisio            | ✔      | x      | x      |
-| Adobe Analytics     | ✔      | x      | x      |
-| Amazon Kinesis      | ✔      | ✔      | ✔      |
-| Amazon Redshift     | ✔      | ✔      | ✔      |
-| Amplitude           | ✔      | ✔      | ✔      |
-| Attribution         | ✔      | ✔      | x      |
-| Bloom Reach         | ✔      | x      | x      |
-| Braze               | ✔      | ✔      | x      |
-| Calq                | x      | ✔      | ✔      |
-| Clicky              | ✔      | x      | x      |
-| Criteo              | ✔      | x      | x      |
-| Customer.io         | ✔      | ✔      | ✔      |
-| DoubleClick         | ✔      | x      | x      |
-| Drift               | ✔      | x      | x      |
-| Facebook App Events | x      | ✔      | ✔      |
-| Facebook Pixel      | ✔      | x      | x      |
-| Google AdWords      | ✔      | x      | ✔      |
-| Google Analytics    | ✔      | ✔      | ✔      |
-| Google BigQuery     | ✔      | ✔      | ✔      |
-| Google Tag Manager  | ✔      | x      | x      |
-| Heap Analytics      | ✔      | ✔      | ✔      |
-| HubSpot             | ✔      | ✔      | ✔      |
-| Intercom            | ✔      | ✔      | ✔      |
-| Keen                | ✔      | ✔      | ✔      |
-| Kenshoo             | ✔      | x      | x      |
-| KISSmetrics         | ✔      | ✔      | ✔      |
-| Lucky Orange        | ✔      | x      | x      |
-| Lytics              | ✔      | ✔      | ✔      |
-| Microsoft Ads       | ✔      | x      | x      |
-| Mixpanel            | ✔      | ✔      | ✔      |
-| Netmining           | ✔      | x      | x      |
-| Optimizely          | ✔      | x      | x      |
-| OutBrain            | ✔      | x      | x      |
-| Pebble Post         | ✔      | x      | x      |
-| Resonate            | ✔      | x      | x      |
-| Retention Science   | ✔      | x      | x      |
-| Rubicon             | ✔      | x      | x      |
-| S3 Event Logs       | ✔      | ✔      | ✔      |
-| Sailthru            | ✔      | ✔      | ✔      |
-| Taboola             | ✔      | x      | x      |
-| Twitter Ads         | ✔      | x      | x      |
-| VWO                 | ✔      | x      | x      |
-| Webhooks            | ✔      | ✔      | ✔      |
-| Woopra              | ✔      | ✔      | ✔      |
+| :------------------ | :----: | :----: | :----: |
+| Acquisio            |   ✔    |   x    |   x    |
+| Adobe Analytics     |   ✔    |   x    |   x    |
+| Amazon Kinesis      |   ✔    |   ✔    |   ✔    |
+| Amazon Redshift     |   ✔    |   ✔    |   ✔    |
+| Amplitude           |   ✔    |   ✔    |   ✔    |
+| Attribution         |   ✔    |   ✔    |   x    |
+| Bloom Reach         |   ✔    |   x    |   x    |
+| Braze               |   ✔    |   ✔    |   x    |
+| Calq                |   x    |   ✔    |   ✔    |
+| Clicky              |   ✔    |   x    |   x    |
+| Criteo              |   ✔    |   x    |   x    |
+| Customer.io         |   ✔    |   ✔    |   ✔    |
+| DoubleClick         |   ✔    |   x    |   x    |
+| Drift               |   ✔    |   x    |   x    |
+| Facebook App Events |   x    |   ✔    |   ✔    |
+| Facebook Pixel      |   ✔    |   x    |   x    |
+| Google AdWords      |   ✔    |   x    |   ✔    |
+| Google Analytics    |   ✔    |   ✔    |   ✔    |
+| Google BigQuery     |   ✔    |   ✔    |   ✔    |
+| Google Tag Manager  |   ✔    |   x    |   x    |
+| Heap Analytics      |   ✔    |   ✔    |   ✔    |
+| HubSpot             |   ✔    |   ✔    |   ✔    |
+| Intercom            |   ✔    |   ✔    |   ✔    |
+| Keen                |   ✔    |   ✔    |   ✔    |
+| Kenshoo             |   ✔    |   x    |   x    |
+| KISSmetrics         |   ✔    |   ✔    |   ✔    |
+| Lucky Orange        |   ✔    |   x    |   x    |
+| Lytics              |   ✔    |   ✔    |   ✔    |
+| Microsoft Ads       |   ✔    |   x    |   x    |
+| Mixpanel            |   ✔    |   ✔    |   ✔    |
+| Netmining           |   ✔    |   x    |   x    |
+| Optimizely          |   ✔    |   x    |   x    |
+| OutBrain            |   ✔    |   x    |   x    |
+| Pebble Post         |   ✔    |   x    |   x    |
+| Resonate            |   ✔    |   x    |   x    |
+| Retention Science   |   ✔    |   x    |   x    |
+| Rubicon             |   ✔    |   x    |   x    |
+| S3 Event Logs       |   ✔    |   ✔    |   ✔    |
+| Sailthru            |   ✔    |   ✔    |   ✔    |
+| Taboola             |   ✔    |   x    |   x    |
+| Twitter Ads         |   ✔    |   x    |   x    |
+| VWO                 |   ✔    |   x    |   x    |
+| Webhooks            |   ✔    |   ✔    |   ✔    |
+| Woopra              |   ✔    |   ✔    |   ✔    |

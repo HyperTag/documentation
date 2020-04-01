@@ -162,7 +162,7 @@ The Adobe Analytics destination works with our standard Ecommerce API.
 The following mapping between semantic ecommerce events for MetaRouter and Adobe Analytics are supported:
 
 | MetaRouter Event Name | Adobe Analytics Event Name |
-| --------------------- | -------------------------- |
+| :-------------------- | :------------------------- |
 | Product Viewed        | `prodView`                 |
 | Product List Viewed   | `prodView`                 |
 | Product Added         | `scAdd`                    |

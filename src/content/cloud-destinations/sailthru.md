@@ -143,23 +143,23 @@ If the user and their email does not exist in Sailthru, the event will throw an 
 
 Once `Order Completed` is triggered, MetaRouter will pass in `incomplete: 0`to signify that the order is now complete. MetaRouter will map the following Sailthru **required fields** from the **v2 Order Completed Spec**:
 
-| Sailthru spec | Analytics.js spec      |
-| ------------- | ---------------------- |
-| title         | products.\$.name       |
-| qty           | products.\$.quantity   |
-| price         | products.\$.price      |
-| id            | products.\$.product_id |
-| url           | products.\$.url        |
+| Sailthru spec | Analytics.js spec        |
+| :------------ | :----------------------- |
+| `title`       | `products.{}.name`       |
+| `qty`         | `products.{}.quantity`   |
+| `price`       | `products.{}.price`      |
+| `id`          | `products.{}.product_id` |
+| `url`         | `products.{}.url`        |
 
-_Note_: the url field is required by Sailthru for each product. If it’s not explicitly attached to the product, MetaRouter will pull this value out from the `context.page.url` for you, or if this value is not present, we'll use `productBaseUrl` value configured in Metarouter UI.
+**Note:** the url field is required by Sailthru for each product. If it’s not explicitly attached to the product, MetaRouter will pull this value out from the `context.page.url` for you, or if this value is not present, we'll use `productBaseUrl` value configured in Metarouter UI.
 
 In addition, the following optional parameters will be mapped:
 
-| Sailthru spec   | Analytics.js spec           |
-| --------------- | --------------------------- |
-| tags            | products.\$.tags            |
-| image_url       | products.\$.image_url       |
-| image_url_thumb | products.\$.image_url_thumb |
+| Sailthru spec     | Analytics.js spec             |
+| :---------------- | :---------------------------- |
+| `tags`            | `products.{}.tags`            |
+| `image_url`       | `products.{}.image_url`       |
+| `image_url_thumb` | `products.{}.image_url_thumb` |
 
 `adjustments` is not a standard Analytics.js event, but we'll apply the values from `properties.tax`, `properties.shipping` and `properties.discount`.
 

@@ -78,15 +78,15 @@ This configuration file allows you to set your own configuration based on how yo
 
 - By default, we map some of the Analytics.js Standard E-commerce events to Adobe Analytics Standard events, as follows:
 
-  | analytics.js event    | Adobe Analytics event |
-  | --------------------- | --------------------- |
-  | 'Product Viewed'      | 'prodView'            |
-  | 'Product List Viewed' | 'prodView'            |
-  | 'Product Added'       | 'scAdd'               |
-  | 'Product Removed'     | 'scRemove'            |
-  | 'Cart Viewed'         | 'scView'              |
-  | 'Checkout Started'    | 'scCheckout'          |
-  | 'Order Completed'     | 'purchase             |
+  | Analytics.js event  | Adobe Analytics event |
+  | :------------------ | :-------------------- |
+  | Product Viewed      | 'prodView'            |
+  | Product List Viewed | 'prodView'            |
+  | Product Added       | 'scAdd'               |
+  | Product Removed     | 'scRemove'            |
+  | Cart Viewed         | 'scView'              |
+  | Checkout Started    | 'scCheckout'          |
+  | Order Completed     | 'purchase             |
 
 - In order to map other events, you would use the custom mapping provided by the config:
 
