@@ -9,7 +9,7 @@ path: '/'
 
 MetaRouter is a data engineering platform that helps you collect user events from any source, and stream that data to all of your favorite third-party tools, analytics platforms, and data warehouses. MetaRouter is built on industry proven open-source technologies, and takes care of all the complex orchestrating and managing of cloud infrastructure. The goal of our platform is to increase your ability to focus on data analytics and data science initiatives.
 
-[![MetaRouter Overview](/images/platform_overview.png)](/images/platform_overview.png)
+<a href="/images/platform_overview.png" target="_mr"><img src="/images/platform_overview.png" /></a>
 
 ## Editions
 
