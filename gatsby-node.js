@@ -33,8 +33,8 @@ const setTableColumnWidths = nodes => {
     const $ = cheerio.load(node.html)
     const regex = /\[\d*\]/g // match [25] format for column width
 
-    $('table tbody tr:first-child').each(function(i) {
-      const row = $(this)
+    $('table tbody tr:first-child').each((i, el) => {
+      const row = $(el)
 
       if (
         row
@@ -48,14 +48,10 @@ const setTableColumnWidths = nodes => {
           .split('][')
           .map(segment => segment.replace('[', '').replace(']', '')) // strip remaining brackets
 
-        const th = $(this)
-          .closest('table')
-          .find('th')
+        const th = row.closest('table').find('th')
 
         // for case where table may not have a header row
-        const td = $(this)
-          .next()
-          .find('td')
+        const td = row.next().find('td')
 
         const cells = th.length ? th : td
 
@@ -90,6 +86,11 @@ const tableOfContentsItems = $ => {
 
 // renders a content section
 const section = ($, isPage) => {
+  $('h1')
+    .first()
+    .find('a')
+    .attr('href', '#')
+
   const tocItems = tableOfContentsItems($)
   let toc = `
     <div class="toc">
@@ -173,6 +174,22 @@ const addTags = nodes => {
   })
 }
 
+const linkImages = nodes => {
+  return nodes.map(node => {
+    const $ = cheerio.load(node.html)
+    const images = $('img')
+
+    images.each((i, el) => {
+      var image = $(el)
+
+      image.wrap(`<a href="${image.attr('src')}" target="_mr"></a>`)
+    })
+    node.html = $.html()
+
+    return node
+  })
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(query)
@@ -184,8 +201,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   let nodes = result.data.allMarkdownRemark.edges.map(e => e.node)
+
+  // run mutations on node content
   nodes = setTableColumnWidths(nodes)
   nodes = addTags(nodes)
+  nodes = linkImages(nodes)
 
   const groups = createGroups(nodes)
 
