@@ -32,7 +32,7 @@ Integrating Pinterest with MetaRouter cuts out any need for additional implement
 
 To get started sending events to Pinterest, first sign up for [Pinterest for Business](https://business.pinterest.com/en).
 
-**Note**: This destination supports client-side Analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.
+**Note:** This destination supports client-side Analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.
 
 ### Pinterest Side
 
@@ -52,11 +52,11 @@ The generated Pinterest tag contains a value shown in red in two places. Copy th
 
 ### MetaRouter Side
 
-You can configure your integrations using a `integrations.yaml` config file, where you define multiple destinations, each one with its custom settings.
+You can configure your integrations using a **integrations.yaml** config file, where you define multiple destinations, each one with its custom settings.
 
 The only configuration needed is the `tagId`, which represents the id that you've got from the previous step.
 
-Here is an example of `integrations.yaml`:
+Here is an example of **integrations.yaml**:
 
 ```yaml
 - name: 'pinterest'

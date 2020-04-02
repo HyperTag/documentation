@@ -149,3 +149,8 @@ main .tags li.cloud {
 main .tags li.sources {
   @apply bg-mr-purple;
 }
+
+main sub {
+  @apply leading-normal;
+  font-size: 11px;
+}

@@ -18,16 +18,15 @@ Using our analytics-react-native library, you can start sending customer data fr
 
 After logging in with your MetaRouter credentials, add a new **Source > Client-Side**. Give your source a friendly name and copy that `Source ID` for the next step.
 
-### iOS
+### iOS CocoaPods
 
-- CocoaPods
-  - To add CocoaPods to your app, follow [these instructions](https://facebook.github.io/react-native/docs/integration-with-existing-apps#configuring-cocoapods-dependencies).
+To add CocoaPods to your app, follow [these instructions](https://facebook.github.io/react-native/docs/integration-with-existing-apps#configuring-cocoapods-dependencies).
 
 ## Installing and configuring the SDK
 
 The recommended way to install Analytics for React Native is via npm, since it means you can create a build with specific destinations, and because it makes it dead simple to install and upgrade.
 
-First, add the @metarouter/analytics-react-native dependency to your dependencies and link it using react-native-cli, like so:
+First, add the `@metarouter/analytics-react-native` dependency to your dependencies and link it using react-native-cli, like so:
 
 ```bash
 yarn add @metarouter/analytics-react-native
@@ -65,7 +64,7 @@ import analytics from '@metarouter/analytics-react-native'
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
-**Note**: Users are automatically assigned an anonymousID before you identify them. The userID is then what connects anonymous activity across mobile iOS devices.
+**Note:** Users are automatically assigned an anonymousID before you identify them. The userID is then what connects anonymous activity across mobile iOS devices.
 
 For example, a simple `identify` looks something like this:
 
@@ -77,7 +76,7 @@ analytics.identify("a user's id", {
 
 This call identifies a user by his unique User ID (the one you know him by in your database) and labels him with `name` and `email` traits.
 
-**Note**: When you add an `identify` to your React Native app, you will need to replace all those hard-coded strings with details about the currently logged-in user.
+**Note:** When you add an `identify` to your React Native app, you will need to replace all those hard-coded strings with details about the currently logged-in user.
 
 Analytics works on its own background thread, so it will never block the main thread for the UI or the calling thread.
 
@@ -102,7 +101,7 @@ analytics.track('Item Purchased', {
 
 This example `track` call tells us that a user just triggered an "Item Purchased" event for an `item` called "Cat Feather Toy" and `revenue` of 9.99.
 
-**Note**: In order to use a `track` call, you must specify a name for the event you want to track whereas properties and options are all optional fields.
+**Note:** In order to use a `track` call, you must specify a name for the event you want to track whereas properties and options are all optional fields.
 
 A lot of analytics tools support custom event mapping so, with `track` implemented, you’ll be able to attribute events to your users and start targeting them in a more informed and relevant way.
 
@@ -176,7 +175,7 @@ You can also use the native Analytics API to configure it. Just make sure to cal
 
 ### Application Lifecycle Tracking
 
-Our SDK can automatically instrument common application lifecycle events such as “Application Installed”, “Application Updated” and “Application Opened”. Simply enable this option when you initialize the SDK.
+Our SDK can automatically instrument common application lifecycle events such as **Application Installed**, **Application Updated** and **Application Opened**. Simply enable this option when you initialize the SDK.
 
 ```javascript
 await analytics.setup('YOUR_WRITE_KEY', {

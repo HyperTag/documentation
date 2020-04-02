@@ -52,7 +52,7 @@ The `Analytics` class has a method called `enqueue` that takes a `MessageBuilder
 
 Check out the below calls and their use cases to determine the calls that you need to make. We have also included examples of how you'd call specific objects in Java.
 
-**Note**: Thee following examples use the [Guava](https://github.com/google/guava) immutable map style, but feel free to use standard Java maps instead.
+**Note:** Thee following examples use the [Guava](https://github.com/google/guava) immutable map style, but feel free to use standard Java maps instead.
 
 ### Identify
 
@@ -92,7 +92,7 @@ The above call tells us that someone has purchased an item for 50 dollars and ha
 
 ### Screen
 
-**Note**: The `screen` call pulls the same data as a `page` call, but is used for mobile rather than web sources.
+**Note:** The `screen` call pulls the same data as a `page` call, but is used for mobile rather than web sources.
 
 ```java
 analytics.enqueue(ScreenMessage.builder("MoonLanding")

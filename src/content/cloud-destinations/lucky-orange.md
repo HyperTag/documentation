@@ -34,7 +34,7 @@ Begin by logging into your [Lucky Orange](https://www.luckyorange.com/) account.
 
 The generated Lucky Orange tracking code contains your site id (shown blurred in the above image). Copy this value.
 
-**Note**: You can always grab this value by accessing **Settings > General**.
+**Note:** You can always grab this value by accessing **Settings > General**.
 
 ### MetaRouter Side
 

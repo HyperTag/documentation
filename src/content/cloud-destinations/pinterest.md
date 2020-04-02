@@ -32,7 +32,7 @@ Integrating Pinterest with MetaRouter cuts out any need for additional implement
 
 To get started sending events to Pinterest, first sign up for [Pinterest for Business](https://business.pinterest.com/en).
 
-**Note**: This destination supports client-side Analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.
+**Note:** This destination supports client-side Analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.
 
 ### Pinterest Side
 

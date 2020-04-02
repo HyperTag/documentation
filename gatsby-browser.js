@@ -161,7 +161,7 @@ exports.onRouteUpdate = () => {
       ? Array.from(collapsedGroups).map(function(group) {
           return group.dataset.title
         })
-      : null
+      : []
 
     sessionStorage.setItem('navStateCollapsed', collapsed.join(','))
   }

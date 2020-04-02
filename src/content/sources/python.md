@@ -34,7 +34,7 @@ analytics.host = 'https://e.metarouter.io'
 analytics.app_id = ‘metarouter_source_id’
 ```
 
-**Note**: You can find your metarouter_source_id in the settings section of your MetaRouter App.
+**Note:** You can find your metarouter_source_id in the settings section of your MetaRouter App.
 
 ## Calls in Python
 

@@ -239,7 +239,7 @@ analytics.track(
 )
 ```
 
-**Note**: All `Product Added` and `Product Removed` events going into Sailthru must have a `userId`. Sailthru must understand the state of a user’s cart when updating an item within the cart. To understand this, MetaRouter makes a `get` request with the `userId` value to retrieve a user’s cart.
+**Note:** All `Product Added` and `Product Removed` events going into Sailthru must have a `userId`. Sailthru must understand the state of a user’s cart when updating an item within the cart. To understand this, MetaRouter makes a `get` request with the `userId` value to retrieve a user’s cart.
 
 For `Product Added` events, we check the item added using the `productId` against the items we retrieved from Sailthru within the user’s cart. If the item is present, we increase the quantity by one. If there are no items in the retrieved cart, we simply add the item.
 

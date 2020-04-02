@@ -7,8 +7,6 @@ table {
 table + p > sub {
   @apply relative;
   @apply inline-block;
-  @apply leading-normal;
-  font-size: 11px;
   top: -1.5rem;
 }
 td,

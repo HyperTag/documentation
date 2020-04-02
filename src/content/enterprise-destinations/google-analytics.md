@@ -567,7 +567,7 @@ analytics.track('Completed Checkout Step', {
 })
 ```
 
-**Note**: `shipping_method` and `payment_method` are semantic properties so if you want to send that information, please do so in this exact spelling!
+**Note:** `shipping_method` and `payment_method` are semantic properties so if you want to send that information, please do so in this exact spelling!
 
 You can have as many or as few steps in the checkout funnel as you'd like. The four steps above merely serve as an example. Note that you'll still need to track the **Order Completed** event per our standard e-commerce tracking API after you've tracked the checkout steps.
 

@@ -51,7 +51,7 @@ By default, the MetaRouter snippet includes an empty `page()` call. When `page()
 
 1. Set `window.s.pageName` to the `name` of the page call was. By default, the MetaRouter `.page()` call will set `window.s.pageName` to be the passed argument. Since the default `page()` call has no arguments, `window.s.pageName` will be set as `undefined`. For calls like `page('Homepage')`, the `window.s.pageName` property will be set to the String passed, in this example, `'Homepage'`.
 
-   **Note**: For an empty `page()` call, Adobe Analytics will fallback by default to displaying the `url` as the name of the page.
+   **Note:** For an empty `page()` call, Adobe Analytics will fallback by default to displaying the `url` as the name of the page.
 
 2. `window.s.events` will also be set to the passed argument of the `page(<name>)` call.
 
@@ -173,7 +173,7 @@ The following mapping between semantic ecommerce events for MetaRouter and Adobe
 
 For any of the above ecommerce events, data is sent similarly to `.track()` events. The difference here is that you do **NOT** need to predefine these MetaRouter event names in the MetaRouter settings. The above ecommerce events will automatically be mapped and sent to Adobe Analytics.
 
-**Note**: Ecommerce relevant properties such as `orderId`, `products` will be sent automatically. However, if you want to attach custom properties to Adobe’s `eVar`, `prop` or `hVar`, you need to predefine them in the MetaRouter settings. (just the properties, no need to map the event names, unless you want the event name to be set to an `eVar`).
+**Note:** Ecommerce relevant properties such as `orderId`, `products` will be sent automatically. However, if you want to attach custom properties to Adobe’s `eVar`, `prop` or `hVar`, you need to predefine them in the MetaRouter settings. (just the properties, no need to map the event names, unless you want the event name to be set to an `eVar`).
 
 For all ecommerce events listed, we will send product description data to Adobe Analytics.
 
@@ -212,7 +212,7 @@ analytics.track('Order Completed', {
 
 1. Set `window.s.products` with the product description string - a semi-colon delimited string per product which is additionally delimited by commas if you have multiple products. The string format per product is `[category];[name];[quantity];[total]`. Total is calculated by multiplying price and quantity for each product.
 
-   **Note**: you can optionally choose whether to map the `name`, `sku`, or `id` for each of item in the `products` array. So one could alternatively send product descriptions with `[category];[sku];[quantity];[total]` or `[category];[id];[quantity];[total]`. Select the mapping via the **Product Identifier** dropdown under Advanced Options in your Adobe Analytics MetaRouter settings. The default identifier is set to `name`.
+   **Note:** you can optionally choose whether to map the `name`, `sku`, or `id` for each of item in the `products` array. So one could alternatively send product descriptions with `[category];[sku];[quantity];[total]` or `[category];[id];[quantity];[total]`. Select the mapping via the **Product Identifier** dropdown under Advanced Options in your Adobe Analytics MetaRouter settings. The default identifier is set to `name`.
 
    Thus the above example would set `window.s.products` to `'Games;Monopoly: 3rd Edition;1;19,Electronics;Go Pro;2;99'`.
 

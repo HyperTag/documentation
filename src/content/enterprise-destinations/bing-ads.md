@@ -32,11 +32,11 @@ Before you can track conversions or target audiences, you need to [create a UET 
 
 ### MetaRouter Side
 
-You can configure your integrations using a `integrations.yaml` config file, where you define multiple destinations, each one with its custom settings.
+You can configure your integrations using a **integrations.yaml** config file, where you define multiple destinations, each one with its custom settings.
 
 The only configuration needed is the `tagId`, which represents the id that you've got from the previous step.
 
-Here is an example of `integrations.yaml`:
+Here is an example of **integrations.yaml**:
 
 ```yaml
 - name: 'bing-ads'

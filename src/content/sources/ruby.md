@@ -45,7 +45,7 @@ analytics = Segment::Analytics.new({
 })
 ```
 
-**Note**: You can find your `Source ID` in the settings section of your MetaRouter App.
+**Note:** You can find your `Source ID` in the settings section of your MetaRouter App.
 
 ## Calls in Ruby
 

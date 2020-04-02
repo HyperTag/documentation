@@ -64,11 +64,11 @@ We’re working to provide trusted partners with API Keys that provide access to
 
 ### Users and Organizations
 
-In order to access and control pipelines in the MetaRouter platform, we give control of these operations to `Organizations`. `Users` are added to `Organizations` in order to utilize the org's control over those pipelines. Once an person is added to an `Organization`, they are titled either `Owner` or `User`.
+In order to access and control pipelines in the MetaRouter platform, we give control of these operations to **Organizations**. **Users** are added to Organizations in order to utilize the org's control over those pipelines. Once a person is added to an Organization, they are titled either **Owner** or **User**.
 
-Organization `Owners` have full read/write control over everything linked to that Organization, from editing pipelines to expanding User permissions. You can consider this role as having administrative privileges for this Organization.
+Organization Owners have full read/write control over everything linked to that Organization, from editing pipelines to expanding User permissions. You can consider this role as having administrative privileges for this Organization.
 
-Organization `Users` have specific read/write control over pipelines linked to that Organization, however cannot read the contents of Connections and cannot change access of other Users to their Organization.
+Organization Users have specific read/write control over pipelines linked to that Organization, however cannot read the contents of Connections and cannot change access of other Users to their Organization.
 
 #### Creating and Editing Users
 
@@ -99,13 +99,13 @@ mutation {
 }
 ```
 
-There is no direct access to auto signup a user from the API. However the auto signup feature will be automatically triggered when adding a user to your `Organization` that does not have an existing MetaRouter `User` account.
+There is no direct access to auto signup a user from the API. However the auto signup feature will be automatically triggered when adding a user to your Organization that does not have an existing MetaRouter User account.
 
 Note that editing a user's account and editing organization users are features on our roadmap and will be available soon!
 
 #### Creating and Editing Organizations
 
-In order to create any pipelines, you must first create an `Organization` to link those pipelines to. The `User` who creates an `Organization` is automatically given the `Organization Owner` title, giving them access to all possible functionality.
+In order to create any pipelines, you must first create an Organization to link those pipelines to. The User who creates an Organization is automatically given the **Organization Owner** title, giving them access to all possible functionality.
 
 Below is the mutation to create a new Organization:
 
@@ -125,7 +125,7 @@ Clickstream Pipelines focus on extracting or loading events in as close to real-
 
 ### Sources and Applications
 
-We currently support Analytics.js, servers, analytics-android, analytics-ios and analytics-react-native as sources in our Clickstream module. The SDKs we offer for those platforms forward events to our Clickstream API to be ingested and distributed by our system. These sources are grouped under an `Organization`, to allow you and other contributors that you specify to have access to view and/or edit them.
+We currently support Analytics.js, servers, analytics-android, analytics-ios and analytics-react-native as sources in our Clickstream module. The SDKs we offer for those platforms forward events to our Clickstream API to be ingested and distributed by our system. These sources are grouped under an Organization, to allow you and other contributors that you specify to have access to view and/or edit them.
 
 Upon source creation, a 21 character long `Source ID` is generated to identify your Application within our system and to ensure your events are routed to the correct destinations.
 
@@ -204,7 +204,7 @@ Mutations typically respond with a `statusMessage` object to alert you on if the
 - `id` : For operations that create new data, the id of the created object will be returned
 - `code` : Coming soon...
 
-Actions to mutate data within MetaRouter’s platform tend to follow a "create and update" pattern, where we separate out the functions to make a new object with the ability to change or delete it in order to have strict control over the permissions over data control. For example, anyone can run `createOrganization` and make a new `Organization` where they are the owner. However, only `Organization` owners can run `updateOrganization` that allows for adding/removing users, updating details, or deleting the org.
+Actions to mutate data within MetaRouter’s platform tend to follow a "create and update" pattern, where we separate out the functions to make a new object with the ability to change or delete it in order to have strict control over the permissions over data control. For example, anyone can run `createOrganization` and make a new Organization where they are the owner. However, only Organization owners can run `updateOrganization` that allows for adding/removing users, updating details, or deleting the org.
 
 ### Error Response
 
@@ -216,9 +216,8 @@ This is on our roadmap and currently being built out- check back soon for update
 
 Please contact us directly at [support@metarouter.io](support@metarouter.io) for access to the main developer console for MetaRouter’s public API.
 
-Within the black Header Area, you want to paste the JWT into the token field and the Organization ID (found within the URL of your Organizations dashboard on app.metarouter.io - app.metarouter.io/org/). This will embed that information within the header of all of your requests within the console and will provide access to query and mutation results for your organization. Make sure you select `Prod` as your GraphQL endpoint (defaults to `Staging` on page load) to make sure you are accessing data that resides on MetaRouter's Main Platform.
+Within the black Header Area, you want to paste the JWT into the token field and the Organization ID (found within the URL of your Organizations dashboard). This will embed that information within the header of all of your requests within the console and will provide access to query and mutation results for your organization. Make sure you select **Prod** as your GraphQL endpoint (defaults to **Staging** on page load) to make sure you are accessing data that resides on MetaRouter's Main Platform.
 
 ### API Reference Materials
 
 - [API Schema](https://super-collider.github.io/houston/schema/public-API-schema-0.3.0.html)
-- [API Roadmap](https://super-collider.github.io/houston/roadmap.html) coming soon...

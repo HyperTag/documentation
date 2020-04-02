@@ -10,11 +10,13 @@ tags: [sources]
 
 # MeteorJS
 
-**Note**: This package is not being actively developed or maintained by MetaRouter. However, it is still functional. If you would like to contribute to the package, please submit a pull request or email pete@astronomer.io.
+<div class="warning">
+This package is not being actively developed or maintained by MetaRouter. However, it is still functional. If you would like to contribute to the package, please submit a pull request or email pete@astronomer.io.
+</div>
 
 If you're using the Meteor JavaScript app platform and haven't instrumented your app for user analytics yet, our [Meteor Package](https://atmospherejs.com/astronomerio/core) will instrument for you automatically!
 
-**Note**: If you are using the package `percolatestudio:segment.io`, you will need to remove this before installing MetaRouter. This packages sets a global `analytics` object and makes the package unfunctional.
+**Note:** If you are using the package `percolatestudio:segment.io`, you will need to remove this before installing MetaRouter. This packages sets a global `analytics` object and makes the package unfunctional.
 
 ```json
 {
@@ -58,15 +60,12 @@ To configure your Meteor app, follow the steps below:
 
 ## Additional MeteorJS Features
 
-`disableUserTracking:` `true` or `false`: This tracks aliased users.
+- `disableUserTracking` : (Boolean) Tracks aliased users
+- `disableRouteTracking` : (Boolean) Sends a Page call as routing is engaged within your Meteor App
+- `disableMethodTracking` : (Boolean) Sends a Track call as methods are engaged within your Meteor App
+- `ignoreNotFoundWarning` : (Boolean) Prevents a warning from appearing in the console if there is no `Source ID`
 
-`disableRouteTracking:` `true` or `false`: This sends a Page call as routing is engaged within your Meteor App.
-
-`disableMethodTracking:` `true` or `false`: This sends a Track call as methods are engaged within your Meteor App.
-
-`ignoreNotFoundWarning:` `true` or `false`: This prevents a warning from appearing in the console if there is no `Source ID`.
-
-**Note**: Every integration you activate will require you to set up a separate account with specific keys or ids that let MetaRouter know which account is yours
+**Note:** Every integration you activate will require you to set up a separate account with specific keys or ids that let MetaRouter know which account is yours
 
 To confirm that events are being sent, follow the steps below:
 
