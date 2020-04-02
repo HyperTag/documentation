@@ -3,6 +3,14 @@ table {
   @apply w-full;
   table-layout: fixed;
 }
+/* this is used mainly for the GA page */
+table + p > sub {
+  @apply relative;
+  @apply inline-block;
+  @apply leading-normal;
+  font-size: 11px;
+  top: -1.5rem;
+}
 td,
 th {
   @apply py-1 pr-2 pl-2;

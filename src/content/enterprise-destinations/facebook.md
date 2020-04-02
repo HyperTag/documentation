@@ -151,7 +151,7 @@ All Pixel Standard Events will be mapped with the following properties.
 | `content_type`     | String                       | Either `product` or `product_group` based your products array length or on `categoryToContentTypeMapping[category_name]` parameter from **integrations.yaml** |
 | `content_name`     | String                       | The `track.name()` property of the payload                                                                                                                    |
 | `content_category` | String                       | The `track.category() || ''` of the page / or category of the first product `product[0].category()`                                                           |
-| `currency`         | String                       | The currency for the specified value. Mapped from `track.currency()` or to `'USD'` if no currency is specified                                                |
+| `currency`         | String                       | The currency for the specified value. Mapped from `track.currency()` or to "USD" if no currency is specified                                                  |
 | `search_string`    | String                       | `query` parameter from properties for the `Search` event or `undefined` for other events, for example `track.proxy('properties.query') || undefined`          |
 | `value`            | String                       | The field you've mapped for the event in your `valueFieldIdentifier` property from **integrations.yaml**                                                      |
 

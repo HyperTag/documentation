@@ -48,31 +48,31 @@ You can configure the Google Analytics account and the event field mappings for 
 
 ### Config
 
-#### `api` (Required) - Object
+#### `api` (required) - Object
 
 The purpose of this section is to allow you to define Google Analytics' specific API information.
 The structure of the `api` property is the following:
 
-- `"endpoint": "https://www.googleanalytics.com/collect"` _(required)_ - String
+- `"endpoint": "https://www.googleanalytics.com/collect"` (required) - String
   - Request's endpoint
   - **Note:** This is GA's API endpoint and should not be altered.
-- `"method": "post"` _(optional)_ - String
+- `"method": "post"` (optional) - String
   - Request's method
   - Available values: `"get"`, `"post"`
   - Default value: `"get"`
   - **Note:** GA's API is expecting a POST request, this should not be altered.
-- `"keepAliveAgent": true` _(optional)_ - Bool / Object
+- `"keepAliveAgent": true` (optional) - Bool / Object
   - Request's HttpAgent or HttpsAgent (automatically detected based on endpoint's structure)
   - Possible values:
     - `false` => request agent won't be set
     - `true` => the following default settings will be used as request agent: `{ maxSockets: 100, maxFreeSockets: 10, timeout: 60000, freeSocketTimeout: 30000 }`
     - Object of agent settings => passed settings will be used as request agent
   - **Note:** This should be enabled and set based on your needs and does not affect GA's capabilities.
-- `"includePayloadInURL": true` _(optional)_ - Bool
+- `"includePayloadInURL": true` (optional) - Bool
   - If this is set to `true`, the request's URL will include the encoded payload
   - **Note:** GA's API requires the payload to be included inside the URL.
 
-#### `events` (Required) - Object
+#### `events` (required) - Object
 
 The purpose of this section is to allow you to define event-specific information based on the event type. Because GA allows you to track `page()` and standard and custom `track()` calls, we divided this into the following sections:
 
@@ -89,7 +89,7 @@ The purpose of this section is to allow you to define event-specific information
 
 All GA API calls require specific properties to be sent regardless of the event type that's being triggered, page or track. This section allows you to define all the properties that are common for all API calls that'll go to GA.
 
-Here's how this section should look like for GA:
+Here's how this section should look for GA:
 
 ```json
 "general": [
@@ -107,21 +107,22 @@ Here's how this section should look like for GA:
 
 **Note:** All GA API calls require the following properties to be sent:
 
-| GA Parameter | Value                          | Explanation                              | Notes                                                 |
-| :----------- | :----------------------------- | :--------------------------------------- | :---------------------------------------------------- |
-| `v`          | "1"                            | protocol version, currently at version 1 |                                                       |
-| `tid`        | your Tracking ID               | universal google analytics tracking ID   | Replace `<TRACKING_ID_HERE>` with your GA Tracking ID |
-| `cu`         | `properties.currency` property | currency uppercase                       | default value: `USD`                                  |
-| `uip`        | `context.ip` property          | user’s ip                                |                                                       |
-| `ua`         | `context.userAgent` property   | user agent                               |                                                       |
+| GA Parameter | Value                          | Explanation                                                                                   |
+| :----------- | :----------------------------- | :-------------------------------------------------------------------------------------------- |
+| [20]         | [30]                           | [30]                                                                                          |
+| `v`          | "1"                            | protocol version, currently at version 1                                                      |
+| `tid`        | your Tracking ID               | universal google analytics tracking ID, Replace `<TRACKING_ID_HERE>` with your GA Tracking ID |
+| `cu`         | `properties.currency` property | currency uppercase, defaults to "USD"                                                         |
+| `uip`        | `context.ip` property          | user’s ip                                                                                     |
+| `ua`         | `context.userAgent` property   | user agent                                                                                    |
 
-- All other properties included in the `general` section are nice to have.
+All other properties included in the `general` section are nice to have.
 
 #### `page` section
 
 All GA API calls require the `t` (hit type) parameter to be sent. For `page()` calls, GA is expecting a hit type `"pageview"`.
 
-Here's how this section should look like for GA:
+Here's how this section should look for GA:
 
 ```json
 "page": [
@@ -133,7 +134,7 @@ Here's how this section should look like for GA:
 
 The purpose of this section is to allow you to define the properties that you want to send over to GA for a specific event.
 
-Here's how this section should look like for GA for the main standard events:
+Here's how this section should look for GA for the main standard events:
 
 ```json
 "track": [
@@ -317,6 +318,7 @@ Here's how this section should look like for GA for the main standard events:
 
 | GA Parameter | Value                                   | Explanation                                                                       |
 | :----------- | :-------------------------------------- | :-------------------------------------------------------------------------------- |
+| [20]         | [30]                                    | [30]                                                                              |
 | `t`          | varies depending on the triggered event | available values: `event`, `transaction`, `item`, `social`, `exception`, `timing` |
 | `ec`         | `properties.category` property          | event category                                                                    |
 | `ea`         | `properties.action` property            | event action                                                                      |
@@ -325,7 +327,7 @@ Here's how this section should look like for GA for the main standard events:
 
 The purpose of this section is to allow you to specify if a custom event (event that is not mapped inside the `track` section) should be triggered or not. It also allows you to add a list of specific properties that should exist for all custom events.
 
-Here's how this section should look like for GA:
+Here's how this section should look for GA:
 
 ```json
 "customTrack": {
@@ -344,7 +346,7 @@ Here's how this section should look like for GA:
 - `allowAnyProperty` set to `true` will append the track `properties` to the final payload using the same `key: value` structure and naming
 - `mappedProperties` allows you to define properties that you want to add to all your custom track calls
 
-#### `cookies` _(Optional)_ - String
+#### `cookies` (optional) - String
 
 Our Analytics.js library includes a sync-injector. The purpose of this sync-injector is to load the minimal 3rd party tag in order for it to drop it's first party cookies. It will then grab these values and include those into the event's final structure.
 
@@ -373,13 +375,14 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value                             | Explanation    |
 | :----------- | :-------------------------------- | :------------- |
+| [20]         | [30]                              | [30]           |
 | `t`          | "event"                           | Hit type       |
 | `ea`         | "view"                            | Event action   |
 | `ec`         | "list"                            | Event category |
 | `pa`         | "detail"                          | Product action |
 | `il1nm`      | "category" from your `track` call | List name      |
 
-- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `N` 1, because there's only one product
+<sub>See: [Product list fields](#7-product-list-fields) with `<type>` "pr" and `N` 1, because there's only one product</sub>
 
 ### Promotion events
 
@@ -409,9 +412,10 @@ Besides [the mandatory fields](#1-mandatory-fields), the parameters for this cal
 
 | GA Parameter | Value   | Explanation |
 | :----------- | :------ | :---------- |
+| [20]         | [30]    | [30]        |
 | `t`          | "event" | Hit type    |
 
-- [Promotion fields](#2-promotion-fields)
+<sub>See: [Promotion fields](#2-promotion-fields)</sub>
 
 #### Promotion Clicked
 
@@ -419,12 +423,13 @@ Besides [the mandatory fields](#1-mandatory-fields), the parameters for this cal
 
 | GA Parameter | Value         | Explanation    |
 | :----------- | :------------ | :------------- |
+| [20]         | [30]          | [30]           |
 | `t`          | "event"       | Hit type       |
 | `ea`         | "click"       | Event action   |
 | `ec`         | "interaction" | Event category |
 | `pa`         | "click"       | Product action |
 
-- [Promotion fields](#2-promotion-fields)
+<sub>See: [Promotion fields](#2-promotion-fields)</sub>
 
 ### Product Events
 
@@ -434,12 +439,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value      | Explanation    |
 | :----------- | :--------- | :------------- |
+| [20]         | [30]       | [30]           |
 | `t`          | "event"    | Hit type       |
 | `ea`         | "click"    | Event action   |
 | `ec`         | "ordering" | Event category |
 | `pa`         | "click"    | Product action |
 
-- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+<sub>See: [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product</sub>
 
 #### Product Viewed
 
@@ -447,12 +453,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value      | Explanation    |
 | :----------- | :--------- | :------------- |
+| [20]         | [30]       | [30]           |
 | `t`          | "event"    | Hit type       |
 | `ea`         | "view"     | Event action`  |
 | `ec`         | "ordering" | Event category |
 | `pa`         | "detail"   | Product action |
 
-- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+<sub>See: [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product</sub>
 
 ### Cart events
 
@@ -462,12 +469,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value      | Explanation    |
 | :----------- | :--------- | :------------- |
+| [20]         | [30]       | [30]           |
 | `t`          | "event"    | Hit type       |
 | `ea`         | "view"     | Event action   |
 | `ec`         | "ordering" | Event category |
 | `pa`         | "add"      | Product action |
 
-- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+<sub>See: [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product</sub>
 
 **Note:** at this stage we can't associate a `cart_id` to send to GA.
 
@@ -477,12 +485,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value    | Explanation    |
 | :----------- | :------- | :------------- |
+| [20]         | [30]     | [30]           |
 | `t`          | "event"  | Hit type       |
 | `ea`         | "view"   | Event action   |
 | `ec`         | "cart"   | Event category |
 | `pa`         | "remove" | Product action |
 
-- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product
+<sub>See: [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` 1, because there's only one product</sub>
 
 **Note:** at this stage we can't associate a `cart_id` to send to GA.
 
@@ -492,12 +501,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value      | Explanation    |
 | :----------- | :--------- | :------------- |
+| [20]         | [30]       | [30]           |
 | `t`          | "event"    | Hit type       |
 | `ea`         | "view"     | Event action   |
 | `ec`         | "cart"     | Event category |
 | `pa`         | "checkout" | Product action |
 
-- [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
+<sub>See: [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length</sub>
 
 ### Checkout events
 
@@ -505,7 +515,7 @@ The biggest differentiator between e-commerce and enhanced e-commerce is support
 
 ![checkout-funnel](/images/google-analytics-checkout-funnel.png)
 
-Then you'll instrument your checkout flow with `Viewed Checkout Step` and `Completed Checkout Step` for each step of the funnel you configured in the Google Analytics admin interface, passing the step number and step-specific options through as a property of those events:
+Then you'll instrument your checkout flow with **Viewed Checkout Step** and **Completed Checkout Step** for each step of the funnel you configured in the Google Analytics admin interface, passing the step number and step-specific options through as a property of those events:
 
 ```javascript
 //upon arrival at first checkout step ('Review Cart' per the screenshot example above)
@@ -559,7 +569,7 @@ analytics.track('Completed Checkout Step', {
 
 **Note**: `shipping_method` and `payment_method` are semantic properties so if you want to send that information, please do so in this exact spelling!
 
-You can have as many or as few steps in the checkout funnel as you'd like. The 4 steps above merely serve as an example. Note that you'll still need to track the `Order Completed`event per our standard e-commerce tracking API after you've tracked the checkout steps.
+You can have as many or as few steps in the checkout funnel as you'd like. The four steps above merely serve as an example. Note that you'll still need to track the **Order Completed** event per our standard e-commerce tracking API after you've tracked the checkout steps.
 
 #### Checkout Started
 
@@ -567,12 +577,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value            | Explanation    |
 | :----------- | :--------------- | :------------- |
+| [20]         | [30]             | [30]           |
 | `t`          | "event"          | Hit type       |
 | `ea`         | "start_checkout" | Event action   |
 | `ec`         | "cart"           | Event category |
 | `pa`         | "checkout"       | Product action |
 
-- [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length
+<sub>See: [Product list fields](#7-product-list-fields) with `<type>` "list" and `<ProductIndex>` between 1 and products length</sub>
 
 #### Checkout Step Viewed
 
@@ -582,9 +593,10 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value      | Explanation    |
 | :----------- | :--------- | :------------- |
+| [20]         | [30]       | [30]           |
 | `pa`         | "checkout" | Product action |
 
-- [Checkout fields](#3-checkout-fields)
+<sub>See: [Checkout fields](#3-checkout-fields)</sub>
 
 #### Checkout Step Completed
 
@@ -592,9 +604,10 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value             | Explanation    |
 | :----------- | :---------------- | :------------- |
+| [20]         | [30]              | [30]           |
 | `pa`         | "checkout_option" | Product action |
 
-- [Checkout fields](#3-checkout-fields)
+<sub>See: [Checkout fields](#3-checkout-fields)</sub>
 
 #### Payment Info Entered
 
@@ -602,9 +615,10 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value             | Explanation    |
 | :----------- | :---------------- | :------------- |
+| [20]         | [30]              | [30]           |
 | `pa`         | "checkout_option" | Product action |
 
-- [Checkout fields](#3-checkout-fields)
+<sub>See: [Checkout fields](#3-checkout-fields)</sub>
 
 ### Ordering events
 
@@ -614,13 +628,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value         | Explanation    |
 | :----------- | :------------ | :------------- |
+| [20]         | [30]          | [30]           |
 | `t`          | "transaction" | Hit type       |
 | `ea`         | "update"      | Event action   |
 | `ec`         | "cart"        | Event category |
 | `pa`         | "checkout"    | Product action |
 
-- [Transaction fields](#4-transaction-fields)
-- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
+<sub>See: [Transaction fields](#4-transaction-fields) and [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length</sub>
 
 #### Order Completed
 
@@ -628,15 +642,15 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value             | Explanation    |
 | :----------- | :---------------- | :------------- |
+| [20]         | [30]              | [30]           |
 | `t`          | "transaction"     | Hit type       |
 | `ea`         | "order_completed" | Event action   |
 | `ec`         | "cart"            | Event category |
 | `pa`         | "purchase"        | Product action |
 
-- [Transaction fields](#4-transaction-fields)
-- [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
+<sub>See: [Transaction fields](#4-transaction-fields) and [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length</sub>
 
-If you want to send coupon data to your `Order Completed` event when using Enhanced E-commerce, you can simply add the `coupon` property on the order level or the product level or both.
+If you want to send coupon data to your **Order Completed** event when using Enhanced E-commerce, you can simply add the `coupon` property on the order level or the product level or both.
 
 Google Analytics documentation emphasizes on the fact that we should send a `total` field comprise of the final cost to the client, including tax, shipping etc. For better flexibility and total control over tracking, we let you decide how to calculate how coupons and discounts are applied.
 
@@ -683,14 +697,13 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value         | Explanation    |
 | :----------- | :------------ | :------------- |
+| [20]         | [30]          | [30]           |
 | `t`          | "transaction" | Hit type       |
 | `ea`         | "refund"      | Event action   |
 | `ec`         | "cart"        | Event category |
 | `pa`         | "refund"      | Product action |
 
-- [Transaction fields](#4-transaction-fields) for `negative` transactions
-
-* [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length
+<sub>See: [Transaction fields](#4-transaction-fields) for `negative` transactions and [Product list fields](#7-product-list-fields) with `<type>` "pr" and `<ProductIndex>` between 1 and products length</sub>
 
 For full refunds, fire this event whenever an order/transaction gets refunded:
 
@@ -722,10 +735,11 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value    | Explanation    |
 | :----------- | :------- | :------------- |
+| [20]         | [30]     | [30]           |
 | `t`          | "social" | Hit type       |
 | `sa`         | "share"  | Product action |
 
-- [Social details fields](#5-social-details-fields)
+<sub>See: [Social details fields](#5-social-details-fields)</sub>
 
 #### Cart Shared
 
@@ -733,10 +747,11 @@ This query takes advantage of GA's Enhanced E-Commerce. Besides [the mandatory f
 
 | GA Parameter | Value    | Explanation    |
 | :----------- | :------- | :------------- |
+| [20]         | [30]     | [30]           |
 | `t`          | "social" | Hit type       |
 | `sa`         | "share"  | Product action |
 
-- [Social details fields](#5-social-details-fields)
+<sub>See: [Social details fields](#5-social-details-fields)</sub>
 
 #### Product Reviewed
 
@@ -744,10 +759,11 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 
 | GA Parameter | Value    | Explanation    |
 | :----------- | :------- | :------------- |
+| [20]         | [30]     | [30]           |
 | `t`          | "social" | Hit type       |
 | `sa`         | "share"  | Product action |
 
-- [Review fields](#5-social-details-fields) with `sn` hard-coded
+<sub>See: [Fields hard-coded with sn](#5-social-details-fields)</sub>
 
 ### Fields mapping
 
@@ -755,6 +771,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 
 | GA Field | Mapping                                                                                   | Explanation                              |
 | :------- | :---------------------------------------------------------------------------------------- | :--------------------------------------- |
+| [20]     | [30]                                                                                      | [30]                                     |
 | `v`      | "1"                                                                                       | protocol version, currently at version 1 |
 | `tid`    | `trackingId` from your **integrations.yaml**                                              | universal google analytics tracking ID   |
 | `t`      | `pageview`, `event`, `social`, `transaction`, `item`, `exception`, `appview` or `timing`. | hit type                                 |
@@ -766,6 +783,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 
 | GA Field   | Analytics.js property from `properties` obj | Explanation        |
 | :--------- | :------------------------------------------ | :----------------- |
+| [20]       | [30]                                        | [30]               |
 | `promo1id` | `promotion_id`                              | promotion id       |
 | `promo1cr` | `creatives`                                 | promotion creative |
 | `promo1nm` | `name`                                      | promotion name     |
@@ -775,6 +793,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 
 | GA Field | Analytics.js property from `properties` obj | Explanation   |
 | :------- | :------------------------------------------ | :------------ |
+| [20]     | [30]                                        | [30]          |
 | `cos`    | `step`                                      | checkout step |
 | `col`    | `checkout_id`                               | checkout id   |
 
@@ -782,6 +801,7 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 
 | GA Field | Analytics.js property from `properties` obj | Explanation                                                                                                                                                                                                                                                                            |
 | :------- | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [20]     | [30]                                        | [30]                                                                                                                                                                                                                                                                                   |
 | `ti`     | `order_id`                                  | transaction id                                                                                                                                                                                                                                                                         |
 | `ta`     | `affiliation`                               | transaction affiliation                                                                                                                                                                                                                                                                |
 | `tr`     | `revenue`                                   | transaction revenue - although we have a revenue field in Analytics.js, that field does not include shipping and applied coupons, taxes, promotions etc. GA documentation emphasizes that this field should be comprised of the final cost to the client, including tax, shipping etc. |
@@ -795,6 +815,7 @@ For `negative` transactions, we map negative values of `revenue`, `shipping`, `t
 
 | GA Field | Analytics.js property from `properties` obj                    | Observation                                                                              |
 | :------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+| [20]     | [30]                                                           | [30]                                                                                     |
 | `sn`     | `share_via`                                                    | share network - hard-coded as `product-review` for [Product Reviewed](#product-reviewed) |
 | `st`     | `cart-<cart_id>:<product_id1>:<product_id2>:...:<product_idn>` |                                                                                          |
 
@@ -804,12 +825,14 @@ For `Review events` we hard-code `sn` as `product-review`
 
 | GA field | Analytics.js property from `properties` obj | Observation                                                                        |
 | :------- | :------------------------------------------ | :--------------------------------------------------------------------------------- |
+| [20]     | [30]                                        | [30]                                                                               |
 | `dl`     | `<baseURL><searchParam>=<query>`            | use `searchParam` and `baseUrl` from **integrations.yaml** to set the query string |
 
 #### 7. Product list fields
 
 | GA field                  | Analytics.js property from `properties` obj | Observation      |
 | :------------------------ | :------------------------------------------ | :--------------- |
+| [20]                      | [30]                                        | [30]             |
 | `<type><ProductIndex>id`  | `sku` or `product_id`                       | product ID       |
 | `<type><ProductIndex>nm`  | `name`                                      | product name     |
 | `<type><ProductIndex>ca`  | `category`                                  | product category |
@@ -820,11 +843,11 @@ For `Review events` we hard-code `sn` as `product-review`
 | `<type><ProductIndex>qty` | `quantity`                                  | product quantity |
 | `<type><ProductIndex>cc`  | `coupon`                                    | product coupon   |
 
-Where `<type>` is either `"pr"` - for simple products, or `il1pi` - "il" prefix stands for `Impression List`.
+Where `<type>` is either `"pr"` - for simple products, or `il1pi` - "il" prefix stands for "Impression List".
 
 **Note:** `<ProductIndex>` stands for a product index number. It's an integer from 1 to 200 (limited to 200) and is not an array index. `il1pi1id`, `il1pi2id`, `il1pi3id`...`il1pi200id` are separate parameters that are sent individually.
 
-**Note 2:** besides the hard limit of 200 products do not forget about the 8kb/request hard limit that the GA collect API has.
+In addition to the hard limit of 200 products do not forget about the 8kb/request hard limit that the GA collect API has.
 
 ## Complete GA configurations
 

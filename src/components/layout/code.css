@@ -204,3 +204,7 @@ h3 code,
 h4 code {
   color: inherit !important;
 }
+
+sub code {
+  font-size: inherit !important;
+}
