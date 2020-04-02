@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import _ from 'lodash'
+import slugify from 'slugify'
 
 const ListItem = ({ node }) => {
   return (
@@ -86,7 +87,7 @@ const ContentNav = () => {
             {node.collectionTitle && (
               <>
                 <h2>{node.collectionTitle}</h2>
-                <ul>
+                <ul data-title={slugify(node.collectionTitle, { lower: true })}>
                   {node.nodes.map(subNode => (
                     <ListItem node={subNode} />
                   ))}

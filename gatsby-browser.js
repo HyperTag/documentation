@@ -33,6 +33,7 @@ exports.onRouteUpdate = () => {
     if (tag === 'h2') {
       e.target.classList.toggle('collapsed')
       e.target.nextSibling.classList.toggle('hidden')
+      setNavCollapsedState()
     }
 
     // set class when link is clicked (hashchange does not get triggered)
@@ -120,6 +121,8 @@ exports.onRouteUpdate = () => {
   var onScroll = throttle(function() {
     document.querySelectorAll('main section').forEach(checkSectionOffset)
     document.querySelectorAll('main h2').forEach(checkSubheadingOffset)
+
+    setNavScrollPosition()
   }, 250)
 
   // append a list of tags to the primary heading, with values taken from its data attrs
@@ -152,7 +155,38 @@ exports.onRouteUpdate = () => {
     })
   }
 
+  var setNavCollapsedState = function() {
+    var collapsedGroups = navList.querySelectorAll('.scrollbox ul.hidden')
+    var collapsed = collapsedGroups.length
+      ? Array.from(collapsedGroups).map(function(group) {
+          return group.dataset.title
+        })
+      : null
+
+    sessionStorage.setItem('navStateCollapsed', collapsed.join(','))
+  }
+
+  var setNavScrollPosition = function() {
+    sessionStorage.setItem('navStateScroll', navList.querySelector('.scrollbox').scrollTop)
+  }
+
+  var syncNavState = function() {
+    var titles = sessionStorage.getItem('navStateCollapsed')
+    var scrollPosition = sessionStorage.getItem('navStateScroll')
+
+    if (titles) {
+      titles.split(',').forEach(function(title) {
+        navList.querySelector(`[data-title=${title}]`).classList.add('hidden')
+      })
+    }
+
+    if (scrollPosition) {
+      navList.querySelector('.scrollbox').scrollTop = Number(scrollPosition)
+    }
+  }
+
   // functions to run onload
+  syncNavState()
   setCurrent()
   renderTags()
   styleTableCells()
@@ -161,4 +195,5 @@ exports.onRouteUpdate = () => {
   window.addEventListener('hashchange', setCurrent)
   document.addEventListener('scroll', onScroll)
   navList.addEventListener('click', onClickNav)
+  navList.querySelector('.scrollbox').addEventListener('scroll', setNavScrollPosition)
 }
