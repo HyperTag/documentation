@@ -32,17 +32,17 @@ Our connector periodically runs an ETL (Extract - Transform - Load) process that
 
 ### Setting up your BigQuery dataset
 
-**\*Note**: If you already have your dataset created, you can skip this step\*
+**Note:** If you already have your dataset created, you can skip this step\*
 
 Once you've logged into your GCP account and activated BigQuery, it's time to create your BigQuery dataset.
 
 Follow [Google's guide](https://cloud.google.com/bigquery/docs/datasets#bigquery_create_dataset-console) to get your dataset created. Make sure that you keep this dataset name handy for when you go to put your information in on MetaRouter.
 
-**\*Note**: Each unique `track` event will create a new table, and each property sent creates a new column in that table. For this reason, think about creating a detailed tracking plan to make sure that all events being passed to MetaRouter are necessary and consistent.\*
+**Note:** Each unique `track` event will create a new table, and each property sent creates a new column in that table. For this reason, think about creating a detailed tracking plan to make sure that all events being passed to MetaRouter are necessary and consistent.
 
 ### Setting up your authentication service account
 
-**\*Note**: If you already have your auth json, you can skip this step\*
+**Note:** If you already have your auth json, you can skip this step
 
 Now that you have your dataset created, it is time to get GCP authentication set up. This is accomplished through creating a _service account_.
 
@@ -65,7 +65,7 @@ In the [MetaRouter app](https://app.metarouter.io/), head to the pipeline you wi
 
 Now it is time to input the information from GCP and BigQuery into the _Destination Details_. Under `Project ID`, enter the GCP project you have the desired BigQuery dataset tied to. Then, under `Data Location` enter the location you selected when setup up your dataset (step 1). The location will most often be 'Default', but if you selected another region, enter it here. Please use the region key (e.g. `US` or `europe-west3`). Lastly, under `BigQuery Dataset`, enter the name of your existing or newly created dataset (step 1).
 
-**\*Note**: Make sure you only enter the dataset name, not the full dataset id\*
+**Note:** Make sure you only enter the dataset name, not the full dataset id
 
 With those details in, you can go on to _Create Connection_. This is where you are granting MetaRouter teh ability to interface with your GCP account using that service account JSON. Under `Friendly Name`, enter in your connection name (e.g. Production GCP Connection). Then, copy the contents of that service account JSON file into the field for `Google Cloud Auth JSON`. Once that is completed, hit `Save` at the bottom of the form.
 

@@ -59,7 +59,7 @@ On top of our standard calls, you're free to do a few extra things with our Mixp
   - `Add People Properties` - These are set off of `identify` API calls and allow you to explicitly set properties that you want to track.
   - `Add Super Properties` - This lets you explicitly set the super properties that you wish to track.
 
-_Note that, if `Set All Traits by Default` is enabled, you will not need to specify explicit people or super properties._
+Note that, if `Set All Traits by Default` is enabled, you will not need to specify explicit people or super properties.\_
 
 - By default, we will track all pages to Mixpanel with a consolidated event name. This sends all `page` and `screen` calls as `Loaded a Page` or `Loaded a Screen` events. If you wish to do this in a different way, disable the `Consolidate Page Calls` option and see the additional options below.
 

@@ -18,7 +18,7 @@ Customer.io is an automated email based on customer behavioral data. It allows y
 
 Using Customer.io involves placing their JavaScript snippet in the footer of your website and using their client libraries.
 
-_Note that Customer.io accepts a maximum of 30 unique traits per identify call. If you have more than 30 traits attached to these calls, some will not be passed. Furthermore, Customer.io will only ingest a certain amount of data for each call sent to it. If you are not seeing specific attributes for the calls you are sending to Customer.io, ensure that you have not exceeded this limit._
+**Note that Customer.io accepts a maximum of 30 unique traits per identify call. If you have more than 30 traits attached to these calls, some will not be passed. Furthermore, Customer.io will only ingest a certain amount of data for each call sent to it. If you are not seeing specific attributes for the calls you are sending to Customer.io, ensure that you have not exceeded this limit.**
 
 [Learn more about customer.io.](https://customer.io/)
 

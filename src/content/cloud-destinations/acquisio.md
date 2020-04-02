@@ -10,7 +10,7 @@ tags: [cloud, destinations]
 
 # Acquisio
 
-MetaRouter makes it easy to send your data to Acquisio. Once you follow the steps below, your data will be routed through our platform and pushed to Acquisio in the appropriate format. Note that this connector supports client-side analytics.js only.
+MetaRouter makes it easy to send your data to Acquisio. Once you follow the steps below, your data will be routed through our platform and pushed to Acquisio in the appropriate format. Note that this connector supports client-side Analytics.js only.
 
 ## What is Acquisio and how does it work?
 

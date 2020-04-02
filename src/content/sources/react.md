@@ -65,7 +65,7 @@ import analytics from '@metarouter/analytics-react-native'
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
-**\*Note**: Users are automatically assigned an anonymousID before you identify them. The userID is then what connects anonymous activity across mobile iOS devices.\*
+**Note**: Users are automatically assigned an anonymousID before you identify them. The userID is then what connects anonymous activity across mobile iOS devices.
 
 For example, a simple `identify` looks something like this:
 
@@ -77,7 +77,7 @@ analytics.identify("a user's id", {
 
 This call identifies a user by his unique User ID (the one you know him by in your database) and labels him with `name` and `email` traits.
 
-**\*Note**: When you add an `identify` to your React Native app, you will need to replace all those hard-coded strings with details about the currently logged-in user.\*
+**Note**: When you add an `identify` to your React Native app, you will need to replace all those hard-coded strings with details about the currently logged-in user.
 
 Analytics works on its own background thread, so it will never block the main thread for the UI or the calling thread.
 
@@ -102,7 +102,7 @@ analytics.track('Item Purchased', {
 
 This example `track` call tells us that a user just triggered an "Item Purchased" event for an `item` called "Cat Feather Toy" and `revenue` of 9.99.
 
-**\*Note**: In order to use a `track` call, you must specify a name for the event you want to track whereas properties and options are all optional fields.\*
+**Note**: In order to use a `track` call, you must specify a name for the event you want to track whereas properties and options are all optional fields.
 
 A lot of analytics tools support custom event mapping so, with `track` implemented, you’ll be able to attribute events to your users and start targeting them in a more informed and relevant way.
 

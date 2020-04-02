@@ -24,7 +24,7 @@ With MetaRouter, you can use Lucky Orange without having to install their JavaSc
 
 To get started sending events to Lucky Orange, first sign up for [an account](https://www.luckyorange.com/).
 
-**\*Note**: Lucky Orange is available as a client-side destination only.\*
+**Note:** Lucky Orange is available as a client-side destination only.
 
 ### Lucky Orange Side
 
@@ -34,7 +34,7 @@ Begin by logging into your [Lucky Orange](https://www.luckyorange.com/) account.
 
 The generated Lucky Orange tracking code contains your site id (shown blurred in the above image). Copy this value.
 
-**\*Note**: You can always grab this value by accessing Settings > General.\*
+**Note**: You can always grab this value by accessing **Settings > General**.
 
 ### MetaRouter Side
 
@@ -46,7 +46,7 @@ This settings page allows you to connect an [e-commerce event](/sources/analytic
 
 #### Auto-Tagging
 
-Auto-Tagging option will send all analytics.js triggered events from your website to Lucky Orange's API. You can customize your tags with each `track()` call - more details on [Track section](#track).
+Auto-Tagging option will send all Analytics.js triggered events from your website to Lucky Orange's API. You can customize your tags with each `track()` call - more details on [Track section](#track).
 
 ![luckyorange3](/images/luckyorange3.png)
 
@@ -54,12 +54,12 @@ Auto-Tagging option will send all analytics.js triggered events from your websit
 
 To map an event to a specific tag, uncheck _Auto-Tagging_ option - _Map Analytics Events to Lucky Orange tags_ section will be available. Here you can define your own mappings between an [e-commerce event](/sources/analytics-js-ecommerce-spec/) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
 
-- Event name (required) - the name of your analytics.js event
+- Event name (required) - the name of your Analytics.js event
 - Tag (required) the name of your Lucky Orange tag
 - Star - by checking this box, the triggered tag will be starred on your Lucky Orange's dashboard
 - Overwrite - by checking this box, the triggered tag will overwrite any existing tags on your Lucky Orange's dashboard
 
-**\*Note:** Only triggered events that have a mapping defined will be sent to Lucky Orange's APIs.\*
+**Note:** Only triggered events that have a mapping defined will be sent to Lucky Orange's APIs.
 
 ![luckyorange4](/images/luckyorange4.png)
 

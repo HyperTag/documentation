@@ -1,9 +1,9 @@
 ---
 collectionKey: enterprise-destinations
 
-navText: 'Facebook'
+navText: 'Facebook Pixel'
 
-path: '/enterprise-destinations/facebook/'
+path: '/enterprise-destinations/facebook-pixel/'
 
 tags: [enterprise, destinations]
 ---
@@ -12,7 +12,7 @@ tags: [enterprise, destinations]
 
 MetaRouter makes it easy to send your data to Facebook Pixel. Once you follow the steps below, your data will be routed through our platform and pushed to Facebook Pixel in the appropriate format.
 
-**\*Note:** MetaRouter's Facebook Pixel destination consolidates what was previously Facebook's "Ads for Websites" suite, which consisted of both Facebook Custom Audiences and Facebook Conversion Tracking.\*
+**Note:** MetaRouter's Facebook Pixel destination consolidates what was previously Facebook's "Ads for Websites" suite, which consisted of both Facebook Custom Audiences and Facebook Conversion Tracking.
 
 ## What is Facebook Pixel and how does it work?
 
@@ -157,10 +157,6 @@ By default, we map some of the Analytics.js Standard E-commerce events to Pixel 
             <td>Product Added to Wishlist</td>
             <td>AddToWishlist</td>
             <td>content_name, content_category, content_ids, contents, currency, value</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>CompleteRegistration</td>
         </tr>
     </tbody>
 </table>

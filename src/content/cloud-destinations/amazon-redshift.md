@@ -34,7 +34,7 @@ Our connector periodically runs an ETL (Extract - Transform - Load) process that
 
 ## Step 1. Pick a cluster that fits your needs
 
-**\*Note**: If you already have a Redshift cluster, go ahead to step 3\*
+**Note:** If you already have a Redshift cluster, go ahead to step 3
 
 Once you've logged into your AWS account and Redshift console, it's time to pick and select your cluster.
 
@@ -131,9 +131,9 @@ The Host and Port are found at the top beside the label 'Endpoint,' with Host co
 
 ## Step 5: Activate Integration on MetaRouter
 
-After you've identified the <b>Username, Password, Host, Port,</b> and <b>Database Name</b>, put all of these credentials into your MetaRouter account and give your new connection a unique name.
+After you've identified the **Username, Password, Host, Port,** and **Database Name**, put all of these credentials into your MetaRouter account and give your new connection a unique name.
 
-Note that your _Database_ and _Schema_ are kept separate from your other connection credentials. _Schema_ is required, but it's up to you to decide what value to input - think of it as a folder to store your clickstream in. Example values include `analytics_ios`, `clickstream_web`, etc.
+Note that your **Database** and **Schema** are kept separate from your other connection credentials. **Schema** is required, but it's up to you to decide what value to input - think of it as a folder to store your clickstream in. Example values include `analytics_ios`, `clickstream_web`, etc.
 
 Click `Create Destination` and your pipeline will be activated.
 

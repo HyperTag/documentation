@@ -50,7 +50,7 @@ configuration.requestFactory = ^(NSURL *url) {
 
 Here, you'll need to place "YOUR_SOURCE_ID" with the Source ID for this particular project.
 
-**\*Note**: Automatically tracking lifecycle events (Application Opened, Application Installed, Application Updated) and screen views is optional via initialization config parameters, but highly recommended to hit the ground running with core events!\*
+**Note**: Automatically tracking lifecycle events (Application Opened, Application Installed, Application Updated) and screen views is optional via initialization config parameters, but highly recommended to hit the ground running with core events!
 
 And of course, import the SDK in the files that you use it with:
 
@@ -64,7 +64,7 @@ Now that you have the SDK installed and setup, you are ready to start building o
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
-**\*Note**: Users are automatically assigned an anonymousID before you identify them. The userID is then what connects anonymous activity across mobile iOS devices.\*
+**Note**: Users are automatically assigned an anonymousID before you identify them. The userID is then what connects anonymous activity across mobile iOS devices.
 
 For example, a simple `identify` looks something like this:
 
@@ -77,7 +77,7 @@ For example, a simple `identify` looks something like this:
 
 This call is identifying a user by her unique `userID` (from your database) and associating her with `name`, `email`, and `role` traits.
 
-**\*Note**: When you add an `identify` to your iOS app, you will need to replace all those hard-coded strings with details about the currently logged-in user.\*
+**Note**: When you add an `identify` to your iOS app, you will need to replace all those hard-coded strings with details about the currently logged-in user.
 
 Once you have the `identify` call implemented, you're ready to move on to the `track` call.
 
@@ -97,7 +97,7 @@ Setting up a `track` is very similar to the process you just went through to set
 
 This example `track` call tells us that a user just triggered an "Item Purchased" event for an `item` called "Cat Feather Toy" and `revenue` of 9.99.
 
-**\*Note**: In order to use a `track` call, you must specify a name for the event you want to track whereas properties and options are all optional fields.\*
+**Note**: In order to use a `track` call, you must specify a name for the event you want to track whereas properties and options are all optional fields.
 
 A lot of analytics tools support custom event mapping so, with `track` implemented, you’ll be able to attribute events to your users and start targeting them in a more informed and relevant way.
 

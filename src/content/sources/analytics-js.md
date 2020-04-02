@@ -114,7 +114,7 @@ Now the fun begins: head back to our app, turn on some destinations, and hit you
 
 ### Page
 
-The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing. Note that a `page` call is included by default in our analytics.js snippet. Here's the basic `page` definition:
+The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing. Note that a `page` call is included by default in our Analytics.js snippet. Here's the basic `page` definition:
 
 ```javascript
 analytics.page([category], [name], [properties], [options], [callback])
@@ -170,7 +170,7 @@ The fields outlined above are explained here:
 
 Open up your browser's console, (instructions for [Chrome](https://developers.google.com/web/tools/chrome-devtools/console/), [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Console#Opening_the_Browser_Console), [IE/EDGE](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console), [Safari](https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac) ) and type in `analytics.debug()`. If there is no error, refresh the page and view your browser's console again.
 
-This will have analytics.js log out all the actions that it takes, as well as when it triggers an action for any client-side destinations.
+This will have Analytics.js log out all the actions that it takes, as well as when it triggers an action for any client-side destinations.
 
 ### Debugging within the MetaRouter App
 

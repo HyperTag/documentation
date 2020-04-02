@@ -30,7 +30,7 @@ export default () => {
           <li>
             <Link to="/cloud-edition/">
               <h1>MetaRouter Cloud</h1>
-              <p>Securely stream events from web, mobile, and server side sources using our cloud-based platform.</p>
+              <p>Securely send events to our cloud-based platform from web, mobile, and server-side sources.</p>
             </Link>
           </li>
           <li>

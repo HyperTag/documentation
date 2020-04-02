@@ -32,7 +32,7 @@ For e-commerce sites, you won't need to worry about creating custom code to trac
 
 To get started, all you need is your Twitter Pixel ID, which you can retrieve by creating a Twitter Ads conversion tracking website tag.
 
-**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.\*
+**Note:** This connector supports client-side Analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.
 
 ### Twitter Side
 
@@ -54,7 +54,7 @@ If you want to use the universal tag, simply copy your Twitter Pixel ID from the
 
 ![twitterads3](/images/twitterads3.png)
 
-**\*Reminder:** Twitter doesn't recognize custom events, just pixel IDs. Anytime that you `analytics.track(event, properties)` an event that represents a Twitter conversion, you need to map the event name on the left to its corresponding Twitter Pixel ID on the right.\*
+**Reminder:** Twitter doesn't recognize custom events, just pixel IDs. Anytime that you `analytics.track(event, properties)` an event that represents a Twitter conversion, you need to map the event name on the left to its corresponding Twitter Pixel ID on the right.
 
 **Single Event Website Tags**
 
@@ -62,7 +62,7 @@ If you want to use Single Event Website Tags, you'll have to map the MetaRouter 
 
 If your events don't match the event names you're receiving from MetaRouter that have the Universal Website Tag, you'll want to use the _Single Event Website Tags_.
 
-**\*Note:** Twitter Ads only work with our client-side JavaScript library `analytics.js` since it requires its script or pixel to be loaded onto your website.\*
+**Note:** Twitter Ads only work with our client-side JavaScript library Analytics.js since it requires its script or pixel to be loaded onto your website.
 
 ### MetaRouter Side
 

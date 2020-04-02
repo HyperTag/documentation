@@ -26,7 +26,7 @@ MetaRouter data will inform your Taboola platform, empowering you to better unde
 
 To get started sending events to Taboola, you'll need your script source, which you'll see as soon as you [create your Taboola conversion tracking code](https://help.taboola.com/hc/en-us/articles/115006164967-Creating-Your-Conversion-Tracking-Code).
 
-**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.\*
+**Note:** This connector supports client-side Analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.
 
 ### Taboola Side
 
@@ -42,7 +42,7 @@ Copy your `ScriptSrc` and paste it into the "Script Source" field in your MetaRo
 
 Give your new connection a unique name and click `Save` to activate your pipeline.
 
-**\*Note:** You can specify custom event names in the Conversion Events section, shown as `my_custom_event` in the example below.\*
+**Note:** You can specify custom event names in the Conversion Events section, shown as `my_custom_event` in the example below.
 
 ![taboola1](/images/taboola1v2.png)
 

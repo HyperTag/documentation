@@ -43,7 +43,7 @@ Segment::init("METAROUTER_APP_ID", array(
 
 After this initialization, you have a ready-to-use instance with all calls built in.
 
-**\*Note:** We've standardized to analytics.js. If you've used a tool like [Segment](https://segment.com/) in the past, you will find that instrumenting events in MetaRouter works in the exact same way.\*
+**Note:** We've standardized to Analytics.js. If you've used a tool like [Segment](https://segment.com/) in the past, you will find that instrumenting events in MetaRouter works in the exact same way.
 
 ## Using Composer to Install the PHP Library from Github
 
@@ -51,7 +51,7 @@ To add the MetaRouter PHP library to a PHP app using composer:
 
 In composer.json, add the GitHub url to the repositories section and then require the library as usual.
 
-**\*Note:** you need the ‘dev-‘ prefix on the version in the require section as noted in the [composer docs](https://getcomposer.org/doc/05-repositories.md#loading-a-package-from-a-vcs-repository).
+**Note:** you need the ‘dev-‘ prefix on the version in the require section as noted in the [composer docs](https://getcomposer.org/doc/05-repositories.md#loading-a-package-from-a-vcs-repository).
 
 ```json
 {

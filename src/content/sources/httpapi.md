@@ -78,6 +78,7 @@ Below are some fields are common across all events a list of common fields and t
 
 | Field          | Required                                   | Type   | Explanation                                                                                                                                                                                                                                                                                 |
 | :------------- | :----------------------------------------- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [20]           | [20]                                       | [20]   | [40]                                                                                                                                                                                                                                                                                        |
 | `anonymousId`  | optional (if `userId` exists)              | String | A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier. A userId or an anonymousId is required.                                                                                                                                            |
 | `context`      | optional                                   | Object | Dictionary of extra information that provides useful context about a message, but is not directly related to the API call like ip address or locale See the Context field docs for more details.                                                                                            |
 | `integrations` | optional                                   | Object | Dictionary of destinations to either enable or disable See the Destinations field docs for more details.                                                                                                                                                                                    |
@@ -92,6 +93,7 @@ Below are some fields are common across all events a list of common fields and t
 
 | Field       | Type    | Explanation                                                                                                                                                                                                                                           |
 | :---------- | :------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [30]        | [30]    | [40]                                                                                                                                                                                                                                                  |
 | `active`    | Boolean | Whether a user is active. This is usually used to flag an .identify() call to just update the traits but not _last seen_.                                                                                                                             |
 | `app`       | Object  | Dictionary of information about the current application, containing name, version and build. This is collected automatically from our mobile libraries when possible.                                                                                 |
 | `campaign`  | Object  | Dictionary of information about the campaign that resulted in the API call, containing name, source, medium, term, and content. This maps directly to the common UTM campaign parameters.                                                             |
@@ -118,10 +120,11 @@ Check out the `POST` calls below and their use cases to determine the calls that
 
 The `identify` method helps you associate your users and their actions to a unique and recognizable `userID` and any optional `traits` that you know about them. We recommend calling an `identify` a single time - when the user's account is first created and only again when their traits change.
 
-Post `https://e.metarouter.io/v1/i` or `https://e.metarouter.io/v1/identify`
+POST to `https://e.metarouter.io/v1/i` or `https://e.metarouter.io/v1/identify`
 
 | Field    | Required | Type   | Explanation                                                    |
 | :------- | :------- | :----- | :------------------------------------------------------------- |
+| [20]     | [20]     | [20]   | [40]                                                           |
 | `traits` | optional | Object | Free-form dictionary of traits of the user, like email or name |
 
 ```json
@@ -141,10 +144,11 @@ Post `https://e.metarouter.io/v1/i` or `https://e.metarouter.io/v1/identify`
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your website. This will tell MetaRouter which actions you are performing on your site. With `track`, each user action triggers an “event,” which can also have associated properties.
 
-Post `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
+POST to `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
 
 | Property     | Required | Type   | Explanation                                                   |
 | :----------- | :------- | :----- | :------------------------------------------------------------ |
+| [20]         | [20]     | [20]   | [40]                                                          |
 | `eventName`  | required | String | Name of the action that a user has performed                  |
 | `properties` | optional | Object | Free-form dictionary of properties of the event, like revenue |
 
@@ -157,8 +161,8 @@ Post `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
     "fileSize": "42kb",
     "fileType": "PDF"
   },
-  "timestamp": "2015-11-10T00:45:23.412Z"
-  "type": track
+  "timestamp": "2015-11-10T00:45:23.412Z",
+  "type": "track"
 }
 ```
 
@@ -166,10 +170,11 @@ Post `https://e.metarouter.io/v1/t` or `https://e.metarouter.io/v1/track`
 
 The `page` method allows you to record page views on your website. It also allows you to pass addtional information about the pages people are viewing.
 
-Post `https://e.metarouter.io/v1/p` or `https://e.metarouter.io/v1/page`
+POST to `https://e.metarouter.io/v1/p` or `https://e.metarouter.io/v1/page`
 
 | Property     | Required | Type   | Explanation                                                                                                                                     |
 | :----------- | :------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| [20]         | [20]     | [20]   | [40]                                                                                                                                            |
 | `name`       | optional | String | Name of the page For example, most sites have a “Signup” page that can be useful to tag, so you can see users as they move through your funnel. |
 | `properties` | optional | Object | Free-form dictionary of properties of the event, like revenue                                                                                   |
 
@@ -189,10 +194,11 @@ Post `https://e.metarouter.io/v1/p` or `https://e.metarouter.io/v1/page`
 
 The `group` method associates an identified user with a company, organization, project, etc.
 
-Post `https://e.metarouter.io/v1/g` or `https://e.metarouter.io/v1/group`
+POST to `https://e.metarouter.io/v1/g` or `https://e.metarouter.io/v1/group`
 
 | Property  | Required | Type   | Explanation                                                                                                                   |
 | :-------- | :------- | :----- | :---------------------------------------------------------------------------------------------------------------------------- |
+| [20]      | [20]     | [20]   | [40]                                                                                                                          |
 | `groupId` | required | String | A unique identifier for the group in your database. See the Group ID field docs for more detail.                              |
 | `traits`  | optional | Object | Free-form dictionary of traits of the group, like email or name See the Traits field docs for a list of reserved trait names. |
 
@@ -212,10 +218,11 @@ Post `https://e.metarouter.io/v1/g` or `https://e.metarouter.io/v1/group`
 
 The `alias` method combines two unassociated User IDs.
 
-Post `https://e.metarouter.io/v1/a` or `https://e.metarouter.io/v1/alias`
+POST to `https://e.metarouter.io/v1/a` or `https://e.metarouter.io/v1/alias`
 
 | Property     | Required                           | Type   | Explanation                                                                                                                                                                                   |
 | :----------- | :--------------------------------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [20]         | [20]                               | [20]   | [40]                                                                                                                                                                                          |
 | `previousId` | required                           | String | The previousId is the existing ID you’ve referred to the user by. It might be an Anonymous ID assigned to that user or a User ID you previously identified them with using our identify call. |
 | `userId`     | optional (if `anonymousId` exists) | String | Unique identifier for the user in your database. A userId or an anonymousId is required.                                                                                                      |
 
@@ -236,7 +243,7 @@ There are additional event collection endpoints to help with specific implementa
 
 The `batch` method allows for submitting multiple events with one request. Batching events is useful for increased performance from the application and the MetaRouter Platform. The events follow the standard message formats from above and allow for context and timestamps to be injected from the top level.
 
-Post `https://e.metarouter.io/v1/batch` or `https://e.metarouter.io/v1/import`
+POST to `https://e.metarouter.io/v1/batch` or `https://e.metarouter.io/v1/import`
 
 ```json
 {

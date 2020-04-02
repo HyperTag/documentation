@@ -69,7 +69,7 @@ Every time you call the Track event, the page details available from `context.pa
 
 #### `mapQueryParams`
 
-When sending data via server side, you can send the custom query params that are automatically collected by analytics.js (or whatever you manually send under context.page.search), by mapping it to either `user_properties` or `event_properties` keys. Choose whether you want the query params to be set on the Amplitude user profile or event metadata level.
+When sending data via server side, you can send the custom query params that are automatically collected by Analytics.js (or whatever you manually send under context.page.search), by mapping it to either `user_properties` or `event_properties` keys. Choose whether you want the query params to be set on the Amplitude user profile or event metadata level.
 
 ```json
 ...

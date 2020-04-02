@@ -44,6 +44,7 @@ Check out the matrix below if you're wondering which sources are compatible with
 
 |                     | Client | Server | Mobile |
 | :------------------ | :----: | :----: | :----: |
+| [40]                |  [20]  |  [20]  |  [20]  |
 | Acquisio            |   ✔    |   x    |   x    |
 | Adobe Analytics     |   ✔    |   x    |   x    |
 | Amazon Kinesis      |   ✔    |   ✔    |   ✔    |

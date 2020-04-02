@@ -33,7 +33,7 @@ Once you have an account on [Retention Science](https://www.retentionscience.com
 - Create your company's specific remarketing campaign
 - Identify your Site ID and tracking `<script>` tags
 
-**\*Note:** This connector supports client-side analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.\*
+**Note:** This connector supports client-side Analytics.js only. You also need to have instrumented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.
 
 ### MetaRouter Side
 
@@ -45,6 +45,6 @@ Check the `Enable On-Site` box, click `Save` and your pipeline will be activated
 
 You'll notice two additional sections in our UI. Both are optional, but you can use these to map custom events to specific Retention Science events.
 
-**\*Note:** Retention Science has a list of reserved event names (`click`, `view`, `email_open`, `email_click`, `shopping_cart`, `checkout_success`, `search`) that should not be entered as custom events. We've provided those for mapping in the Reserved Events section of our UI.\*
+**Note:** Retention Science has a list of reserved event names (`click`, `view`, `email_open`, `email_click`, `shopping_cart`, `checkout_success`, `search`) that should not be entered as custom events. We've provided those for mapping in the Reserved Events section of our UI.
 
 Confirm with your Retention Science account manager that the `<script>` tags for your specific campaigns are being sent as expected.

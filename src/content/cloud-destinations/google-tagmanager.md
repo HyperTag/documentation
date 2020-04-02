@@ -24,7 +24,7 @@ GTM works through a snippet that you'd normally have to include in all of your p
 
 ## Why send data to Google Tag Manager using MetaRouter?
 
-With MetaRouter's GTM integration, you won't have to worry about loading GTM's snippet onto every single one of your pages or installing SDKs for iOS and Android mobile apps. Instead, GTM will be automatically loaded onto any pages where your MetaRouter snippet is initialized and your `analytics.js` page gets called in client-side JavaScript.
+With MetaRouter's GTM integration, you won't have to worry about loading GTM's snippet onto every single one of your pages or installing SDKs for iOS and Android mobile apps. Instead, GTM will be automatically loaded onto any pages where your MetaRouter snippet is initialized and your Analytics.js page gets called in client-side JavaScript.
 
 MetaRouter's integration only requires the `Container ID` tied to your account. Skip the headache and get straight to insights.
 
@@ -62,4 +62,4 @@ With that, you're all set!
 
 Once you enable this pipeline, you'll be able to trigger MetaRouter events by entering `analytics.track` or `analytics.page` calls into GTM.
 
-**\*Note:** Don't forget to "publish" your GTM container before trying to load it with MetaRouter.\*
+**Note:** Don't forget to "publish" your GTM container before trying to load it with MetaRouter.

@@ -32,7 +32,7 @@ Integrating Pinterest with MetaRouter cuts out any need for additional implement
 
 To get started sending events to Pinterest, first sign up for [Pinterest for Business](https://business.pinterest.com/en).
 
-**\*Note**: This destination supports client-side analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.\*
+**Note**: This destination supports client-side Analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.
 
 ### Pinterest Side
 
@@ -164,7 +164,7 @@ According to [Pinterest Conversion tag documentation](https://developers.pintere
 - `Search`
 - `ViewCategory`
 - `Custom`
-- `[Partner-defined event]` - _Note_: Any additional event defined for the purpose of audience targeting. Unique events aren’t available for conversion reporting.
+- `[Partner-defined event]` - **Note:** Any additional event defined for the purpose of audience targeting. Unique events aren’t available for conversion reporting.
 
 The following Analytics.js Events are matching the following Pinterest Specific Events:
 

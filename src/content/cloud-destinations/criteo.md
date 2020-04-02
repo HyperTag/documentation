@@ -28,7 +28,7 @@ Integrating Criteo with MetaRouter eliminates the need to add any Criteo code ta
 
 ### Criteo Side
 
-To get started sending events to Criteo, you'll need to have signed up for [Criteo Remarketing](http://www.criteo.com/) and working with a Criteo Account Strategist to plan your remarketing campaign. You'll need a few technical components from your Account Strategist to move forward with enabling this connector. Note that this destination supports the client-side analytics.js source only.
+To get started sending events to Criteo, you'll need to have signed up for [Criteo Remarketing](http://www.criteo.com/) and working with a Criteo Account Strategist to plan your remarketing campaign. You'll need a few technical components from your Account Strategist to move forward with enabling this connector. Note that this destination supports the client-side Analytics.js source only.
 
 Begin by retrieving and deploying the latest version of Criteo's loader file (a `.js` file that should get loaded into your page by your servers). You'll also need your remarketing campaign tags to enable tracking with MetaRouter.
 

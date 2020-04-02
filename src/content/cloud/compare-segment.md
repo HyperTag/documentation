@@ -19,7 +19,7 @@ In order to complete a successful test, integrations need to be moved to cloud m
 
 ![aa-test1](/images/aa_test1.png)
 
-**\*Note:** Please be aware if Segment does not allow for cloud mode for a particular integration there is a risk of client-side collision occurring which may result in bad test results.\*
+**Note:** Please be aware if Segment does not allow for cloud mode for a particular integration there is a risk of client-side collision occurring which may result in bad test results.
 
 ### Update Your MetaRouter Snippet
 

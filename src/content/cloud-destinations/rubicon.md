@@ -31,7 +31,7 @@ Once you're signed up on [Rubicon Project](http://rubiconproject.com/), work wit
 - Create your company's specific campaign
 - Retrieve your Page ID, Conversion ID, and any conversion event names from them
 
-**\*Note:** This connector supports client-side analytics.js only. You need to have implemented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.\*
+**Note:** This connector supports client-side Analytics.js only. You need to have implemented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.
 
 ### MetaRouter Side
 

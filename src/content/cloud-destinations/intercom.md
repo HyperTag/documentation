@@ -110,4 +110,4 @@ analytics.identify({
 })
 ```
 
-**\*Note:** This will only work from server side libraries and mobile, NOT for analytics.js.\*
+**Note:** This will only work from server-side libraries and mobile, NOT for Analytics.js.

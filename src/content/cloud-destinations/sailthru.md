@@ -251,7 +251,7 @@ In addition to the required settings, you will have the option to configure an o
 
 #### Optout
 
-The default status for the optout value is `none` or you can select `all`, `basic` or `blast`. **Note**: Configuring a setting other than none in your integrations settings will apply to **all users**. If you need to dynamically opt users in or out of emails, pass the setting as a parameter on each event.
+The default status for the optout value is `none` or you can select `all`, `basic` or `blast`. **Note:** Configuring a setting other than none in your integrations settings will apply to **all users**. If you need to dynamically opt users in or out of emails, pass the setting as a parameter on each event.
 
 `all`: Opts the user out of all emails (campaigns & transactionals). This is the default status when a subscriber marks your email as spam from within an email client.
 
@@ -357,7 +357,7 @@ Sailthru best practice dictates every user be added to a list. Configure a defau
 
 ### Default Reminder Template
 
-**\*Required with Reminder Time**. The **public name** of your template which you first must configure in Sailthru’s UI.
+**Required with Reminder Time**. The **public name** of your template which you first must configure in Sailthru’s UI.
 
 ### Default Reminder Time
 

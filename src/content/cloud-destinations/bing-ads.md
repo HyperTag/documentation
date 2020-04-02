@@ -28,7 +28,7 @@ With MetaRouter, send page and event data to Microsoft Advertising without havin
 
 Microsoft Advertising will record all of your page views and events sent via `page` and `track`, giving you access to data that you can use to create custom goals and conversions directly on Microsoft Advertising.
 
-**\*Note**: Microsoft Advertising is available as a client-side destination only.\*
+**Note:** Microsoft Advertising is available as a client-side destination only.
 
 ### Microsoft Advertising Side
 

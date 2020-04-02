@@ -40,7 +40,7 @@ Here, you'll need to create a Friendly Name and enter your Google Analytics Trac
 
 ![google-analytics1](/images/google-analytics2v2.png)
 
-**\*Note:** Unless you specify otherwise, MetaRouter will automatically enable `Track Named Pages` and `Track Categorized Pages`.\*
+**Note:** Unless you specify otherwise, MetaRouter will automatically enable `Track Named Pages` and `Track Categorized Pages`.
 
 Enabling Google Analytics in your MetaRouter UI causes a few things to happen:
 
@@ -112,19 +112,19 @@ This feature enables more detailed reports on e-commerce.
 
 Use this if you want Google Analytics to ignore certain referral domains.
 
-**\*Note:** This only works for Classic profiles. If you are on a Universal profile, you can edit this feature directly inside Google Analytics.\*
+**Note:** This only works for Classic profiles. If you are on a Universal profile, you can edit this feature directly inside Google Analytics.
 
 ### Track Named Pages
 
 Enabling this will track events to Google Analytics for `page` calls that have a `name` associated with them. For example, `page('Home')` will translate to **Viewed Home Page**.
 
-**\*Note:** We enable this automatically when you set-up Google Analytics as a MetaRouter destination.\*
+**Note:** We enable this automatically when you set-up Google Analytics as a MetaRouter destination.
 
 ### Track Categorized Pages
 
 Enabling this will track events to Google Analytics for `page` calls that have a `category` associated with them. For example, `page('Blog', 'Index')` will translate to Viewed Blog Page.
 
-**\*Note:** We enable this automatically when you set-up Google Analytics as a MetaRouter destination.\*
+**Note:** We enable this automatically when you set-up Google Analytics as a MetaRouter destination.
 
 ### Include Querystring in Page Views
 

@@ -55,22 +55,22 @@ The structure of the `api` property is the following:
 
 - `"endpoint": "https://www.googleanalytics.com/collect"` _(required)_ - String
   - Request's endpoint
-  - **\*Note:** This is GA's API endpoint and should not be altered.\*
+  - **Note:** This is GA's API endpoint and should not be altered.
 - `"method": "post"` _(optional)_ - String
   - Request's method
   - Available values: `"get"`, `"post"`
   - Default value: `"get"`
-  - **\*Note:** GA's API is expecting a POST request, this should not be altered.\*
+  - **Note:** GA's API is expecting a POST request, this should not be altered.
 - `"keepAliveAgent": true` _(optional)_ - Bool / Object
   - Request's HttpAgent or HttpsAgent (automatically detected based on endpoint's structure)
   - Possible values:
     - `false` => request agent won't be set
     - `true` => the following default settings will be used as request agent: `{ maxSockets: 100, maxFreeSockets: 10, timeout: 60000, freeSocketTimeout: 30000 }`
     - Object of agent settings => passed settings will be used as request agent
-  - **\*Note:** This should be enabled and set based on your needs and does not affect GA's capabilities.\*
+  - **Note:** This should be enabled and set based on your needs and does not affect GA's capabilities.
 - `"includePayloadInURL": true` _(optional)_ - Bool
   - If this is set to `true`, the request's URL will include the encoded payload
-  - **\*Note:** GA's API requires the payload to be included inside the URL.\*
+  - **Note:** GA's API requires the payload to be included inside the URL.
 
 #### `events` (Required) - Object
 

@@ -28,7 +28,7 @@ Integrating MetaRouter with Resonate will circumvent the need for manual impleme
 
 ## Getting Started with Resonate and MetaRouter
 
-**\*Note:** This connector supports client-side analytics.js only. You also need to have implemented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.\*
+**Note:** This connector supports client-side Analytics.js only. You also need to have implemented MetaRouter [inside your website](/sources/analytics-js/) prior to enabling this connector.
 
 ### Resonate Side
 

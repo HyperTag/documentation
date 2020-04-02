@@ -30,7 +30,7 @@ This connector supports either Classic, Optimizely X, or both.
 
 Note that the Optimizely `<script>` tag needs to be on the page right away (MetaRouter can’t load its client side library for you). In order to broadcast events, you must embed the Optimizely `<script>` tag in the `<head>` element on your page <b>before</b> the MetaRouter snippet.
 
-See [this instructional video by Optimizely](https://help.optimizely.com/Set_Up_Optimizely/Implement_the_snippet_for_Optimizely_Classic) to find and embed their JavaScript snippet. You'll want to include this snippet on every page you want to run experiments on (and remember, BEFORE the MetaRouter snippet!). This connector supports client-side analytics.js (no server-side, iOS, or Android analytics).
+See [this instructional video by Optimizely](https://help.optimizely.com/Set_Up_Optimizely/Implement_the_snippet_for_Optimizely_Classic) to find and embed their JavaScript snippet. You'll want to include this snippet on every page you want to run experiments on (and remember, BEFORE the MetaRouter snippet!). This connector supports client-side Analytics.js (no server-side, iOS, or Android analytics).
 
 To begin, create an [Optimizely](https://www.optimizely.com/) account, retrieve your [JavaScript snippet](https://help.optimizely.com/Set_Up_Optimizely/Implement_the_snippet_for_Optimizely_Classic), and embed the snippet in each page that you want to run experiments on before the MetaRouter snippet.
 

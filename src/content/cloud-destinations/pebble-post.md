@@ -37,7 +37,7 @@ Once you've made a Pebble Post account, work with your account manager to identi
 
 ### MetaRouter Side
 
-Log back into your MetaRouter app, and add the Pebble Post destination to your preferred choice (Note: Pebble Post is only available on client-side sources).
+Log back into your MetaRouter app, and add the Pebble Post destination to your preferred choice (**Note:** Pebble Post is only available on client-side sources).
 
 Once you're there, input that Site ID and any applicable end URL mappings where prompted. Check out the image below to see what this page looks like:
 

@@ -102,6 +102,7 @@ Below is a chart detailing what the fields in the above sample payload mean.
 
 | Field                     | Type   | Description                                                                                                                   |
 | :------------------------ | :----- | :---------------------------------------------------------------------------------------------------------------------------- |
+| [20]                      | [20]   | [60]                                                                                                                          |
 | `anonymousId` (optional)  | Object | A pseudo-unique substitute for User ID. This is for cases when you don't have an absolutely unique identifier.                |
 | `context` (optional)      | Object | Dictionary of extra information that provides useful context about a message that is not directly related to the API call     |
 | `integrations` (optional) | String | Dictionary of destinations to either enable or disable                                                                        |
@@ -118,6 +119,7 @@ This section will provide other information you can gather to provide useful con
 
 | Field       | Type    | Description                                                                                                                                                                           |
 | :---------- | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [20]        | [20]    | [60]                                                                                                                                                                                  |
 | `active`    | Boolean | Tells whether a user is active. This can be used to flag an `identify` call to update its traits                                                                                      |
 | `app`       | Object  | Information about the current application, including `name`, `version`, and `build`.                                                                                                  |
 | `campaign`  | Object  | Information about the campaign that led to the API call, including `name`, `source`, `medium`, `term`, and `content`. This field maps directly to the common UTM campaign parameters. |
@@ -139,6 +141,7 @@ All of the fields listed in the above table can be populated, but this does not 
 
 | Context Field              | Analytics.js | Analytics-ios | Analytics-android |
 | :------------------------- | :----------: | :-----------: | :---------------: |
+| [40]                       |     [20]     |     [20]      |       [20]        |
 | `app.name`                 |      x       |       ✔       |         ✔         |
 | `app.version`              |      x       |       ✔       |         ✔         |
 | `app.build`                |      x       |       ✔       |         ✔         |

@@ -33,9 +33,15 @@ const setTableColumnWidths = nodes => {
     const $ = cheerio.load(node.html)
     const regex = /\[\d*\]/g // match [25] format for column width
 
-    $('table tbody tr:first-child').each(function() {
+    $('table tbody tr:first-child').each(function(i) {
       const row = $(this)
-      if (regex.test(row.find('td').text())) {
+
+      if (
+        row
+          .find('td')
+          .text()
+          .match(regex)
+      ) {
         const columnWidths = row
           .find('td')
           .text()
@@ -45,9 +51,12 @@ const setTableColumnWidths = nodes => {
         const th = $(this)
           .closest('table')
           .find('th')
+
+        // for case where table may not have a header row
         const td = $(this)
           .next()
           .find('td')
+
         const cells = th.length ? th : td
 
         cells.map(function(i) {
@@ -175,7 +184,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   let nodes = result.data.allMarkdownRemark.edges.map(e => e.node)
-  // nodes = setTableColumnWidths(nodes)
+  nodes = setTableColumnWidths(nodes)
   nodes = addTags(nodes)
 
   const groups = createGroups(nodes)

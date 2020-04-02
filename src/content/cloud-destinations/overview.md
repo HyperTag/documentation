@@ -23,6 +23,7 @@ Check out our source/destination compatibility matrix below to see which destina
 
 |                     | Client | Server | Mobile |
 | :------------------ | :----: | :----: | :----: |
+| [40]                |  [20]  |  [20]  |  [20]  |
 | Acquisio            |   ✔    |   x    |   x    |
 | Adobe Analytics     |   ✔    |   x    |   x    |
 | Amazon Kinesis      |   ✔    |   ✔    |   ✔    |

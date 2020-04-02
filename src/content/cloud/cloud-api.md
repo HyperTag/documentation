@@ -125,7 +125,7 @@ Clickstream Pipelines focus on extracting or loading events in as close to real-
 
 ### Sources and Applications
 
-We currently support analytics.js, servers, analytics-android, analytics-ios and analytics-react-native as sources in our Clickstream module. The SDKs we offer for those platforms forward events to our Clickstream API to be ingested and distributed by our system. These sources are grouped under an `Organization`, to allow you and other contributors that you specify to have access to view and/or edit them.
+We currently support Analytics.js, servers, analytics-android, analytics-ios and analytics-react-native as sources in our Clickstream module. The SDKs we offer for those platforms forward events to our Clickstream API to be ingested and distributed by our system. These sources are grouped under an `Organization`, to allow you and other contributors that you specify to have access to view and/or edit them.
 
 Upon source creation, a 21 character long `Source ID` is generated to identify your Application within our system and to ensure your events are routed to the correct destinations.
 

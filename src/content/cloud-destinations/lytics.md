@@ -34,7 +34,7 @@ Integrating Lytics with MetaRouter means that you won't have to write any custom
 
 MetaRouter automatically maps `page`, `identify`, and `track` calls directly to Lytics, which then uses that customer data to power its implementations.
 
-**\*Note:** With MetaRouter you can also easily push data from mobile apps or servers to Lytics.\*
+**Note:** With MetaRouter you can also easily push data from mobile apps or servers to Lytics.
 
 ## Getting Started with Lytics and MetaRouter
 

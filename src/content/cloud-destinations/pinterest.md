@@ -32,7 +32,7 @@ Integrating Pinterest with MetaRouter cuts out any need for additional implement
 
 To get started sending events to Pinterest, first sign up for [Pinterest for Business](https://business.pinterest.com/en).
 
-**\*Note**: This destination supports client-side analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.\*
+**Note**: This destination supports client-side Analytics.js only. You also need to have implemented MetaRouter within your website prior to enabling this connector.
 
 ### Pinterest Side
 
@@ -48,7 +48,7 @@ This next page will show your Pinterest Tag Id (shown in red in the image below 
 
 ![pinterest3](/images/pinterest-tag-3.png)
 
-**\*Note:** We will fire `page` views for you, but you'll need to map in your custom events in order to fire those off.\*
+**Note:** MetaRouter will fire `page` views for you, but you'll need to map in your custom events in order to fire those off.
 
 ### MetaRouter Side
 

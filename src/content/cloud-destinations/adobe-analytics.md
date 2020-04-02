@@ -25,7 +25,7 @@ With MetaRouter, you can use Adobe Analytics without having to install their Jav
 
 ### Initialization
 
-When using Adobe Analytics through `analytics.js`, we will check if you already have global properties such as `window.s_account` or any properties on the `window.s` object and use them. In the absence of any of these values, we will fallback on the **Report Suite ID**, **Tracking Server URL**, and **Tracking Server Secure URL**(optional) you have defined in the destination settings inside MetaRouter.
+When using Adobe Analytics through Analytics.js, we will check if you already have global properties such as `window.s_account` or any properties on the `window.s` object and use them. In the absence of any of these values, we will fallback on the **Report Suite ID**, **Tracking Server URL**, and **Tracking Server Secure URL**(optional) you have defined in the destination settings inside MetaRouter.
 
 Once these required properties are set, we will load `appmeasurement.js` version 1.6.
 
@@ -33,7 +33,7 @@ Once these required properties are set, we will load `appmeasurement.js` version
 
 You can use Adobe’s Marketing Cloud Visitor ID Service, in witch case you will need to provide MetaRouter with your **Marketing Cloud Organization ID** - in the advanced options inside MetaRouter.
 
-Our analytics.js destination will load their `visitorAPI.js` library, but will only initialize it if you provide your Marketing Cloud Organization ID - we will set `window.s.visitor` with the return value from `window.Visitor.getInstance(<Your Marketing Cloud Org Id>)`. See [their documentation](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-analytics.html) for more information.
+Our Analytics.js destination will load their `visitorAPI.js` library, but will only initialize it if you provide your Marketing Cloud Organization ID - we will set `window.s.visitor` with the return value from `window.Visitor.getInstance(<Your Marketing Cloud Org Id>)`. See [their documentation](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-analytics.html) for more information.
 
 **Note:** In the same script as `appmeasurement.js` we also load `visitorAPI.js` - Adobe Analytics requires synchronous execution of this two scripts. Using the visitor API is **optional** but for those who do, we make it available on the page.
 
@@ -145,7 +145,7 @@ The following will happen:
 
    - `properties.pageName` (for backward compatibility)
    - `options.pageName` (if you already have `window.s.pageName` defined on the web page)
-   - `context.page.title` (which is automatically tracked by our `analytics.js` library)
+   - `context.page.title` (which is automatically tracked by our Analytics.js library)
 
    Since `context.page.title` will always be populated, at the very minimum `window.s.pageName` will always be set to the value inside your `<title>` tag of the page where the `.track()` call was fired.
 
@@ -153,7 +153,7 @@ The following will happen:
 
 8. Finally, we will fire the request to Adobe Analytics using `window.s.tl(true, 'o', 'Watched Video')`
 
-   _Note_: `true` sets a `500ms` delay to give your browser time to flush the event. It also signifies to Adobe that this event is something other than a `href` link. The `'o'` stands for `'Other'`, as opposed to `'d'` for `'Downloads'`and `'e'` for `'Exit Links'`. The final parameter is the link name you will see in reports inside Adobe Analytics.
+   **Note:** `true` sets a `500ms` delay to give your browser time to flush the event. It also signifies to Adobe that this event is something other than a `href` link. The `'o'` stands for `'Other'`, as opposed to `'d'` for `'Downloads'`and `'e'` for `'Exit Links'`. The final parameter is the link name you will see in reports inside Adobe Analytics.
 
 ### Ecommerce Events
 
