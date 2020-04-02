@@ -24,10 +24,10 @@ Infinity Tag enhances campaign performance by moving beyond currently accepted K
 
 ### Kenshoo Side
 
-All you'll need from Kenshoo is your `Account Id`. Once you have this code, copy it to your clipboard and head over to your [MetaRouter dashboard](https://app.metarouter.io)
+All you'll need from Kenshoo is your **Account Id**. Once you have this code, copy it to your clipboard and head over to your [MetaRouter dashboard](https://app.metarouter.io)
 
 ### MetaRouter Side
 
-Once on our app, go ahead and add Kenshoo Infinity Pixel as a destination for your preferred source. Give the connection a unique name and paste both your `Account Id` and `Server Id` where prompted.
+Once on our app, go ahead and add Kenshoo Infinity Pixel as a destination for your preferred source. Give the connection a unique name and paste both your **Account Id** and **Server Id** where prompted.
 
-Now, just click "create destination" to activate your pipeline and begin pushing your clickstream data into Kenshoo.
+Now, just click **Create Destination** to activate your pipeline and begin pushing your clickstream data into Kenshoo.

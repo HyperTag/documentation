@@ -87,9 +87,9 @@ GRANT CREATE ON DATABASE "<enter database name here>" TO "metarouter";
 
 Redshift clusters can either be in a EC2 Classic subnet or VPC subnet
 
-If your cluster has a field called `Cluster Security Groups`, go ahead to EC2-Classic.
+If your cluster has a field called **Cluster Security Groups**, follow the instructions below for EC2-Classic.
 
-If your cluster has a field called `VPC Security Groups`, go ahead to EC2 VPC.
+If your cluster has a field called **VPC Security Groups**, follow the instructions below for EC2 VPC.
 
 **EC2-Classic**
 
@@ -135,7 +135,7 @@ After you've identified the **Username, Password, Host, Port,** and **Database N
 
 Note that your **Database** and **Schema** are kept separate from your other connection credentials. **Schema** is required, but it's up to you to decide what value to input - think of it as a folder to store your clickstream in. Example values include `analytics_ios`, `clickstream_web`, etc.
 
-Click `Create Destination` and your pipeline will be activated.
+Click **Create Destination** and your pipeline will be activated.
 
 That's it! You'll now be receiving a live stream of data from your application into your private Redshift account.
 

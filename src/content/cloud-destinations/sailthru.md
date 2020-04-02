@@ -31,23 +31,23 @@ The Sailthru server-side destination will allow you to add users, send custom ev
 **Important**: In order for this destination to work, you must have a few prerequisite configurations.
 
 - You must have `extid` lookup enabled in Sailthru, which usually needs to be requested from Sailthru. This is critical to enabling full functionality.
-- Use the [**Ecommerce**](/sources/analytics-js-ecommerce-spec/) event spec to track `Order Completed`,`Order Updated`, `Product Added`, and `Product Removed`.
-- For `Product Added` and `Product Removed` events, whether there is an `email` or not, we need to make a request to grab the items in the user’s cart. We rely on the `userId` value for this request. It is essential that you have a `userId` on these calls, otherwise they will not make it to Sailthru.
-  - To trigger abandoned cart campaigns, you must pass in a `reminder_time` and `reminder_template` on the `Product Added` and `Product Removed` events.
+- Use the [Ecommerce](/sources/analytics-js-ecommerce-spec/) event spec to track Order Completed, Order Updated, Product Added, and Product Removed.
+- For Product Added and Product Removed events, whether there is an `email` or not, we need to make a request to grab the items in the user’s cart. We rely on the `userId` value for this request. It is essential that you have a `userId` on these calls, otherwise they will not make it to Sailthru.
+  - To trigger abandoned cart campaigns, you must pass in a `reminder_time` and `reminder_template` on the Product Added and Product Removed events.
   - The template passed through as `reminder_template` must match the public name configured in Sailthru’s UI.
-- We recommend appending `traits.email` whenever possible in your `identify` calls. If you send an identify call without a `traits.email` and only a `userId`, the profile will be created in Sailthru but you would not be able to find that user via their **User Look Up feature** or to send `Product Added`, `Product Removed` `Order Updated` and `Order Completed` events.
+- We recommend appending `traits.email` whenever possible in your `identify` calls. If you send an identify call without a `traits.email` and only a `userId`, the profile will be created in Sailthru but you would not be able to find that user via their **User Look Up feature** or to send Product Added, Product Removed, Order Updated and Order Completed events.
 
 ### Page
 
-You must configure a `clientId` in your integration settings in order to utilize the page functionality. This value is only required for page calls and can be found in your **Sailthru Dashboard** under **App Settings** - **customerId**.
+You must configure a `clientId` in your integration settings in order to utilize the page functionality. This value is only required for page calls and can be found in your **Sailthru Dashboard** under **App Settings > customerId**.
 
-When you call page, we will hit the Sailthru page endpoint and you will see the calls populate in the **Sailthru Realtime Dashboard**.
+When you call page, we will hit the Sailthru page endpoint and you will see the calls populate in the Sailthru Realtime Dashboard.
 
-The `context.page.url` is also a required field for all page calls, so be sure this is present on each call. The url _must_ be a domain name, otherwise the request will fail.
+The `context.page.url` is also a required field for all page calls, so be sure this is present on each call. The url **must** be a domain name, otherwise the request will fail.
 
 We will automatically handle the proper identification of user’s in Sailthru via the Analytics.js `userId`.
 
-Sailthru provides an out of band web scraper that will automatically collect contextual information from your pages to power their [**personalization engine**](https://getstarted.sailthru.com/site/personalization-engine/meta-tags/). If the design of your site requires passing these tags to Sailthru manually (Single Page Apps are one example) you can manually pass them via a `tags` property in the page event:
+Sailthru provides an out of band web scraper that will automatically collect contextual information from your pages to power their [personalization engine](https://getstarted.sailthru.com/site/personalization-engine/meta-tags/). If the design of your site requires passing these tags to Sailthru manually (Single Page Apps are one example) you can manually pass them via a `tags` property in the page event:
 
 ```javascript
 analytics.page('Page Name', {
@@ -107,7 +107,7 @@ So if you send an`identify` call without a `traits.email` and only a `userId`, t
 
 ### Track
 
-We map `Product Added`, `Product Removed`, `Order Completed` and `Order Updated` events to the `/purchase` endpoint. All other Analytics.js Ecommerce Events will be sent to the `/event` endpoint, with the same name. . **Important**: You must have each event mapped in Sailthru within **Communications > Lifecycle Optimizer** in order to leverage the custom event. Be sure that the **Status** is set to **Active**:
+We map Product Added, Product Removed, Order Completed and Order Updated events to the `/purchase` endpoint. All other Analytics.js Ecommerce Events will be sent to the `/event` endpoint, with the same name. **Important**: You must have each event mapped in Sailthru within **Communications > Lifecycle Optimizer** in order to leverage the custom event. Be sure that the **Status** is set to **Active**:
 
 ![sailthru-lifecycle-optimizer-1](/images/sailthru-lifecycle-optimizer-1.png)
 
@@ -121,11 +121,11 @@ Configure a custom event to a new flow and trigger a follow up action to the eve
 
 ![sailthru-lifecycle-optimizer-3](/images/sailthru-lifecycle-optimizer-3.png)
 
-For instance, in the above example notice that the `Registered` event will add the user who trigger the event to a list.
+For instance, in the above example notice that the Registered event will add the user who trigger the event to a list.
 
 ### Purchases
 
-When you `track` an event with the name `Order Completed` or `Order Updated` using the **e-commerce tracking API**, we will send the products you’ve listed to Sailthru’s purchase log:
+When you `track` an event with the name Order Completed or Order Updated using the e-commerce tracking API, we will send the products you’ve listed to Sailthru’s purchase log:
 
 ![sailthru-purchase-1](/images/sailthru-purchase-1.png)
 
@@ -139,9 +139,9 @@ Note that the main identifier is `email` not `id`
 
 Sailthru does not allow the `extid` to be the main lookup identifier for their Purchase API. Instead, Sailthru requires an `email` as the primary identifier. MetaRouter will make a GET request to retrieve the user’s email based on their `userId`, which is their `extid` in Sailthru.
 
-If the user and their email does not exist in Sailthru, the event will throw an error. If the user exists, the purchase will be added to their profile. Be sure to call `identify` with an `email` passed in the `traits` object prior to the `Order Completed`, `Order Updated`, `Product Added` and `Product Removed` events. If you are sending events using one of MetaRouter’s server-side libraries and want to be sure, you can also send the email value in your `track` calls under `properties.email`.
+If the user and their email does not exist in Sailthru, the event will throw an error. If the user exists, the purchase will be added to their profile. Be sure to call `identify` with an `email` passed in the `traits` object prior to the Order Completed, Order Updated, Product Added and Product Removed events. If you are sending events using one of MetaRouter’s server-side libraries and want to be sure, you can also send the email value in your `track` calls under `properties.email`.
 
-Once `Order Completed` is triggered, MetaRouter will pass in `incomplete: 0`to signify that the order is now complete. MetaRouter will map the following Sailthru **required fields** from the **v2 Order Completed Spec**:
+Once Order Completed is triggered, MetaRouter will pass in `incomplete: 0` to signify that the order is now complete. MetaRouter will map the following Sailthru **required fields** from the **v2 Order Completed Spec**:
 
 | Sailthru spec | Analytics.js spec        |
 | :------------ | :----------------------- |
@@ -206,11 +206,11 @@ analytics.track(
 
 ### Abandoned Cart Events
 
-In addition to `Order Completed` events, we support the concept of **Sailthru’s Abandoned Carts** via MetaRouter’s `Product Added`, `Product Removed` and `Order Updated` events. When these events are triggered, MetaRouter will pass in `incomplete: 1` to signify that the order is incomplete.
+In addition to Order Completed events, we support the concept of **Sailthru’s Abandoned Carts** via MetaRouter’s Product Added, Product Removed and Order Updated events. When these events are triggered, MetaRouter will pass in `incomplete: 1` to signify that the order is incomplete.
 
 To leverage the functionality of sending transactional emails when a user abandons his or her cart, you must pass in a `reminderTime` and `reminderTemplate` on these events. The template passed through as `reminderTemplate` must match the **public name** configured in Sailthru’s UI.
 
-If you send in a `Product Added` event without a valid template, Sailthru will return an error. If you send in a `Product Added` event with the `reminderTemplate` param, it will successfully send in and appear in the user view within their **incomplete purchase cart**. Some example values for `reminderTime` are 60 minutes, 24 hrs, 2 weeks. MetaRouter will handle passing in the `+` increment.
+If you send in a Product Added event without a valid template, Sailthru will return an error. If you send in a Product Added event with the `reminderTemplate` param, it will successfully send in and appear in the user view within their **incomplete purchase cart**. Some example values for `reminderTime` are 60 minutes, 24 hrs, 2 weeks. MetaRouter will handle passing in the `+` increment.
 
 ```javascript
 analytics.track(
@@ -239,11 +239,11 @@ analytics.track(
 )
 ```
 
-**Note:** All `Product Added` and `Product Removed` events going into Sailthru must have a `userId`. Sailthru must understand the state of a user’s cart when updating an item within the cart. To understand this, MetaRouter makes a `get` request with the `userId` value to retrieve a user’s cart.
+**Note:** All Product Added and Product Removed events going into Sailthru must have a `userId`. Sailthru must understand the state of a user’s cart when updating an item within the cart. To understand this, MetaRouter makes a `get` request with the `userId` value to retrieve a user’s cart.
 
-For `Product Added` events, we check the item added using the `productId` against the items we retrieved from Sailthru within the user’s cart. If the item is present, we increase the quantity by one. If there are no items in the retrieved cart, we simply add the item.
+For Product Added events, we check the item added using the `productId` against the items we retrieved from Sailthru within the user’s cart. If the item is present, we increase the quantity by one. If there are no items in the retrieved cart, we simply add the item.
 
-For `Product Removed` events, if the product is present, we then check the `qty`, subtracting the quantity of the one item, and add the remaining quantity back into the purchase payload. If there is only item, we remove it completely and push up the empty cart. If we fetch an empty cart, nothing happens.
+For Product Removed events, if the product is present, we then check the `qty`, subtracting the quantity of the one item, and add the remaining quantity back into the purchase payload. If there is only item, we remove it completely and push up the empty cart. If we fetch an empty cart, nothing happens.
 
 ### Settings
 

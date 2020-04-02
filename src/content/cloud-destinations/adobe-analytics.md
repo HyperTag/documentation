@@ -49,7 +49,7 @@ Our recommendation is to create both a MetaRouter and Adobe Analytics tracking p
 
 By default, the MetaRouter snippet includes an empty `page()` call. When `page()` is called, here's the things that will happen:
 
-1. Set `window.s.pageName` to the `name` of the page call was. By default, the MetaRouter `.page()` call will set `window.s.pageName` to be the passed argument. Since the default `page()` call has no arguments, `window.s.pageName` will be set as `undefined`. For calls like `page('Homepage')`, the `window.s.pageName` property will be set to the String passed, in this example, `'Homepage'`.
+1. Set `window.s.pageName` to the `name` of the page call was. By default, the MetaRouter `.page()` call will set `window.s.pageName` to be the passed argument. Since the default `page()` call has no arguments, `window.s.pageName` will be set as `undefined`. For calls like `page('Homepage')`, the `window.s.pageName` property will be set to the String passed, in this example, "Homepage".
 
    **Note:** For an empty `page()` call, Adobe Analytics will fallback by default to displaying the `url` as the name of the page.
 
@@ -112,7 +112,7 @@ By default, the MetaRouter snippet includes an empty `page()` call. When `page()
 
 Event tracking for Adobe Analytics through MetaRouter requires you to predefine the `events` you want to collect.
 
-In _both_ Adobe Analytics and MetaRouter destination settings UI, you must predefine a list of `.track()` events that you want to send and which properties you want to send as custom variables.
+In **both** Adobe Analytics and MetaRouter destination settings UI, you must predefine a list of `.track()` events that you want to send and which properties you want to send as custom variables.
 
 This means that you **must** map each event and property to a corresponding Adobe Analytics `event`, `prop`, or `eVar`.
 

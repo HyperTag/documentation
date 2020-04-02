@@ -36,7 +36,7 @@ MetaRouter makes it easy to copy broadcasted events to an [Amazon Simple Storage
 
 ### Amazon S3 Side
 
-#### Create an [Amazon S3 bucket](https://aws.amazon.com/s3/) within your AWS account.
+#### Create an Amazon S3 bucket within your AWS account.
 
 ![s3-event-logs1](/images/s3-event-logs1.png)
 
@@ -70,9 +70,9 @@ Add the following S3 bucket policy, which will grant MetaRouter permission to co
 
 ### MetaRouter Side
 
-Navigate to the `Clickstream` pane and select the pipeline you would like to add this S3 storage destination to. Under `Destinations` click `New Destination`. Search for and select `S3 Event Logs`. Give your destination a name and optionally fill in the `Prefix` where the file keys will be stored.
+Navigate to the **Clickstream** pane and select the pipeline you would like to add this S3 storage destination to. Under **Destinations** click **New Destination**. Search for and select **S3 Event Logs**. Give your destination a name and optionally fill in the **Prefix** where the file keys will be stored.
 
-Either configure a new S3 connection in your MetaRouter dashboard with a unique name or use an existing one. This connection holds your `AWS Region`, `Bucket Name`, and `Server Side Encryption` (as needed). Click `Save` to activate your pipeline.
+Either configure a new S3 connection in your MetaRouter dashboard with a unique name or use an existing one. This connection holds your **AWS Region**, **Bucket Name**, and **Server Side Encryption** (as needed). Click **Save** to activate your pipeline.
 
 ## Things to Note
 
@@ -82,7 +82,7 @@ The region in which your S3 bucket resides. You can find a list of regions for [
 
 ### 2. Server Side Encryption (optional):
 
-AWS S3 supports [server side encryption](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). If your bucket policy requires the server side encryption header to be set, you can specify that here. Example values for this field are 'AES256' or 'aws:kms'.
+AWS S3 supports [server side encryption](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). If your bucket policy requires the server side encryption header to be set, you can specify that here. Example values for this field are `AES256` or `aws:kms`.
 
 ### 3. Path Prefix (optional):
 

@@ -38,11 +38,11 @@ To get started, all you need is your Twitter Pixel ID, which you can retrieve by
 
 **Generate your Universal Website Tag**
 
-Once you have a [Twitter Ads account](https://ads.twitter.com/), choose `Conversion Tracking` from the `Tools` drop down menu.
+Once you have a [Twitter Ads account](https://ads.twitter.com/), choose **Conversion Tracking** from the **Tools** drop down menu.
 
 ![twitterads1](/images/twitterads1.png)
 
-A page will load asking you to accept Twitter Ads' conversion tracking policy. If you agree, check that box and choose `Generate website tag for conversion tracking`.
+A page will load asking you to accept Twitter Ads' conversion tracking policy. If you agree, check that box and choose **Generate website tag for conversion tracking**.
 
 ![twitterads2](/images/twitterads2.png)
 
@@ -60,13 +60,13 @@ If you want to use the universal tag, simply copy your Twitter Pixel ID from the
 
 If you want to use Single Event Website Tags, you'll have to map the MetaRouter events to your tags' respective conversion pixel IDs.
 
-If your events don't match the event names you're receiving from MetaRouter that have the Universal Website Tag, you'll want to use the _Single Event Website Tags_.
+If your events don't match the event names you're receiving from MetaRouter that have the Universal Website Tag, you'll want to use the **Single Event Website Tags**.
 
 **Note:** Twitter Ads only work with our client-side JavaScript library Analytics.js since it requires its script or pixel to be loaded onto your website.
 
 ### MetaRouter Side
 
-Paste your Twitter Pixel ID into the `Twitter Pixel ID` field in your MetaRouter Twitter Ads configuration, and give your new connection a unique name. Click `Save` and your pipeline will be activated.
+Paste your Twitter Pixel ID into the **Twitter Pixel ID** field in your MetaRouter Twitter Ads configuration, and give your new connection a unique name. Click **Save** and your pipeline will be activated.
 
 If you’d like to use the Single Event Website Tags, you must map the event names to your Single Event Website Tags’ respective conversion pixel IDs.
 

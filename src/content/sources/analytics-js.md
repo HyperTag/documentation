@@ -14,7 +14,7 @@ Using the open source JavaScript Analytics.js library, you can start sending cus
 
 ## Create a Client-Side Source in the MetaRouter UI
 
-After logging in with your MetaRouter credentials, add a new **Source > Client-Side**. Give your source a friendly name and copy that `Source ID` for the next step.
+After logging in with your MetaRouter credentials, add a new **Source > Client-Side**. Give your source a friendly name and copy that **Source ID** for the next step.
 
 ## Copy & Paste the Snippet
 
@@ -29,7 +29,7 @@ Next, you’ll need to copy and paste the snippet below into the <head> of your 
 </script>
 ```
 
-When you paste the snippet, replace `"YOUR_SOURCE_ID"` with the `Source ID` for this particular project.
+When you paste the snippet, replace `"YOUR_SOURCE_ID"` with the **Source ID** for this particular project.
 
 As soon as this snippet is running on your site, you can begin experimenting with destinations. Click back to MetaRouter Clickstream UI and start adding destinations to the source you just configured.
 

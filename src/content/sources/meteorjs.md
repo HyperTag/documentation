@@ -54,16 +54,16 @@ To configure your Meteor app, follow the steps below:
 
 2. Create a new file called `settings.json` at the root directory of your Meteor application and paste the above snippet into that file. If you already have a file under this name, simply add the snippet to it.
 
-3. In your MetaRouter UI, find your `Source ID` and copy it to your clipboard. Paste this value into the `appID` field in the snippet from step 1.
+3. In your MetaRouter UI, find your **Source ID** and copy it to your clipboard. Paste this value into the `appID` field in the snippet from step 1.
 
 4. Restart your Meteor Application
 
 ## Additional MeteorJS Features
 
-- `disableUserTracking` : (Boolean) Tracks aliased users
-- `disableRouteTracking` : (Boolean) Sends a Page call as routing is engaged within your Meteor App
-- `disableMethodTracking` : (Boolean) Sends a Track call as methods are engaged within your Meteor App
-- `ignoreNotFoundWarning` : (Boolean) Prevents a warning from appearing in the console if there is no `Source ID`
+- `disableUserTracking` : (Bool) Tracks aliased users
+- `disableRouteTracking` : (Bool) Sends a Page call as routing is engaged within your Meteor App
+- `disableMethodTracking` : (Bool) Sends a Track call as methods are engaged within your Meteor App
+- `ignoreNotFoundWarning` : (Bool) Prevents a warning from appearing in the console if there is no **Source ID**
 
 **Note:** Every integration you activate will require you to set up a separate account with specific keys or ids that let MetaRouter know which account is yours
 

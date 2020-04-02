@@ -40,7 +40,7 @@ You can find your script source inside of your conversion tracking code, shown a
 
 Copy your `ScriptSrc` and paste it into the "Script Source" field in your MetaRouter Taboola configuration.
 
-Give your new connection a unique name and click `Save` to activate your pipeline.
+Give your new connection a unique name and click **Save** to activate your pipeline.
 
 **Note:** You can specify custom event names in the Conversion Events section, shown as `my_custom_event` in the example below.
 

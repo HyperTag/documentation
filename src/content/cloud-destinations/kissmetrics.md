@@ -56,7 +56,7 @@ See the below for more details on how to find your API key. This will be a 40 ch
 
 Now that you have your API Key, go ahead and enter it into the KISSmetrics connector on your MetaRouter dashboard and give your new connection a unique name.
 
-Once that's done, click on `Save` to activate your pipeline.
+Once that's done, click on **Save** to activate your pipeline.
 
 ![kissmetrics2](/images/kissmetrics2v2.png)
 

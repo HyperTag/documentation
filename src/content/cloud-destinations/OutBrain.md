@@ -28,20 +28,20 @@ MetaRouter data will better leverage your use of the OutBrain platform, empoweri
 
 ### OutBrain Side
 
-To get started sending events to OutBrain, all you're gonna need is your `Advertiser Id`, which you'll see as soon as you create your account and start a campaign.
+To get started sending events to OutBrain, all you'll need is your **Advertiser Id**, which you'll see as soon as you create your account and start a campaign.
 
 ### MetaRouter Side
 
-Once you've identified your `Advertiser ID`, go ahead to your [MetaRouter dashboard](app.metarouter.io) and add OutBrain as a destination under your client-side connection.
+Once you've identified your Advertiser ID, go ahead to your [MetaRouter dashboard](https://app.metarouter.io) and add OutBrain as a destination under your client-side connection.
 
-Give your connection a unique name and input that `Advertiser ID` where asked.
+Give your connection a unique name and input that Advertiser ID where asked.
 
 ![OutBrain1-v2](/images/outbrain1v2.png)
 
 Lastly, input the OutBrain events you want to track. This is something like: `email_sign_up`.
 
-Click on `Save` at the bottom of the form to activate your pipeline.
+Click on **Save** at the bottom of the form to activate your pipeline.
 
-Once your pipeline is activated, navigate over to the `Logs` or `Analytics` section to monitor live data.
+Once your pipeline is activated, navigate over to the **Logs** or **Analytics** section to monitor live data.
 
 With that - you're ready for insights!

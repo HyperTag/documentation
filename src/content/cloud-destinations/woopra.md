@@ -36,13 +36,13 @@ Once you create your account on the Woopra [website](https://www.woopra.com/), a
 
 Now, add your domain name into the Woopra connector on your MetaRouter dashboard and give your new connection a unique name.
 
-Click `Save` to activate your pipeline.
+Click **Save** to activate your pipeline.
 
 ![woopra2](/images/woopra2v2.png)
 
 ### The Pipeline
 
-You'll now see your events trickling in on your Woopra account. If you click on the `People` icon on the left hand side of the dashboard, you'll see 1 new user. That's you!
+You'll now see your events trickling in on your Woopra account. If you click on the **People** icon on the left hand side of the dashboard, you'll see 1 new user. That's you!
 
 Click on that new user to see the history of events being recorded.
 

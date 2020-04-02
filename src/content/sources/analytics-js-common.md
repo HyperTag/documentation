@@ -117,25 +117,25 @@ Below is a chart detailing what the fields in the above sample payload mean.
 
 This section will provide other information you can gather to provide useful context about a data point. You should only use these fields for their intended meaning; they are complete and explicit specifications.
 
-| Field       | Type    | Description                                                                                                                                                                           |
-| :---------- | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [20]        | [20]    | [60]                                                                                                                                                                                  |
-| `active`    | Boolean | Tells whether a user is active. This can be used to flag an `identify` call to update its traits                                                                                      |
-| `app`       | Object  | Information about the current application, including `name`, `version`, and `build`.                                                                                                  |
-| `campaign`  | Object  | Information about the campaign that led to the API call, including `name`, `source`, `medium`, `term`, and `content`. This field maps directly to the common UTM campaign parameters. |
-| `device`    | Object  | Informationa bout the device, including `id`, `manufacturer`, `model`, `name`, `type`, and `version`.                                                                                 |
-| `ip`        | String  | User's IP address.                                                                                                                                                                    |
-| `library`   | Object  | Information about the libaray making the API calls, including `name` and `version`.                                                                                                   |
-| `locale`    | String  | Current user's locale string                                                                                                                                                          |
-| `location`  | Object  | Information about user's location, including `city`, `country`, `latitude`, `longitude`, `region`, and `speed`.                                                                       |
-| `network`   | Object  | Information about user's current device connection, including `bluetooth`, `carrier`, `cellular`, and `wifi`.                                                                         |
-| `os`        | Object  | Information about user's operating system, including `name` and `version`.                                                                                                            |
-| `page`      | Object  | Information about the current page of the user's browser, including `hash,`, `path`, `referrer`, `search`, `title`, and `url`.                                                        |
-| `referrer`  | Object  | Information about how the user got to the page, including `type`, `name`, `url`, and `link`.                                                                                          |
-| `screen`    | Object  | Information about the user's device screen, including `density`, `height`, and `width`.                                                                                               |
-| `timezone`  | String  | Which timezone the user is in                                                                                                                                                         |
-| `traits`    | Object  | Current user's `traits`.                                                                                                                                                              |
-| `userAgent` | String  | User agent of the user's device.                                                                                                                                                      |
+| Field       | Type   | Description                                                                                                                                                                           |
+| :---------- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [20]        | [20]   | [60]                                                                                                                                                                                  |
+| `active`    | Bool   | Tells whether a user is active. This can be used to flag an `identify` call to update its traits                                                                                      |
+| `app`       | Object | Information about the current application, including `name`, `version`, and `build`.                                                                                                  |
+| `campaign`  | Object | Information about the campaign that led to the API call, including `name`, `source`, `medium`, `term`, and `content`. This field maps directly to the common UTM campaign parameters. |
+| `device`    | Object | Informationa bout the device, including `id`, `manufacturer`, `model`, `name`, `type`, and `version`.                                                                                 |
+| `ip`        | String | User's IP address.                                                                                                                                                                    |
+| `library`   | Object | Information about the libaray making the API calls, including `name` and `version`.                                                                                                   |
+| `locale`    | String | Current user's locale string                                                                                                                                                          |
+| `location`  | Object | Information about user's location, including `city`, `country`, `latitude`, `longitude`, `region`, and `speed`.                                                                       |
+| `network`   | Object | Information about user's current device connection, including `bluetooth`, `carrier`, `cellular`, and `wifi`.                                                                         |
+| `os`        | Object | Information about user's operating system, including `name` and `version`.                                                                                                            |
+| `page`      | Object | Information about the current page of the user's browser, including `hash,`, `path`, `referrer`, `search`, `title`, and `url`.                                                        |
+| `referrer`  | Object | Information about how the user got to the page, including `type`, `name`, `url`, and `link`.                                                                                          |
+| `screen`    | Object | Information about the user's device screen, including `density`, `height`, and `width`.                                                                                               |
+| `timezone`  | String | Which timezone the user is in                                                                                                                                                         |
+| `traits`    | Object | Current user's `traits`.                                                                                                                                                              |
+| `userAgent` | String | User agent of the user's device.                                                                                                                                                      |
 
 All of the fields listed in the above table can be populated, but this does not happen automatically for each one. Below is a chart that details which context fields are automatically populated. If there is no check mark, you will have to manually send these variables.
 

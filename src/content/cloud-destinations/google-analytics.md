@@ -24,7 +24,7 @@ Integrating Google Analytics with MetaRouter means that you do not need to insta
 
 ## Getting Started with Google Analytics and MetaRouter
 
-_Before you get started, note that you will need to remove Google Analytics snippet from your page if you were using it outside of MetaRouter._
+**Before you get started, note that you will need to remove Google Analytics snippet from your page if you were using it outside of MetaRouter.**
 
 ### Google Analytics Side
 
@@ -36,11 +36,11 @@ To start, you'll need your Google Analytics `Tracking ID`. This can be found in 
 
 Next, head to app.metarouter.io and add a new destination for the source you want to track. Select Google Analytics and you will be brought to a Configure your destination panel.
 
-Here, you'll need to create a Friendly Name and enter your Google Analytics Tracking ID for the application. With just these two pieces of information, you can click `Create Destination` and MetaRouter will start sending your data to Google Analytics.
+Here, you'll need to create a Friendly Name and enter your Google Analytics Tracking ID for the application. With just these two pieces of information, you can click **Create Destination** and MetaRouter will start sending your data to Google Analytics.
 
 ![google-analytics1](/images/google-analytics2v2.png)
 
-**Note:** Unless you specify otherwise, MetaRouter will automatically enable `Track Named Pages` and `Track Categorized Pages`.
+**Note:** Unless you specify otherwise, MetaRouter will automatically enable **Track Named Pages** and **Track Categorized Pages**.
 
 Enabling Google Analytics in your MetaRouter UI causes a few things to happen:
 
@@ -76,11 +76,11 @@ To utilize this feature, you'll need to enable User-ID in your Google Analytics 
 
 ### Track
 
-We'll record a Google Analytics event whenever you make a `track` call (see events in Google Analytics in Behavior -> Events -> Overview).
+We'll record a Google Analytics event whenever you make a `track` call (see events in Google Analytics in **Behavior -> Events -> Overview**).
 
 ## Beyond the Basics
 
-As mentioned above, MetaRouter will automatically enable `Track Named Pages` and `Track Categorized Pages`. You'll notice that there a quite a few other Destination Details. Keep reading to learn what those are and why you might want to use them.
+As mentioned above, MetaRouter will automatically enable Track Named Pages and Track Categorized Pages. You'll notice that there a quite a few other Destination Details. Keep reading to learn what those are and why you might want to use them.
 
 ### Use Classic Analytics on Your Site
 

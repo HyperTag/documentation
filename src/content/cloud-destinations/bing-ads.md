@@ -32,19 +32,19 @@ Microsoft Advertising will record all of your page views and events sent via `pa
 
 ### Microsoft Advertising Side
 
-To set up your pipeline, you'll need to create your Universal Event Tracking (UET) `Tag ID`. This tag will help you track campaign performance by counting unique conversions and letting you associate multiple conversion goals under a single account.
+To set up your pipeline, you'll need to create your Universal Event Tracking (UET) **Tag ID**. This tag will help you track campaign performance by counting unique conversions and letting you associate multiple conversion goals under a single account.
 
 To do so, first create an account and make a campaign. Here, you'll also have the option to import a Google AdWords campaign.
 
 ![bing-ads1](/images/bing-ads1.png).
 
-Once you create a campaign, you'll be taken to your `Campaign` page. On the left sidebar, click on `Conversion Tracking` > `UET Tags`.
+Once you create a campaign, you'll be taken to your **Campaign** page. On the left sidebar, click on **Conversion Tracking > UET Tags**.
 
 Now, go ahead and create a UET Tag by choosing a name and description.
 
 ![bing-ads2](/images/bing-ads2.png).
 
-If you click on `View Tag`, you'll be able to see both the JavaScript code and the 7-digit `Tag Id`. With that, jump over to your MetaRouter dashboard to activate your pipeline directly from our UI.
+If you click on **View Tag**, you'll be able to see both the JavaScript code and the 7-digit **Tag ID**. With that, jump over to your MetaRouter dashboard to activate your pipeline directly from our UI.
 
 ![bing-ads3](/images/bing-ads3.png).
 
@@ -52,12 +52,12 @@ For more help on getting Microsoft Advertising set up, check out [this Microsoft
 
 ### MetaRouter Side
 
-If you're ready with your `Tag Id` at hand, go ahead and log into your MetaRouter dashboard.
+If you're ready with your **Tag ID** at hand, go ahead and log into your MetaRouter dashboard.
 
-Add Microsoft Advertising as a destination. From there, give your connection a unique name and input your `Tag Id` where prompted.
+Add Microsoft Advertising as a destination. From there, give your connection a unique name and input your **Tag ID** where prompted.
 
 ![bing-ads4](/images/bing-ads4v2.png)
 
-Now, just click on `Save` to activate your pipeline.
+Now, just click on **Save** to activate your pipeline.
 
 That's it! Get ready for insights.

@@ -16,7 +16,7 @@ Using our analytics-react-native library, you can start sending customer data fr
 
 ### Create an iOS Source in the MetaRouter UI
 
-After logging in with your MetaRouter credentials, add a new **Source > Client-Side**. Give your source a friendly name and copy that `Source ID` for the next step.
+After logging in with your MetaRouter credentials, add a new **Source > Client-Side**. Give your source a friendly name and copy that **Source ID** for the next step.
 
 ### iOS CocoaPods
 

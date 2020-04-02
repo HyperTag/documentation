@@ -77,42 +77,42 @@ This configuration file allows you to set your own configuration based on how yo
         - 'setHashedEmail'
 ```
 
-- `gumId` - String, **required**
-  - you'll find GUM ID value on your Criteo account
-- `partnerId` - String, **required**
-  - is your Account (Partner) ID from your Criteo account
-- `isDeduplicationOn` - Bool, **optional**
+- `gumId` : (required) String
+  - the GUM ID value from your Criteo account
+- `partnerId` : (required) String
+  - your Account (Partner) ID from your Criteo account
+- `isDeduplicationOn` : (optional) Bool
   - will allow you to set the Criteo's `deduplication` parameter for your calls
-  - _default value: `0`_
-- `defaultSiteType` - String, , **optional**, one of these values:
-  - `m` - for mobile
-  - `t` - for tablet
-  - `d` - for desktop
-  - _default value: `d`_
-- `standardEvents` - Array of Objects, **optional**
+  - default value: `0`
+- `defaultSiteType` : (optional) String - one of these values:
+  - `m` : for mobile
+  - `t` : for tablet
+  - `d` : for desktop
+  - default value: `d`
+- `standardEvents` : (optional) Array of Objects
 
-  - by default, MetaRouter will map some of the E-commerce events to standard Criteo events. (See #track-calls to see )
+  - by default, MetaRouter will map some of the E-commerce events to standard Criteo events.
   - this config option allows you to map your own event to a specific Criteo standard event
   - each Object in the Array (one Object in Array equals one mapping) should have the following structure:
 
-    - `event` - String - your event name
-    - `to` - String - Criteo standard event name
-    - `params` - Object with the following structure:
-      - `name` - String - the param name that will be sent to Criteo
-      - `type` - String - the param type of values that you want to send to Criteo. These are the accepted values for `type`:
+    - `event` : String - your event name
+    - `to` : String - Criteo standard event name
+    - `params` : Object with the following structure:
+      - `name` : String - the param name that will be sent to Criteo
+      - `type` : String - the param type of values that you want to send to Criteo. These are the accepted values for `type`:
         - `ps`
           - will send an Array of Strings representing products IDs
           - the value will be retrieved from `properties.product` or `properties.products`
           - if the value type is Array, it will be sent as is
           - if the value type is String, it will be processed into an Array by splinting the String value by `,`
-        - `pid` - will send a String representing the product ID
-        - `pids` - will send an Array of Strings representing products IDs
-        - `products-short` - will send an Array of Objects where each object has the following structure:
-          - `id` - String - product id
-          - `price` - int / float - product price
-          - `quantity` - int - product quantity
-        - `products-full` - will send an Array of Objects where each object will have the same structure that you are passing from your own event
-        - `tid` - will send a String representing transaction / order ID
+        - `pid` : will send a String representing the product ID
+        - `pids` : will send an Array of Strings representing products IDs
+        - `products-short` : will send an Array of Objects where each object has the following structure:
+          - `id` : String - product id
+          - `price` : int / float - product price
+          - `quantity` : int - product quantity
+        - `products-full` : will send an Array of Objects where each object will have the same structure that you are passing from your own event
+        - `tid` : will send a String representing transaction / order ID
         - if **no `type` provided**, we'll search for `property.[name]` and we'll use this value for this param
 
   ## Examples
@@ -134,7 +134,7 @@ This configuration file allows you to set your own configuration based on how yo
 
   Here's how the events will be mapped:
 
-  **Triggered Analytics.js event**
+  ### Triggered Analytics.js event
 
   ```javascript
   analytics.track('Order Updated', {
@@ -162,7 +162,7 @@ This configuration file allows you to set your own configuration based on how yo
   })
   ```
 
-  **Mapped Criteo event**
+  ### Mapped Criteo event
 
   ```json
   {
@@ -171,7 +171,7 @@ This configuration file allows you to set your own configuration based on how yo
   }
   ```
 
-  **Triggered Analytics.js event**
+  ### Triggered Analytics.js event
 
   ```javascript
   analytics.track('Modal Opened', {
@@ -181,7 +181,7 @@ This configuration file allows you to set your own configuration based on how yo
   })
   ```
 
-  **Mapped Criteo event**
+  ### Mapped Criteo event
 
   ```json
   {
@@ -190,7 +190,7 @@ This configuration file allows you to set your own configuration based on how yo
   }
   ```
 
-* `additionalEvents` - Array of Objects, **optional**
+- `additionalEvents` : (optional) Array of Objects
 
   - follows the same structure as `standardEvents` but this will allows you to define events that will be used as additional events fired in groups, attached to specific standard events
   - to populate params with specific values for additional events, you need to pass the values with your track call by adding the key directly on the `properties` object sent with the event (see Example below)
@@ -299,68 +299,48 @@ If `properties.viewHome` is not present or is set to `false`, the page call is *
 
 #### Track calls
 
-- Standard events - this is the list of standard events available from Criteo:
+**Standard events:** this is the list of standard events available from Criteo:
 
-  - `viewHome`
-  - `viewProduct`
-  - `viewListing`
-  - `viewBasket`
-  - `trackTransaction`
-  - `viewStore`
+- `viewHome`
+- `viewProduct`
+- `viewListing`
+- `viewBasket`
+- `trackTransaction`
+- `viewStore`
 
-  For each of these events, Criteo is suggesting a grouping of events as follows:
+For each of these events, Criteo is suggesting a grouping of events as follows:
 
-  - `viewHome` additional events: `setHashedEmail`, `setZipcode`,`setStore`;
-  - `viewProduct` additional events: `setHashedEmail`, `setZipcode`,`setStore`;
-  - `viewListing` additional events: `setHashedEmail`, `setZipcode`,`setStore`;
-  - `viewBasket` additional events: `setHashedEmail`, `setZipcode`,`setStore`;
-  - `trackTransaction` additional events: `setHashedEmail`, `setZipcode`,`setStore`;
-  - `viewStore` additional events: `setHashedEmail`.
+- `viewHome`
+  - `setHashedEmail`, `setZipcode`,`setStore`
+- `viewProduct`
+  - `setHashedEmail`, `setZipcode`,`setStore`
+- `viewListing`
+  - `setHashedEmail`, `setZipcode`,`setStore`
+- `viewBasket`
+  - `setHashedEmail`, `setZipcode`,`setStore`
+- `trackTransaction`
+  - `setHashedEmail`, `setZipcode`,`setStore`
+- `viewStore`
+  - `setHashedEmail`
 
-  This means that, for example, if a `viewProduct` event is triggered, the actual events that will be sent are: `viewProduct`, `setHashedEmail`, `setZipcode` and `setStore`.
+This means that, for example, if a `viewProduct` event is triggered, the actual events that will be sent are: `viewProduct`, `setHashedEmail`, `setZipcode` and `setStore`.
 
-  By default, we map some of the Analytics.js Standard E-commerce events to Criteo Standard events, as follows:
+By default, we map some of the Analytics.js Standard E-commerce events to Criteo Standard events, as follows:
 
-    <table>
-        <thead>
-            <tr>
-                <th><b>Analytics.js</b></th>
-                <th><b>Criteo Standard Event</b></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Products Searched</td>
-                <td>viewListing</td>
-            </tr>
-            <tr>
-                <td>Product List Viewed</td>
-                <td>viewListing</td>
-            </tr>
-            <tr>
-                <td>Product List Filtered</td>
-                <td>viewListing</td>
-            </tr>
-            <tr>
-                <td>Product Viewed</td>
-                <td>viewProduct</td>
-            </tr>
-            <tr>
-                <td>Cart Viewed</td>
-                <td>viewBasket</td>
-            </tr>
-            <tr>
-                <td>Order Completed</td>
-                <td>trackTransaction</td>
-            </tr>
-        </tbody>
-    </table>
+| Analytics.js          | Criteo Standard Event |
+| :-------------------- | :-------------------- |
+| Products Searched     | `viewListing`         |
+| Product List Viewed   | `viewListing`         |
+| Product List Filtered | `viewListing`         |
+| Product Viewed        | `viewProduct`         |
+| Cart Viewed           | `viewBasket`          |
+| Order Completed       | `trackTransaction`    |
 
-* Custom events - For any custom event call, Criteo's API is responding with a `200 ok` status, but **any custom event is dropped by Criteo**. To avoid triggering a call that is eventually dropped by Criteo, we're **dropping** any custom event.
+**Custom events:** For any custom event call, Criteo's API is responding with a `200 ok` status, but **any custom event is dropped by Criteo**. To avoid triggering a call that is eventually dropped by Criteo, we're **dropping** any custom event.
 
 #### Setting Emails
 
-It’s easy to associate emails with a user, if there’s an `email` property in the track call, we’ll include the `setHashedEmail` event to Criteo along with your event. The email value needs to be MD5-hash of the lowercase email (i.e. MD5(user@domain.com) ). To pass the `email` property your `track` call should be trigger like this:
+It’s easy to associate emails with a user, if there’s an `email` property in the track call, we’ll include the `setHashedEmail` event to Criteo along with your event. The email value needs to be MD5-hash of the lowercase email (i.e. `MD5(user@domain.com)` ). To pass the `email` property your `track` call should be trigger like this:
 
 ```javascript
 analytics.track('Event Name', {

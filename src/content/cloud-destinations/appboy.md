@@ -28,8 +28,8 @@ Note that you can only integrate Braze with server-side and mobile sources.
 
 ### Braze Side
 
-Once you've created your Braze account, you'll need to find your `App Group Identifier`. You can find this ID in the Braze Dashboard under `App Settings-->Developer Console`.
+Once you've created your Braze account, you'll need to find your **App Group Identifier**. You can find this ID in the Braze Dashboard under **App Settings > Developer Console**.
 
 ### MetaRouter side
 
-Paste your `App Group Identifier` into the appropriate field in your MetaRouter UI to get your data flowing!
+Paste your App Group Identifier into the appropriate field in your MetaRouter UI to get your data flowing!

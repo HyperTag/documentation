@@ -31,14 +31,14 @@ Having your user event data incorporated into your marketing automation can be i
 To get started sending events to Acquisio, you'll need to sign up for [Acquisio](http://www.acquisio.com/) and work with an account manager to:
 
 - Create your company's specific campaign
-- Receive your `Advertiser ID` and any custom event names
+- Obtain your Acquisio **Advertiser ID** and any custom event names
 
 ### MetaRouter Side
 
-Once you receive your `Advertiser ID` from your account manager, paste it into the `Advertiser ID` field in the MetaRouter UI. In the `Events` area, paste in any conversion event names given to you by Acquisio. If you have more than one custom event, choose the `+` icon to add more.
+Once you receive your Advertiser ID from your account manager, paste it into the **Advertiser ID** field in the MetaRouter UI. In the **Events** area, paste in any conversion event names given to you by Acquisio. If you have more than one custom event, choose the `+` icon to add more.
 
 ![acquisio1](/images/acquisio1v2.png)
 
-With your configuration entered, choose `Save.`
+With your configuration entered, choose **Save**.
 
-Generate page views and events on your website by triggering `analytics.track('your custom event name');`. Confirm with your Acquisio account manager that custom events for your specific campaigns are being received as expected.
+Generate page views and events on your website by triggering `analytics.track('your custom event name')`. Confirm with your Acquisio account manager that custom events for your specific campaigns are being received as expected.

@@ -166,9 +166,9 @@ exports.onRouteUpdate = () => {
     sessionStorage.setItem('navStateCollapsed', collapsed.join(','))
   }
 
-  var setNavScrollPosition = function() {
+  var setNavScrollPosition = throttle(function() {
     sessionStorage.setItem('navStateScroll', navList.querySelector('.scrollbox').scrollTop)
-  }
+  }, 250)
 
   var syncNavState = function() {
     var titles = sessionStorage.getItem('navStateCollapsed')

@@ -34,7 +34,7 @@ gem install analytics-ruby
 
 ### Step 2
 
-Inside your Ruby application, you'll want to set your `Source ID` inside an instance of the Analytics object:
+Inside your Ruby application, you'll want to set your **Source ID** inside an instance of the Analytics object:
 
 ```ruby
 require 'segment/analytics'
@@ -45,7 +45,7 @@ analytics = Segment::Analytics.new({
 })
 ```
 
-**Note:** You can find your `Source ID` in the settings section of your MetaRouter App.
+**Note:** You can find your **Source ID** in the settings section of your MetaRouter App.
 
 ## Calls in Ruby
 

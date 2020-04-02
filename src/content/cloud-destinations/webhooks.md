@@ -10,7 +10,7 @@ tags: [cloud, destinations]
 
 # Webhooks
 
-MetaRouter makes it easy to send your data to webhooks from server-side, mobile, _and_ client-side. Once you follow the steps below, your data will be routed through our platform and pushed to webhooks in the appropriate format.
+MetaRouter makes it easy to send your data to webhooks from server-side, mobile, **and** client-side. Once you follow the steps below, your data will be routed through our platform and pushed to webhooks in the appropriate format.
 
 ## What are webhooks and how do they work?
 
@@ -32,7 +32,7 @@ Read below to kickoff your integration and start gaining insights.
 
 Add your domain name into the webhook connector on your MetaRouter dashboard and give your new connection a unique name.
 
-Click `Save` to activate your pipeline.
+Click **Save** to activate your pipeline.
 
 ### Sending to multiple webhooks
 

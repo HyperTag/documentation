@@ -26,7 +26,7 @@ Below are the settings needed to successfully connect and configure MetaRouter t
 
 #### Slack Channel Webhook (required)
 
-This requires the URL Slack gave you when you added an new _Incoming Webhook_ Configuration.
+This requires the URL Slack gave you when you added a new Incoming Webhook Configuration.
 
 ### Destination Details
 

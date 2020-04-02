@@ -57,7 +57,7 @@ This configuration file allows you to set your own configuration based on how yo
     - You can opt to override the default conversion ID by setting one here.
   - `customVariables` - Object, **optional**
     - Map Analytics.js event properties (on the left) to AdWords custom variables and we'll insert the value of that property in the corresponding AdWords custom variables (on the right).
-- `useDefaultMapping` - Boolean, **optional**, default value `false`
+- `useDefaultMapping` - Bool, **optional**, default value `false`
 
   - By default, we map some of the Analytics.js Standard E-commerce events to AdWords events, as follows:
 

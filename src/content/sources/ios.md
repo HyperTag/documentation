@@ -16,7 +16,7 @@ Using our analytics-iOS library, you can start sending customer data from your a
 
 ### Create an iOS Source in the MetaRouter UI
 
-After logging in with your MetaRouter credentials, add a new **Source > iOS**. Give your source a friendly name and copy that `Source ID` for the next step.
+After logging in with your MetaRouter credentials, add a new **Source > iOS**. Give your source a friendly name and copy that **Source ID** for the next step.
 
 ## Install the SDK
 

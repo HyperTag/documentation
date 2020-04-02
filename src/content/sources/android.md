@@ -16,7 +16,7 @@ Using our analytics-android library, you can start sending customer data from yo
 
 ### Create an Android Source in the MetaRouter UI
 
-After logging in with your MetaRouter credentials, add a new **Source > Android**. Give your source a friendly name and copy that `Source ID` for the next step.
+After logging in with your MetaRouter credentials, add a new **Source > Android**. Give your source a friendly name and copy that **Source ID** for the next step.
 
 ## Install the SDK
 

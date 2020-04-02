@@ -34,9 +34,7 @@ You will need to install the iOS and/or Android Segment-Firebase SDKs (shout-out
 
 Register your app in the [Firebase Console](https://console.firebase.google.com/) and add the `GoogleService-Info.plist` to the root of your Xcode project.
 
-Add the following dependency to your Podfile:
-
-`pod 'Segment-Firebase'`
+Add the following dependency to your Podfile: `pod 'Segment-Firebase'`
 
 After adding the dependency, import the integration:
 
@@ -111,7 +109,7 @@ Register your mobile app with Firebase at https://console.firebase.google.com
 
 Once your app is registered, you’ll be prompted to download a google-services.json file. Place this in your Application’s “app” folder. This file contains all necessary configurations and cannot be used across multiple apps. If you’re configuring Firebase for other apps, you should create a new view in your Firebase console and download a unique google-services.json file for each.
 
-Module-level build.gradle: Add the Segment-Firebase SDK and apply the Google Services plugin at the end of the file:
+**Module-level build.gradle:** Add the Segment-Firebase SDK and apply the Google Services plugin at the end of the file:
 
 ```
 buildscript {
@@ -126,7 +124,7 @@ buildscript {
 apply plugin: 'com.google.gms.google-services'
 ```
 
-_Project-level build.gradle_: Add Google Services dependency and their Maven repo location to repositories:
+**Project-level build.gradle:** Add Google Services dependency and their Maven repo location to repositories:
 
 ```
 buildscript {
@@ -337,7 +335,7 @@ MetaRouter doesn’t map screen events to Firebase - that’s because Firebase�
 
 For Android, MetaRouter passes contextual screen information into each screen view on each activity’s `onResume` callback. To ensure that screen names are labeled properly, MetaRouter recommends adding a `label` value to each of your activities in your app’s AndroidManifest.xml file. At the moment, Firebase does not allow disabling automatic screen tracking for Android.
 
-For iOS, you can configure `recordScreenViews` which will automatically track screen views, or pass in a screen manually via a screen call. You should be able to disable the Automatic Screen reporting by adding the plist flag `FirebaseScreenReportingEnabled` to `Info.plist` and set its value to `NO` (Boolean).
+For iOS, you can configure `recordScreenViews` which will automatically track screen views, or pass in a screen manually via a screen call. You should be able to disable the Automatic Screen reporting by adding the plist flag `FirebaseScreenReportingEnabled` to `Info.plist` and set its value to `NO` (Bool).
 
 Google Analytics for Firebase iOS does NOT support the case of manual-only screen reporting. Firebase only supports automatic + manual screen reporting or no screen reporting at all.
 

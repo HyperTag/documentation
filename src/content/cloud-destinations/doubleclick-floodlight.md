@@ -16,13 +16,13 @@ MetaRouter makes it easy to send your data to DoubleClick Floodlight. Once you f
 
 DoubleClick Floodlight is a system developed by Google used for ad tracking and reporting. It operates by creating an image pixel tag to track user action once they click on a Google Ad. By using a single set of Floodlight tags, it avoids cross-channel redundancy. It also integrates directly with AdWords and Google Analytics to track all activity across multiple platforms.
 
-DoubleClick Floodlight requires the installation of an HTML `Floodlight tag` on every page that you want to track. When a customer clicks an ad that lands them on a page with a `Floodlight tag` embedded within the HTML, the tag sends data about the conversion back to DoubleClick. Setting this up on every page that you want to track is burdensome and requires a commitment from your developer team to write custom event tracking code and learn new tags to make the tool work for your business. That's where we come in.
+DoubleClick Floodlight requires the installation of an HTML **Floodlight tag** on every page that you want to track. When a customer clicks an ad that lands them on a page with the Floodlight tag embedded within the HTML, the tag sends data about the conversion back to DoubleClick. Setting this up on every page that you want to track is burdensome and requires a commitment from your developer team to write custom event tracking code and learn new tags to make the tool work for your business. That's where we come in.
 
 For more information on DoubleClick Floodlight, check out [this page](https://support.google.com/dfa/partner/answer/186739?hl=en).
 
 ## Why send data to DoubleClick Floodlight using MetaRouter?
 
-By integrating DoubleClick Floodlight with MetaRouter, you can send information directly to DoubleClick without even using the `Floodlight tag`. Once you enable it as a destination in your MetaRouter UI, your data will routed by MetaRouter and sent to DoubleClick. By using MetaRouter to enable DoubleClick, you eliminate the need for additional developer resources and custom event tracking code.
+By integrating DoubleClick Floodlight with MetaRouter, you can send information directly to DoubleClick without even using the Floodlight tag. Once you enable it as a destination in your MetaRouter UI, your data will routed by MetaRouter and sent to DoubleClick. By using MetaRouter to enable DoubleClick, you eliminate the need for additional developer resources and custom event tracking code.
 
 ## Getting Started with DoubleClick Floodlight and MetaRouter
 
@@ -34,7 +34,7 @@ With the DoubleClick Floodlight destination, you can make calls directly to Floo
 
 Once you find your seven-digit Advertiser ID, enter it into the corresponding field in the MetaRouter UI. Under this field, you'll find space for your Activity Group label (referred to as "type" within DoubleClick) as well as your Activity Tag String Value (referred to as "cat") for tracking page views.
 
-If you want to pass in specific track events to DoubleClick, you can do so within the Events section in the Advanced tab. Simply specify the name of the event _exactly_ as it is sent to MetaRouter and the corresponding Type and CAT values for the Activity Group in DoubleClick.
+If you want to pass in specific track events to DoubleClick, you can do so within the Events section in the Advanced tab. Simply specify the name of the event **exactly** as it is sent to MetaRouter and the corresponding Type and CAT values for the Activity Group in DoubleClick.
 
 In the past, we've seen Floodlight tags that look something like this:
 
@@ -67,4 +67,4 @@ Custom properties can be added to the events sent to DoubleClick by specifying t
 
 **Note:** When adding new events to track with DoubleClick, make sure the `Event key` matches the `Event name` exactly.
 
-Once you have all of this set up, click `Save` to activate your pipeline.
+Once you have all of this set up, click **Save** to activate your pipeline.

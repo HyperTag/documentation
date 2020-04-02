@@ -68,7 +68,7 @@ This configuration file allows you to set your own configuration based on how yo
     - This should be the `cat` of your tag string, which Floodlight servers use to identify the activity group to which the activity belongs. If you do not add this option, we will fall back to whatever you defines in the top level `cat` setting.
   - `type` - String
     - This should be the `type` of your tag string, which identifies the activity group with which the Floodlight activity is associated. If you do not add this option, we will fall back to whatever you defines in the top level `type` setting.
-  - `isPageView` - Boolean
+  - `isPageView` - Bool
     - This allows us to know if this event is a pageview.
   - `customVariables` - Object, **optional**
     - Map Analytics.js event properties (on the left) to Floodlight custom variables and we'll insert the value of that property in the corresponding Floodlight custom variables like `u1`, `u2`, ..etc (on the right).

@@ -44,9 +44,9 @@ After this application is created, an API Key will be generated and presented in
 
 ### MetaRouter Side
 
-Add this API Key to the Amplitude connector on the MetaRouter dashboard and give your new connection a unique name. Your pipeline will be activated once you click `Save`.
+Add this API Key to the Amplitude connector on the MetaRouter dashboard and give your new connection a unique name. Your pipeline will be activated once you click **Save**.
 
-You can now go back into your Amplitude account and see your user activity! To see exactly what events are being sent over, you can click around the `Events` and `User Activity` tabs.
+You can now go back into your Amplitude account and see your user activity! To see exactly what events are being sent over, you can click around the **Events** and **User Activity** tabs.
 
 ## Additional Features
 
@@ -62,18 +62,18 @@ Note that MetaRouter will not pass `page` or `screen` calls by default. See the 
 
 ### Other Settings
 
-- `Track UTM Properties` - Checking this box will track UTM properties found in the querystring to Amplitude. This feature is only available for Web sources.
-- `Track Referrer` - Checking this box will send referrer information as a user property to Amplitude when you call a `page()` method.
-- `Send Page Details With Track Events` - Checking this box will add `context.page` properties to the `track()` properties. The resulted merged object will then be sent as the final payload for a `track()` call to Amplitude.
-- `Batch Events` - Checking this box causes events to be batched together and uploaded only if the number of unsent events is greater than or equal to the `Event Upload Threshold` or after the `Event Upload Period Millis` milliseconds have passed since the first unsent event was logged. You can set these parameters in the fields at the bottom of the Destination settings in the UI.
-- `Use logRevenueV2 API` - This allows for the tracking of event properties with the revenue event. For example, you would be able to track a certain event and attach `price` and `quantity` properties to it. This feature will then log total revenue (`price`\*`quantity`).
-- `Track Revenue Per Product` - This setting allows you to specify whether you would like to track an Amplitude Revenue event per individual product in a user transaction or a single Revenue event for the combined revenue of all products. This setting is only relevant if you are using our eCommerce spec and passing us an _Order Completed_ event with a list of products.
-- `Force Https` - If true, the events will always be uploaded to HTTPS endpoint. Otherwise the SDK will use the embedding site’s protocol.
-- `Track GCLID` - If true, captures the gclid url parameter as well as the user’s initial_gclid via a set once operation.
-- `Save Referrer Once Per Session` - If true then includeGclid, includeReferrer, and includeUtm will only track their respective properties once per session. New values that come in during the middle of the user’s session will be ignored. Set to false to always capture new values.
-- `Set Device ID From URL Parameter` - If true, the SDK will parse device ID values from url parameter amp_device_id if available.
-- `Map Query Params to Custom Property` - When sending data via server side, you can send the custom query params that are automatically collected by Analytics.js (or whatever you manually send under `context.page.search`), by entering a custom property name you would like to map that under on the left hand side. On the right hand side, please choose whether you want the query params to be set on the user profile or event metadata level. Whatever you put on the left hand side we will map the entire query parameters string from the `context.page.url`. (**Note:** Do not add more than one row. Adding more than one row in this setting will have no effect.)
-- `Unset Params Referrer On New Session` - If false, the existing referrer and `utm_parameter` values will be carried through each new session. If set to true, the referrer and `utm_parameter` user properties, which include `referrer`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, and `utm_content`, will be set to null upon instantiating a new session. (**Note:** This only works if Track Referrer or Track UTM Properties to Amplitude are set to true.)
-- `Append Fields To Event Properties` - Configure event fields to be appended to `event_props` for all track calls. For example, entering `context.page.title` on the left and `pageTitle` on the right will set the value of `context.page.title` at `event_properties.pageTitle`.
-- `Track products once` - _Beta feature_ Amplitude recently added support to submit an array of products on “Order Completed” events. If this setting is set to true, we will send all the products in one single event to Amplitude.
-- `Version Name` - Optional. You can assign a version name for your page, and we’ll send it to Amplitude for more detailed events.
+- **Track UTM Properties:** Checking this box will track UTM properties found in the querystring to Amplitude. This feature is only available for Web sources.
+- **Track Referrer:** Checking this box will send referrer information as a user property to Amplitude when you call a `page()` method.
+- **Send Page Details With Track Events:** Checking this box will add `context.page` properties to the `track()` properties. The resulted merged object will then be sent as the final payload for a `track()` call to Amplitude.
+- **Batch Events:** Checking this box causes events to be batched together and uploaded only if the number of unsent events is greater than or equal to the `Event Upload Threshold` or after the `Event Upload Period Millis` milliseconds have passed since the first unsent event was logged. You can set these parameters in the fields at the bottom of the Destination settings in the UI.
+- **Use logRevenueV2 API:** This allows for the tracking of event properties with the revenue event. For example, you would be able to track a certain event and attach `price` and `quantity` properties to it. This feature will then log total revenue (`price`\*`quantity`).
+- **Track Revenue Per Product:** This setting allows you to specify whether you would like to track an Amplitude Revenue event per individual product in a user transaction or a single Revenue event for the combined revenue of all products. This setting is only relevant if you are using our eCommerce spec and passing us an _Order Completed_ event with a list of products.
+- **Force Https:** If true, the events will always be uploaded to HTTPS endpoint. Otherwise the SDK will use the embedding site’s protocol.
+- **Track GCLID:** If true, captures the gclid url parameter as well as the user’s initial_gclid via a set once operation.
+- **Save Referrer Once Per Session:** If true then includeGclid, includeReferrer, and includeUtm will only track their respective properties once per session. New values that come in during the middle of the user’s session will be ignored. Set to false to always capture new values.
+- **Set Device ID From URL Parameter:** If true, the SDK will parse device ID values from url parameter amp_device_id if available.
+- **Map Query Params to Custom Property:** When sending data via server side, you can send the custom query params that are automatically collected by Analytics.js (or whatever you manually send under `context.page.search`), by entering a custom property name you would like to map that under on the left hand side. On the right hand side, please choose whether you want the query params to be set on the user profile or event metadata level. Whatever you put on the left hand side we will map the entire query parameters string from the `context.page.url`. (**Note:** Do not add more than one row. Adding more than one row in this setting will have no effect.)
+- **Unset Params Referrer On New Session:** If false, the existing referrer and `utm_parameter` values will be carried through each new session. If set to true, the referrer and `utm_parameter` user properties, which include `referrer`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, and `utm_content`, will be set to null upon instantiating a new session. (**Note:** This only works if Track Referrer or Track UTM Properties to Amplitude are set to true.)
+- **Append Fields To Event Properties:** Configure event fields to be appended to `event_props` for all track calls. For example, entering `context.page.title` on the left and `pageTitle` on the right will set the value of `context.page.title` at `event_properties.pageTitle`.
+- **Track products once:** (Beta feature) Amplitude recently added support to submit an array of products on “Order Completed” events. If this setting is set to true, we will send all the products in one single event to Amplitude.
+- **Version Name:** (Optional) You can assign a version name for your page, and we’ll send it to Amplitude for more detailed events.

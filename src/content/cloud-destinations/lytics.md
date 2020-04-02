@@ -49,7 +49,7 @@ Once you have a Lytics account, you'll be dropped into a welcome page asking you
 
 ![lytics1](/images/lytics1.png)
 
-MetaRouter won't show up on that page, but go ahead and click on your email address at the top right, and into the `Manage Accounts` option.
+MetaRouter won't show up on that page, but go ahead and click on your email address at the top right, and into the **Manage Accounts** option.
 
 Once there, you'll see your ID on the left hand side of your account and your Data API Key on the right.
 
@@ -59,16 +59,16 @@ Once there, you'll see your ID on the left hand side of your account and your Da
 
 Add your Account ID and Data API Key into the Lytics connector on your MetaRouter dashboard and give your new connection a unique name.
 
-Now, just click `Save` to activate your pipeline.
+Now, just click **Save** to activate your pipeline.
 
 ![lytics3](/images/lytics3v2.png)
 
 Lytics updates their incoming data stream every two minutes, so give it a couple of minutes for your events to show up.
 
-See the image below - you can check back in on the status of your project by going to the `Data` tab at the top.
+See the image below - you can check back in on the status of your project by going to the **Data** tab at the top.
 
 ![lytics4](/images/lytics4.png)
 
 ## Additional Features
 
-- `Stream` - Allows you to organize your data in Lytics. This is only necessary when you are tracking multiple websites
+- **Stream:** Allows you to organize your data in Lytics. This is only necessary when you are tracking multiple websites

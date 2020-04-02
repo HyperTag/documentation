@@ -28,7 +28,7 @@ To get started sending events to Lucky Orange, first sign up for [an account](ht
 
 ### Lucky Orange Side
 
-Begin by logging into your [Lucky Orange](https://www.luckyorange.com/) account. Create a new site by clicking `Add a New Site` button from top right. The next page will show your Lucky Orange tracking code for your site.
+Begin by logging into your [Lucky Orange](https://www.luckyorange.com/) account. Create a new site by clicking **Add a New Site** button from top right. The next page will show your Lucky Orange tracking code for your site.
 
 ![luckyorange1](/images/luckyorange1.png)
 
@@ -52,12 +52,12 @@ Auto-Tagging option will send all Analytics.js triggered events from your websit
 
 #### Custom mapping
 
-To map an event to a specific tag, uncheck _Auto-Tagging_ option - _Map Analytics Events to Lucky Orange tags_ section will be available. Here you can define your own mappings between an [e-commerce event](/sources/analytics-js-ecommerce-spec/) and a Lucky Orange tag by clicking the **+** button. The values that you can add here are the following:
+To map an event to a specific tag, uncheck **Auto-Tagging** option - **Map Analytics Events to Lucky Orange tags** section will be available. Here you can define your own mappings between an [e-commerce event](/sources/analytics-js-ecommerce-spec/) and a Lucky Orange tag by clicking the `+` button. The values that you can add here are the following:
 
-- Event name (required) - the name of your Analytics.js event
-- Tag (required) the name of your Lucky Orange tag
-- Star - by checking this box, the triggered tag will be starred on your Lucky Orange's dashboard
-- Overwrite - by checking this box, the triggered tag will overwrite any existing tags on your Lucky Orange's dashboard
+- **Event name:** (required) The name of your Analytics.js event
+- **Tag:** (required) The name of your Lucky Orange tag
+- **Star:** By checking this box, the triggered tag will be starred on your Lucky Orange dashboard
+- **Overwrite:** By checking this box, the triggered tag will overwrite any existing tags on your Lucky Orange dashboard
 
 **Note:** Only triggered events that have a mapping defined will be sent to Lucky Orange's APIs.
 
@@ -65,7 +65,7 @@ To map an event to a specific tag, uncheck _Auto-Tagging_ option - _Map Analytic
 
 You can map as many events you need.
 
-Finally, click `Save` to activate your pipeline.
+Finally, click **Save** to activate your pipeline.
 
 ### Identify
 
@@ -107,19 +107,17 @@ For flexibility, there are a few ways for you to benefit of. Here are some examp
 
   Since no custom data is set inside properties, default values used are as follows:
 
-  - tag - event name - for this example, tag will be 'Products Searched'
-  - star - `false`
-  - overwrite - `false`
+  - `tag` : event name - for this example, tag will be 'Products Searched'
+  - `star` : false
+  - `overwrite` : false
 
-  ![luckyorange7](/images/luckyorange7.png)
+![luckyorange7](/images/luckyorange7.png)
 
-- Custom `track()` usage
+- You can customize each `track()` call by setting values for these properties:
 
-  You can customize each `track()` call with these properties:
-
-  - `tag` _(optional, defaults to event's name)_ - **String** - Lucky Orange tag name
-  - `star` _(optional, default `false`)_ - **Boolean** - Lucky Orange star property
-  - `overwrite` _(optional, default `false`)_ - **Boolean** - Lucky Orange overwrite property
+  - `tag` : (optional) String - Lucky Orange tag name
+  - `star` : (optional) Bool - Lucky Orange star property
+  - `overwrite` : (optional) Bool - Lucky Orange overwrite property
 
   ```javascript
   analytics.track('Products Searched', {
@@ -130,7 +128,7 @@ For flexibility, there are a few ways for you to benefit of. Here are some examp
   })
   ```
 
-  ![luckyorange8](/images/luckyorange8.png)
+![luckyorange8](/images/luckyorange8.png)
 
 #### Auto-Tagging disabled & Mapped Analytics Events to Lucky Orange tags available
 

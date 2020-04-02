@@ -26,9 +26,9 @@ Next, you'll want to install our .net library to start using the `identify` and 
 Install-Package Analytics
 ```
 
-You can also doing this by navigating through Visual Studio: `Toola-->Library Package Manager-->Package Manager Console'
+You can also doing this by navigating through Visual Studio: **Tools > Library Package Manager > Package Manager Console**
 
-Now you need to initialize the .NET library so that it knows where to send data. Do this with your `Source ID`, which can be found in your MetaRouter UI once you've created a server-side source. Then you can use the `Analytics` singleton in any controller you want:
+Now you need to initialize the .NET library so that it knows where to send data. Do this with your **Source ID**, which can be found in your MetaRouter UI once you've created a server-side source. Then you can use the `Analytics` singleton in any controller you want:
 
 ```csharp
 <%@ Application Language="C#" %>

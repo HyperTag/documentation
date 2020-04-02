@@ -40,7 +40,7 @@ It's important to note here that Heap automatically sets you up with a Developme
 
 ### MetaRouter Side
 
-Add your Source ID into the Heap connector on your MetaRouter dashboard and give your new connection a unique name. Click `Save` and your pipeline will be activated.
+Add your Source ID into the Heap connector on your MetaRouter dashboard and give your new connection a unique name. Click **Save** and your pipeline will be activated.
 
 ![heap-analytics3](/images/heap-analytics3v2.png)
 
@@ -50,6 +50,6 @@ When you return to your Heap account, you might get a message saying "There's no
 
 ![heap-analytics4](/images/heap-analytics4.png)
 
-To see what specific events are coming in, go to the `Events` page on the left-hand menu bar.
+To see what specific events are coming in, go to the **Events** page on the left-hand menu bar.
 
 ![heap-analytics5](/images/heap-analytics5.png)

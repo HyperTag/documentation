@@ -36,7 +36,7 @@ Add to `pom.xml`:
 
 ## Initialize the SDK
 
-Before you can start sending us events, you'll need to initialize an instance of the Analytics class. Do this using the `Analytics.builder` class, inputting the `Source ID` found in the source settings of your MetaRouter UI.
+Before you can start sending us events, you'll need to initialize an instance of the Analytics class. Do this using the `Analytics.builder` class, inputting the **Source ID** found in the source settings of your MetaRouter UI.
 
 ```java
 Analytics analytics = Analytics.builder("Your Source ID")

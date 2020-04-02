@@ -42,7 +42,7 @@ With that 8-character ID, go right ahead to your MetaRouter dashboard to finish 
 
 Once you're on our UI, add Attribution as a destination on your client-side or server-side source. From there, give your connection a unique name and enter your `Project ID` where prompted.
 
-Finally, click `Save` to activate your pipeline.
+Finally, click **Save** to activate your pipeline.
 
 ![attribution2](/images/Attribution2v2.png)
 

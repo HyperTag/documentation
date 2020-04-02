@@ -54,13 +54,13 @@ To connect your events to these predefined ones within Facebook, just input the 
 
 **Conversion Pixel ID**
 
-If you are using the Facebook Pixel integration as a replacement for Conversion Pixels as well, put each `Conversion Pixel ID` into your MetaRouter account next to the corresponding event in MetaRouter that you've already set up. Make sure you include all capitals letters and spaces used in your event labels.
+If you are using the Facebook Pixel integration as a replacement for Conversion Pixels as well, put each **Conversion Pixel ID** into your MetaRouter account next to the corresponding event in MetaRouter that you've already set up. Make sure you include all capitals letters and spaces used in your event labels.
 
 ![facebook-pixel4](/images/facebook-pixel4v2.png)
 
 **Send all Events as Single Events**
 
-Enabling this will force FB Pixel events triggered by MetaRouter to fire in trackSingle/trackSingleCustom mode to prevent them from going to other FB Pixels loaded on the page. This is helpful if there are different team managing their own pixel, or if you have installed Analytics.js on a site with an existing pixel.
+Enabling this will force FB Pixel events triggered by MetaRouter to fire in `trackSingle` / `trackSingleCustom` mode to prevent them from going to other FB Pixels loaded on the page. This is helpful if there are different team managing their own pixel, or if you have installed Analytics.js on a site with an existing pixel.
 
 You can find out more about the specific use-case and benefits from this [Facebook Developers article](https://developers.facebook.com/ads/blog/post/2017/11/28/event-tracking-with-multiple-pixels-tracksingle/).
 

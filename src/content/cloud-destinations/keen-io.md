@@ -36,8 +36,8 @@ Plus, with MetaRouter, there is no need to manually install the Keen SDK in your
 
 To get started sending events to Keen, you'll need two things:
 
-- `Project ID`: This tells MetaRouter which project within Keen is yours
-- `Write Key`: This gives MetaRouter permission to send data to your Keen dashboard
+- **Project ID:** This tells MetaRouter which project within Keen is yours
+- **Write Key:** This gives MetaRouter permission to send data to your Keen dashboard
   Both of these things will be long strings of random characters.
 
 You can find your Write Key by clicking on `Show API Keys`.
@@ -48,18 +48,18 @@ You can find your Write Key by clicking on `Show API Keys`.
 
 Once you have your Project ID and Write Key, copy both into the MetaRouter dashboard.
 
-Your pipeline will be activated once you click `Create Destination`.
+Your pipeline will be activated once you click **Create Destination**.
 
 ### Additional Features
 
 We offer some additional features in the MetaRouter UI that allow you to change your destination settings without any code.
 
-- `Project ID` - This is a 24-character code that you can find in your Keen settings.
-- `Read Key` - This can be used if you are a Keen Pro user. This should be a string of letters and numbers that is at least 32 characters long.
-- `Add IP Address` - Check this box to use the Keen data enrichment feature for adding geographic information based on IP address.
-- `Add Referrer` - Check this box to use the Keen data enrichment feature for parsing referrer URLs into their sources.
-- `Track All Pages` - Check this box to track `Loaded a Page` to Keen for all `page` calls.
-- `Track Categorized Pages` - Check this box to track all `page` calls that have a `category` associated with them to Keen. For example, `page('Product' , 'Index')` would translate to `Viewed Product Page` in your Keen dashboard.
-- `Track Named Pages` - Check this box to track all `page` calls that have a `name` associated with them to Keen. For example, `page('Contact Us')`would translate to `Viewed Contact Us Page` in your Keen dashboard.
-- `Add User Agent` - Check this box to use the Keen data enrichment feature that parses `userAgent` strings. Note that `userAgent` is only collected from Android sources and not from iOS ones.
-- `Add URL` - Check this box to use the Keen data enrichment feature that parses URLs into their components for easier filtering.
+- **Project ID:** This is a 24-character code that you can find in your Keen settings.
+- **Read Key:** This can be used if you are a Keen Pro user. This should be a string of letters and numbers that is at least 32 characters long.
+- **Add IP Address:** Check this box to use the Keen data enrichment feature for adding geographic information based on IP address.
+- **Add Referrer:** Check this box to use the Keen data enrichment feature for parsing referrer URLs into their sources.
+- **Track All Pages:** Check this box to track `Loaded a Page` to Keen for all `page` calls.
+- **Track Categorized Pages:** Check this box to track all `page` calls that have a `category` associated with them to Keen. For example, `page('Product' , 'Index')` would translate to `Viewed Product Page` in your Keen dashboard.
+- **Track Named Pages:** Check this box to track all `page` calls that have a `name` associated with them to Keen. For example, `page('Contact Us')` would translate to `Viewed Contact Us Page` in your Keen dashboard.
+- **Add User Agent:** Check this box to use the Keen data enrichment feature that parses `userAgent` strings. Note that `userAgent` is only collected from Android sources and not from iOS ones.
+- **Add URL:** Check this box to use the Keen data enrichment feature that parses URLs into their components for easier filtering.

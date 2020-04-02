@@ -36,11 +36,11 @@ To get started sending events to Pinterest, first sign up for [Pinterest for Bus
 
 ### Pinterest Side
 
-Begin by logging into your [Pinterest for Business Ads account](https://ads.pinterest.com) account. Create your conversion tracking tags by choosing from the `Ads` dropdown and selecting `Conversion Tracking`.
+Begin by logging into your [Pinterest for Business Ads account](https://ads.pinterest.com) account. Create your conversion tracking tags by choosing from the **Ads** dropdown and selecting **Conversion Tracking**.
 
 ![pinterest1](/images/pinterest-tag-1.png)
 
-On the next page, click `Create Pinterest Tag`.
+On the next page, click **Create Pinterest Tag**.
 
 ![pinterest2](/images/pinterest-tag-2.png)
 
@@ -54,9 +54,9 @@ This next page will show your Pinterest Tag Id (shown in red in the image below 
 
 Back in the MetaRouter UI, select Pinterest Tag as a destination and give your new Pinterest pipeline a unique name.
 
-The next mandatory step is to add you Pinterest Tag Id as the connection of the current pipeline. Clicking `Save` will activate your pipeline and you're ready to go with the basic functionalities.
+The next mandatory step is to add you Pinterest Tag Id as the connection of the current pipeline. Clicking **Save** will activate your pipeline and you're ready to go with the basic functionalities.
 
-In addition, you can choose to customize your destination using the following fields available on our UI, under _Destination Details_ section:
+In addition, you can choose to customize your destination using the following fields available on our UI, under **Destination Details** section:
 
 ![pinterest4](/images/pinterest-tag-4.png)
 
@@ -88,14 +88,14 @@ Enter your event on the left, and map it to one of the [standard Pinterest event
 
 | Analytics.js Spec Event           | Pinterest Tag Event Type |
 | :-------------------------------- | :----------------------- |
-| Products Searched                 | Search                   |
-| Product List Filtered             | Search                   |
-| Product Added                     | AddToCart                |
-| Order Completed                   | Checkout                 |
-| Video Playback Started            | WatchVideo               |
-| `.page()` call with no `category` | PageVisit                |
-| `.page()` call with `category`    | ViewCategory             |
+| Products Searched                 | `Search`                 |
+| Product List Filtered             | `Search`                 |
+| Product Added                     | `AddToCart`              |
+| Order Completed                   | `Checkout`               |
+| Video Playback Started            | `WatchVideo`             |
+| `.page()` call with no `category` | `PageVisit`              |
+| `.page()` call with `category`    | `ViewCategory`           |
 
 ## Things to note
 
-Generate page views and trigger your custom event inside your website with `analytics.track('your event name');`. You should see confirmation of those tags sent to Pinterest inside your Pinterest for Business dashboard, under **Ads > Conversions**.
+Generate page views and trigger your custom event inside your website with `analytics.track('your event name')`. You should see confirmation of those tags sent to Pinterest inside your Pinterest for Business dashboard, under **Ads > Conversions**.

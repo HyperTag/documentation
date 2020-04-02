@@ -20,7 +20,7 @@ Netmining is an audience targeting platform that allows you to uncover audience 
 
 ### Netmining Side
 
-Once you create your Netmining account, you'll need to work with your Account Manager on their side to get your AID code. Once you have this code, copy it to your clipboard.
+Once you create your Netmining account, you'll need to work with your Account Manager on their side to get your **AID code**. Once you have this code, copy it to your clipboard.
 
 ### MetaRouter Side
 

@@ -37,11 +37,11 @@ Once you have an account on [Retention Science](https://www.retentionscience.com
 
 ### MetaRouter Side
 
-Paste your Site ID into the `Site ID` field in your MetaRouter Retention Science configuration, and give your new connection a unique name.
+Paste your Site ID into the **Site ID** field in your MetaRouter Retention Science configuration, and give your new connection a unique name.
 
-Check the `Enable On-Site` box, click `Save` and your pipeline will be activated.
+Check the **Enable On-Site** box, click **Save** and your pipeline will be activated.
 
-**Custom Events & Reserved Events**
+### Custom Events & Reserved Events
 
 You'll notice two additional sections in our UI. Both are optional, but you can use these to map custom events to specific Retention Science events.
 

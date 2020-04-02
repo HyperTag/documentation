@@ -26,7 +26,7 @@ GTM works through a snippet that you'd normally have to include in all of your p
 
 With MetaRouter's GTM integration, you won't have to worry about loading GTM's snippet onto every single one of your pages or installing SDKs for iOS and Android mobile apps. Instead, GTM will be automatically loaded onto any pages where your MetaRouter snippet is initialized and your Analytics.js page gets called in client-side JavaScript.
 
-MetaRouter's integration only requires the `Container ID` tied to your account. Skip the headache and get straight to insights.
+MetaRouter's integration only requires the **Container ID** tied to your account. Skip the headache and get straight to insights.
 
 ## Getting Started with Google Tag Manager and MetaRouter
 
@@ -40,7 +40,7 @@ You'll immediately be given a GTM container `snippet`. Since you're using MetaRo
 
 ![google-tagmanager2](/images/google-tagmanager2.png)
 
-You'll then be taken to your "Workspace". Look to the top right of that page to find your `Container ID` - formatted GTM-XXXXXX.
+You'll then be taken to your "Workspace". Look to the top right of that page to find your **Container ID** - formatted GTM-XXXXXX.
 
 ![google-tagmanager3](/images/google-tagmanager3.png)
 
@@ -48,11 +48,11 @@ _Still need help setting up Google Tag Manager? Check out [this page](https://su
 
 ### MetaRouter Side
 
-Once you've identified your `Container ID`, go to your MetaRouter dashboard and add 'Google Tag Manager' as a destination.
+Once you've identified your **Container ID**, go to your MetaRouter dashboard and add 'Google Tag Manager' as a destination.
 
-Input your `Container ID` and give your connection a unique name.
+Input your **Container ID** and give your connection a unique name.
 
-At the bottom, you'll also see an option to enable tracking for both named and categorized pages. Once that's set, go ahead and click `Save` to activate your pipeline.
+At the bottom, you'll also see an option to enable tracking for both named and categorized pages. Once that's set, go ahead and click **Save** to activate your pipeline.
 
 ![google-tagmanager4](/images/google-tagmanager4v2.png)
 

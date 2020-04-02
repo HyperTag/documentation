@@ -50,6 +50,6 @@ Give your connection a unique name enter your `Embed Id` as seen below:
 
 ![drift3](/images/drift3v2.png)
 
-Now, just click `Save` to activate your pipeline.
+Now, just click **Save** to activate your pipeline.
 
 With that, you're all set! Get ready for insights.

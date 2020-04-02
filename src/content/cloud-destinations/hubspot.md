@@ -36,15 +36,13 @@ To get started sending events to [HubSpot](http://www.hubspot.com), all you'll n
 
 Create a HubSpot account via their [website](http://www.hubspot.com).
 
-After you go through the initial onboarding, click on your account tab on the top right of the window. Note that you might notice something called a `Hub ID` next to the account tab. That's the ID you'll need for the MetaRouter integration.
+After you go through the initial onboarding, click on your account tab on the top right of the window. Note that you might notice something called a **Hub ID** next to the account tab. That's the ID you'll need for the MetaRouter integration.
 
-Now, go to `Settings` -> `Configuration`.
-
-Select the `Integrations` option and you'll be brought to a screen that looks like the one below. Next, click the option on the left hand menu labeled `Get your HubSpot API Key`.
+Next, navigate to **Settings -> Configuration**. Select the **Integrations** option and you'll be brought to a screen that looks like the one below. Next, click the option on the left hand menu labeled **Get your HubSpot API Key**.
 
 ![hubspot1](/images/hubspot1.png)
 
-On this page you'll see a large blue button appropriately labeled `Generate New Key`.
+On this page you'll see a large blue button appropriately labeled **Generate New Key**.
 
 ![hubspot2](/images/hubspot2.png)
 
@@ -58,4 +56,4 @@ Now, all you have to do is add both of these credentials (your Portal ID and you
 
 ![hubspot4](/images/hubspot4v2.png)
 
-Once you do that, just click `Save` to activate your pipeline.
+Once you do that, just click **Save** to activate your pipeline.

@@ -52,8 +52,6 @@ You will see a `Global Site Tag` that looks like the following:
 </script>
 ```
 
-[Source](https://developers.google.com/adwords-remarketing-tag/)
-
 In the code snippet above, the conversion ID has been replaced with `AW-Google_Conversion_ID`. In your new conversion, this will be a unique numerical ID that is tied to your AdWords account. Copy this to your clipboard and navigate back to your MetaRouter app.
 
 ### MetaRouter Side
@@ -74,6 +72,6 @@ For example, the event `analytics.track("Red Rover", {...})` and the AdWords Con
 
 ## Additional Features
 
-You are also now able to click a `Remarketing` checkbox. If you enable this feature, MetaRouter sends an additional remarketing tag for each of your conversion labels and for every `page` API call.
+You are also now able to click a **Remarketing** checkbox. If you enable this feature, MetaRouter sends an additional remarketing tag for each of your conversion labels and for every `page` API call.
 
-Since AdWords recognizes labels rather than custom events, you'll need to map the `event name` to its corresponding `AdWords label` in the appropriate fields.
+Since AdWords recognizes labels rather than custom events, you'll need to map the `event name` to its corresponding **AdWords label** in the appropriate fields.

@@ -30,11 +30,11 @@ Once you're on the [Get started with Intercom](http://www.intercom.io) page, you
 
 ![intercom1](/images/intercom1.png)
 
-Click on `Integrate` and then `Segment` (You're still setting up MetaRouter, don't worry).
+Click on **Integrate** and then **Segment** (You're still setting up MetaRouter, don't worry).
 
 ![intercom2](/images/intercom2.png)
 
-Go ahead and click `Next` to continue the setup.
+Go ahead and click **Next** to continue the setup.
 
 ![intercom3](/images/intercom3.png)
 
@@ -42,11 +42,11 @@ This is where you'll actually create your account and get started using Intercom
 
 ![intercom4](/images/intercom4.png)
 
-Skip the `Set up Intercom & Segment` prompt and click on the gear wheel icon on the top right and then into the `Integrations` option in the dropdown.
+Skip the **Set up Intercom & Segment** prompt and click on the gear wheel icon on the top right and then into the **Integrations** option in the dropdown.
 
 ![intercom5](/images/intercom5.png)
 
-From here, click on the `API Keys` on the left hand panel to access your Source ID and API Key. Your Source ID will look something like this: `9iefb489`.
+From here, click on the **API Keys** on the left hand panel to access your Source ID and API Key. Your Source ID will look something like this: `9iefb489`.
 
 ![intercom6](/images/intercom6.png)
 
@@ -56,11 +56,11 @@ Enter your Source ID and API Key into the Intercom connector on your MetaRouter 
 
 Give your new connection a unique name.
 
-Click `Save` to activate your pipeline.
+Click **Save** to activate your pipeline.
 
 ![intercom7](/images/intercom7v2.png)
 
-At this point, you'll see events coming in to your Intercom account. If you click on the `People` icon on the top of your dashboard, you'll see 1 new user. That's you!
+At this point, you'll see events coming in to your Intercom account. If you click on the **People** icon on the top of your dashboard, you'll see 1 new user. That's you!
 
 ![intercom8](/images/intercom8.png)
 
