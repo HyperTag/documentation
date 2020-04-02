@@ -55,10 +55,8 @@ const setTableColumnWidths = nodes => {
 
         const cells = th.length ? th : td
 
-        cells.map(function(i) {
-          $(this).attr('style', `width: ${columnWidths[i]}%;`)
-          return $(this)
-        })
+        // set width as inline style attr
+        cells.each((i, el) => $(el).attr('style', `width: ${columnWidths[i]}%;`))
 
         // delete this row
         row.remove()
@@ -72,11 +70,11 @@ const setTableColumnWidths = nodes => {
 
 const tableOfContentsItems = $ => {
   const items = $('h2')
-    .map(function() {
-      const el = $(this)
-      const href = el.find('.anchor').attr('href')
+    .map((i, el) => {
+      const item = $(el)
+      const href = item.find('.anchor').attr('href')
 
-      return `<li><a href="${href}">${el.text()}</a></li>`
+      return `<li><a href="${href}">${item.text()}</a></li>`
     })
     .get()
     .join(' ')
@@ -86,10 +84,12 @@ const tableOfContentsItems = $ => {
 
 // renders a content section
 const section = ($, isPage) => {
-  $('h1')
-    .first()
-    .find('a')
-    .attr('href', '#')
+  if (isPage) {
+    $('h1')
+      .first()
+      .find('a')
+      .attr('href', '#')
+  }
 
   const tocItems = tableOfContentsItems($)
   let toc = `
@@ -179,12 +179,14 @@ const linkImages = nodes => {
     const $ = cheerio.load(node.html)
     const images = $('img')
 
-    images.each((i, el) => {
-      var image = $(el)
+    if (images.length) {
+      images.each((i, el) => {
+        var image = $(el)
 
-      image.wrap(`<a href="${image.attr('src')}" target="_mr"></a>`)
-    })
-    node.html = $.html()
+        image.wrap(`<a href="${image.attr('src')}" target="_mr"></a>`)
+      })
+      node.html = $.html()
+    }
 
     return node
   })

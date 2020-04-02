@@ -80,13 +80,13 @@ If the ordinal position differs between the two tables, a Bulk Insert ((e.g. `IN
 
 From here, you'll have 2 options:
 
-**A) Bulk Insert**
+#### A) Bulk Insert
 
 Here, use the specific column order as the destination tables rather than`SELECT` (see below)
 
 ![clickstream-merge2](/images/clickstream-merge2.png)
 
-**B) Unload to S3 and then Copy**
+#### B) Unload to S3 and then Copy\*\*
 
 This has a few more steps, but will likely be less taxing on your db depending on your row count.
 

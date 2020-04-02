@@ -34,13 +34,13 @@ export default () => {
             </Link>
           </li>
           <li>
-            <Link to="/enterprise-destinations/">
+            <Link to="/enterprise-destinations/overview/">
               <h1>Enterprise Destinations</h1>
               <p></p>
             </Link>
           </li>
           <li>
-            <Link to="/cloud-destinations/">
+            <Link to="/cloud-destinations/overview/">
               <h1>Cloud Destinations</h1>
             </Link>
           </li>
