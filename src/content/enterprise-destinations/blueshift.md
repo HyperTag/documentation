@@ -56,8 +56,7 @@ Replaces the key of an event payload's property object into the value specified 
 
 #### `fallbackToDefault`
 
-Allows you to control the default fall-back behavior.
-Possible fields to control:
+Allows you to control the default fall-back behavior. Possible fields to control:
 
 - `customer_id` : Bool
 - `username` : Bool
@@ -78,7 +77,7 @@ Except the `session_id`. It is disabled totally in request payload/config, since
 
 Also, anything can be overwritten if placed directly inside `properties` object.
 
-## Examples:
+## Examples
 
 Given the following config:
 

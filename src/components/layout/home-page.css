@@ -20,13 +20,28 @@
   @apply p-4;
   @apply text-gray-800;
   @apply shadow-sm;
+  @apply relative;
+  @apply overflow-hidden;
   height: 200px;
-
-  background-image: url(https://cdn.metarouter.io/web/img/docs/enterprise-corner.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 130% 130%;
 }
+.cards a:after {
+  @apply w-full;
+  @apply absolute;
+  @apply bg-contain bg-no-repeat;
+  @apply top-0 left-0;
+  @apply opacity-50;
+  background-image: url(/card-bg-grayscale.png);
+  background-position: 150% 150%;
+  height: 200px;
+  content: '';
+}
+.cards .enterprise-edition a:after {
+  background-image: url(/card-bg-enterprise-dark.png);
+}
+.cards .cloud-edition a:after {
+  background-image: url(/card-bg-cloud-dark.png);
+}
+
 .cards a:hover {
   @apply shadow-md;
 }

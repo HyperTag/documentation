@@ -94,6 +94,7 @@ main section img {
   @apply shadow-md;
   @apply border border-solid rounded-md border-gray-200;
 }
+
 main section .warning {
   @apply bg-yellow-200;
   @apply text-sm;
@@ -101,31 +102,47 @@ main section .warning {
   @apply mb-8;
   @apply rounded;
 }
+
+/* code block followed by an image */
 .gatsby-highlight + p > img {
   @apply mt-10;
 }
+
+/* page / section table of contents */
 main .toc {
   @apply text-xs;
-  @apply w-56;
-  @apply absolute;
-  top: 6rem;
-  right: 2rem;
-  height: calc(100% - 12rem);
+  @apply bg-gray-100 rounded;
+  @apply py-3 px-6;
+  @apply mb-6 -mt-3;
 }
-main .toc-sticky {
-  @apply sticky;
-  top: 4rem;
-}
+
 main .toc ul {
-  @apply ml-0;
-  @apply mt-1;
+  @apply ml-0 mt-1 mb-0;
   list-style-type: '-  ';
 }
 
-main .toc li:hover {
-  @apply bg-mr-light-medium;
+/* sticky TOC in right column for wide screens */
+@media (min-width: 1284px) {
+  main .toc {
+    @apply w-56;
+    @apply absolute;
+    @apply bg-transparent;
+    top: 6rem;
+    right: 2rem;
+    height: calc(100% - 12rem);
+  }
+
+  main .toc .toc-sticky {
+    @apply sticky;
+    top: 4rem;
+  }
+
+  main .toc li:hover {
+    @apply bg-mr-light-medium;
+  }
 }
 
+/* tags displayed under primary header */
 main section .tags {
   @apply p-0;
   @apply -mt-5 mx-0 mb-6;
@@ -150,6 +167,7 @@ main .tags li.sources {
   @apply bg-mr-purple;
 }
 
+/* table footnotes */
 main sub {
   @apply leading-normal;
   font-size: 11px;

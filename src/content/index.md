@@ -13,7 +13,7 @@ MetaRouter is a data engineering platform that helps you collect user events fro
 
 ## Editions
 
-**[Cloud](/cloud-edition/)** - an Analytics.js-based module, which helps you collect data from your web and mobile applications, and route those events to your tools and to your data lake. Signup for an account at https://app.metarouter.io/ and get started with the platform quickly.
+**[Cloud](/cloud-edition/)** ⇒ An Analytics.js-based module, which helps you collect data from your web and mobile applications, and route those events to your tools and to your data lake. Signup for an account at https://app.metarouter.io/ and get started with the platform quickly.
 
 - Best suited for those:
   - Just getting started collecting user data
@@ -21,18 +21,18 @@ MetaRouter is a data engineering platform that helps you collect user events fro
   - Are using Google Analytics and a few other tools
   - Want to warehouse user interaction data
   - Are a freemium, low revenue per monthly active user or e-commerce business model
-- Use Cases for Clickstream:
+- Use Cases for Cloud Edition:
   - Product analytics
   - Marketing automation
   - User data tracking and warehousing
 
-**[Enterprise](/enterprise-edition/)** - our full platform deployable via Kubernetes to your preferred cloud (AWS, Google Cloud, Azure).
+**[Enterprise](/enterprise-edition/)** ⇒ Our full platform deployable via Kubernetes to your preferred cloud (AWS, Google Cloud, Azure).
 
 - Best suited for those:
   - With very high user data volumes
   - Who have sensitive data or security-conscious data needs
   - Who value flexibility and control over their routing ecosystem
-- Use Cases for Clickstream:
+- Use Cases for Enterprise Edition:
   - Large-scale ecommerce companies
   - Financial or Medical data managers
   - Desire to inject or leverage ingesting, routing, queuing or forwarding tools into an existing data platform

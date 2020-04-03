@@ -49,6 +49,7 @@ ol {
 :root {
   --nav-width: 18rem;
 }
+
 .nav-list {
   width: var(--nav-width);
   @apply fixed;
@@ -61,6 +62,12 @@ main {
 }
 main section {
   padding-right: var(--nav-width);
+  min-width: 800px;
+}
+@media (max-width: 1284px) {
+  main section {
+    @apply pr-24;
+  }
 }
 
 .header-links {
@@ -80,7 +87,7 @@ footer {
   @apply px-24 pt-24 pb-12;
 }
 #disclaimer {
-  max-width: 40rem;
-  text-align: justify;
-  margin: 0 auto;
+  @apply max-w-2xl;
+  @apply text-justify;
+  @apply mx-auto;
 }

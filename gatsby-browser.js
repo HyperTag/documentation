@@ -115,7 +115,7 @@ exports.onRouteUpdate = () => {
   }
 
   var checkSubheadingOffset = function(heading) {
-    if (!document.querySelector('.toc')) {
+    if (!document.querySelector('.toc') || document.body.width < 1284) {
       return
     }
 
@@ -123,7 +123,6 @@ exports.onRouteUpdate = () => {
       // highlight the corresponding link in table of contents
       var url = new URL(heading.querySelector('.anchor').href)
       var tocLink = heading.closest('section').querySelector('.toc a[href="' + url.hash + '"]')
-
       document.querySelectorAll('.toc a').forEach(function(a) {
         a.classList.remove('font-bold')
       })
@@ -201,14 +200,26 @@ exports.onRouteUpdate = () => {
     }
   }
 
+  var setStickyNav = function() {
+    var isSticky = document.body.clientWidth > 1284 // corresponds with CSS breakpoint
+
+    if (!isSticky) {
+      document.querySelectorAll('.toc a').forEach(function(a) {
+        a.classList.remove('font-bold')
+      })
+    }
+  }
+
   // functions to run onload
   setCurrent()
   syncNavState()
   renderTags()
   styleTableCells()
+  setStickyNav()
 
   // event handlers
   window.addEventListener('hashchange', setCurrent)
+  window.addEventListener('resize', setStickyNav)
   document.addEventListener('scroll', onScroll)
   navList && navList.addEventListener('click', onClickNav)
 }
