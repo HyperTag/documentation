@@ -46,28 +46,29 @@ ol {
   @apply list-decimal;
 }
 
-:root {
-  --nav-width: 18rem;
-}
-
 .nav-list {
-  width: var(--nav-width);
   @apply fixed;
   @apply h-full;
   @apply left-0;
   @apply top-0;
+  width: 14rem;
 }
 main {
-  margin-left: var(--nav-width);
+  margin-left: 14rem;
 }
+
+/* section containers for each markdown file */
 main section {
-  padding-right: var(--nav-width);
+  @apply py-24 px-32;
+  @apply border-b border-gray-400 border-solid;
+  @apply relative;
   min-width: 800px;
 }
-@media (max-width: 1284px) {
-  main section {
-    @apply pr-24;
-  }
+main section:first-of-type {
+  margin-top: -6px; /* align first section with first nav item */
+}
+main section:last-of-type {
+  @apply border-none;
 }
 
 .header-links {
@@ -90,4 +91,57 @@ footer {
   @apply max-w-2xl;
   @apply text-justify;
   @apply mx-auto;
+}
+
+/* responsive styles */
+@media (min-width: 1280px) {
+  main {
+    margin-left: 18rem;
+  }
+
+  main section {
+    padding-right: 24rem;
+  }
+
+  .nav-list {
+    width: 18rem;
+  }
+
+  /* sticky TOC in right column for wide screens */
+  main .toc {
+    @apply w-56;
+    @apply absolute;
+    @apply bg-transparent;
+    @apply -mt-10;
+    top: 8rem;
+    right: 4rem;
+    height: calc(100% - 12rem);
+  }
+
+  main .toc .toc-sticky {
+    @apply sticky;
+    top: 4rem;
+  }
+
+  main .toc li:hover {
+    @apply bg-mr-light-medium;
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    margin-left: 24rem;
+  }
+
+  main section {
+    padding-right: 30rem;
+  }
+
+  .nav-list {
+    width: 20rem;
+  }
+
+  main .toc {
+    right: 8rem;
+  }
 }

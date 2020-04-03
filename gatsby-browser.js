@@ -89,7 +89,7 @@ exports.onRouteUpdate = () => {
     }
   }
 
-  var checkSectionOffset = function(section) {
+  var setHashByOffset = function(section) {
     if (!document.querySelector('.' + sectionAnchorSelector)) {
       return // bail out if this is a single page
     }
@@ -114,8 +114,9 @@ exports.onRouteUpdate = () => {
     }
   }
 
-  var checkSubheadingOffset = function(heading) {
-    if (!document.querySelector('.toc') || document.body.width < 1284) {
+  // highlights the link in TOC for the associated content based on offset
+  var setTocByOffset = function(heading) {
+    if (!document.querySelector('.toc') || document.body.width < 1280) {
       return
     }
 
@@ -131,8 +132,8 @@ exports.onRouteUpdate = () => {
   }
 
   var onScroll = throttle(function() {
-    document.querySelectorAll('main section').forEach(checkSectionOffset)
-    document.querySelectorAll('main h2').forEach(checkSubheadingOffset)
+    document.querySelectorAll('main section').forEach(setHashByOffset)
+    document.querySelectorAll('main h2').forEach(setTocByOffset)
   }, 200)
 
   // append a list of tags to the primary heading, with values taken from its data attrs
@@ -201,7 +202,7 @@ exports.onRouteUpdate = () => {
   }
 
   var setStickyNav = function() {
-    var isSticky = document.body.clientWidth > 1284 // corresponds with CSS breakpoint
+    var isSticky = document.body.clientWidth > 1280 // corresponds with CSS breakpoint
 
     if (!isSticky) {
       document.querySelectorAll('.toc a').forEach(function(a) {

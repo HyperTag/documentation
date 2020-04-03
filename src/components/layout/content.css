@@ -23,19 +23,6 @@ table + h3 {
   @apply mt-8;
 }
 
-/* section containers for each markdown file */
-main section {
-  @apply py-24 px-24;
-  @apply border-b border-gray-400 border-solid;
-  @apply relative;
-}
-main section:first-of-type {
-  margin-top: -6px; /* align first section with first nav item */
-}
-main section:last-of-type {
-  @apply border-none;
-}
-
 /* section content */
 main h1,
 main h2,
@@ -113,33 +100,12 @@ main .toc {
   @apply text-xs;
   @apply bg-gray-100 rounded;
   @apply py-3 px-6;
-  @apply mb-6 -mt-3;
+  @apply mb-6 -mt-6;
 }
 
 main .toc ul {
   @apply ml-0 mt-1 mb-0;
   list-style-type: '-  ';
-}
-
-/* sticky TOC in right column for wide screens */
-@media (min-width: 1284px) {
-  main .toc {
-    @apply w-56;
-    @apply absolute;
-    @apply bg-transparent;
-    top: 6rem;
-    right: 2rem;
-    height: calc(100% - 12rem);
-  }
-
-  main .toc .toc-sticky {
-    @apply sticky;
-    top: 4rem;
-  }
-
-  main .toc li:hover {
-    @apply bg-mr-light-medium;
-  }
 }
 
 /* tags displayed under primary header */

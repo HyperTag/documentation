@@ -20,20 +20,12 @@
   @apply p-4;
   @apply text-gray-800;
   @apply shadow-sm;
-  @apply relative;
   @apply overflow-hidden;
-  height: 200px;
-}
-.cards a:after {
-  @apply w-full;
-  @apply absolute;
   @apply bg-contain bg-no-repeat;
   @apply top-0 left-0;
   @apply opacity-50;
   background-image: url(/card-bg-grayscale.png);
   background-position: 150% 150%;
-  height: 200px;
-  content: '';
 }
 .cards .enterprise-edition a:after {
   background-image: url(/card-bg-enterprise-dark.png);
