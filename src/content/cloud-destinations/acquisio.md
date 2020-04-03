@@ -39,6 +39,6 @@ Once you receive your Advertiser ID from your account manager, paste it into the
 
 ![acquisio1](/images/acquisio1v2.png)
 
-With your configuration entered, choose **Save**.
+With your configuration entered, choose Save.
 
 Generate page views and events on your website by triggering `analytics.track('your custom event name')`. Confirm with your Acquisio account manager that custom events for your specific campaigns are being received as expected.

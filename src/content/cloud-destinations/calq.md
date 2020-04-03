@@ -14,7 +14,7 @@ MetaRouter makes it easy to send your data to Calq. Once you follow the steps be
 
 ## What is Calq and how does it work?
 
-Calq is a custom analytics tool for mobile and web applications. It supports custom funnels to provide marketers with visibility into user flow and user drop off. On top of those custom funnels, Calq enables retroactive funnels, allowing marketers to analyze historical actions such as products viewed, products added to cart, and pages viewed. It generates real-time reports that live-stream customer actions and provides query builders. It also allows developers to create custom properties and queries using "Action Query Language," which is similar to SQL.
+Calq is a custom analytics tool for mobile and web applications. It supports custom funnels to provide marketers with visibility into user flow and user drop off. On top of those custom funnels, Calq enables retroactive funnels, allowing marketers to analyze historical actions such as products viewed, products added to cart, and pages viewed. It generates real-time reports that live-stream customer actions and provides query builders. It also allows developers to create custom properties and queries using their Action Query Language, which is similar to SQL.
 
 Sending data to Calq requires the use of the Calq API, which is done via implementation of their SDKs. Implementing these collection methods requires manual additions to your application client or server code.
 

@@ -52,7 +52,7 @@ Once you've identified your **Container ID**, go to your MetaRouter dashboard an
 
 Input your **Container ID** and give your connection a unique name.
 
-At the bottom, you'll also see an option to enable tracking for both named and categorized pages. Once that's set, go ahead and click **Save** to activate your pipeline.
+At the bottom, you'll also see an option to enable tracking for both named and categorized pages. Once that's set, go ahead and click Save to activate your pipeline.
 
 ![google-tagmanager4](/images/google-tagmanager4v2.png)
 

@@ -58,6 +58,6 @@ Add Microsoft Advertising as a destination. From there, give your connection a u
 
 ![bing-ads4](/images/bing-ads4v2.png)
 
-Now, just click on **Save** to activate your pipeline.
+Now, just click on Save to activate your pipeline.
 
 That's it! Get ready for insights.

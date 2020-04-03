@@ -54,7 +54,7 @@ Dense storage clusters maximize storage capacity and allow customers with hundre
 ## Step 2. Provision your cluster
 
 1. Open the Redshift Console
-2. Click on "Launch Cluster"
+2. Click on **Launch Cluster**
 3. Input cluster details
 4. Choose cluster size
 5. Set up your cluster Security Group or VPC and proceed to review
@@ -69,7 +69,7 @@ Once you provision your Redshift cluster, you'll need to configure your Redshift
 
 The **Username** and **Password** you used to initially create the cluster are the credentials you'll put into your MetaRouter account. You should NOT use your master AWS credentials here. If you want to switch clusters in the future, make sure you update your Username and Password as needed.
 
-For MetaRouter, having _distinct users_ will allow you to (i) isolate queries from one another and (ii) perform audits more easily.
+For MetaRouter, having distinct users will allow you to isolate queries from one another and perform audits more easily.
 
 To create a new user, you'll need to log into the Redshift database directly. Here's the SQL command:
 
@@ -91,7 +91,7 @@ If your cluster has a field called **Cluster Security Groups**, follow the instr
 
 If your cluster has a field called **VPC Security Groups**, follow the instructions below for EC2 VPC.
 
-**EC2-Classic**
+#### EC2-Classic
 
 1. Navigate to your Redshift Cluster settings **Redshift Dashboard > Clusters > Select Your Cluster**
 
@@ -99,25 +99,25 @@ If your cluster has a field called **VPC Security Groups**, follow the instructi
 
 3) Open the Cluster Security Group
 
-4) Click on "Add Connection Type"
+4) Click on **Add Connection Type**
 
 5) Authorize MetaRouter to write into your Redshift Port by inputting our IP Addresses: `35.245.140.149` and `35.236.193.215`
 
-**EC2-VPC**
+#### EC2-VPC
 
 1. Navigate to your Redshift Cluster settings **Redshift Dashboard > Clusters > Select Your Cluster**
 
 2. Click on the VPC Security Groups
 
-3. Select the "Inbound" tab and then "Edit"
+3. Select the **Inbound** tab and then **Edit**
 
 4. Authorize MetaRouter to write into your Redshift Port by inputting our IP Addresses: `35.245.140.149` and `35.236.193.215`
 
 5. Navigate back to your Redshift Cluster Settings
 
-6. Select the "Cluster" button and then "Modify"
+6. Select the **Cluster** button and then **Modify**
 
-7. Make sure the "Publicly Accessible" option is set to "Yes"
+7. Make sure the **Publicly Accessible** option is set to **Yes**
 
 ### Whitelist MetaRouter's IP.
 

@@ -44,7 +44,7 @@ After this application is created, an API Key will be generated and presented in
 
 ### MetaRouter Side
 
-Add this API Key to the Amplitude connector on the MetaRouter dashboard and give your new connection a unique name. Your pipeline will be activated once you click **Save**.
+Add this API Key to the Amplitude connector on the MetaRouter dashboard and give your new connection a unique name. Your pipeline will be activated once you click Save.
 
 You can now go back into your Amplitude account and see your user activity! To see exactly what events are being sent over, you can click around the **Events** and **User Activity** tabs.
 
@@ -54,11 +54,11 @@ Note that MetaRouter will not pass `page` or `screen` calls by default. See the 
 
 ### Page View Tracking Settings
 
-- `Default Tracking` - Checking this box sends all `page` and `screen` calls to Amplitude as `Loaded a Page`. This feature works with all source types.
-- `Custom Tracking` - Allows you to choose both or one of the following options: `Send Page Category`, `Send Page Name`. Depending on your selections, we handle the following scenarios:
-  - `Send Page Category` set to **ON** and `Send Page Name` set to **ON** => will send all `page` and `screen` calls to Amplitude as `Viewed [Category] [Name] Page`
-  - `Send Page Category` set to **ON** and `Send Page Name` set to **OFF** => will send all `page` and `screen` calls to Amplitude as `Viewed [Category] Page`
-  - `Send Page Category` set to **OFF** and `Send Page Name` set to **ON** => will send all `page` and `screen` calls to Amplitude as `Viewed [Name] Page`
+- **Default Tracking:** Checking this box sends all `page` and `screen` calls to Amplitude as `Loaded a Page`. This feature works with all source types.
+- **Custom Tracking:** Allows you to choose both or one of the following options: `Send Page Category`, `Send Page Name`. Depending on your selections, we handle the following scenarios:
+  - `Send Page Category` set to **ON** and `Send Page Name` set to **ON** ⇒ will send all `page` and `screen` calls to Amplitude as `Viewed [Category] [Name] Page`
+  - `Send Page Category` set to **ON** and `Send Page Name` set to **OFF** ⇒ will send all `page` and `screen` calls to Amplitude as `Viewed [Category] Page`
+  - `Send Page Category` set to **OFF** and `Send Page Name` set to **ON** ⇒ will send all `page` and `screen` calls to Amplitude as `Viewed [Name] Page`
 
 ### Other Settings
 

@@ -38,6 +38,6 @@ Your site ID will be at the top of this page. Copy this ID to your clipboard.
 
 ![clicky4](/images/clicky4.png)
 
-Paste this ID into the MetaRouter UI to begin sending data to Clicky. Your pipeline will be activated once you click **Save**.
+Paste this ID into the MetaRouter UI to begin sending data to Clicky. Your pipeline will be activated once you click Save.
 
 ![clicky5](/images/clicky5v2.png)

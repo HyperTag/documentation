@@ -32,7 +32,7 @@ Read below to kickoff your integration and start gaining insights.
 
 Add your domain name into the webhook connector on your MetaRouter dashboard and give your new connection a unique name.
 
-Click **Save** to activate your pipeline.
+Click Save to activate your pipeline.
 
 ### Sending to multiple webhooks
 

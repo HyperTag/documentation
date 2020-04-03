@@ -20,8 +20,8 @@ Bloom Reach is a digital experience platform that accelerates customer engagemen
 
 ### Bloom Reach Side
 
-Once you create your Bloom Reach account, you'll have to work with your account manager to get your `Account ID`. Once you have this information, copy it to your clipboard.
+Once you create your Bloom Reach account, you'll have to work with your account manager to get your **Account ID**. Once you have this information, copy it to your clipboard.
 
 ### MetaRouter Side
 
-Paste your `Account ID` into the appropriate field in your MetaRouter UI. You can then activate your pipeline to begin dumping your clickstream data into Bloom Reach.
+Paste your **Account ID** into the appropriate field in your MetaRouter UI. You can then activate your pipeline to begin sending your clickstream data into Bloom Reach.

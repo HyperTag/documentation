@@ -1,7 +1,7 @@
 const siteTitle = 'MetaRouter Documentation'
 
 module.exports = {
-  pathPrefix: '/gatsby-docs',
+  pathPrefix: '/docs-gatsby',
   siteMetadata: {
     title: siteTitle,
     description: `MetaRouter is a data engineering platform that that helps you collect, process, and route streaming data.`,

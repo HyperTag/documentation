@@ -46,20 +46,20 @@ This configuration file allows you to set your own configuration based on how yo
           - price: 's0'
 ```
 
-- `advertiserId` - (required) String
+- `advertiserId` - String (required)
   - You can find your advertiser ID in your Media Math account.
-- `mt_id` - (optional) String
+- `mt_id` - String (optional)
   - If you want to fire a conversion pixel on every page of your website (typically to block retargeting) then enter the `mt_id` for that pixel here.
-- `mt_adid` - (optional) String
+- `mt_adid` - String (optional)
   - If you want to fire a conversion pixel on every page of your website (typically to block retargeting) then enter the `mt_adid` for that pixel here.
-- `events` - (optional) Object
+- `events` - Object (optional)
   - This config option allows you to map your own event to specific Media Math event details.
-  - `name` - (required) String
+  - `name` - String (required)
     - Analytics event name
-  - `mt_id` - (optional) String
+  - `mt_id` - String (optional)
     - The `mt_id` that you want us to send when this conversion event is triggered.
-  - `mt_adid` - (optional) String
+  - `mt_adid` - String (optional)
     - The `mt_adid` that you want us to send when this conversion event is triggered.
-  - `vParams`, `sParams` - (optional) Object
+  - `vParams`, `sParams` - Object (optional)
     - Map your Media Math `s` params and `v` params to the property names you’re using in your MetaRouter events. Enter a E-commerce property name on the left and an Media Math s/v param on the right.
     - By default, no vars or params are mapped or sent out.

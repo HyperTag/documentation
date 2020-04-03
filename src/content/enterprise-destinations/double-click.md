@@ -55,7 +55,7 @@ This configuration file allows you to set your own configuration based on how yo
       ord: 'DEFAULT_PAGEVIEW_ORD'
 ```
 
-- `advertiserId` - String, **required**
+- `advertiserId` - String (required)
   - Your advertiser ID that is the source of the Floodlight activity. This should be the `src` of your tag string.
 - `cat` - String
   - This setting maps to the Doubleclick Floodlight container activity tag (or `cat`) string. You can choose to use this setting to define the same value for this parameter across all conversion events or you can define this value for each of your conversion event mappings below. If a mapped event doesn't have a `cat` value, we'll use this one as default.
@@ -70,18 +70,19 @@ This configuration file allows you to set your own configuration based on how yo
     - This should be the `type` of your tag string, which identifies the activity group with which the Floodlight activity is associated. If you do not add this option, we will fall back to whatever you defines in the top level `type` setting.
   - `isPageView` - Bool
     - This allows us to know if this event is a pageview.
-  - `customVariables` - Object, **optional**
+  - `customVariables` - Object (optional)
     - Map Analytics.js event properties (on the left) to Floodlight custom variables and we'll insert the value of that property in the corresponding Floodlight custom variables like `u1`, `u2`, ..etc (on the right).
-- `defaultPageviewEvent` - Object, **optional**
+- `defaultPageviewEvent` - Object (optional)
   - This settings allows you to define default `cat`, `type` and `ord` values for a standard page view. If a pageview is triggered and is not found defined inside `events` object, we'll use these values as defaults.
-  - `cat` - String, **optional**
+  - `cat` - String (optional)
     - DoubleClick Floodlight container activity tag (or `cat`) string.
-  - `type` - String, **optional**
+  - `type` - String (optional)
     - DoubleClick Floodlight container group tag (the `type` parameter) string.
-  - `ord` - String, **optional**
+  - `ord` - String (optional)
     - For Sales tags only, please specify which property value should be used for the `ord`. You must **enable reporting on ord** inside DoubleClick Floodlight if you decide to use this feature. A good example would be something like `order_id`.
 
 ## Sending Personally Identifiable Information (PII)
 
 Please refrain from mapping custom variables that are PII. Please refer to the [warning](https://support.google.com/dcm/answer/2604612?hl=en) by DoubleClick:
+
 The terms of your DoubleClick contract prohibit passing any information to us that we could use or recognize as personally identifiable information (PII). If you enter certain key-values into a field in a DoubleClick product, you may see a warning that reminds you that you must not use key-values to pass data that we would recognize as PII. Key-values that trigger this warning include, for example, email and username. Note that it is okay to use these key-values if your purpose is not to collect information that DoubleClick could use or recognize as PII. (For example, email=weekly is fine, but passing a user’s email address is not.) If you do choose one of these key-values, DoubleClick may contact you in the future to confirm that you are not using them in a way that is prohibited.

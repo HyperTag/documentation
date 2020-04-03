@@ -57,7 +57,7 @@ Copy your common tag parameters (`advkey`, `opptykey`), as well as your `User Tr
 
 Next, you'll need to provide your page impression tag event key, as well as any custom events and their respective event keys (shown as `evkey` in the snippet above).
 
-Give your new Resonate connection a name, and choose `Save`.
+Give your new Resonate connection a name, and choose Save.
 
 ![resonate1](/images/resonate1v2.png)
 

@@ -41,6 +41,6 @@ Then, paste your Page ID into the `pid` field, and your Conversion ID into the *
 
 ![rubicon1](/images/rubicon1v2.png)
 
-With your configuration entered, choose **Save**.
+With your configuration entered, choose Save.
 
 Generate page views and events on your website by triggering `analytics.track('your conversion event name');`. Confirm with your Rubicon account manager that conversion events for your specific campaigns are being received as expected.

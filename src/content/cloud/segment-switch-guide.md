@@ -64,7 +64,7 @@ AND table_name = 'example_table_name'
 
 ### Datatype Conflicts
 
-If you do identify some datatype conflicts, it's likely that your destination column will be able to accommodate the previous datatype (e.g. varchar(256) or varchar(512) or timestamp with timezone. Check out the following example:
+If you do identify some datatype conflicts, it's likely that your destination column will be able to accommodate the previous datatype (e.g. varchar(256) or varchar(512) or timestamp with timezone). Check out the following example:
 
 ![clickstream-merge1](/images/clickstream-merge1.png)
 

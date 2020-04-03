@@ -67,7 +67,7 @@ Now it is time to input the information from GCP and BigQuery into the _Destinat
 
 **Note:** Make sure you only enter the dataset name, not the full dataset id
 
-With those details in, you can go on to **Create Connection**. This is where you are granting MetaRouter the ability to interface with your GCP account using that service account JSON. Under **Friendly Name**, enter in your connection name (e.g. Production GCP Connection). Then, copy the contents of that service account JSON file into the field for **Google Cloud Auth JSON**. Once that is completed, hit **Save** at the bottom of the form.
+With those details in, you can go on to **Create Connection**. This is where you are granting MetaRouter the ability to interface with your GCP account using that service account JSON. Under **Friendly Name**, enter in your connection name (e.g. Production GCP Connection). Then, copy the contents of that service account JSON file into the field for **Google Cloud Auth JSON**. Once that is completed, hit Save at the bottom of the form.
 
 That's it! You'll now be receiving a live stream of data from your application into your BigQuery dataset.
 

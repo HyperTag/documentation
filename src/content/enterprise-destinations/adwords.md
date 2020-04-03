@@ -44,20 +44,16 @@ This configuration file allows you to set your own configuration based on how yo
     useDefaultMapping: false
 ```
 
-- `linkId` - String, **required**
+- `linkId` : String (required)
   - To authorize MetaRouter to track conversion events using the AdWords API on your behalf, you must generate a Link ID in your AdWords Account - see details [here](#generate-a-link-id-in-your-adwords-account)
-- `dev_token` - String, **required**
+- `dev_token` : String (required)
   - Value available on your AdWords dashboard.
-- `events` - Object, **optional**
-  - `event`
-    - Analytics.js event name
-  - `label`
-    - AdWords recognizes labels, not custom events - we'll use this label for this event on our calls to AdWords.
-  - `conversionId` - String, **optional**
-    - You can opt to override the default conversion ID by setting one here.
-  - `customVariables` - Object, **optional**
-    - Map Analytics.js event properties (on the left) to AdWords custom variables and we'll insert the value of that property in the corresponding AdWords custom variables (on the right).
-- `useDefaultMapping` - Bool, **optional**, default value `false`
+- `events` : Object (optional)
+  - `event` : Analytics.js event name
+  - `label` : AdWords recognizes labels, not custom events - we'll use this label for this event on our calls to AdWords.
+  - `conversionId` : String (optional) - You can opt to override the default conversion ID by setting one here.
+  - `customVariables` : Object (optional) - Map Analytics.js event properties (on the left) to AdWords custom variables and we'll insert the value of that property in the corresponding AdWords custom variables (on the right).
+- `useDefaultMapping` : Bool (optional) - default value `false`
 
   - By default, we map some of the Analytics.js Standard E-commerce events to AdWords events, as follows:
 

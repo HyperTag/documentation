@@ -66,7 +66,7 @@ If your events don't match the event names you're receiving from MetaRouter that
 
 ### MetaRouter Side
 
-Paste your Twitter Pixel ID into the **Twitter Pixel ID** field in your MetaRouter Twitter Ads configuration, and give your new connection a unique name. Click **Save** and your pipeline will be activated.
+Paste your Twitter Pixel ID into the **Twitter Pixel ID** field in your MetaRouter Twitter Ads configuration, and give your new connection a unique name. Click Save and your pipeline will be activated.
 
 If you’d like to use the Single Event Website Tags, you must map the event names to your Single Event Website Tags’ respective conversion pixel IDs.
 

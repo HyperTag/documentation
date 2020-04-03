@@ -127,7 +127,7 @@ When `handleCustomAsPartnerDefinedEvent` is `false`, we'll send a `event:custom`
 }
 ```
 
-When `handleCustomAsPartnerDefinedEvent` is `true`, we'll send a _Partner Defined event_, with the `event` parameter the same as your custom event concatenated name. The conversion payload for the previous request will look like:
+When `handleCustomAsPartnerDefinedEvent` is `true`, we'll send a **Partner Defined event**, with the `event` parameter the same as your custom event concatenated name. The conversion payload for the previous request will look like:
 
 ```json
 {
@@ -140,10 +140,12 @@ When `handleCustomAsPartnerDefinedEvent` is `true`, we'll send a _Partner Define
 ```
 
 `customEventsMapping` list allows you to define your own mapping for custom events that you track with `analytics.track()`. Using the config file from the example, when calling `analytics.track('Custom Event 1')` we'll send a `ViewContent` event to Pinterest. We use the following parameters:
-_ `event`: your `track()` event.
-_ `mapping`: the event send to Pinterest \* `valueFieldIdentifier`: we'll set the conversion value based on the field mapped here.
 
-`customPropertiesForStandardEvents` list allows you to send additional custom parameters mapped from your `properties` of your`track()` calls to your conversions, for all the standard events.
+- `event` : your `track()` event
+- `mapping` : the event send to Pinterest
+- `valueFieldIdentifier` : we'll set the conversion value based on the field mapped here
+
+The `customPropertiesForStandardEvents` list allows you to send additional custom parameters mapped from your `properties` of your`track()` calls to your conversions, for all the standard events.
 
 ### Pinterest Enhanced Match
 
@@ -168,13 +170,13 @@ According to [Pinterest Conversion tag documentation](https://developers.pintere
 
 The following Analytics.js Events are matching the following Pinterest Specific Events:
 
-- `Products Searched` => `search`
-- `Product List Viewed` => `viewcategory`
-- `Promotion Viewed` => `pagevisit`
-- `Product Viewed` => `pagevisit`
-- `Product Added` => `addtocart`
-- `Cart Viewed` => `pagevisit`
-- `Order Completed` => `checkout`
+- `Products Searched` ⇒ `search`
+- `Product List Viewed` ⇒ `viewcategory`
+- `Promotion Viewed` ⇒ `pagevisit`
+- `Product Viewed` ⇒ `pagevisit`
+- `Product Added` ⇒ `addtocart`
+- `Cart Viewed` ⇒ `pagevisit`
+- `Order Completed` ⇒ `checkout`
 
 Because Pinterest offers a Standard Event `custom` that is available for conversion reporting, for all unmatched Analytics.js events we decided to send data to use this last one.
 

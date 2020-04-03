@@ -56,4 +56,4 @@ Now, all you have to do is add both of these credentials (your Portal ID and you
 
 ![hubspot4](/images/hubspot4v2.png)
 
-Once you do that, just click **Save** to activate your pipeline.
+Once you do that, just click Save to activate your pipeline.

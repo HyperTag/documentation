@@ -62,4 +62,4 @@ Specifies the Experiment Viewed as a non-interaction event for Google Analytics.
 
 ![optimizely1](/images/optimizely1v2.png)
 
-Click `Save` and your pipeline will be activated.
+Click Save and your pipeline will be activated.

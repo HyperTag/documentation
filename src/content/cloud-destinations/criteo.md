@@ -14,7 +14,7 @@ MetaRouter makes it easy to send your data to Criteo. Once you follow the steps 
 
 ## What is Criteo and how does it work?
 
-Criteo is a digital advertising and retargeting tool that automates, optimizes, and places Google Shopping ad campaigns in front of 1.2 billion monthly users. It also enables the creation and placement of native ads on retail sites using **Brand 360**, an attribution feature that uses closed-loop SKU-level sales data, allowing advertisers to track sales outcomes. It is capable of retargeting dynamic ads across Facebook and Instagram using machine learning to analyze user behavior and suggest products to customers.
+Criteo is a digital advertising and retargeting tool that automates, optimizes, and places Google Shopping ad campaigns in front of 1.2 billion monthly users. It also enables the creation and placement of native ads on retail sites using Brand 360, an attribution feature that uses closed-loop SKU-level sales data, allowing advertisers to track sales outcomes. It is capable of retargeting dynamic ads across Facebook and Instagram using machine learning to analyze user behavior and suggest products to customers.
 
 In order to track key conversion events, Criteo requires the installation of their JavaScript library into your site. Implementation of Criteo tags will require effort from your mobile developer team.
 

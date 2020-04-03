@@ -36,9 +36,9 @@ Once you create an AdWords account, you'll need to find your Conversion ID. To d
 
 ![Adwords1](/images/Adwords1.png)
 
-After you click the wrench, you'll be prompted with a menu. Under `Measurement`, select `Conversions`. Create a new conversion by clicking the plus icon in the upper left hand corner of the screen.
+After you click the wrench, you'll be prompted with a menu. Under **Measurement**, select **Conversions**. Create a new conversion by clicking the plus icon in the upper left hand corner of the screen.
 
-You will see a `Global Site Tag` that looks like the following:
+You will see a **Global Site Tag** that looks like the following:
 
 ```HTML
 <!-- Global Site Tag (gtag.js) - Google AdWords: GOOGLE_CONVERSION_ID -->
@@ -62,13 +62,13 @@ Once you've obtained your Conversion ID, copy and paste it into the correspondin
 
 In you MetaRouter UI, you'll need to map your conversion `track` events to your AdWords `google_conversion_label`s. To do this, enter the name of your track event _exactly_ as you've named for both the **Key** and **Event** fields.
 
-Then, add the `Conversion Label` from your AdWords conversion event to the **Label** field inside the MetaRouter UI. For more information on where to find your `google_Converion_id` and `google_conversion_label`, check out [this forum](https://www.en.advertisercommunity.com/t5/AdWords-Tracking-and-Reporting/Find-conversion-ID-and-Conversion-label/td-p/364894#).
+Then, add the **Conversion Label** from your AdWords conversion event to the **Label** field inside the MetaRouter UI. For more information on where to find your `google_Converion_id` and `google_conversion_label`, check out [this forum](https://www.en.advertisercommunity.com/t5/AdWords-Tracking-and-Reporting/Find-conversion-ID-and-Conversion-label/td-p/364894#).
 
 For example, the event `analytics.track("Red Rover", {...})` and the AdWords Conversion label `ABC-123...` would be entered as:
 
-- **Key**: `Red Rover`
-- **Event**: `Red Rover`
-- **Label**: `ABC-123...`
+- Key: `Red Rover`
+- Event: `Red Rover`
+- Label: `ABC-123...`
 
 ## Additional Features
 

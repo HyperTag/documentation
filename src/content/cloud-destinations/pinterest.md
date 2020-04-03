@@ -54,7 +54,7 @@ This next page will show your Pinterest Tag Id (shown in red in the image below 
 
 Back in the MetaRouter UI, select Pinterest Tag as a destination and give your new Pinterest pipeline a unique name.
 
-The next mandatory step is to add you Pinterest Tag Id as the connection of the current pipeline. Clicking **Save** will activate your pipeline and you're ready to go with the basic functionalities.
+The next mandatory step is to add you Pinterest Tag Id as the connection of the current pipeline. Clicking Save will activate your pipeline and you're ready to go with the basic functionalities.
 
 In addition, you can choose to customize your destination using the following fields available on our UI, under **Destination Details** section:
 

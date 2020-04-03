@@ -44,7 +44,7 @@ You'll need to copy these two fields into the MetaRouter App configuration for M
 
 Now, head over to your MetaRouter dashboard and insert both your Token and API key into the MixPanel destination.
 
-Give your pipeline a unique name, and click **Save** to officially activate it.
+Give your pipeline a unique name, and click Save to officially activate it.
 
 With that, you're set! Your data should start flowing almost immediately.
 

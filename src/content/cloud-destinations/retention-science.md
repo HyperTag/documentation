@@ -39,7 +39,7 @@ Once you have an account on [Retention Science](https://www.retentionscience.com
 
 Paste your Site ID into the **Site ID** field in your MetaRouter Retention Science configuration, and give your new connection a unique name.
 
-Check the **Enable On-Site** box, click **Save** and your pipeline will be activated.
+Check the **Enable On-Site** box, click Save and your pipeline will be activated.
 
 ### Custom Events & Reserved Events
 

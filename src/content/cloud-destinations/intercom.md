@@ -56,7 +56,7 @@ Enter your Source ID and API Key into the Intercom connector on your MetaRouter 
 
 Give your new connection a unique name.
 
-Click **Save** to activate your pipeline.
+Click Save to activate your pipeline.
 
 ![intercom7](/images/intercom7v2.png)
 

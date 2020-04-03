@@ -28,7 +28,7 @@ Implementing Kinesis with MetaRouter allows you to skip the installation of a Ki
 
 ### Kinesis Side
 
-Once you create your Kinesis stream, you'll need to [create an IAM user](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) to allow us to integrate with your stream. You will then need to [create an IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html), which will allow Astronomer to issue a `putRecord` request that looks like this:
+Once you create your Kinesis stream, you'll need to [create an IAM user](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) to allow us to integrate with your stream. You will then need to [create an IAM policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html), which will allow MetaRouter to issue a `putRecord` request that looks like this:
 
 ```javascript
 kinesis.putRecord({
@@ -55,8 +55,8 @@ Next, select the `Create Policy from JSON` option and use the code template blow
 
 Now, [follow these instructions to attach the IAM policy to the IAM user](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-using.html#attach-managed-policy-console).
 
-### Astronomer Side
+### MetaRouter Side
 
-Now, all you need to do is enable Kinesis as a destination in your Astronomer UI. You'll need to input your `AWS Region` and `Kinesis Stream Name`. Enable the destination to watch your data flow from your source to your Kinesis stream.
+Now, all you need to do is enable Kinesis as a destination in your MetaRouter UI. You'll need to input your **AWS Region** and **Kinesis Stream Name**. Enable the destination to watch your data flow from your source to your Kinesis stream.
 
-Once you've created that policy, you need to attach it to the IAM user that you have also created. Now, you can flip over to the Astronomer UI and enable your Kinesis connector.
+Once you've created that policy, you need to attach it to the IAM user that you have also created. Now, you can flip over to the MetaRouter UI and enable your Kinesis connector.

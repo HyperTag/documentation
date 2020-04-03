@@ -30,7 +30,7 @@ _Before you get started, note that you will need to remove Google Analytics snip
 
 To get started sending events to Google Analytics, first you'll need to [create an account](https://analytics.google.com).
 
-The first step is to get your Google Analytics `Tracking ID`. This can be found in the Admin panel and should abide by the following structure: `UA-XXXXXXXX-X`.
+The first step is to get your Google Analytics **Tracking ID**. This can be found in the Admin panel and should abide by the following structure: `UA-XXXXXXXX-X`.
 
 ![google-analytics1](/images/google-analytics1.png)
 
@@ -53,22 +53,22 @@ You can configure the Google Analytics account and the event field mappings for 
 The purpose of this section is to allow you to define Google Analytics' specific API information.
 The structure of the `api` property is the following:
 
-- `"endpoint": "https://www.googleanalytics.com/collect"` (required) - String
+- `"endpoint": "https://www.googleanalytics.com/collect"` String (required)
   - Request's endpoint
   - **Note:** This is GA's API endpoint and should not be altered.
-- `"method": "post"` (optional) - String
+- `"method": "post"` String (optional)
   - Request's method
   - Available values: `"get"`, `"post"`
   - Default value: `"get"`
   - **Note:** GA's API is expecting a POST request, this should not be altered.
-- `"keepAliveAgent": true` (optional) - Bool / Object
+- `"keepAliveAgent": true` Bool / Object (optional)
   - Request's HttpAgent or HttpsAgent (automatically detected based on endpoint's structure)
   - Possible values:
-    - `false` => request agent won't be set
-    - `true` => the following default settings will be used as request agent: `{ maxSockets: 100, maxFreeSockets: 10, timeout: 60000, freeSocketTimeout: 30000 }`
-    - Object of agent settings => passed settings will be used as request agent
+    - `false` ⇒ request agent won't be set
+    - `true` ⇒ the following default settings will be used as request agent: `{ maxSockets: 100, maxFreeSockets: 10, timeout: 60000, freeSocketTimeout: 30000 }`
+    - Object of agent settings ⇒ passed settings will be used as request agent
   - **Note:** This should be enabled and set based on your needs and does not affect GA's capabilities.
-- `"includePayloadInURL": true` (optional) - Bool
+- `"includePayloadInURL": true` Bool (optional)
   - If this is set to `true`, the request's URL will include the encoded payload
   - **Note:** GA's API requires the payload to be included inside the URL.
 
@@ -773,47 +773,47 @@ This query takes advantage of GA's Enhanced E-Commerce but there is no native su
 | :------- | :---------------------------------------------------------------------------------------- | :--------------------------------------- |
 | [20]     | [30]                                                                                      | [30]                                     |
 | `v`      | "1"                                                                                       | protocol version, currently at version 1 |
-| `tid`    | `trackingId` from your **integrations.yaml**                                              | universal google analytics tracking ID   |
+| `tid`    | `trackingId` from your integrations.yaml                                                  | universal google analytics tracking ID   |
 | `t`      | `pageview`, `event`, `social`, `transaction`, `item`, `exception`, `appview` or `timing`. | hit type                                 |
-| `cu`     | `currency` property from `track()` calls. Default `USD`                                   | currency                                 |
+| `cu`     | `currency` property from `track()` calls. Default "USD"                                   | currency                                 |
 | `uip`    | `context.ip` property from your `track()` calls                                           | user's ip                                |
 | `ua`     | `context.userAgent` property from your `track()` calls                                    | user agent                               |
 
 #### 2. Promotion fields
 
-| GA Field   | Analytics.js property from `properties` obj | Explanation        |
-| :--------- | :------------------------------------------ | :----------------- |
-| [20]       | [30]                                        | [30]               |
-| `promo1id` | `promotion_id`                              | promotion id       |
-| `promo1cr` | `creatives`                                 | promotion creative |
-| `promo1nm` | `name`                                      | promotion name     |
-| `promo1ps` | `position`                                  | promotion position |
+| GA Field   | Analytics.js property | Explanation        |
+| :--------- | :-------------------- | :----------------- |
+| [20]       | [30]                  | [30]               |
+| `promo1id` | `promotion_id`        | promotion id       |
+| `promo1cr` | `creatives`           | promotion creative |
+| `promo1nm` | `name`                | promotion name     |
+| `promo1ps` | `position`            | promotion position |
 
 #### 3. Checkout fields
 
-| GA Field | Analytics.js property from `properties` obj | Explanation   |
-| :------- | :------------------------------------------ | :------------ |
-| [20]     | [30]                                        | [30]          |
-| `cos`    | `step`                                      | checkout step |
-| `col`    | `checkout_id`                               | checkout id   |
+| GA Field | Analytics.js property | Explanation   |
+| :------- | :-------------------- | :------------ |
+| [20]     | [30]                  | [30]          |
+| `cos`    | `step`                | checkout step |
+| `col`    | `checkout_id`         | checkout id   |
 
 #### 4. Transaction fields
 
-| GA Field | Analytics.js property from `properties` obj | Explanation                                                                                                                                                                                                                                                                            |
-| :------- | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [20]     | [30]                                        | [30]                                                                                                                                                                                                                                                                                   |
-| `ti`     | `order_id`                                  | transaction id                                                                                                                                                                                                                                                                         |
-| `ta`     | `affiliation`                               | transaction affiliation                                                                                                                                                                                                                                                                |
-| `tr`     | `revenue`                                   | transaction revenue - although we have a revenue field in Analytics.js, that field does not include shipping and applied coupons, taxes, promotions etc. GA documentation emphasizes that this field should be comprised of the final cost to the client, including tax, shipping etc. |
-| `ts`     | `shipping`                                  | transaction shipping cost                                                                                                                                                                                                                                                              |
-| `tt`     | `tax`                                       | transaction tax                                                                                                                                                                                                                                                                        |
-| `tcc`    | `coupon`                                    | transaction coupon code                                                                                                                                                                                                                                                                |
+| GA Field | Analytics.js property | Explanation                                                                                                                                                                                                                                                                            |
+| :------- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [20]     | [30]                  | [30]                                                                                                                                                                                                                                                                                   |
+| `ti`     | `order_id`            | transaction id                                                                                                                                                                                                                                                                         |
+| `ta`     | `affiliation`         | transaction affiliation                                                                                                                                                                                                                                                                |
+| `tr`     | `revenue`             | transaction revenue - although we have a revenue field in Analytics.js, that field does not include shipping and applied coupons, taxes, promotions etc. GA documentation emphasizes that this field should be comprised of the final cost to the client, including tax, shipping etc. |
+| `ts`     | `shipping`            | transaction shipping cost                                                                                                                                                                                                                                                              |
+| `tt`     | `tax`                 | transaction tax                                                                                                                                                                                                                                                                        |
+| `tcc`    | `coupon`              | transaction coupon code                                                                                                                                                                                                                                                                |
 
 For `negative` transactions, we map negative values of `revenue`, `shipping`, `tax` and `coupon`
 
 #### 5. Social details fields
 
-| GA Field | Analytics.js property from `properties` obj                    | Observation                                                                              |
+| GA Field | Analytics.js property                                          | Observation                                                                              |
 | :------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
 | [20]     | [30]                                                           | [30]                                                                                     |
 | `sn`     | `share_via`                                                    | share network - hard-coded as `product-review` for [Product Reviewed](#product-reviewed) |
@@ -823,25 +823,25 @@ For `Review events` we hard-code `sn` as `product-review`
 
 #### 6. Search fields
 
-| GA field | Analytics.js property from `properties` obj | Observation                                                                        |
-| :------- | :------------------------------------------ | :--------------------------------------------------------------------------------- |
-| [20]     | [30]                                        | [30]                                                                               |
-| `dl`     | `<baseURL><searchParam>=<query>`            | use `searchParam` and `baseUrl` from **integrations.yaml** to set the query string |
+| GA field | Analytics.js property            | Observation                                                                    |
+| :------- | :------------------------------- | :----------------------------------------------------------------------------- |
+| [20]     | [30]                             | [30]                                                                           |
+| `dl`     | `<baseURL><searchParam>=<query>` | use `searchParam` and `baseUrl` from integrations.yaml to set the query string |
 
 #### 7. Product list fields
 
-| GA field                  | Analytics.js property from `properties` obj | Observation      |
-| :------------------------ | :------------------------------------------ | :--------------- |
-| [20]                      | [30]                                        | [30]             |
-| `<type><ProductIndex>id`  | `sku` or `product_id`                       | product ID       |
-| `<type><ProductIndex>nm`  | `name`                                      | product name     |
-| `<type><ProductIndex>ca`  | `category`                                  | product category |
-| `<type><ProductIndex>pr`  | `price`                                     | product price    |
-| `<type><ProductIndex>br`  | `brand`                                     | product brand    |
-| `<type><ProductIndex>va`  | `variant`                                   | product variant  |
-| `<type><ProductIndex>ps`  | `position`                                  | product position |
-| `<type><ProductIndex>qty` | `quantity`                                  | product quantity |
-| `<type><ProductIndex>cc`  | `coupon`                                    | product coupon   |
+| GA field                  | Analytics.js property | Observation      |
+| :------------------------ | :-------------------- | :--------------- |
+| [20]                      | [30]                  | [30]             |
+| `<type><ProductIndex>id`  | `sku` or `product_id` | product ID       |
+| `<type><ProductIndex>nm`  | `name`                | product name     |
+| `<type><ProductIndex>ca`  | `category`            | product category |
+| `<type><ProductIndex>pr`  | `price`               | product price    |
+| `<type><ProductIndex>br`  | `brand`               | product brand    |
+| `<type><ProductIndex>va`  | `variant`             | product variant  |
+| `<type><ProductIndex>ps`  | `position`            | product position |
+| `<type><ProductIndex>qty` | `quantity`            | product quantity |
+| `<type><ProductIndex>cc`  | `coupon`              | product coupon   |
 
 Where `<type>` is either `"pr"` - for simple products, or `il1pi` - "il" prefix stands for "Impression List".
 

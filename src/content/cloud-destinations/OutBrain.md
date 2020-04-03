@@ -40,7 +40,7 @@ Give your connection a unique name and input that Advertiser ID where asked.
 
 Lastly, input the OutBrain events you want to track. This is something like: `email_sign_up`.
 
-Click on **Save** at the bottom of the form to activate your pipeline.
+Click on Save at the bottom of the form to activate your pipeline.
 
 Once your pipeline is activated, navigate over to the **Logs** or **Analytics** section to monitor live data.
 

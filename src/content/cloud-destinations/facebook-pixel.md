@@ -40,7 +40,7 @@ Once that's set up, identify your unique `pixelId`, a 15 digit number that uniqu
 
 Put your Facebook Pixel ID into your MetaRouter account and give your new connection a unique name.
 
-With that, just click `Save` to activate your pipeline.
+With that, just click Save to activate your pipeline.
 
 ## Additional Features
 
@@ -114,16 +114,16 @@ By default, MetaRouter will strip any PII from the properties of `track` events 
 
 Facebook enforces strict guidelines around sending Personally Identifiable Information (PII) as properties of Pixel events. In order to adhere to these guidelines, MetaRouter will automatically scan `track` event properties for PII and remove any that get flagged from the event to Facebook. The following keys are currently filtered:
 
-- email
-- firstName
-- lastName
-- gender
-- city
-- country
-- phone
-- state
-- zip
-- birthday
+- `email`
+- `firstName`
+- `lastName`
+- `gender`
+- `city`
+- `country`
+- `phone`
+- `state`
+- `zip`
+- `birthday`
 
 Any `track` events with properties containing those keys will be sent to Facebook with those properties omitted.
 

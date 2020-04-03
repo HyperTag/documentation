@@ -9,11 +9,11 @@ path: '/config-and-management/'
 
 # Controlling how the MetaRouter Platform sends data
 
-The MetaRouter Streaming Data Platform will accept events from _Sources_, identified by their Write Key, and fan-out that data to the Source's _Destinations_, which map and forward the data out of the platform to their respective endpoints. You can control which Sources are allowed to have data received by the platform and which destinations are sent the data by providing the platform with a _Source Configuration_.
+The MetaRouter Streaming Data Platform will accept events from **Sources**, identified by their Write Key, and fan-out that data to the Source's **Destinations**, which map and forward the data out of the platform to their respective endpoints. You can control which Sources are allowed to have data received by the platform and which destinations are sent the data by providing the platform with a **Source Configuration**.
 
-For example, say I have two applications, one a website and another a server that supports said website. I can give them a unique identifier, called the Write Key, that will allow me to detail where their events go. I give them the Write Key `WEB01` and `SVR01`, and now need to create two Source Configurations so the platform knows what to do once it receives events with those Write Keys.
+For example, if you have two applications, one a website and another a server that supports said website, you can give them a unique identifier, called the Write Key, that will allow you to detail where their events go. Using the Write Keys `WEB01` and `SVR01` for example, you would then create two Source Configurations so the platform knows what to do once it receives events with those Write Keys.
 
-In order to create effective Source Configurations, I need to send events to Destinations. Let's say that I want events from the server to go into S3, but I want the web events to go to S3 and Google Analytics. My Source Configurations would look something like this:
+In order to create effective Source Configurations, you'll need send events to Destinations. Let's say that you'd like want events from the server to go into S3, but want the web events to go to S3 and Google Analytics. Your Source Configurations would look something like this:
 
 ```json
 "WEB01": {
@@ -38,7 +38,7 @@ In order to create effective Source Configurations, I need to send events to Des
 }
 ```
 
-Each configuration for a Destination can be unique per Source, but I cannot have more than one of the same Destination for a single Source. To find out what the `config` parameters are for a Destination, visit the [Destinations section](https://docs.metarouter.io/v2/clickstream/destinations/overview.html) of our Docs and look for Destinations with the _Enterprise_ tag.
+Each configuration for a Destination can be unique per Source, but cannot have more than one of the same Destination for a single Source. To find out what the `config` parameters are for a Destination, visit the [Destinations section](/enterprise-destinations/overview/).
 
 ## Version Control
 

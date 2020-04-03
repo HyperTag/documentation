@@ -8,7 +8,7 @@ path: '/enterprise-destinations/facebook-pixel/'
 tags: [enterprise, destinations]
 ---
 
-# Facebook
+# Facebook Pixel
 
 MetaRouter makes it easy to send your data to Facebook Pixel. Once you follow the steps below, your data will be routed through our platform and pushed to Facebook Pixel in the appropriate format.
 
@@ -40,7 +40,7 @@ Once that's set up, identify your unique `pixelId`, a 15 digit number that uniqu
 
 Put your Facebook Pixel ID into your MetaRouter account and give your new connection a unique name.
 
-With that, just click `Save` to activate your pipeline.
+With that, just click Save to activate your pipeline.
 
 #### Configuration file
 

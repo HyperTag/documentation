@@ -72,7 +72,7 @@ Add the following S3 bucket policy, which will grant MetaRouter permission to co
 
 Navigate to the **Clickstream** pane and select the pipeline you would like to add this S3 storage destination to. Under **Destinations** click **New Destination**. Search for and select **S3 Event Logs**. Give your destination a name and optionally fill in the **Prefix** where the file keys will be stored.
 
-Either configure a new S3 connection in your MetaRouter dashboard with a unique name or use an existing one. This connection holds your **AWS Region**, **Bucket Name**, and **Server Side Encryption** (as needed). Click **Save** to activate your pipeline.
+Either configure a new S3 connection in your MetaRouter dashboard with a unique name or use an existing one. This connection holds your **AWS Region**, **Bucket Name**, and **Server Side Encryption** (as needed). Click Save to activate your pipeline.
 
 ## Things to Note
 

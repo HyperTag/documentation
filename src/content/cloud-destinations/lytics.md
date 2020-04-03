@@ -59,7 +59,7 @@ Once there, you'll see your ID on the left hand side of your account and your Da
 
 Add your Account ID and Data API Key into the Lytics connector on your MetaRouter dashboard and give your new connection a unique name.
 
-Now, just click **Save** to activate your pipeline.
+Now, just click Save to activate your pipeline.
 
 ![lytics3](/images/lytics3v2.png)
 

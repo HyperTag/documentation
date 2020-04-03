@@ -28,7 +28,7 @@ Integrating Google Analytics with MetaRouter means that you do not need to insta
 
 ### Google Analytics Side
 
-To start, you'll need your Google Analytics `Tracking ID`. This can be found in the Admin panel and should abide by the following structure: `UA-XXXXXXXX-X`.
+To start, you'll need your Google Analytics **Tracking ID**. This can be found in the Admin panel and should abide by the following structure: `UA-XXXXXXXX-X`.
 
 ![google-analytics1](/images/google-analytics1.png)
 

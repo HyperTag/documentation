@@ -59,20 +59,20 @@ Replaces the key of an event payload's property object into the value specified 
 Allows you to control the default fall-back behavior.
 Possible fields to control:
 
-- `customer_id`: [boolean],
-- `username`: [boolean],
-- `currency`: [boolean],
-- `phones`: [boolean],
-- `websites`: [boolean],
+- `customer_id` : Bool
+- `username` : Bool
+- `currency` : Bool
+- `phones` : Bool
+- `websites` : Bool
 
 If following properties are enabled in `config.fallbackToDefault` , next behavior should be expected:
 
-- `customer_id` falls back to ⇒ `user_id` ⇒ `anonymous_id` ⇒ `session_id`
-- `username` falls back to `traits.username` ⇒ `properties.username`⇒ `userId` ⇒`anonymousId`
-- `session_id` falls back to `anonymous_id`
-- `currency` falls back to `'USD'`
-- `phones` falls back to single `phone`
-- `websites` falls back to `website`
+- `customer_id` : falls back to ⇒ `user_id` ⇒ `anonymous_id` ⇒ `session_id`
+- `username` : falls back to `traits.username` ⇒ `properties.username`⇒ `userId` ⇒`anonymousId`
+- `session_id` : falls back to `anonymous_id`
+- `currency` : falls back to `'USD'`
+- `phones` : falls back to single `phone`
+- `websites` : falls back to `website`
 
 Except the `session_id`. It is disabled totally in request payload/config, since it is the same as `anonymous_id` . If you want to send `session_id` , simply place it to `properties`.
 

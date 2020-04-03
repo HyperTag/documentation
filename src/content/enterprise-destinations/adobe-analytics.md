@@ -52,25 +52,25 @@ This configuration file allows you to set your own configuration based on how yo
 
 ```
 
-- `reportSuiteId` - String, **required**
+- `reportSuiteId` : String (required)
   - You can find your Report Suite ID in your Adobe Analytics Settings page.
-- `trackingServerUrl` - String, **optional**
+- `trackingServerUrl` : String (optional)
   - This is the secure URL of your Adobe Analytics server.
-- `timestampOption` - String, **optional**, one of:
-  - `enabled` - Send timestamp instead of visitorID;
-  - `disabled` - Send visitorID instead of timestamp;
-  - `optional` - Use this together with `sendBoth` to send out both timestamp and visitorId.
-- `sendBoth` - Bool, **optional**, defaults to `false`
-  - If you've set `timestampOption` to `optional`, you can opt to send _both_ the timestamp and the visitorID to Adobe. However, note that this is _NOT_ recommended by Adobe as it may lead to out of order data.
-- `sendContextData` - Bool, **optional**, defaults to `false`
+- `timestampOption` : String (optional) - one of:
+  - `enabled` : Send timestamp instead of visitorID
+  - `disabled` : Send visitorID instead of timestamp
+  - `optional` : Use this together with `sendBoth` to send out both timestamp and visitorId
+- `sendBoth` : Bool (optional) - defaults to `false`
+  - If you've set `timestampOption` to `optional`, you can opt to send both the timestamp and the visitorID to Adobe. However, this is **NOT** recommended by Adobe as it may lead to out of order data.
+- `sendContextData` : Bool (optional) - defaults to `false`
   - If `true`, all track properties will be attached to event as context data. Then you can use processing rules to map you Context Data Variables in Adobe to other variables with Adobe Analytics Processing Rules.
-- `productIdentifier` - String, **optional**, one of `id`, `name` or `sku`, defaults to `name`
+- `productIdentifier` : String (optional) - one of `id`, `name` or `sku`, defaults to `name`
   - Establishes which track event property to send as product identifier.
-- `events` - Object, **optional**
-  - By default, MetaRouter will map some of the E-commerce events to standard Adobe Analytics events. (See [here](#track-calls) for full list).
+- `events` : Object (optional)
+  - By default, MetaRouter will map some of the E-commerce events to standard Adobe Analytics events.
   - This config option allows you to map your own event to a specific Adobe Analytics standard event.
   - Use E-commerce event names as keys of this object, and the custom Adobe Analytics event names ("event1" - "event200") as the corresponding value.
-- `eVars`, `hVars`, `lists`, `props` - Object, **optional**
+- `eVars`, `hVars`, `lists`, `props` : Object (optional)
   - Map your Adobe Analytics eVar, hVar, lVar and prop names to the property names you’re using in your MetaRouter events. Enter a E-commerce property name on the left and an Adobe Analytics eVar/lVar/hVar/prop number on the right.
   - By default, no vars or params are mapped or sent out.
 

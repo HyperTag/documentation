@@ -77,19 +77,19 @@ This configuration file allows you to set your own configuration based on how yo
         - 'setHashedEmail'
 ```
 
-- `gumId` : (required) String
+- `gumId` : String (required)
   - the GUM ID value from your Criteo account
-- `partnerId` : (required) String
+- `partnerId` : String (required)
   - your Account (Partner) ID from your Criteo account
-- `isDeduplicationOn` : (optional) Bool
+- `isDeduplicationOn` : Bool (optional)
   - will allow you to set the Criteo's `deduplication` parameter for your calls
   - default value: `0`
-- `defaultSiteType` : (optional) String - one of these values:
+- `defaultSiteType` : String (optional) - one of these values:
   - `m` : for mobile
   - `t` : for tablet
   - `d` : for desktop
   - default value: `d`
-- `standardEvents` : (optional) Array of Objects
+- `standardEvents` : Array of Objects (optional)
 
   - by default, MetaRouter will map some of the E-commerce events to standard Criteo events.
   - this config option allows you to map your own event to a specific Criteo standard event
@@ -104,13 +104,13 @@ This configuration file allows you to set your own configuration based on how yo
           - will send an Array of Strings representing products IDs
           - the value will be retrieved from `properties.product` or `properties.products`
           - if the value type is Array, it will be sent as is
-          - if the value type is String, it will be processed into an Array by splinting the String value by `,`
+          - if the value type is String, it will be processed into an Array by spliting the String value on commas
         - `pid` : will send a String representing the product ID
         - `pids` : will send an Array of Strings representing products IDs
         - `products-short` : will send an Array of Objects where each object has the following structure:
           - `id` : String - product id
-          - `price` : int / float - product price
-          - `quantity` : int - product quantity
+          - `price` : Integer / Float - product price
+          - `quantity` : Integer - product quantity
         - `products-full` : will send an Array of Objects where each object will have the same structure that you are passing from your own event
         - `tid` : will send a String representing transaction / order ID
         - if **no `type` provided**, we'll search for `property.[name]` and we'll use this value for this param
@@ -310,18 +310,12 @@ If `properties.viewHome` is not present or is set to `false`, the page call is *
 
 For each of these events, Criteo is suggesting a grouping of events as follows:
 
-- `viewHome`
-  - `setHashedEmail`, `setZipcode`,`setStore`
-- `viewProduct`
-  - `setHashedEmail`, `setZipcode`,`setStore`
-- `viewListing`
-  - `setHashedEmail`, `setZipcode`,`setStore`
-- `viewBasket`
-  - `setHashedEmail`, `setZipcode`,`setStore`
-- `trackTransaction`
-  - `setHashedEmail`, `setZipcode`,`setStore`
-- `viewStore`
-  - `setHashedEmail`
+- `viewHome` ⇒ `setHashedEmail`, `setZipcode`,`setStore`
+- `viewProduct` ⇒ `setHashedEmail`, `setZipcode`,`setStore`
+- `viewListing` ⇒ `setHashedEmail`, `setZipcode`,`setStore`
+- `viewBasket` ⇒ `setHashedEmail`, `setZipcode`,`setStore`
+- `trackTransaction` ⇒ `setHashedEmail`, `setZipcode`,`setStore`
+- `viewStore` ⇒ `setHashedEmail`
 
 This means that, for example, if a `viewProduct` event is triggered, the actual events that will be sent are: `viewProduct`, `setHashedEmail`, `setZipcode` and `setStore`.
 

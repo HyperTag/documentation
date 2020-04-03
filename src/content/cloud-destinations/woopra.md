@@ -36,7 +36,7 @@ Once you create your account on the Woopra [website](https://www.woopra.com/), a
 
 Now, add your domain name into the Woopra connector on your MetaRouter dashboard and give your new connection a unique name.
 
-Click **Save** to activate your pipeline.
+Click Save to activate your pipeline.
 
 ![woopra2](/images/woopra2v2.png)
 

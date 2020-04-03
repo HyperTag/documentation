@@ -65,7 +65,7 @@ To map an event to a specific tag, uncheck **Auto-Tagging** option - **Map Analy
 
 You can map as many events you need.
 
-Finally, click **Save** to activate your pipeline.
+Finally, click Save to activate your pipeline.
 
 ### Identify
 

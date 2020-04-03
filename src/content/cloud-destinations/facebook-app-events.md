@@ -68,4 +68,4 @@ For any custom event that's not mapped, we'll send the exact event name to Faceb
 
 As a final step, give your destination a unique name in the **Friendly Name** box.
 
-With that, just click on **Save** to active your pipeline!
+With that, just click on Save to active your pipeline!

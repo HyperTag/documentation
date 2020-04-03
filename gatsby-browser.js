@@ -1,7 +1,7 @@
 exports.onRouteUpdate = () => {
   var navList = document.querySelector('.nav-list')
-  var selectedItem = 'selected-item'
-  var sectionAnchor = 'section-anchor' // <h1> with this class indicates the page is made of merged markdown files
+  var currentNavSelector = 'selected-item'
+  var sectionAnchorSelector = 'section-anchor' // <h1> with this class indicates the page is made of merged markdown files
 
   var throttle = function(callback, limit) {
     var wait = false
@@ -14,6 +14,17 @@ exports.onRouteUpdate = () => {
         }, limit)
       }
     }
+  }
+
+  var inViewport = function(el, offsetTop) {
+    var rect = el.getBoundingClientRect()
+
+    return (
+      rect.top >= 0 + offsetTop &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
   }
 
   var stringToHTML = function(str) {
@@ -34,14 +45,15 @@ exports.onRouteUpdate = () => {
       e.target.classList.toggle('collapsed')
       e.target.nextSibling.classList.toggle('hidden')
       setNavCollapsedState()
-    }
+    } else if (tag === 'a' && !e.target.classList.contains('logo')) {
+      // save the navigation scroll position
+      sessionStorage.setItem('navStateScroll', navList.querySelector('.scrollbox').scrollTop)
 
-    // set class when link is clicked (hashchange does not get triggered)
-    else if (tag === 'a' && !e.target.classList.contains('logo')) {
+      // set class when link is clicked (hashchange does not get triggered)
       navList.querySelectorAll('li a').forEach(function(a) {
-        a.classList.remove(selectedItem)
+        a.classList.remove(currentNavSelector)
       })
-      e.target.classList.add(selectedItem)
+      e.target.classList.add(currentNavSelector)
     }
   }
 
@@ -58,7 +70,7 @@ exports.onRouteUpdate = () => {
       navItem = navList.querySelector('li a[href="' + url.pathname + '"]')
     }
 
-    navItem.classList.add(selectedItem)
+    navItem.classList.add(currentNavSelector)
   }
 
   var setCurrent = function() {
@@ -67,18 +79,18 @@ exports.onRouteUpdate = () => {
     var anchor = navList.querySelector('li a[href="' + window.location.pathname + window.location.hash + '"]')
 
     navList.querySelectorAll('a').forEach(function(a) {
-      a.classList.remove(selectedItem)
+      a.classList.remove(currentNavSelector)
     })
 
     if (anchor) {
-      anchor.classList.add(selectedItem)
+      anchor.classList.add(currentNavSelector)
     } else {
       setCurrentForSubheading()
     }
   }
 
   var checkSectionOffset = function(section) {
-    if (!document.querySelector('.' + sectionAnchor)) {
+    if (!document.querySelector('.' + sectionAnchorSelector)) {
       return // bail out if this is a single page
     }
 
@@ -88,7 +100,8 @@ exports.onRouteUpdate = () => {
     // check whether the current hash belongs to a subheading (h2, h3, etc.) in this section
     if (hasHash) {
       var currentEl = document.getElementById(window.location.hash.substring(1))
-      isSectionSubheading = currentEl && section.contains(currentEl) && !currentEl.classList.contains(sectionAnchor)
+      isSectionSubheading =
+        currentEl && section.contains(currentEl) && !currentEl.classList.contains(sectionAnchorSelector)
     }
 
     if (
@@ -97,7 +110,7 @@ exports.onRouteUpdate = () => {
       section.offsetTop + section.offsetHeight > window.pageYOffset
     ) {
       // TODO deal with cases where this isn't an h1
-      window.location.hash = '#' + section.querySelector('.' + sectionAnchor).id
+      window.location.hash = '#' + section.querySelector('.' + sectionAnchorSelector).id
     }
   }
 
@@ -121,9 +134,7 @@ exports.onRouteUpdate = () => {
   var onScroll = throttle(function() {
     document.querySelectorAll('main section').forEach(checkSectionOffset)
     document.querySelectorAll('main h2').forEach(checkSubheadingOffset)
-
-    setNavScrollPosition()
-  }, 250)
+  }, 200)
 
   // append a list of tags to the primary heading, with values taken from its data attrs
   var renderTags = function() {
@@ -166,13 +177,12 @@ exports.onRouteUpdate = () => {
     sessionStorage.setItem('navStateCollapsed', collapsed.join(','))
   }
 
-  var setNavScrollPosition = throttle(function() {
-    sessionStorage.setItem('navStateScroll', navList.querySelector('.scrollbox').scrollTop)
-  }, 250)
-
+  // get nav state from session storage
   var syncNavState = function() {
     var titles = sessionStorage.getItem('navStateCollapsed')
-    var scrollPosition = sessionStorage.getItem('navStateScroll')
+    var scrollPosition = Number(sessionStorage.getItem('navStateScroll'))
+    var currentNav = navList.querySelector('.' + currentNavSelector)
+    var navHeaderHeight = navList.querySelector('header').clientHeight
 
     if (titles) {
       titles.split(',').forEach(function(title) {
@@ -181,13 +191,17 @@ exports.onRouteUpdate = () => {
     }
 
     if (scrollPosition) {
-      navList.querySelector('.scrollbox').scrollTop = Number(scrollPosition)
+      navList.querySelector('.scrollbox').scrollTo(0, scrollPosition)
+    }
+
+    if (currentNav && !inViewport(currentNav, navHeaderHeight)) {
+      navList.querySelector('.scrollbox').scrollTo(0, currentNav.offsetTop - navHeaderHeight)
     }
   }
 
   // functions to run onload
-  syncNavState()
   setCurrent()
+  syncNavState()
   renderTags()
   styleTableCells()
 
@@ -195,5 +209,4 @@ exports.onRouteUpdate = () => {
   window.addEventListener('hashchange', setCurrent)
   document.addEventListener('scroll', onScroll)
   navList.addEventListener('click', onClickNav)
-  navList.querySelector('.scrollbox').addEventListener('scroll', setNavScrollPosition)
 }
