@@ -60,17 +60,17 @@ exports.onRouteUpdate = () => {
   // find the parent heading for the subheading, get its internal anchor and highlight the corresponding menu item
   var setCurrentForSubheading = function() {
     var subheading = document.querySelector('main a[href="' + window.location.hash + '"]')
-    var parentAnchor = subheading.closest('section').querySelector('h1 .anchor')
-    var url = new URL(parentAnchor.href)
 
-    // TODO add a comment to this re-assignment
-    var navItem = navList.querySelector('li a[href="' + url.pathname + url.hash + '"]')
-
-    if (!navItem) {
-      navItem = navList.querySelector('li a[href="' + url.pathname + '"]')
+    if (subheading) {
+      var parentAnchor = subheading.closest('section').querySelector('h1 .anchor')
+      var url = new URL(parentAnchor.href)
+      // TODO add a comment to this re-assignment
+      var navItem = navList.querySelector('li a[href="' + url.pathname + url.hash + '"]')
+      if (!navItem) {
+        navItem = navList.querySelector('li a[href="' + url.pathname + '"]')
+      }
+      navItem.classList.add(currentNavSelector)
     }
-
-    navItem.classList.add(currentNavSelector)
   }
 
   var setCurrent = function() {
@@ -140,7 +140,7 @@ exports.onRouteUpdate = () => {
   var renderTags = function() {
     var h1 = document.querySelector('main h1')
 
-    if (h1.dataset.tags) {
+    if (h1 && h1.dataset.tags) {
       var tags = `<ul class="tags">${h1.dataset.tags
         .split(',')
         .map(function(tag) {
@@ -179,23 +179,25 @@ exports.onRouteUpdate = () => {
 
   // get nav state from session storage
   var syncNavState = function() {
-    var titles = sessionStorage.getItem('navStateCollapsed')
-    var scrollPosition = Number(sessionStorage.getItem('navStateScroll'))
-    var currentNav = navList.querySelector('.' + currentNavSelector)
-    var navHeaderHeight = navList.querySelector('header').clientHeight
+    if (navList) {
+      var titles = sessionStorage.getItem('navStateCollapsed')
+      var scrollPosition = Number(sessionStorage.getItem('navStateScroll'))
+      var currentNav = navList.querySelector('.' + currentNavSelector)
+      var navHeaderHeight = navList.querySelector('header').clientHeight
 
-    if (titles) {
-      titles.split(',').forEach(function(title) {
-        navList.querySelector(`[data-title=${title}]`).classList.add('hidden')
-      })
-    }
+      if (titles) {
+        titles.split(',').forEach(function(title) {
+          navList.querySelector(`[data-title=${title}]`).classList.add('hidden')
+        })
+      }
 
-    if (scrollPosition) {
-      navList.querySelector('.scrollbox').scrollTo(0, scrollPosition)
-    }
+      if (scrollPosition) {
+        navList.querySelector('.scrollbox').scrollTo(0, scrollPosition)
+      }
 
-    if (currentNav && !inViewport(currentNav, navHeaderHeight)) {
-      navList.querySelector('.scrollbox').scrollTo(0, currentNav.offsetTop - navHeaderHeight)
+      if (currentNav && !inViewport(currentNav, navHeaderHeight)) {
+        navList.querySelector('.scrollbox').scrollTo(0, currentNav.offsetTop - navHeaderHeight)
+      }
     }
   }
 
@@ -208,5 +210,5 @@ exports.onRouteUpdate = () => {
   // event handlers
   window.addEventListener('hashchange', setCurrent)
   document.addEventListener('scroll', onScroll)
-  navList.addEventListener('click', onClickNav)
+  navList && navList.addEventListener('click', onClickNav)
 }
