@@ -37,6 +37,7 @@ const ContentNav = () => {
               collectionMerge
               path
             }
+            fileAbsolutePath
           }
         }
       }
@@ -44,7 +45,9 @@ const ContentNav = () => {
   `)
 
   const grouped = []
-  const nodes = allMarkdownRemark.edges.map(e => e.node.frontmatter)
+  const nodes = allMarkdownRemark.edges
+    .filter(e => !e.node.fileAbsolutePath.includes('_markdown-templates'))
+    .map(e => e.node.frontmatter)
 
   // group links if necessary
   nodes.forEach(n => {

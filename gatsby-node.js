@@ -22,6 +22,7 @@ const query = `
           tags
         }
         html
+        fileAbsolutePath
       }
     }
   }
@@ -203,7 +204,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  let nodes = result.data.allMarkdownRemark.edges.map(e => e.node)
+  let nodes = result.data.allMarkdownRemark.edges
+    .map(e => e.node)
+    .filter(node => !node.fileAbsolutePath.includes('_markdown-templates'))
 
   // run mutations on node content
   nodes = setTableColumnWidths(nodes)

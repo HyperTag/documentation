@@ -80,13 +80,13 @@ This configuration file allows you to set your own configuration based on how yo
 
   | Analytics.js event  | Adobe Analytics event |
   | :------------------ | :-------------------- |
-  | Product Viewed      | 'prodView'            |
-  | Product List Viewed | 'prodView'            |
-  | Product Added       | 'scAdd'               |
-  | Product Removed     | 'scRemove'            |
-  | Cart Viewed         | 'scView'              |
-  | Checkout Started    | 'scCheckout'          |
-  | Order Completed     | 'purchase             |
+  | Product Viewed      | `prodView`            |
+  | Product List Viewed | `prodView`            |
+  | Product Added       | `scAdd`               |
+  | Product Removed     | `scRemove`            |
+  | Cart Viewed         | `scView`              |
+  | Checkout Started    | `scCheckout`          |
+  | Order Completed     | `purchase`            |
 
 - In order to map other events, you would use the custom mapping provided by the config:
 
