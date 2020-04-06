@@ -6,7 +6,8 @@
 }
 .nav-list header {
   @apply p-4 pb-0;
-  @apply border-b border-solid border-gray-300;
+  /* @apply border-b border-solid border-gray-300; tailwind is not compiling this correctly */
+  border-bottom: solid 1px #e2e8f0;
   @apply relative;
   @apply z-10;
   box-shadow: -15px 20px 10px #f5faff;
