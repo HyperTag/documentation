@@ -61,18 +61,20 @@ main {
 main section,
 footer {
   @apply py-24 px-32;
-  @apply border-b border-gray-400 border-solid;
   @apply relative;
   @apply mx-auto;
   min-width: 45rem;
   max-width: 60rem;
 }
-
 main section:first-of-type {
   margin-top: -6px; /* align first section with first nav item */
 }
-main section:last-of-type {
-  @apply border-none;
+
+main .section-border {
+  @apply border-gray-400 border-b border-solid;
+}
+main .section-border:last-of-type {
+  @apply border-0;
 }
 
 .header-links {

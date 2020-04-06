@@ -106,6 +106,7 @@ const section = ($, isPage) => {
       ${tocItems.length ? toc : ''}
       ${$.html()}
     </section>
+    <div class="section-border"></div>
   `
 }
 
