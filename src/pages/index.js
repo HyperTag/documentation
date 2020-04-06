@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO htmlClass="home-page" />
 
       <section>
         <h1>MetaRouter Documentation</h1>
@@ -27,16 +27,16 @@ export default () => {
               <p>Deploy an end-to-end data router on your own cloud with maximum control, flexibility, and security.</p>
             </Link>
           </li>
-          <li className="cloud-edition">
-            <Link to="/cloud-edition/">
-              <h1>MetaRouter Cloud</h1>
-              <p>Securely send events to our cloud-based platform from web, mobile, and server-side sources.</p>
-            </Link>
-          </li>
           <li className="enterprise-edition">
             <Link to="/enterprise-destinations/overview/">
               <h1>Enterprise Destinations</h1>
               <p></p>
+            </Link>
+          </li>
+          <li className="cloud-edition">
+            <Link to="/cloud-edition/">
+              <h1>MetaRouter Cloud</h1>
+              <p>Securely send events to our cloud-based platform from web, mobile, and server-side sources.</p>
             </Link>
           </li>
           <li className="cloud-edition">

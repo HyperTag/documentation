@@ -10,7 +10,7 @@
 @import './home-page.css';
 
 html {
-  height: 100%;
+  @apply h-full;
 }
 
 body,
@@ -51,19 +51,23 @@ ol {
   @apply h-full;
   @apply left-0;
   @apply top-0;
-  width: 14rem;
+  width: 16rem;
 }
 main {
-  margin-left: 14rem;
+  margin-left: 16rem;
 }
 
 /* section containers for each markdown file */
-main section {
+main section,
+footer {
   @apply py-24 px-32;
   @apply border-b border-gray-400 border-solid;
   @apply relative;
-  min-width: 800px;
+  @apply mx-auto;
+  min-width: 45rem;
+  max-width: 60rem;
 }
+
 main section:first-of-type {
   margin-top: -6px; /* align first section with first nav item */
 }
@@ -85,37 +89,33 @@ main section:last-of-type {
 
 footer {
   @apply text-center text-xs;
-  @apply px-24 pt-24 pb-12;
+  @apply px-32 pt-24 pb-12;
+}
+footer p:first-child {
+  @apply pt-4;
+  @apply border-t border-solid border-gray-400;
 }
 #disclaimer {
-  @apply max-w-2xl;
   @apply text-justify;
-  @apply mx-auto;
 }
 
 /* responsive styles */
 @media (min-width: 1280px) {
-  main {
-    margin-left: 18rem;
-  }
-
-  main section {
-    padding-right: 24rem;
-  }
-
-  .nav-list {
-    width: 18rem;
+  main section,
+  footer {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   /* sticky TOC in right column for wide screens */
   main .toc {
-    @apply w-56;
     @apply absolute;
     @apply bg-transparent;
     @apply -mt-10;
     top: 8rem;
-    right: 4rem;
+    right: -12rem;
     height: calc(100% - 12rem);
+    width: 16rem;
   }
 
   main .toc .toc-sticky {
@@ -123,25 +123,10 @@ footer {
     top: 4rem;
   }
 
-  main .toc li:hover {
+  main .toc a {
+    @apply block;
+  }
+  main .toc a:hover {
     @apply bg-mr-light-medium;
-  }
-}
-
-@media (min-width: 1600px) {
-  main {
-    margin-left: 24rem;
-  }
-
-  main section {
-    padding-right: 30rem;
-  }
-
-  .nav-list {
-    width: 20rem;
-  }
-
-  main .toc {
-    right: 8rem;
   }
 }
