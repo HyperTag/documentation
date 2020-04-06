@@ -1,7 +1,13 @@
+/* purgecss should ignore everything but tailwind utilities */
+
+/* purgecss start ignore */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+/* purgecss end ignore */
+
 @import 'tailwindcss/utilities';
 
+/* purgecss start ignore */
 @import './fonts.css';
 @import './content-nav.css';
 @import './table.css';
@@ -132,3 +138,4 @@ footer p:first-child {
     @apply bg-mr-light-medium;
   }
 }
+/* purgecss end ignore */

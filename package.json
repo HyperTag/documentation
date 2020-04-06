@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "metarouter.io",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "cheerio": "^1.0.0-rc.3",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
