@@ -19,4 +19,4 @@ MetaRouter will automatically load the Hotjar script once you've enabled the int
 
 Hotjar automatically tracks visits and bound page events that you've defined in your Hotjar account. When MetaRouter loads the Hotjar snippet, the trigers that you've defined in your  Hotjar profile are automatically placed on your website and will function normally. 
 
-All you need to do to start using Hotjar with MetaRouter is input your `Hotjar Snippet Version` and your `Hotjar ID` in the MetaRouter UI. Both of these items can be found within your Hotjar account.
+All you need to do to start using Hotjar with MetaRouter is input your `Hotjar Site ID` in the MetaRouter UI. This can be found [within your Hotjar account](https://insights.hotjar.com/site/list), as a number besides your site's URL.
