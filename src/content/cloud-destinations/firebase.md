@@ -361,7 +361,7 @@ Firebase has great logging. If you are having any issues, you can enable debug m
 
 Not much to do here now that you already have your MetaRouter-Firebase SDKs all set up! When you set up your destination within the MetaRouter UI, you will see the below fields:
 
-![firebaseDestination](firebasedestination.png)
+![firebaseDestination](/images/firebaseDestination.png)
 In the "Name" field, simply name your destination.
 
 The iOS Deep Link URL Scheme only applies if you have installed the iOS Firebase integration and are utilizing Firebase Dynamic Linking (above). If are wondering what a iOS Deep Links are, here is an [article](https://www.originate.com/thinking/stories/deeplinking-in-ios/) that explains use cases for deep link URLs and how to create them.
