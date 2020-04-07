@@ -40,7 +40,7 @@ Since the VWO snippet is now on your site, all you need to do is enable the VWO 
 
 Inside the Destination's Connection, add your VWO account ID in order to fetch your VWO async smart code.
 
-This setting is only effective if _Use Async Smart Code_ is set to `true`.
+This setting is only effective if **Use Async Smart Code** is set to `true`.
 
 #### Send Experiment Data to other Destinations (as Track)
 
@@ -63,13 +63,13 @@ Akin to the above setting, enabling this option will have Analytics.js fire an `
 
 The maximum amount of time (in milliseconds) to wait for VWO’s full library to be downloaded before simply displaying your original page.
 
-This setting is only effective if _Use Async Smart Code_ is set to `true`.
+This setting is only effective if **Use Async Smart Code** is set to `true`.
 
 #### Settings Tolerance
 
 The maximum amount of time (in milliseconds) to wait for test settings before VWO will simply display your original page.
 
-This setting is only effective if _Use Async Smart Code_ is set to `true`.
+This setting is only effective if **Use Async Smart Code** is set to `true`.
 
 #### Use Async Smart Code
 
@@ -83,4 +83,4 @@ This setting is only effective if **Use Async Smart Code** is set to `true`.
 
 #### Single Page App Mode
 
-By enabling Single Page App (SPA) mode, Analytics.js will load the SPA version of the VWO Async Smart Code (if that option is enabled) and will watch for new experiments that VWO loads after the app is initialized in order to trigger _Send Experiment Data to other Destinations_ option correctly. By default, Analytics.js will only send Experiment data to other Destinations the first time the page is loaded. However, SPA Mode will contine to watch for new Experiments and will re-trigger sending Experiment Data to other Destination on every `.page()` call. Only one "Experiment Viewed" event will be triggered per Experiment unless the user reloads the page.
+By enabling Single Page App (SPA) mode, Analytics.js will load the SPA version of the VWO Async Smart Code (if that option is enabled) and will watch for new experiments that VWO loads after the app is initialized in order to trigger **Send Experiment Data to other Destinations** option correctly. By default, Analytics.js will only send Experiment data to other Destinations the first time the page is loaded. However, SPA Mode will continue to watch for new Experiments and will re-trigger sending Experiment Data to other Destination on every `.page()` call. Only one **Experiment Viewed** event will be triggered per Experiment unless the user reloads the page.

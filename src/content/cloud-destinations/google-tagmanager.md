@@ -40,7 +40,7 @@ You'll immediately be given a GTM container `snippet`. Since you're using MetaRo
 
 ![google-tagmanager2](/images/google-tagmanager2.png)
 
-You'll then be taken to your "Workspace". Look to the top right of that page to find your **Container ID** - formatted GTM-XXXXXX.
+You'll then be taken to your Workspace. Look to the top right of that page to find your **Container ID** - formatted GTM-XXXXXX.
 
 ![google-tagmanager3](/images/google-tagmanager3.png)
 

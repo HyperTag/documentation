@@ -78,4 +78,4 @@ You should now be able to refresh your website and see the Twitter Ads pixel fir
 
 If you're using Single Event Website Tags and have those mapped in, you should see specific pixels fire when triggering your respective events.
 
-For example, `analytics.track("Custom Event 1");`, based on the input above, would fire the Twitter Ads pixel `pixel1`, and so on.
+For example, `analytics.track('Custom Event 1')`, based on the input above, would fire the Twitter Ads pixel `pixel1`, and so on.

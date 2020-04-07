@@ -44,7 +44,7 @@ Follow [Google's guide](https://cloud.google.com/bigquery/docs/datasets#bigquery
 
 **Note:** If you already have your auth json, you can skip this step
 
-Now that you have your dataset created, it is time to get GCP authentication set up. This is accomplished through creating a _service account_.
+Now that you have your dataset created, it is time to get GCP authentication set up. This is accomplished through creating a **service account**.
 
 You can see the steps for getting this set up [here](https://cloud.google.com/docs/authentication/getting-started).
 

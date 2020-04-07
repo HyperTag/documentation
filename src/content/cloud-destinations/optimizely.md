@@ -56,7 +56,7 @@ This tracks events to Optimizely for page calls that have a category associated 
 
 Sends the experiment and variation information as properties on a track call.
 
-### Send `Experiment Viewed` as a non-interaction event
+### Send Experiment Viewed as a non-interaction event
 
 Specifies the Experiment Viewed as a non-interaction event for Google Analytics.
 

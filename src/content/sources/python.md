@@ -12,7 +12,7 @@ tags: [sources]
 
 ## Getting Started
 
-This library lets you record analytics data from your Python code. You can use this library in your web server controller code. It is high-performing in that it uses an internal queue to make 'identify' and 'track' calls non-blocking and fast. It also batches messages and flushes asynchronously to our servers.
+This library lets you record analytics data from your Python code. You can use this library in your web server controller code. It is high-performing in that it uses an internal queue to make `identify` and `track` calls non-blocking and fast. It also batches messages and flushes asynchronously to our servers.
 
 Visit https://github.com/segmentio/analytics-python for full package details.
 
@@ -34,7 +34,7 @@ analytics.host = 'https://e.metarouter.io'
 analytics.app_id = ‘metarouter_source_id’
 ```
 
-**Note:** You can find your metarouter_source_id in the settings section of your MetaRouter App.
+**Note:** You can find your `metarouter_source_id` in the settings section of your MetaRouter App.
 
 ## Calls in Python
 

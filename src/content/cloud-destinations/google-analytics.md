@@ -76,7 +76,7 @@ To utilize this feature, you'll need to enable User-ID in your Google Analytics 
 
 ### Track
 
-We'll record a Google Analytics event whenever you make a `track` call (see events in Google Analytics in **Behavior -> Events -> Overview**).
+We'll record a Google Analytics event whenever you make a `track` call (see events in Google Analytics in **Behavior > Events > Overview**).
 
 ## Beyond the Basics
 

@@ -38,7 +38,7 @@ Create a HubSpot account via their [website](http://www.hubspot.com).
 
 After you go through the initial onboarding, click on your account tab on the top right of the window. Note that you might notice something called a **Hub ID** next to the account tab. That's the ID you'll need for the MetaRouter integration.
 
-Next, navigate to **Settings -> Configuration**. Select the **Integrations** option and you'll be brought to a screen that looks like the one below. Next, click the option on the left hand menu labeled **Get your HubSpot API Key**.
+Next, navigate to **Settings > Configuration**. Select the **Integrations** option and you'll be brought to a screen that looks like the one below. Next, click the option on the left hand menu labeled **Get your HubSpot API Key**.
 
 ![hubspot1](/images/hubspot1.png)
 

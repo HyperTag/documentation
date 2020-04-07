@@ -85,7 +85,7 @@ Once you have the `identify` call implemented, you're ready to move on to the `t
 
 To get to a more complete event tracking analytics setup, you can add a `track` call to your app. This will tell MetaRouter which actions users are performing in your app. With `track`, each user action triggers an “event”, which can also have associated properties.
 
-To start, our SDK can automatically track a few common events (e.g. Application_Installed, Application_Opened, and Application_Updated) - you will just need to enable this option during initialization. In addition to these, you will likely want to track some events that are success indicators for your app - like Viewed Product, Email Sign Up, Item Purchased, etc.
+To start, our SDK can automatically track a few common events (e.g. `Application_Installed`, `Application_Opened`, and `Application_Updated`) - you will just need to enable this option during initialization. In addition to these, you will likely want to track some events that are success indicators for your app - like Viewed Product, Email Sign Up, Item Purchased, etc.
 
 Setting up a `track` is very similar to the process you just went through to set up an `identify`. Here’s the basic, sample `track`:
 

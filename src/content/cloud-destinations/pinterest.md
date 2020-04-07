@@ -60,7 +60,7 @@ In addition, you can choose to customize your destination using the following fi
 
 ![pinterest4](/images/pinterest-tag-4.png)
 
-#### `Pinterest Custom Properties`
+#### Pinterest Custom Properties
 
 If you wish to send any extra custom properties to Pinterest - in addition to the [standard Pinterest properties](https://help.pinterest.com/sites/help/files/pinterest_tag_instructions.pdf) - then add them to this section. These properties are case-insensitive, and can be nested. For example, if you want to send `analytics.track('Event', {myObject: { myProperty: true }})` then input `myObject.myProperty`.
 
@@ -82,7 +82,7 @@ MetaRouter automatically binds the following properties to Pinterest Event Data:
 | `products.{}.quantity`     | `product_quantity`       |
 | `products.{}.brand`        | `product_brand`          |
 
-#### `Map Your Events to Pinterest`
+#### Map Your Events to Pinterest
 
 Enter your event on the left, and map it to one of the [standard Pinterest events](https://help.pinterest.com/sites/help/files/pinterest_tag_instructions.pdf) on the right. Some Pinterest events, such as `AddToCart` are already mapped to the Analytics Spec (in this case, to `Product Added`). In the MetaRouter Pinterest Tag destination settings, one can define their own events for Pinterest Tag’s `Signup`, `Lead`, and `Custom` events. Any events sent that aren’t bound to any of these events will still be sent as a _Partner-defined_ event. However, they will not be available for conversion tracking; only for audience creation.
 
@@ -103,13 +103,12 @@ MetaRouter supports Pinterest Enhanced Match in two scenarios:
 1. where a user is already identified when they visit your site
 2. when a user visits your site anonymously but is identified at some later point.
 
-
 To support Pinterest Enhanced Match in the first scenario, go to the Pinterest Tag destination settings in the MetaRoyter web app, and click **Enable Enhanced Match to on Page Load**. This attaches the hashed email address on the initial page load conversion event. For more information see the [Pinterest enhanced-match documentation here](https://help.pinterest.com/en/business/article/enhanced-match).
 
 To support the second scenario, where a user visits your site anonymously, but is identified at a later point, you do not need to change any of the Pinterest destination settings. Instead, you can make an `identify()` call with the user’s email address, which triggers a Pinterest `set()` method. This saves the identification parameters so they can be sent with the next event, so it’s important to `set` the values as early as possible.  
 **Note**: Nothing appears in the network tab in your browser or in the tag helper extension after `set()` is called. However, a hashed value for an `'em'` parameter is added in the next event call, in a JSON object encoded in the URL. You can also see the email box in the tag helper extension.
 
-If you use MetaRouter’s `identify()` method to enable Pinterest’s Enhanced Match, you only collect this information for events *after* you enable the setting. Pinterest does not retroactively update values for past events.
+If you use MetaRouter’s `identify()` method to enable Pinterest’s Enhanced Match, you only collect this information for events _after_ you enable the setting. Pinterest does not retroactively update values for past events.
 
 ## Things to note
 

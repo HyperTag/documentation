@@ -167,7 +167,7 @@ Note that purchases cannot be edited once they are posted.
 
 ### Purchase confirmation
 
-For `Order Completed` events you can configure an additional `sendTemplate` parameter, which will send a transactional email for purchase confirmation. `sendTemplate` parameter must match the **public name** configured in Sailthru’s UI.
+For Order Completed events you can configure an additional `sendTemplate` parameter, which will send a transactional email for purchase confirmation. `sendTemplate` parameter must match the **public name** configured in Sailthru’s UI.
 
 ```javascript
 analytics.track(
@@ -183,15 +183,17 @@ analytics.track(
     coupon: 'MAYDEALS',
     currency: 'USD',
     products: [
-      (product_id: '507f1f77bcf86cd799439011'),
-      (sku: 'G-32'),
-      (category: 'Games'),
-      (name: 'Monopoly: 3rd Edition'),
-      (brand: 'Hasbro'),
-      (variant: '200 pieces'),
-      (price: 18.99),
-      (quantity: 1),
-      (position: 3),
+      {
+        product_id: '507f1f77bcf86cd799439011',
+        sku: 'G-32',
+        category: 'Games',
+        name: 'Monopoly: 3rd Edition',
+        brand: 'Hasbro',
+        variant: '200 pieces',
+        price: 18.99,
+        quantity: 1,
+        position: 3,
+      },
     ],
   },
   {
@@ -253,13 +255,13 @@ In addition to the required settings, you will have the option to configure an o
 
 The default status for the optout value is `none` or you can select `all`, `basic` or `blast`. **Note:** Configuring a setting other than none in your integrations settings will apply to **all users**. If you need to dynamically opt users in or out of emails, pass the setting as a parameter on each event.
 
-`all`: Opts the user out of all emails (campaigns & transactionals). This is the default status when a subscriber marks your email as spam from within an email client.
+`all` : Opts the user out of all emails (campaigns & transactionals). This is the default status when a subscriber marks your email as spam from within an email client.
 
-`basic`: This opt-out setup allows for certain communications (see some acceptable examples in the next bullet) to always send to a user – despite their status.
+`basic` : This opt-out setup allows for certain communications (see some acceptable examples in the next bullet) to always send to a user – despite their status.
 
-`blast`: Opts the user out of all campaign emails. The user will still receive all transactional (1:1) emails.
+`blast` : Opts the user out of all campaign emails. The user will still receive all transactional (1:1) emails.
 
-`none`: Optout(none) is a way of revalidating users back from being any type of optout. This would only be used if an end user has previously opted out and would like to opt back in to be a valid user.
+`none` : Optout(none) is a way of revalidating users back from being any type of optout. This would only be used if an end user has previously opted out and would like to opt back in to be a valid user.
 
 You can read more about [**Optout Levels here**](https://getstarted.sailthru.com/audience/managing-users/user-optout-levels/).
 

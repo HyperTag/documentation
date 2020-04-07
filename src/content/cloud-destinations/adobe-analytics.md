@@ -240,4 +240,4 @@ analytics.track('Order Completed', {
 
 9. Set `window.s.linkTrackVars` which is a string of keys we want Adobe Analytics to read from the `window.s`object when the request is sent. For the example above, the value of `linkTrackVars` would be set as `'pageName,events,products,purchaseID,transactionID,timestamp'`.
 
-10. Finally, we will fire the request to Adobe Analytics using `window.s.tl(true, 'o', 'Order Completed');`.
+10. Finally, we will fire the request to Adobe Analytics using `window.s.tl(true, 'o', 'Order Completed')`.
