@@ -10,7 +10,9 @@ navText: Overview
 path: '/enterprise-edition/'
 ---
 
-# MetaRouter Enterprise
+<h1 class="enterprise">MetaRouter Enterprise</h1>
+
+<img class="content-logo" src="https://cdn.metarouter.io/web/img/docs/enterprise-logo-light.png" />
 
 ## Data Streaming on your own terms
 
@@ -26,7 +28,7 @@ With support for a variety of Destinations, MetaRouter Enterprise leverages Kube
 
 The primary component of our platform, consisting of three distinct layers of services, that allows for the real-time ingestion, durable processing, and monitored delivery of data from your applications.
 
-[![MetaRouter Overview](/images/platform_overview.png)](/images/platform_overview.png)
+![MetaRouter Overview](/images/platform_overview.png)
 
 **Layer 1: Ingestion** - A high performance API, only outwardly facing component of the platform, that accepts the incoming data from your sources to write into durable stateful message queues.
 

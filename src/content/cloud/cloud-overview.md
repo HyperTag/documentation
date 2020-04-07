@@ -10,7 +10,9 @@ navText: Overview
 path: '/cloud-edition/'
 ---
 
-# MetaRouter Cloud
+<h1 class="cloud">MetaRouter Cloud</h1>
+
+<img class="content-logo" src="https://cdn.metarouter.io/web/img/docs/cloud-logo-light.png" />
 
 MetaRouter Cloud Edition is our SaaS offering. This is different from our [Enterprise](/enterprise-edition/) edition in that we run the infrastructure in our cloud rather than deploying to your private cloud or running in a docker container on your local machine.
 

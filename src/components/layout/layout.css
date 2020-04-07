@@ -18,7 +18,9 @@
 html {
   @apply h-full;
 }
-
+body {
+  overflow-y: scroll;
+}
 body,
 input,
 select,
@@ -129,7 +131,7 @@ footer p:first-child {
     @apply float-left;
     @apply bg-no-repeat;
     @apply relative;
-    background-image: url('https://cdn.metarouter.io/web/img/mr_icon_light.png');
+    background-image: url('https://cdn.metarouter.io/web/img/docs/logo-light.png');
     background-size: contain;
     content: '';
     height: 35px;

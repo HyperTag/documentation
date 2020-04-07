@@ -9,7 +9,9 @@ navText: Overview
 path: '/cloud-destinations/overview/'
 ---
 
-# Cloud Destinations
+<h1 class="cloud">Cloud Destinations</h1>
+
+<img class="content-logo" src="https://cdn.metarouter.io/web/img/docs/cloud-logo-light.png" />
 
 MetaRouter has a robust library of destinations consisting of data warehouses, A/B testing tools, analytics tools, marketing tools, and more. These destinations receive data from the sources that you select in your MetaRouter UI.
 

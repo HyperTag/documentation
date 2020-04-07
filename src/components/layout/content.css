@@ -138,3 +138,21 @@ main sub {
   @apply leading-normal;
   font-size: 11px;
 }
+
+/* markup with classes embedded in markdown */
+h1.cloud {
+  @apply border-b border-cloud-green border-solid !important;
+  @apply text-cloud-green-darkest;
+}
+h1.enterprise {
+  @apply border-b border-enterprise-orange border-solid !important;
+  @apply text-enterprise-orange;
+}
+
+main section .content-logo {
+  @apply border-0;
+  @apply shadow-none;
+  @apply float-right;
+  width: 100px;
+  margin: 0 0 15px 15px;
+}
