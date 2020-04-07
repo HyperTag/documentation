@@ -70,7 +70,7 @@ footer {
   @apply relative;
   @apply mx-auto;
   min-width: 45rem;
-  max-width: 60rem;
+  max-width: 58rem;
 }
 main section:first-of-type {
   margin-top: -6px; /* align first section with first nav item */
@@ -109,10 +109,17 @@ footer p:first-child {
 
 /* responsive styles */
 @media (min-width: 1280px) {
-  main section,
-  footer {
-    margin-left: 5%;
-    margin-right: 5%;
+  main {
+    transform: translateX(-8rem);
+  }
+  main nav,
+  .section-border {
+    transform: translateX(8rem);
+  }
+
+  .home-page main,
+  .home-page main nav {
+    transform: translateX(0);
   }
 
   /* sticky TOC in right column for wide screens */
@@ -138,4 +145,5 @@ footer p:first-child {
     @apply bg-mr-light-medium;
   }
 }
+
 /* purgecss end ignore */
