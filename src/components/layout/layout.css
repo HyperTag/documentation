@@ -71,7 +71,7 @@ main {
 
 .header-links {
   @apply sans-light;
-  @apply mb-3 mt-2;
+  @apply my-2;
   @apply text-sm;
   @apply float-right;
 }

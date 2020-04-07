@@ -30,7 +30,7 @@ export default () => {
           <li className="enterprise-edition">
             <Link to="/enterprise-destinations/overview/">
               <h1>Enterprise Destinations</h1>
-              <p></p>
+              <p>Get started with our variety of supported destinations for enterprise-level data streaming.</p>
             </Link>
           </li>
           <li className="cloud-edition">
@@ -42,6 +42,9 @@ export default () => {
           <li className="cloud-edition">
             <Link to="/cloud-destinations/overview/">
               <h1>Cloud Destinations</h1>
+              <p>
+                Choose from over 40 destinations, including analytics platforms, data warehouses, and A/B testing tools.
+              </p>
             </Link>
           </li>
           <li>
@@ -53,7 +56,7 @@ export default () => {
           <li>
             <a href="https://metarouter.io/#contact">
               <h1>Help</h1>
-              <p></p>
+              <p>Looking for additional support? Get&nbsp;in touch with one of our friendly humans.</p>
             </a>
           </li>
         </ul>

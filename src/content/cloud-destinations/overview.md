@@ -15,7 +15,7 @@ path: '/cloud-destinations/overview/'
 
 MetaRouter has a robust library of destinations consisting of data warehouses, A/B testing tools, analytics tools, marketing tools, and more. These destinations receive data from the sources that you select in your MetaRouter UI.
 
-For specific information on each destination and what it is used for, check out the docs in the sidebar. Don't see the destination you want? Have no fear- we're constantly building out new integrations based on our customer requests. Feel free to drop us a line at [support@metarouter.io](support@metarouter.io) if you'd like to have something built and we'll get that done for you!
+For specific information on each destination and what it is used for, check out the docs in the sidebar. Don't see the destination you want? Have no fear, we're constantly building out new integrations based on our customer requests. Feel free to drop us a line at [support@metarouter.io](support@metarouter.io) if you'd like to have something built and we'll get that done for you!
 
 Check out our source/destination compatibility matrix below to see which destinations can accept the data that you'd like to send:
 

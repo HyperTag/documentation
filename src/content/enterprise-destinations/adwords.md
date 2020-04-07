@@ -1,9 +1,9 @@
 ---
 collectionKey: enterprise-destinations
 
-navText: 'AdWords'
+navText: 'Google AdWords'
 
-path: '/enterprise-destinations/adwords/'
+path: '/enterprise-destinations/google-adwords/'
 
 tags: [enterprise, destinations]
 ---

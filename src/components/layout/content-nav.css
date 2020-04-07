@@ -8,7 +8,7 @@
   @apply w-1/2;
   @apply text-sm;
   @apply relative;
-  top: -2.7rem;
+  top: -2.5rem;
 }
 
 .nav-list {
@@ -45,6 +45,7 @@
     @apply border-r border-solid border-gray-300;
     @apply text-sm;
     @apply sans-light;
+    @apply z-20;
     width: 16rem;
   }
   .nav-list header {
