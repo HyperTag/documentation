@@ -28,21 +28,17 @@ To get started sending events to [HubSpot](http://www.hubspot.com), all you'll n
 
 Create a HubSpot account via their [website](http://www.hubspot.com).
 
-After you go through the initial onboarding, click on your account tab on the top right of the window. Note that you might notice something called a `Hub ID` next to the account tab. That's the ID you'll need for the MetaRouter integration.
+After you go through the initial onboarding, click on your account tab on the top right of the window. Here you will find your Portal ID (1) as a number below your organization name.
 
-Now, go to `Settings` -> `Configuration`.
+Now, go to `Settings` and from the left side panel go to `Integration` -> `API key`.
 
-Select the `Integrations` option and you'll be brought to a screen that looks like the one below. Next, click the option on the left hand menu labeled `Get your HubSpot API Key`.
+Here you will be able to create a new API key (2).
 
-![hubspot1](../../../images/hubspot1.png)
-
-On this page you'll see a large blue button appropriately labeled `Generate New Key`.
-
-![hubspot2](../../../images/hubspot2.png)
+![hubspot1](../../../images/hubspot1v2.png)
 
 One handy feature of HubSpot is the full API Key History, including creation, viewing, and deactivation dates.
 
-![hubspot3](../../../images/hubspot3.png)
+![hubspot3](../../../images/hubspot3v2.png)
 
 ### MetaRouter Side
 
