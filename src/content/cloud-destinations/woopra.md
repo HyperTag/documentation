@@ -30,7 +30,7 @@ Combining Woopra's data with the data you receive from other third-party tools o
 
 Once you create your account on the Woopra [website](https://www.woopra.com/), add a new project with the domain of your website or mobile app.
 
-![woopra1](/images/woopra1.png)
+![woopra1](/images/woopra1v2.png)
 
 ### MetaRouter Side
 
@@ -46,7 +46,7 @@ You'll now see your events trickling in on your Woopra account. If you click on 
 
 Click on that new user to see the history of events being recorded.
 
-![woopra3](/images/woopra3.png)
+![woopra3](/images/woopra3v2.png)
 
 ## Beyond the Basics
 
