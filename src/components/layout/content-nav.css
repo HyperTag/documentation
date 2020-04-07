@@ -1,8 +1,18 @@
+.scrollbox,
+#search-input {
+  @apply hidden;
+}
+.nav-dropdown select {
+  @apply border-gray-400 border border-solid rounded;
+  @apply bg-gray-200;
+  @apply w-1/2;
+  @apply text-sm;
+  @apply relative;
+  top: -2.7rem;
+}
+
 .nav-list {
   @apply bg-mr-light-medium;
-  @apply border-r border-solid border-gray-300;
-  @apply text-sm;
-  @apply sans-light;
 }
 .nav-list header {
   @apply p-4 pb-0;
@@ -10,91 +20,137 @@
   border-bottom: solid 1px #e2e8f0;
 }
 .nav-list h1 {
+  @apply text-2xl;
+  @apply text-center;
   @apply mb-4;
   @apply text-lg;
   line-height: 1.1;
 }
 
-.nav-list h2 {
-  @apply sans-bold;
-  @apply mt-4;
-  @apply mx-4;
-  @apply relative;
-  @apply cursor-pointer;
-  @apply text-gray-700;
-}
-.nav-list h2:after {
-  @apply text-base;
-  @apply float-right;
-  @apply inline-block;
-  @apply text-gray-500;
-  content: '⌄';
-  margin-top: 0.1rem;
-  transform: rotate(180deg);
-}
-.nav-list h2.collapsed:after {
-  @apply text-base;
-  @apply float-right;
-  @apply inline-block;
-  content: '⌄';
-  margin-top: -0.35rem;
-  transform: rotate(0);
-}
+/* responsive styles */
+@media (min-width: 640px) {
+  .scrollbox,
+  #search-input {
+    @apply block;
+  }
+  .nav-dropdown {
+    @apply hidden;
+  }
 
-.nav-list li {
-  @apply list-none;
-}
-.nav-list li a {
-  @apply block;
-  @apply px-4;
-  @apply text-gray-600;
-  @apply border border-solid border-transparent;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 85%;
-}
-.nav-list li a:hover {
-  @apply text-black;
-}
-.nav-list li a.selected-item {
-  @apply relative;
-  @apply rounded-tr-lg rounded-br-lg;
-  @apply text-black;
-  border: solid 1px #64a7dd70;
-  background-color: #64a7dd50;
-}
+  .nav-list {
+    @apply fixed;
+    @apply h-full;
+    @apply left-0;
+    @apply top-0;
+    @apply border-r border-solid border-gray-300;
+    @apply text-sm;
+    @apply sans-light;
+    width: 16rem;
+  }
+  .nav-list header {
+    @apply relative;
+    @apply z-10;
+    box-shadow: -15px 20px 10px #f5faff;
+  }
+  .nav-list h1 {
+    @apply text-left text-base;
+  }
 
-#search-input,
-#search-input:focus {
-  @apply bg-white;
-  @apply border-gray-400 border border-solid rounded;
-  @apply mb-6;
-  @apply p-1;
-  @apply text-xs;
-  @apply w-full;
-  @apply outline-none;
-}
+  .nav-list h1:before {
+    @apply block;
+    @apply float-left;
+    @apply relative;
+    @apply bg-no-repeat;
+    background-image: url('https://cdn.metarouter.io/web/img/docs/logo-light.png');
+    background-size: contain;
+    content: '';
+    height: 35px;
+    margin-right: 7px;
+    top: 2px;
+    width: 41px;
+  }
 
-.scrollbox {
-  @apply relative;
-  @apply overflow-y-scroll;
-  @apply pt-6;
-  @apply pb-32;
-  height: 88vh;
-}
+  .nav-list h2 {
+    @apply sans-bold;
+    @apply mt-4;
+    @apply mx-4;
+    @apply relative;
+    @apply cursor-pointer;
+    @apply text-gray-700;
+  }
+  .nav-list h2:after {
+    @apply text-base;
+    @apply float-right;
+    @apply inline-block;
+    @apply text-gray-500;
+    content: '⌄';
+    margin-top: 0.1rem;
+    transform: rotate(180deg);
+  }
+  .nav-list h2.collapsed:after {
+    @apply text-base;
+    @apply float-right;
+    @apply inline-block;
+    content: '⌄';
+    margin-top: -0.35rem;
+    transform: rotate(0);
+  }
 
-.scrollbox::-webkit-scrollbar {
-  width: 0.4em;
-}
-.scrollbox::-webkit-scrollbar,
-.scrollbox::-webkit-scrollbar-thumb {
-  @apply visible;
-  border-radius: 4px;
-}
-.scrollbox::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0);
-}
+  .nav-list li {
+    @apply list-none;
+  }
+  .nav-list li a {
+    @apply block;
+    @apply px-4;
+    @apply text-gray-600;
+    @apply border border-solid border-transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 85%;
+  }
+  .nav-list li a:hover {
+    @apply text-black;
+  }
+  .nav-list li a.selected-item {
+    @apply relative;
+    @apply rounded-tr-lg rounded-br-lg;
+    @apply text-black;
+    border: solid 1px #64a7dd70;
+    background-color: #64a7dd50;
+  }
 
-.scrollbox:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
+  #search-input,
+  #search-input:focus {
+    @apply bg-white;
+    @apply border-gray-400 border border-solid rounded;
+    @apply mb-6;
+    @apply p-1;
+    @apply text-xs;
+    @apply w-full;
+    @apply outline-none;
+  }
+
+  .scrollbox {
+    @apply relative;
+    @apply overflow-y-scroll;
+    @apply pt-6;
+    @apply pb-32;
+    height: 88vh;
+  }
+
+  .scrollbox::-webkit-scrollbar {
+    width: 0.4em;
+  }
+  .scrollbox::-webkit-scrollbar,
+  .scrollbox::-webkit-scrollbar-thumb {
+    @apply visible;
+    border-radius: 4px;
+  }
+  .scrollbox::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .scrollbox:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }

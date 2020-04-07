@@ -15,12 +15,6 @@
 @import './code.css';
 @import './home-page.css';
 
-html {
-  @apply h-full;
-}
-body {
-  overflow-y: scroll;
-}
 body,
 input,
 select,
@@ -29,6 +23,7 @@ textarea {
   @apply text-gray-800;
 }
 
+/* base test styles */
 h1,
 h2,
 h3,
@@ -36,9 +31,6 @@ h4 {
   @apply serif-bold;
 }
 
-p {
-  @apply mb-6;
-}
 b,
 strong {
   @apply font-bold;
@@ -54,22 +46,15 @@ ol {
   @apply list-decimal;
 }
 
-.nav-list h1 {
-  @apply text-center;
-  @apply text-2xl;
+/* main layout */
+html {
+  @apply h-full;
 }
-
-.scrollbox,
-#search-input {
-  @apply hidden;
+body {
+  overflow-y: scroll;
 }
-.nav-dropdown select {
-  @apply border-gray-400 border border-solid rounded;
-  @apply bg-gray-200;
-  @apply w-1/2;
-  @apply text-sm;
-  @apply relative;
-  top: -2.7rem;
+p {
+  @apply mb-6;
 }
 
 main {
@@ -85,8 +70,8 @@ main {
 }
 
 .header-links {
-  @apply mb-3 mt-2;
   @apply sans-light;
+  @apply mb-3 mt-2;
   @apply text-sm;
   @apply float-right;
 }
@@ -102,49 +87,13 @@ footer p:first-child {
   @apply pt-4;
   @apply border-t border-solid border-gray-400;
 }
+
 #disclaimer {
   @apply text-justify;
 }
 
 /* responsive styles */
 @media (min-width: 640px) {
-  .nav-dropdown {
-    @apply hidden;
-  }
-  .nav-list {
-    @apply fixed;
-    @apply h-full;
-    @apply left-0;
-    @apply top-0;
-    width: 16rem;
-  }
-  .nav-list header {
-    @apply relative;
-    @apply z-10;
-    box-shadow: -15px 20px 10px #f5faff;
-  }
-  .nav-list h1 {
-    @apply text-left text-base;
-  }
-  .nav-list h1:before {
-    @apply block;
-    @apply float-left;
-    @apply bg-no-repeat;
-    @apply relative;
-    background-image: url('https://cdn.metarouter.io/web/img/docs/logo-light.png');
-    background-size: contain;
-    content: '';
-    height: 35px;
-    margin-right: 7px;
-    top: 2px;
-    width: 41px;
-  }
-
-  .scrollbox,
-  #search-input {
-    @apply block;
-  }
-
   .header-links {
     @apply mr-8;
   }
@@ -185,29 +134,6 @@ footer p:first-child {
   .home-page main,
   .home-page main nav {
     transform: translateX(0);
-  }
-
-  /* sticky TOC in right column for wide screens */
-  main .toc {
-    @apply absolute;
-    @apply bg-transparent;
-    @apply -mt-10;
-    top: 8rem;
-    right: -12rem;
-    height: calc(100% - 12rem);
-    width: 16rem;
-  }
-
-  main .toc .toc-sticky {
-    @apply sticky;
-    top: 4rem;
-  }
-
-  main .toc a {
-    @apply block;
-  }
-  main .toc a:hover {
-    @apply bg-mr-light-medium;
   }
 }
 

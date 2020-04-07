@@ -156,3 +156,26 @@ main section .content-logo {
   width: 100px;
   margin: 0 0 15px 15px;
 }
+
+@media (min-width: 1280px) {
+  /* sticky TOC in right column for wide screens */
+  main .toc {
+    @apply absolute;
+    @apply bg-transparent !important;
+    @apply -mt-10;
+    height: calc(100% - 12rem);
+    right: -12rem;
+    top: 8rem;
+    width: 16rem;
+  }
+  main .toc .toc-sticky {
+    @apply sticky;
+    top: 4rem;
+  }
+  main .toc a {
+    @apply block;
+  }
+  main .toc a:hover {
+    @apply bg-mr-light-medium;
+  }
+}

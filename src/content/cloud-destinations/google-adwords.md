@@ -24,7 +24,7 @@ Furthermore, if you want to use AdWords in your mobile apps, you'll need to lear
 
 ## Why send data to Google AdWords using MetaRouter
 
-Integrating AdWords with MetaRouter allows you to use your existing tracking events (check out our [API Calls](../calls.md)) to trigger conversions and remarketing tags. We also allow you to incorporate multiple remarketing tags using the conversion label identifier.
+Integrating AdWords with MetaRouter allows you to use your existing tracking events (check out our [API Calls](/sources/analytics-js/)) to trigger conversions and remarketing tags. We also allow you to incorporate multiple remarketing tags using the conversion label identifier.
 
 Furthermore, you do not need to learn the AdWords SDK methods if you want to send data from your mobile apps. You will also not need to re-submit to the app store, as everything can be handled by MetaRouter. We take care of pulling the data from your apps and sending it to AdWords.
 
