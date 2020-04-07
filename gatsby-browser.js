@@ -1,5 +1,6 @@
 exports.onRouteUpdate = () => {
   var navList = document.querySelector('.nav-list')
+  var navDropdown = document.querySelector('.nav-dropdown select')
   var currentNavSelector = 'selected-item'
   var sectionAnchorSelector = 'section-anchor' // <h1> with this class indicates the page is made of merged markdown files
 
@@ -74,19 +75,26 @@ exports.onRouteUpdate = () => {
   }
 
   var setCurrent = function() {
-    // check if an anchor with the current path exists in nav
-    // will be false for subheading anchors
-    var anchor = navList.querySelector('li a[href="' + window.location.pathname + window.location.hash + '"]')
+    var href = window.location.pathname + window.location.hash
+    var anchor = navList.querySelector('li a[href="' + href + '"]')
 
     navList.querySelectorAll('a').forEach(function(a) {
       a.classList.remove(currentNavSelector)
     })
 
+    // check if an anchor with the current path exists in nav list
+    // will be false for subheading anchors
     if (anchor) {
       anchor.classList.add(currentNavSelector)
     } else {
       setCurrentForSubheading()
     }
+
+    var selectedDropdownIndex = Array.from(navDropdown.options).findIndex(function(option) {
+      return option.value === href
+    })
+
+    navDropdown.selectedIndex = selectedDropdownIndex
   }
 
   var setHashByOffset = function(section) {
@@ -211,6 +219,10 @@ exports.onRouteUpdate = () => {
     }
   }
 
+  var onNavDropdownChange = function(e) {
+    window.location.href = e.target.value
+  }
+
   // functions to run onload
   setCurrent()
   syncNavState()
@@ -223,4 +235,5 @@ exports.onRouteUpdate = () => {
   window.addEventListener('resize', setStickyNav)
   document.addEventListener('scroll', onScroll)
   navList && navList.addEventListener('click', onClickNav)
+  navDropdown && navDropdown.addEventListener('change', onNavDropdownChange)
 }

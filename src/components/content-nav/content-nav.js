@@ -119,7 +119,7 @@ const ContentNav = ({ type }) => {
           return (
             <optgroup label={node.collectionTitle}>
               {node.nodes.map(subNode => (
-                <option>{subNode.navText}</option>
+                <option value={subNode.path}>{subNode.navText}</option>
               ))}
             </optgroup>
           )
