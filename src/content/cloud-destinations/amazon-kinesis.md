@@ -22,7 +22,7 @@ In order to configure a Kinesis stream, you must implement its appropriate API l
 
 ## Why send data to Amazon Kinesis using MetaRouter?
 
-Implementing Kinesis with MetaRouter allows you to skip the installation of a Kinesis API library or SDK and limits the amount of modifications that you need to make to your own code. Our Kinesis integration supports all of our [API Calls](../calls.html), so you don't need to set up a separate library for each event you want to track.
+Implementing Kinesis with MetaRouter allows you to skip the installation of a Kinesis API library or SDK and limits the amount of modifications that you need to make to your own code. Our Kinesis integration supports all of our [API Calls](/sources/analytics-js/), so you don't need to set up a separate library for each event you want to track.
 
 ## Getting started with Amazon Kinesis
 

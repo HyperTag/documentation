@@ -20,7 +20,7 @@ Because Braze has a predictive analytics component, it functions most effectivel
 
 ## Why send data to Braze using MetaRouter?
 
-Integrating Braze with MetaRouter means that you can track users across your web, mobile, and server-side apps. Without installing additional code in the form of Braze SDKs or API libraries, you'll be able to receive all [`identify` and `track` calls](,,/calls.html) in the format that Braze understands.
+Integrating Braze with MetaRouter means that you can track users across your web, mobile, and server-side apps. Without installing additional code in the form of Braze SDKs or API libraries, you'll be able to receive all [`identify` and `track` calls](/sources/analytics-js/) in the format that Braze understands.
 
 ## Getting started with Braze
 

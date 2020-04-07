@@ -69,7 +69,7 @@ Finally, click Save to activate your pipeline.
 
 ### Identify
 
-If you haven't had a chance to review our spec, please take a look to understand what the [Identify method](https://docs.metarouter.io/v2/clickstream/calls.html#identify) does. An example call would look like:
+If you haven't had a chance to review our spec, please take a look to understand what the [Identify method](/analytics-js/#identify) does. An example call would look like:
 
 ```javascript
 analytics.identify('1205119', {
@@ -84,7 +84,7 @@ Calling `identify()` will create/update visitors in Lucky Orange. All traits are
 
 ### Track
 
-If you haven't had a chance to review our spec, please take a look to understand what the [Track method](https://docs.metarouter.io/v2/clickstream/calls.html#track) does. An example call would look like:
+If you haven't had a chance to review our spec, please take a look to understand what the [Track method](/analytics-js/#track) does. An example call would look like:
 
 ```javascript
 analytics.track('Your Event Name', {})

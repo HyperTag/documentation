@@ -71,7 +71,7 @@ analytics.enqueue(IdentifyMessage.builder()
 );
 ```
 
-The above call identifies Buzz by his unique `userID` and labels him with `name`, `email`, `gender`, and `title` traits. For a complete library of the traits that you're able to assign to a user, check out our [API Calls doc](../calls.html).
+The above call identifies Buzz by his unique `userID` and labels him with `name`, `email`, `gender`, and `title` traits. For a complete library of the traits that you're able to assign to a user, check out our [API Calls doc](/analytics-js/).
 
 ### Track
 

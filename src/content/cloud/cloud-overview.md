@@ -148,4 +148,4 @@ Check out the list below to explore all of the destinations available with MetaR
 
 ## Calls
 
-[Here](/v2/clickstream/calls.html), we outline the different types of customer data we capture and how to implement them for your business.
+[Here](/sources/analytics-js/), we outline the different types of customer data we capture and how to implement them for your business.
