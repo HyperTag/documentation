@@ -17,7 +17,7 @@ For a proper DNS setup, our platform will require a Static IP to be assigned to 
 
 ### Amazon Web Services (AWS)
 
-**Note:** This is a stub of an existing feature. Details coming soon.\_
+**Note:** This is a stub of an existing feature. Details coming soon.
 
 ## Kubernetes Prerequisites
 

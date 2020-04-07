@@ -100,7 +100,7 @@ main .toc {
   @apply text-xs;
   @apply bg-gray-100 rounded;
   @apply py-3 px-6;
-  @apply mb-6 -mt-6;
+  @apply mb-6;
 }
 
 main .toc ul {

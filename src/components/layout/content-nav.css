@@ -8,28 +8,13 @@
   @apply p-4 pb-0;
   /* @apply border-b border-solid border-gray-300; tailwind is not compiling this correctly */
   border-bottom: solid 1px #e2e8f0;
-  @apply relative;
-  @apply z-10;
-  box-shadow: -15px 20px 10px #f5faff;
 }
 .nav-list h1 {
   @apply mb-4;
   @apply text-lg;
   line-height: 1.1;
 }
-.nav-list h1:before {
-  @apply block;
-  @apply float-left;
-  @apply bg-no-repeat;
-  @apply relative;
-  background-image: url('https://cdn.metarouter.io/web/img/mr_icon_light.png');
-  background-size: contain;
-  content: '';
-  height: 35px;
-  margin-right: 7px;
-  top: 2px;
-  width: 41px;
-}
+
 .nav-list h2 {
   @apply sans-bold;
   @apply mt-4;

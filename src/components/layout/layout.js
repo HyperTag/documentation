@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
         </header>
 
         <div className="scrollbox">
-          <ContentNav />
+          <ContentNav type="list" />
         </div>
       </div>
 
@@ -47,6 +47,10 @@ const Layout = ({ children }) => {
             </li>
           </ul>
         </nav>
+
+        <div className="nav-dropdown">
+          <ContentNav />
+        </div>
 
         {children}
 

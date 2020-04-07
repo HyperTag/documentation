@@ -52,34 +52,33 @@ ol {
   @apply list-decimal;
 }
 
-.nav-list {
-  @apply fixed;
-  @apply h-full;
-  @apply left-0;
-  @apply top-0;
-  width: 16rem;
-}
-main {
-  margin-left: 16rem;
+.nav-list h1 {
+  @apply text-center;
+  @apply text-2xl;
 }
 
-/* section containers for each markdown file */
-main section,
-footer {
-  @apply py-24 px-32;
+.scrollbox,
+#search-input {
+  @apply hidden;
+}
+.nav-dropdown select {
+  @apply border-gray-400 border border-solid rounded;
+  @apply bg-gray-200;
+  @apply w-1/2;
+  @apply text-sm;
   @apply relative;
-  @apply mx-auto;
-  min-width: 45rem;
-  max-width: 58rem;
-}
-main section:first-of-type {
-  margin-top: -6px; /* align first section with first nav item */
+  top: -2.7rem;
 }
 
-main .section-border {
-  @apply border-gray-400 border-b border-solid;
+main {
+  @apply p-8;
 }
-main .section-border:last-of-type {
+
+.section-border {
+  @apply border-gray-400 border-b border-solid;
+  @apply mt-16 -mx-8 mb-8;
+}
+.section-border:last-of-type {
   @apply border-0;
 }
 
@@ -88,16 +87,14 @@ main .section-border:last-of-type {
   @apply sans-light;
   @apply text-sm;
   @apply float-right;
-  @apply mr-4;
 }
 .header-links li {
-  @apply p-2;
+  @apply p-2 pr-0;
   @apply inline-block;
 }
 
 footer {
   @apply text-center text-xs;
-  @apply px-32 pt-24 pb-12;
 }
 footer p:first-child {
   @apply pt-4;
@@ -108,6 +105,72 @@ footer p:first-child {
 }
 
 /* responsive styles */
+@media (min-width: 640px) {
+  .nav-dropdown {
+    @apply hidden;
+  }
+  .nav-list {
+    @apply fixed;
+    @apply h-full;
+    @apply left-0;
+    @apply top-0;
+    width: 16rem;
+  }
+  .nav-list header {
+    @apply relative;
+    @apply z-10;
+    box-shadow: -15px 20px 10px #f5faff;
+  }
+  .nav-list h1 {
+    @apply text-left text-base;
+  }
+  .nav-list h1:before {
+    @apply block;
+    @apply float-left;
+    @apply bg-no-repeat;
+    @apply relative;
+    background-image: url('https://cdn.metarouter.io/web/img/mr_icon_light.png');
+    background-size: contain;
+    content: '';
+    height: 35px;
+    margin-right: 7px;
+    top: 2px;
+    width: 41px;
+  }
+
+  .scrollbox,
+  #search-input {
+    @apply block;
+  }
+
+  .header-links {
+    @apply mr-8;
+  }
+
+  main {
+    @apply p-0;
+    margin-left: 16rem;
+  }
+
+  /* section containers for each markdown file */
+  main section,
+  footer {
+    @apply relative;
+    @apply mx-auto;
+    @apply py-24 px-32;
+    min-width: 45rem;
+    max-width: 58rem;
+  }
+
+  .section-border {
+    @apply m-0;
+  }
+
+  footer {
+    @apply px-32 pt-24 pb-12;
+  }
+}
+
 @media (min-width: 1280px) {
   main {
     transform: translateX(-8rem);

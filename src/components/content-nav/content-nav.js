@@ -22,7 +22,7 @@ const getSortBy = node => {
   return sortBy === 'string' ? sortBy.toLowerCase() : sortBy.toString()
 }
 
-const ContentNav = () => {
+const ContentNav = ({ type }) => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     {
       allMarkdownRemark {
@@ -80,12 +80,13 @@ const ContentNav = () => {
 
   // should only contain the root path, but all ungrouped pages get dumped here by default
   const ungrouped = nodes.filter(n => !n.collectionIndex && !n.collectionKey)
+  const sorted = [...grouped, ...ungrouped].sort((a, b) => a.navIndex - b.navIndex)
 
-  return (
-    <>
-      {[...grouped, ...ungrouped]
-        .sort((a, b) => a.navIndex - b.navIndex)
-        .map(node => (
+  // renders a dropdown for narrow screens or a full list for wider screens
+  if (type === 'list') {
+    return (
+      <>
+        {sorted.map(node => (
           <>
             {node.collectionTitle && (
               <>
@@ -107,7 +108,26 @@ const ContentNav = () => {
             )}
           </>
         ))}
-    </>
+      </>
+    )
+  }
+
+  return (
+    <select>
+      {sorted.map(node => {
+        if (node.collectionTitle) {
+          return (
+            <optgroup label={node.collectionTitle}>
+              {node.nodes.map(subNode => (
+                <option>{subNode.navText}</option>
+              ))}
+            </optgroup>
+          )
+        } else {
+          return <option value={node.path}>{node.navText}</option>
+        }
+      })}
+    </select>
   )
 }
 
