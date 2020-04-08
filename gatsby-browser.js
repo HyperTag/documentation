@@ -1,8 +1,11 @@
+'use strict'
+
 exports.onRouteUpdate = () => {
   var navList = document.querySelector('.nav-list')
   var navDropdown = document.querySelector('.nav-dropdown select')
   var currentNavSelector = 'selected-item'
   var sectionAnchorSelector = 'section-anchor' // <h1> with this class indicates the page is made of merged markdown files
+  var documentElement = document.documentElement
 
   var throttle = function(callback, limit) {
     var wait = false
@@ -23,8 +26,8 @@ exports.onRouteUpdate = () => {
     return (
       rect.top >= 0 + offsetTop &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.bottom <= (window.innerHeight || documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || documentElement.clientWidth)
     )
   }
 
@@ -99,52 +102,82 @@ exports.onRouteUpdate = () => {
     }
   }
 
-  var setHashByOffset = function(section) {
-    if (!document.querySelector('.' + sectionAnchorSelector)) {
-      return // bail out if this is a single page
-    }
+  var setHashByOffset = function(sections) {
+    sections.forEach(function(section) {
+      if (!document.querySelector('.' + sectionAnchorSelector)) {
+        return // bail out if this is a single page
+      }
 
-    var hasHash = window.location.hash !== ''
-    var isSectionSubheading = false
+      var hasHash = window.location.hash !== ''
+      var isSectionSubheading = false
 
-    // check whether the current hash belongs to a subheading (h2, h3, etc.) in this section
-    if (hasHash) {
-      var currentEl = document.getElementById(window.location.hash.substring(1))
-      isSectionSubheading =
-        currentEl && section.contains(currentEl) && !currentEl.classList.contains(sectionAnchorSelector)
-    }
+      // check whether the current hash belongs to a subheading (h2, h3, etc.) in this section
+      if (hasHash) {
+        var currentEl = document.getElementById(window.location.hash.substring(1))
+        isSectionSubheading =
+          currentEl && section.contains(currentEl) && !currentEl.classList.contains(sectionAnchorSelector)
+      }
 
-    if (
-      !isSectionSubheading && // prevents hash change to section anchor when clicking one of its subheading links
-      section.offsetTop < window.pageYOffset &&
-      section.offsetTop + section.offsetHeight > window.pageYOffset
-    ) {
-      // TODO deal with cases where this isn't an h1
-      window.location.hash = '#' + section.querySelector('.' + sectionAnchorSelector).id
-    }
+      if (
+        !isSectionSubheading && // prevents hash change to section anchor when clicking one of its subheading links
+        section.offsetTop < window.pageYOffset &&
+        section.offsetTop + section.offsetHeight > window.pageYOffset
+      ) {
+        // TODO deal with cases where this isn't an h1
+        window.location.hash = '#' + section.querySelector('.' + sectionAnchorSelector).id
+      }
+    })
   }
 
   // highlights the link in TOC for the associated content based on offset
-  var setTocByOffset = function(heading) {
-    if (!document.querySelector('.toc') || document.body.width < 1280) {
+  var setTocByOffset = function(headings) {
+    if (!document.querySelector('.toc') || documentElement.clientWidth < 1280) {
       return
     }
 
-    if (heading.getBoundingClientRect().top < 100) {
-      // highlight the corresponding link in table of contents
-      var url = new URL(heading.querySelector('.anchor').href)
-      var tocLink = heading.closest('section').querySelector('.toc a[href="' + url.hash + '"]')
+    var atTop = documentElement.scrollTop < 150
+    var atBottom = documentElement.scrollHeight - documentElement.scrollTop - documentElement.clientHeight < 100
+    var unsetCurrent = function() {
       document.querySelectorAll('.toc a').forEach(function(a) {
         a.classList.remove('font-bold')
       })
-      tocLink.classList.add('font-bold')
+    }
+
+    // highlight the first heading
+    if (atBottom) {
+      unsetCurrent()
+      var links = document.querySelectorAll('.toc a')
+      links[links.length - 1].classList.add('font-bold')
+      return
+    }
+
+    // highlight the last heading
+    else if (atTop) {
+      unsetCurrent()
+      document.querySelector('.toc a').classList.add('font-bold')
+      return
+    }
+
+    // highlight the heading that's closest to the top edge of the viewport
+    else {
+      headings.forEach(function(heading) {
+        if (heading.getBoundingClientRect().top < 100) {
+          // highlight the corresponding link in table of contents
+          var url = new URL(heading.querySelector('.anchor').href)
+          var tocLink = heading.closest('section').querySelector('.toc a[href="' + url.hash + '"]')
+
+          unsetCurrent()
+          tocLink.classList.add('font-bold')
+          return
+        }
+      })
     }
   }
 
   var onScroll = throttle(function() {
-    document.querySelectorAll('main section').forEach(setHashByOffset)
-    document.querySelectorAll('main h2').forEach(setTocByOffset)
-  }, 200)
+    setHashByOffset(document.querySelectorAll('main section'))
+    setTocByOffset(document.querySelectorAll('main h2'))
+  }, 100)
 
   // append a list of tags to the primary heading, with values taken from its data attrs
   var renderTags = function() {
@@ -212,7 +245,7 @@ exports.onRouteUpdate = () => {
   }
 
   var setStickyNav = function() {
-    var isSticky = document.body.clientWidth > 1280 // corresponds with CSS breakpoint
+    var isSticky = documentElement.clientWidth > 1280 // corresponds with CSS breakpoint
 
     if (!isSticky) {
       document.querySelectorAll('.toc a').forEach(function(a) {
