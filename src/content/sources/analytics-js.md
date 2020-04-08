@@ -57,6 +57,7 @@ The `identify` call contains the following fields:
 
 | Field      | Status   | Type     | Notes                                                                                                                                               |
 | :--------- | :------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [20]       | [20]     | [20]     | [40]                                                                                                                                                |
 | `userId`   | Optional | String   | The database ID for the user                                                                                                                        |
 | `traits`   | Optional | Object   | A group of traits you know about the user, including email and name                                                                                 |
 | `options`  | Optional | Object   | A group of options tied to the call. Note that, if you elect to not pass a `traits` object, you must pass an empty object with `{}` before options. |
@@ -90,6 +91,7 @@ The fields mentioned above are defined here:
 
 | Field        | Status    | Type     | Notes                                                                                                                                                                                                            |
 | :----------- | :-------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [20]         | [20]      | [20]     | [40]                                                                                                                                                                                                             |
 | `event`      | Mandatory | String   | Name of the event you're tracking                                                                                                                                                                                |
 | `properties` | Optional  | Object   | A library of properties to be associated with the event. Check out our [API Call doc](/analytics-js/) to learn more about properties you can pass with your track calls                                          |
 | `options`    | Optional  | Object   | A library of options, such as enabiling or disabiling specfiic destinations for a given call. Note that, if you elect to not pass a `properties` object, you must pass an empty object with `{}` before options. |
@@ -124,6 +126,7 @@ The fields outlined above are explained here:
 
 | Field        | Status   | Type     | Notes                                                                                                                                                                                         |
 | :----------- | :------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [20]         | [20]     | [20]     | [40]                                                                                                                                                                                          |
 | `category`   | Optional | String   | Category of the page.                                                                                                                                                                         |
 | `name`       | Optional | String   | Name of the page.                                                                                                                                                                             |
 | `properties` | Optional | String   | A library of properties that you want to pass with your `page` call. Note that url, title, referrer, and path are automatically collected with `page` calls, so no need to include them here! |
@@ -142,6 +145,7 @@ The fields outlined above are explained here:
 
 | Field      | Status    | Type     | Notes                                                                                                                                                                           |
 | :--------- | :-------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [20]       | [20]      | [20]     | [40]                                                                                                                                                                            |
 | `groupId`  | Mandatory | String   | The Group ID associated with the user                                                                                                                                           |
 | `traits`   | Optional  | String   | A library of trais that you'd like to associate with the group. Can include address, website, employees, etc.                                                                   |
 | `options`  | Optional  | Object   | A library of options that you might want to pass with your call. Note that, if you elect to not pass a `traits` object, you must pass an empty object with `{}` before options. |
@@ -159,6 +163,7 @@ The fields outlined above are explained here:
 
 | Field        | Status    | Type     | Notes                                                                                                     |
 | :----------- | :-------- | :------- | :-------------------------------------------------------------------------------------------------------- |
+| [20]         | [20]      | [20]     | [40]                                                                                                      |
 | `userId`     | Mandatory | String   | The new user ID that you want to associate with the user                                                  |
 | `previousId` | Optional  | String   | The previous ID that was assigned to the user.                                                            |
 | `options`    | Optional  | Object   | A library of options that you might want to pass with your call.                                          |

@@ -109,24 +109,24 @@ analytics.track('Products Searched', {
 Fire this event when a visitor views a product list or category.
 This event supports the following semantic properties:
 
-| Property                 | Type   | Description                                             |
-| :----------------------- | :----- | :------------------------------------------------------ |
-| [30]                     | [30]   | [40]                                                    |
-| `list_id`                | String | Product list being viewed                               |
-| `category`               | String | Product category being viewed                           |
-| `products`               | Array  | Products displayed in the product list                  |
-| `products.{}.product_id` | String | Product id displayed on the list                        |
-| `products.{}.sku`        | String | Sku of the product being viewed                         |
-| `products.{}.category`   | String | Product category being viewed                           |
-| `products.{}.name`       | String | Name of the product being viewed                        |
-| `products.{}.brand`      | String | Brand associated with the product                       |
-| `products.{}.variant`    | String | Variant of the product (e.g. Black)                     |
-| `products.{}.price`      | Number | Price (\$) of the product being viewed                  |
-| `products.{}.quantity`   | Number | Quantity of a product                                   |
-| `products.{}.coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `products.{}.position`   | Number | Position in the product list (ex. 3)                    |
-| `products.{}.url`        | String | URL of the product page                                 |
-| `products.{}.image_url`  | String | Image url of the product                                |
+| Property                 | Type   | Description                                               |
+| :----------------------- | :----- | :-------------------------------------------------------- |
+| [30]                     | [30]   | [40]                                                      |
+| `list_id`                | String | Product list being viewed                                 |
+| `category`               | String | Product category being viewed                             |
+| `products`               | Array  | Products displayed in the product list                    |
+| `products.{}.product_id` | String | Product ID displayed on the list                          |
+| `products.{}.sku`        | String | Sku of the product being viewed                           |
+| `products.{}.category`   | String | Product category being viewed                             |
+| `products.{}.name`       | String | Name of the product being viewed                          |
+| `products.{}.brand`      | String | Brand associated with the product                         |
+| `products.{}.variant`    | String | Variant of the product (e.g. Black)                       |
+| `products.{}.price`      | Number | Price (\$) of the product being viewed                    |
+| `products.{}.quantity`   | Number | Quantity of a product                                     |
+| `products.{}.coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `products.{}.position`   | Number | Position in the product list (ex. 3)                      |
+| `products.{}.url`        | String | URL of the product page                                   |
+| `products.{}.image_url`  | String | Image url of the product                                  |
 
 Example:
 
@@ -170,13 +170,13 @@ This event supports the following semantic properties:
 | `list_id`                | String | Product list being viewed                                                  |
 | `category`               | String | Product category being viewed                                              |
 | `filters`                | Array  | Product filters that the customer is using                                 |
-| `filters.{}.type`        | String | Id of the filter type that the customer is using                           |
-| `filters.{}.value`       | String | Id of the selection that the customer chose                                |
+| `filters.{}.type`        | String | ID of the filter type that the customer is using                           |
+| `filters.{}.value`       | String | ID of the selection that the customer chose                                |
 | `sorts`                  | Array  | Product sorting that the customer is using                                 |
-| `sorts.{}.type`          | String | Id of the sort type that the customer is using                             |
-| `sorts.{}.value`         | String | Id of the selection type the the customer is using (ascending, descending) |
+| `sorts.{}.type`          | String | ID of the sort type that the customer is using                             |
+| `sorts.{}.value`         | String | ID of the selection type the the customer is using (ascending, descending) |
 | `products`               | Array  | Products displayed in the product list                                     |
-| `products.{}.product_id` | String | Product id displayed on the list                                           |
+| `products.{}.product_id` | String | Product ID displayed on the list                                           |
 | `products.{}.sku`        | String | Sku of the product being viewed                                            |
 | `products.{}.category`   | String | Product category being viewed                                              |
 | `products.{}.name`       | String | Name of the product being viewed                                           |
@@ -184,7 +184,7 @@ This event supports the following semantic properties:
 | `products.{}.variant`    | String | Variant of the product (e.g. Black)                                        |
 | `products.{}.price`      | Number | Price (\$) of the product being viewed                                     |
 | `products.{}.quantity`   | Number | Quantity of a product                                                      |
-| `products.{}.coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3)                    |
+| `products.{}.coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`)                  |
 | `products.{}.position`   | Number | Position in the product list (ex. 3)                                       |
 | `products.{}.url`        | String | URL of the product page                                                    |
 | `products.{}.image_url`  | String | Image url of the product                                                   |
@@ -247,7 +247,7 @@ This event supports the following semantic properties:
 | `promotion_id` | String | promotion’s ID       | promo_1                  |
 | `creative`     | String | Promotion’s creative | top_banner_2             |
 | `name`         | String | Promotion’s name     | 75% store-wide shoe sale |
-| `position`     | String | Promotion’s position | home_banner_top          |
+| `position`     | String | Promotion’s position | `home_banner_top`        |
 
 Example:
 
@@ -269,10 +269,10 @@ This event supports the following semantic properties:
 
 | Property       | Type   | Description          | Example                  |
 | :------------- | :----- | :------------------- | :----------------------- |
-| `promotion_id` | String | promotion’s ID       | promo_1                  |
-| `creative`     | String | Promotion’s creative | top_banner_2             |
+| `promotion_id` | String | promotion’s ID       | `promo_1`                |
+| `creative`     | String | Promotion’s creative | `top_banner_2`           |
 | `name`         | String | Promotion’s name     | 75% store-wide shoe sale |
-| `position`     | String | Promotion’s position | home_banner_top          |
+| `position`     | String | Promotion’s position | `home_banner_top`        |
 
 Example:
 
@@ -296,20 +296,20 @@ These events represent the customer journey in regards to product ordering.
 Fire this event when a visitor clicks a product.
 This event supports the following semantic properties:
 
-| Property     | Type   | Description                                             |
-| :----------- | :----- | :------------------------------------------------------ |
-| `product_id` | String | Database id of the product being viewed                 |
-| `sku`        | String | Sku of the product being viewed                         |
-| `category`   | String | Product category being viewed                           |
-| `name`       | String | Name of the product being viewed                        |
-| `brand`      | String | Brand associated with the product                       |
-| `variant`    | String | Variant of the product (e.g. Black)                     |
-| `price`      | Number | Price of the product being viewed                       |
-| `quantity`   | Number | Quantity of a product                                   |
-| `coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `position`   | Number | Position in the product list (ex. 3)                    |
-| `url`        | String | URL of the product page                                 |
-| `image_url`  | String | Image url of the product                                |
+| Property     | Type   | Description                                               |
+| :----------- | :----- | :-------------------------------------------------------- |
+| `product_id` | String | Database ID of the product being viewed                   |
+| `sku`        | String | Sku of the product being viewed                           |
+| `category`   | String | Product category being viewed                             |
+| `name`       | String | Name of the product being viewed                          |
+| `brand`      | String | Brand associated with the product                         |
+| `variant`    | String | Variant of the product (e.g. Black)                       |
+| `price`      | Number | Price of the product being viewed                         |
+| `quantity`   | Number | Quantity of a product                                     |
+| `coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `position`   | Number | Position in the product list (ex. 3)                      |
+| `url`        | String | URL of the product page                                   |
+| `image_url`  | String | Image url of the product                                  |
 
 Example:
 
@@ -337,22 +337,22 @@ analytics.track('Product Clicked', {
 Fire this event when a visitor views a product. That view might happen on a page, screen, or preview modal.
 This event supports the following semantic properties:
 
-| Property     | Type   | Description                                             |
-| :----------- | :----- | :------------------------------------------------------ |
-| `product_id` | String | Database id of the product being viewed                 |
-| `sku`        | String | Sku of the product being viewed                         |
-| `category`   | String | Product category being viewed                           |
-| `name`       | String | Name of the product being viewed                        |
-| `brand`      | String | Brand associated with the product                       |
-| `variant`    | String | Variant of the product (e.g. Black)                     |
-| `price`      | Number | Price (\$) of the product being viewed                  |
-| `quantity`   | Number | Quantity of a product                                   |
-| `coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `currency`   | String | Currency of the transaction                             |
-| `position`   | Number | Position in the product list (ex. 3)                    |
-| `value`      | Number | Total value of the product after quantity               |
-| `url`        | String | URL of the product page                                 |
-| `image_url`  | String | Image url of the product                                |
+| Property     | Type   | Description                                               |
+| :----------- | :----- | :-------------------------------------------------------- |
+| `product_id` | String | Database ID of the product being viewed                   |
+| `sku`        | String | Sku of the product being viewed                           |
+| `category`   | String | Product category being viewed                             |
+| `name`       | String | Name of the product being viewed                          |
+| `brand`      | String | Brand associated with the product                         |
+| `variant`    | String | Variant of the product (e.g. Black)                       |
+| `price`      | Number | Price (\$) of the product being viewed                    |
+| `quantity`   | Number | Quantity of a product                                     |
+| `coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `currency`   | String | Currency of the transaction                               |
+| `position`   | Number | Position in the product list (ex. 3)                      |
+| `value`      | Number | Total value of the product after quantity                 |
+| `url`        | String | URL of the product page                                   |
+| `image_url`  | String | Image url of the product                                  |
 
 Example:
 
@@ -382,21 +382,21 @@ analytics.track('Product Viewed', {
 Fire this event when a visitor adds a product to their shopping cart.
 This event supports the following semantic properties:
 
-| Property     | Type   | Description                                             |
-| :----------- | :----- | :------------------------------------------------------ |
-| `cart_id`    | String | Cart ID to which the product was added to               |
-| `product_id` | String | Database id of the product being viewed                 |
-| `sku`        | String | Sku of the product being viewed                         |
-| `category`   | String | Product category being viewed                           |
-| `name`       | String | Name of the product being viewed                        |
-| `brand`      | String | Brand associated with the product                       |
-| `variant`    | String | Variant of the product (e.g. Black)                     |
-| `price`      | Number | Price (\$) of the product being viewed                  |
-| `quantity`   | Number | Quantity of a product                                   |
-| `coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `position`   | Number | Position in the product list (ex. 3)                    |
-| `url`        | String | URL of the product page                                 |
-| `image_url`  | String | Image url of the product                                |
+| Property     | Type   | Description                                               |
+| :----------- | :----- | :-------------------------------------------------------- |
+| `cart_id`    | String | Cart ID to which the product was added to                 |
+| `product_id` | String | Database ID of the product being viewed                   |
+| `sku`        | String | Sku of the product being viewed                           |
+| `category`   | String | Product category being viewed                             |
+| `name`       | String | Name of the product being viewed                          |
+| `brand`      | String | Brand associated with the product                         |
+| `variant`    | String | Variant of the product (e.g. Black)                       |
+| `price`      | Number | Price (\$) of the product being viewed                    |
+| `quantity`   | Number | Quantity of a product                                     |
+| `coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `position`   | Number | Position in the product list (ex. 3)                      |
+| `url`        | String | URL of the product page                                   |
+| `image_url`  | String | Image url of the product                                  |
 
 Example:
 
@@ -425,21 +425,21 @@ analytics.track('Product Added', {
 Fire this event when a visitor removes a product from their shopping cart.
 This event supports the following semantic properties:
 
-| Property     | Type   | Description                                             |
-| :----------- | :----- | :------------------------------------------------------ |
-| `cart_id`    | String | Cart ID to which the product was removed from           |
-| `product_id` | String | Database id of the product being viewed                 |
-| `sku`        | String | Sku of the product being viewed                         |
-| `category`   | String | Product category being viewed                           |
-| `name`       | String | Name of the product being viewed                        |
-| `brand`      | String | Brand associated with the product                       |
-| `variant`    | String | Variant of the product (e.g. Black)                     |
-| `price`      | Number | Price (\$) of the product being viewed                  |
-| `quantity`   | Number | Quantity of a product                                   |
-| `coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `position`   | Number | Position in the product list (ex. 3)                    |
-| `url`        | String | URL of the product page                                 |
-| `image_url`  | String | Image url of the product                                |
+| Property     | Type   | Description                                               |
+| :----------- | :----- | :-------------------------------------------------------- |
+| `cart_id`    | String | Cart ID to which the product was removed from             |
+| `product_id` | String | Database ID of the product being viewed                   |
+| `sku`        | String | Sku of the product being viewed                           |
+| `category`   | String | Product category being viewed                             |
+| `name`       | String | Name of the product being viewed                          |
+| `brand`      | String | Brand associated with the product                         |
+| `variant`    | String | Variant of the product (e.g. Black)                       |
+| `price`      | Number | Price (\$) of the product being viewed                    |
+| `quantity`   | Number | Quantity of a product                                     |
+| `coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `position`   | Number | Position in the product list (ex. 3)                      |
+| `url`        | String | URL of the product page                                   |
+| `image_url`  | String | Image url of the product                                  |
 
 Example:
 
@@ -468,22 +468,22 @@ analytics.track('Product Removed', {
 Fire this event when a visitor views a shopping cart.
 This event supports the following semantic properties:
 
-| Property                 | Type   | Description                                             |
-| :----------------------- | :----- | :------------------------------------------------------ |
-| `cart_id`                | String | Shopping cart ID                                        |
-| `products`               | Array  | Products displayed in the product list                  |
-| `products.{}.product_id` | String | Product ID displayed on the list                        |
-| `products.{}.sku`        | String | Sku of the product being viewed                         |
-| `products.{}.category`   | String | Product category being viewed                           |
-| `products.{}.name`       | String | Name of the product being viewed                        |
-| `products.{}.brand`      | String | Brand associated with the product                       |
-| `products.{}.variant`    | String | Variant of the product (e.g. Black)                     |
-| `products.{}.price`      | Number | Price (\$) of the product being viewed                  |
-| `products.{}.quantity`   | Number | Quantity of a product                                   |
-| `products.{}.coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `products.{}.position`   | Number | Position in the product list (ex. 3)                    |
-| `products.{}.url`        | String | URL of the product page                                 |
-| `products.{}.image_url`  | String | Image url of the product                                |
+| Property                 | Type   | Description                                               |
+| :----------------------- | :----- | :-------------------------------------------------------- |
+| `cart_id`                | String | Shopping cart ID                                          |
+| `products`               | Array  | Products displayed in the product list                    |
+| `products.{}.product_id` | String | Product ID displayed on the list                          |
+| `products.{}.sku`        | String | Sku of the product being viewed                           |
+| `products.{}.category`   | String | Product category being viewed                             |
+| `products.{}.name`       | String | Name of the product being viewed                          |
+| `products.{}.brand`      | String | Brand associated with the product                         |
+| `products.{}.variant`    | String | Variant of the product (e.g. Black)                       |
+| `products.{}.price`      | Number | Price (\$) of the product being viewed                    |
+| `products.{}.quantity`   | Number | Quantity of a product                                     |
+| `products.{}.coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `products.{}.position`   | Number | Position in the product list (ex. 3)                      |
+| `products.{}.url`        | String | URL of the product page                                   |
+| `products.{}.image_url`  | String | Image url of the product                                  |
 
 Example:
 
@@ -531,7 +531,7 @@ This event supports the following semantic properties:
 | `coupon`                 | String | Transaction coupon redeemed with the transaction                                                                                                                                   |
 | `currency`               | String | [Currency code](https://support.google.com/analytics/answer/6205902#supported-currencies) associated with the transaction                                                          |
 | `products`               | Array  | Products in the order                                                                                                                                                              |
-| `products.{}.product_id` | String | Database id of the product being viewed                                                                                                                                            |
+| `products.{}.product_id` | String | Database ID of the product being viewed                                                                                                                                            |
 | `products.{}.sku`        | String | Sku of the product being viewed                                                                                                                                                    |
 | `products.{}.category`   | String | Product category being viewed                                                                                                                                                      |
 | `products.{}.name`       | String | Name of the product being viewed                                                                                                                                                   |
@@ -539,7 +539,7 @@ This event supports the following semantic properties:
 | `products.{}.variant`    | String | Variant of the product (e.g. Black)                                                                                                                                                |
 | `products.{}.price`      | Number | Price (\$) of the product being viewed                                                                                                                                             |
 | `products.{}.quantity`   | Number | Quantity of a product                                                                                                                                                              |
-| `products.{}.coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3)                                                                                                                            |
+| `products.{}.coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`)                                                                                                                          |
 | `products.{}.position`   | Number | Position in the product list (ex. 3)                                                                                                                                               |
 | `products.{}.url`        | String | URL of the product page                                                                                                                                                            |
 | `products.{}.image_url`  | String | Image url of the product                                                                                                                                                           |
@@ -667,30 +667,30 @@ Fire this event whenever an order/transaction was updated.
 Be sure to **include all items in the cart as event properties**, with the same properties from the previous calls, like so:
 This event supports the following semantic properties:
 
-| Property                 | Type   | Description                                                                                                                                                                                                                                                                        |
-| :----------------------- | :----- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `order_id`               | String | Order/transaction ID                                                                                                                                                                                                                                                               |
-| `affiliation`            | String | Store or affiliation from which this transaction occurred (e.g. Google Store)                                                                                                                                                                                                      |
-| `total`                  | Number | Revenue (\$) with discounts and coupons added in. Note that our Google Analytics Ecommerce destination accepts`total`_or_`revenue`, but not both. For better flexibility and total control over tracking, we let you decide how to calculate how coupons and discounts are applied |
-| `revenue`                | Number | Revenue (\$) associated with the transaction (excluding shipping and tax)                                                                                                                                                                                                          |
-| `shipping`               | Number | Shipping cost associated with the transaction                                                                                                                                                                                                                                      |
-| `tax`                    | Number | Total tax associated with the transaction                                                                                                                                                                                                                                          |
-| `discount`               | Number | Total discount associated with the transaction                                                                                                                                                                                                                                     |
-| `coupon`                 | String | Transaction coupon redeemed with the transaction                                                                                                                                                                                                                                   |
-| `currency`               | String | [Currency code](https://support.google.com/analytics/answer/6205902#supported-currencies) associated with the transaction                                                                                                                                                          |
-| `products`               | Array  | Products in the order                                                                                                                                                                                                                                                              |
-| `products.{}.product_id` | String | Database id of the product being viewed                                                                                                                                                                                                                                            |
-| `products.{}.sku`        | String | Sku of the product being viewed                                                                                                                                                                                                                                                    |
-| `products.{}.category`   | String | Product category being viewed                                                                                                                                                                                                                                                      |
-| `products.{}.name`       | String | Name of the product being viewed                                                                                                                                                                                                                                                   |
-| `products.{}.brand`      | String | Brand associated with the product                                                                                                                                                                                                                                                  |
-| `products.{}.variant`    | String | Variant of the product (e.g. Black)                                                                                                                                                                                                                                                |
-| `products.{}.price`      | Number | Price (\$) of the product being viewed                                                                                                                                                                                                                                             |
-| `products.{}.quantity`   | Number | Quantity of a product                                                                                                                                                                                                                                                              |
-| `products.{}.coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3)                                                                                                                                                                                                                            |
-| `products.{}.position`   | Number | Position in the product list (ex. 3)                                                                                                                                                                                                                                               |
-| `products.{}.url`        | String | URL of the product page                                                                                                                                                                                                                                                            |
-| `products.{}.image_url`  | String | Image url of the product                                                                                                                                                                                                                                                           |
+| Property                 | Type   | Description                                                                                                                                                                                                                                                                         |
+| :----------------------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `order_id`               | String | Order/transaction ID                                                                                                                                                                                                                                                                |
+| `affiliation`            | String | Store or affiliation from which this transaction occurred (e.g. Google Store)                                                                                                                                                                                                       |
+| `total`                  | Number | Revenue (\$) with discounts and coupons added in. Note that our Google Analytics Ecommerce destination accepts `total` or `revenue`, but not both. For better flexibility and total control over tracking, we let you decide how to calculate how coupons and discounts are applied |
+| `revenue`                | Number | Revenue (\$) associated with the transaction (excluding shipping and tax)                                                                                                                                                                                                           |
+| `shipping`               | Number | Shipping cost associated with the transaction                                                                                                                                                                                                                                       |
+| `tax`                    | Number | Total tax associated with the transaction                                                                                                                                                                                                                                           |
+| `discount`               | Number | Total discount associated with the transaction                                                                                                                                                                                                                                      |
+| `coupon`                 | String | Transaction coupon redeemed with the transaction                                                                                                                                                                                                                                    |
+| `currency`               | String | [Currency code](https://support.google.com/analytics/answer/6205902#supported-currencies) associated with the transaction                                                                                                                                                           |
+| `products`               | Array  | Products in the order                                                                                                                                                                                                                                                               |
+| `products.{}.product_id` | String | Database ID of the product being viewed                                                                                                                                                                                                                                             |
+| `products.{}.sku`        | String | Sku of the product being viewed                                                                                                                                                                                                                                                     |
+| `products.{}.category`   | String | Product category being viewed                                                                                                                                                                                                                                                       |
+| `products.{}.name`       | String | Name of the product being viewed                                                                                                                                                                                                                                                    |
+| `products.{}.brand`      | String | Brand associated with the product                                                                                                                                                                                                                                                   |
+| `products.{}.variant`    | String | Variant of the product (e.g. Black)                                                                                                                                                                                                                                                 |
+| `products.{}.price`      | Number | Price (\$) of the product being viewed                                                                                                                                                                                                                                              |
+| `products.{}.quantity`   | Number | Quantity of a product                                                                                                                                                                                                                                                               |
+| `products.{}.coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`)                                                                                                                                                                                                                           |
+| `products.{}.position`   | Number | Position in the product list (ex. 3)                                                                                                                                                                                                                                                |
+| `products.{}.url`        | String | URL of the product page                                                                                                                                                                                                                                                             |
+| `products.{}.image_url`  | String | Image url of the product                                                                                                                                                                                                                                                            |
 
 Example:
 
@@ -738,31 +738,31 @@ Fire this event whenever an order/transaction was successfully completed by the 
 Be sure to **include all items in the cart as event properties**, with the same properties from the previous calls, like so:
 This event supports the following semantic properties:
 
-| Property                 | Type   | Description                                                                                                                                                                                                                                                                           |
-| :----------------------- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `checkout_id`            | String | Checkout ID                                                                                                                                                                                                                                                                           |
-| `order_id`               | String | Order/transaction ID                                                                                                                                                                                                                                                                  |
-| `affiliation`            | String | Store or affiliation from which this transaction occurred (e.g. Google Store)                                                                                                                                                                                                         |
-| `total`                  | Number | Revenue (\$) with discounts and coupons added in. Note that our Google Analytics Ecommerce destination accepts `total` _or_ `revenue`, but not both. For better flexibility and total control over tracking, we let you decide how to calculate how coupons and discounts are applied |
-| `revenue`                | Number | Revenue (\$) associated with the transaction (excluding shipping and tax)                                                                                                                                                                                                             |
-| `shipping`               | Number | Shipping cost associated with the transaction                                                                                                                                                                                                                                         |
-| `tax`                    | Number | Total tax associated with the transaction                                                                                                                                                                                                                                             |
-| `discount`               | Number | Total discount associated with the transaction                                                                                                                                                                                                                                        |
-| `coupon`                 | String | Transaction coupon redeemed with the transaction                                                                                                                                                                                                                                      |
-| `currency`               | String | [Currency code](https://support.google.com/analytics/answer/6205902#supported-currencies) associated with the transaction                                                                                                                                                             |
-| `products`               | Array  | Products in the order                                                                                                                                                                                                                                                                 |
-| `products.{}.product_id` | String | Database id of the product being viewed                                                                                                                                                                                                                                               |
-| `products.{}.sku`        | String | Sku of the product being viewed                                                                                                                                                                                                                                                       |
-| `products.{}.category`   | String | Product category being viewed                                                                                                                                                                                                                                                         |
-| `products.{}.name`       | String | Name of the product being viewed                                                                                                                                                                                                                                                      |
-| `products.{}.brand`      | String | Brand associated with the product                                                                                                                                                                                                                                                     |
-| `products.{}.variant`    | String | Variant of the product (e.g. Black)                                                                                                                                                                                                                                                   |
-| `products.{}.price`      | Number | Price (\$) of the product being viewed                                                                                                                                                                                                                                                |
-| `products.{}.quantity`   | Number | Quantity of a product                                                                                                                                                                                                                                                                 |
-| `products.{}.coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3)                                                                                                                                                                                                                               |
-| `products.{}.position`   | Number | Position in the product list (ex. 3)                                                                                                                                                                                                                                                  |
-| `products.{}.url`        | String | URL of the product page                                                                                                                                                                                                                                                               |
-| `products.{}.image_url`  | String | Image url of the product                                                                                                                                                                                                                                                              |
+| Property                 | Type   | Description                                                                                                                                                                                                                                                                         |
+| :----------------------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `checkout_id`            | String | Checkout ID                                                                                                                                                                                                                                                                         |
+| `order_id`               | String | Order/transaction ID                                                                                                                                                                                                                                                                |
+| `affiliation`            | String | Store or affiliation from which this transaction occurred (e.g. Google Store)                                                                                                                                                                                                       |
+| `total`                  | Number | Revenue (\$) with discounts and coupons added in. Note that our Google Analytics Ecommerce destination accepts `total` or `revenue`, but not both. For better flexibility and total control over tracking, we let you decide how to calculate how coupons and discounts are applied |
+| `revenue`                | Number | Revenue (\$) associated with the transaction (excluding shipping and tax)                                                                                                                                                                                                           |
+| `shipping`               | Number | Shipping cost associated with the transaction                                                                                                                                                                                                                                       |
+| `tax`                    | Number | Total tax associated with the transaction                                                                                                                                                                                                                                           |
+| `discount`               | Number | Total discount associated with the transaction                                                                                                                                                                                                                                      |
+| `coupon`                 | String | Transaction coupon redeemed with the transaction                                                                                                                                                                                                                                    |
+| `currency`               | String | [Currency code](https://support.google.com/analytics/answer/6205902#supported-currencies) associated with the transaction                                                                                                                                                           |
+| `products`               | Array  | Products in the order                                                                                                                                                                                                                                                               |
+| `products.{}.product_id` | String | Database ID of the product being viewed                                                                                                                                                                                                                                             |
+| `products.{}.sku`        | String | Sku of the product being viewed                                                                                                                                                                                                                                                     |
+| `products.{}.category`   | String | Product category being viewed                                                                                                                                                                                                                                                       |
+| `products.{}.name`       | String | Name of the product being viewed                                                                                                                                                                                                                                                    |
+| `products.{}.brand`      | String | Brand associated with the product                                                                                                                                                                                                                                                   |
+| `products.{}.variant`    | String | Variant of the product (e.g. Black)                                                                                                                                                                                                                                                 |
+| `products.{}.price`      | Number | Price (\$) of the product being viewed                                                                                                                                                                                                                                              |
+| `products.{}.quantity`   | Number | Quantity of a product                                                                                                                                                                                                                                                               |
+| `products.{}.coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`)                                                                                                                                                                                                                           |
+| `products.{}.position`   | Number | Position in the product list (ex. 3)                                                                                                                                                                                                                                                |
+| `products.{}.url`        | String | URL of the product page                                                                                                                                                                                                                                                             |
+| `products.{}.image_url`  | String | Image url of the product                                                                                                                                                                                                                                                            |
 
 Example:
 
@@ -864,7 +864,7 @@ This event supports the following semantic properties:
 | `coupon`                 | String | Transaction coupon redeemed with the transaction                                                                          |
 | `currency`               | String | [Currency code](https://support.google.com/analytics/answer/6205902#supported-currencies) associated with the transaction |
 | `products`               | Array  | Products in the order                                                                                                     |
-| `products.{}.product_id` | String | Database id of the product being viewed                                                                                   |
+| `products.{}.product_id` | String | Database ID of the product being viewed                                                                                   |
 | `products.{}.sku`        | String | Sku of the product being viewed                                                                                           |
 | `products.{}.category`   | String | Product category being viewed                                                                                             |
 | `products.{}.name`       | String | Name of the product being viewed                                                                                          |
@@ -872,7 +872,7 @@ This event supports the following semantic properties:
 | `products.{}.variant`    | String | Variant of the product (e.g. Black)                                                                                       |
 | `products.{}.price`      | Number | Price (\$) of the product being viewed                                                                                    |
 | `products.{}.quantity`   | Number | Quantity of a product                                                                                                     |
-| `products.{}.coupon`     | String | Coupon code associated with a product (e.g MAY_DEALS_3)                                                                   |
+| `products.{}.coupon`     | String | Coupon code associated with a product (e.g `MAY_DEALS_3`)                                                                 |
 | `products.{}.position`   | Number | Position in the product list (ex. 3)                                                                                      |
 | `products.{}.url`        | String | URL of the product page                                                                                                   |
 | `products.{}.image_url`  | String | Image url of the product                                                                                                  |
@@ -1035,23 +1035,23 @@ These events may occur if your ecommerce supports wishlist features.
 Fire this event when a customer adds a product to their wish list.
 This event supports the following semantic properties:
 
-| Property        | Type   | Description                                             |
-| :-------------- | :----- | :------------------------------------------------------ |
-| [30]            | [30]   | [40]                                                    |
-| `wishlist_id`   | String | Wishlist ID to which the product was added to           |
-| `wishlist_name` | String | Wishlist name to which the product was added to         |
-| `product_id`    | String | Database id of the product being viewed                 |
-| `sku`           | String | Sku of the product being viewed                         |
-| `category`      | String | Product category being viewed                           |
-| `name`          | String | Name of the product being viewed                        |
-| `brand`         | String | Brand associated with the product                       |
-| `variant`       | String | Variant of the product (e.g. Black)                     |
-| `price`         | Number | Price (\$) of the product being viewed                  |
-| `quantity`      | Number | Quantity of a product                                   |
-| `coupon`        | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `position`      | Number | Position in the product list (ex. 3)                    |
-| `url`           | String | URL of the product page                                 |
-| `image_url`     | String | Image url of the product                                |
+| Property        | Type   | Description                                               |
+| :-------------- | :----- | :-------------------------------------------------------- |
+| [30]            | [30]   | [40]                                                      |
+| `wishlist_id`   | String | Wishlist ID to which the product was added to             |
+| `wishlist_name` | String | Wishlist name to which the product was added to           |
+| `product_id`    | String | Database ID of the product being viewed                   |
+| `sku`           | String | Sku of the product being viewed                           |
+| `category`      | String | Product category being viewed                             |
+| `name`          | String | Name of the product being viewed                          |
+| `brand`         | String | Brand associated with the product                         |
+| `variant`       | String | Variant of the product (e.g. Black)                       |
+| `price`         | Number | Price (\$) of the product being viewed                    |
+| `quantity`      | Number | Quantity of a product                                     |
+| `coupon`        | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `position`      | Number | Position in the product list (ex. 3)                      |
+| `url`           | String | URL of the product page                                   |
+| `image_url`     | String | Image url of the product                                  |
 
 Example:
 
@@ -1081,23 +1081,23 @@ analytics.track('Product Added to Wishlist', {
 Fire this event when a customer removes a product from their wish list.
 This event supports the following semantic properties:
 
-| Property        | Type   | Description                                             |
-| :-------------- | :----- | :------------------------------------------------------ |
-| [30]            | [30]   | [40]                                                    |
-| `wishlist_id`   | String | Wishlist ID to which the product was added to           |
-| `wishlist_name` | String | Wishlist name to which the product was added to         |
-| `product_id`    | String | Database id of the product being viewed                 |
-| `sku`           | String | Sku of the product being viewed                         |
-| `category`      | String | Product category being viewed                           |
-| `name`          | String | Name of the product being viewed                        |
-| `brand`         | String | Brand associated with the product                       |
-| `variant`       | String | Variant of the product (e.g. Black)                     |
-| `price`         | Number | Price (\$) of the product being viewed                  |
-| `quantity`      | Number | Quantity of a product                                   |
-| `coupon`        | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `position`      | Number | Position in the product list (ex. 3)                    |
-| `url`           | String | URL of the product page                                 |
-| `image_url`     | String | Image url of the product                                |
+| Property        | Type   | Description                                               |
+| :-------------- | :----- | :-------------------------------------------------------- |
+| [30]            | [30]   | [40]                                                      |
+| `wishlist_id`   | String | Wishlist ID to which the product was added to             |
+| `wishlist_name` | String | Wishlist name to which the product was added to           |
+| `product_id`    | String | Database ID of the product being viewed                   |
+| `sku`           | String | Sku of the product being viewed                           |
+| `category`      | String | Product category being viewed                             |
+| `name`          | String | Name of the product being viewed                          |
+| `brand`         | String | Brand associated with the product                         |
+| `variant`       | String | Variant of the product (e.g. Black)                       |
+| `price`         | Number | Price (\$) of the product being viewed                    |
+| `quantity`      | Number | Quantity of a product                                     |
+| `coupon`        | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `position`      | Number | Position in the product list (ex. 3)                      |
+| `url`           | String | URL of the product page                                   |
+| `image_url`     | String | Image url of the product                                  |
 
 Example:
 
@@ -1127,24 +1127,24 @@ analytics.track('Product Removed from Wishlist', {
 Fire this event when a customer moves a product from their wish list to their cart.
 This event supports the following semantic properties:
 
-| Property        | Type   | Description                                             |
-| :-------------- | :----- | :------------------------------------------------------ |
-| [30]            | [30]   | [40]                                                    |
-| `wishlist_id`   | String | Wishlist ID to which the product was added to           |
-| `wishlist_name` | String | Wishlist name to which the product was added to         |
-| `cart_id`       | String | Cart ID to which this product was added to              |
-| `product_id`    | String | Database ID of the product being viewed                 |
-| `sku`           | String | Sku of the product being viewed                         |
-| `category`      | String | Product category being viewed                           |
-| `name`          | String | Name of the product being viewed                        |
-| `brand`         | String | Brand associated with the product                       |
-| `variant`       | String | Variant of the product (e.g. Black)                     |
-| `price`         | Number | Price (\$) of the product being viewed                  |
-| `quantity`      | Number | Quantity of a product                                   |
-| `coupon`        | String | Coupon code associated with a product (e.g MAY_DEALS_3) |
-| `position`      | Number | Position in the product list (ex. 3)                    |
-| `url`           | String | URL of the product page                                 |
-| `image_url`     | String | Image url of the product                                |
+| Property        | Type   | Description                                               |
+| :-------------- | :----- | :-------------------------------------------------------- |
+| [30]            | [30]   | [40]                                                      |
+| `wishlist_id`   | String | Wishlist ID to which the product was added to             |
+| `wishlist_name` | String | Wishlist name to which the product was added to           |
+| `cart_id`       | String | Cart ID to which this product was added to                |
+| `product_id`    | String | Database ID of the product being viewed                   |
+| `sku`           | String | Sku of the product being viewed                           |
+| `category`      | String | Product category being viewed                             |
+| `name`          | String | Name of the product being viewed                          |
+| `brand`         | String | Brand associated with the product                         |
+| `variant`       | String | Variant of the product (e.g. Black)                       |
+| `price`         | Number | Price (\$) of the product being viewed                    |
+| `quantity`      | Number | Quantity of a product                                     |
+| `coupon`        | String | Coupon code associated with a product (e.g `MAY_DEALS_3`) |
+| `position`      | Number | Position in the product list (ex. 3)                      |
+| `url`           | String | URL of the product page                                   |
+| `image_url`     | String | Image url of the product                                  |
 
 Example:
 
@@ -1229,7 +1229,7 @@ This event supports the following semantic properties:
 | `recipient`              | String | Recipient of the sharing               |
 | `cart_id`                | String | Shopping cart ID                       |
 | `products`               | Array  | Products displayed in the product list |
-| `products.{}.product_id` | String | Product id displayed on the list       |
+| `products.{}.product_id` | String | Product ID displayed on the list       |
 
 Example:
 

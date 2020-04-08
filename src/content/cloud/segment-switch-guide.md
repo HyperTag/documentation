@@ -86,7 +86,7 @@ Here, use the specific column order as the destination tables rather than`SELECT
 
 ![clickstream-merge2](/images/clickstream-merge2.png)
 
-#### B) Unload to S3 and then Copy\*\*
+#### B) Unload to S3 and then Copy
 
 This has a few more steps, but will likely be less taxing on your db depending on your row count.
 

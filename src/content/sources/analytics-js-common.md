@@ -100,18 +100,18 @@ As mentioned above, there is a general structure that governs our API calls. Bel
 
 Below is a chart detailing what the fields in the above sample payload mean.
 
-| Field                     | Type   | Description                                                                                                                   |
-| :------------------------ | :----- | :---------------------------------------------------------------------------------------------------------------------------- |
-| [20]                      | [20]   | [60]                                                                                                                          |
-| `anonymousId` (optional)  | Object | A pseudo-unique substitute for User ID. This is for cases when you don't have an absolutely unique identifier.                |
-| `context` (optional)      | Object | Dictionary of extra information that provides useful context about a message that is not directly related to the API call     |
-| `integrations` (optional) | String | Dictionary of destinations to either enable or disable                                                                        |
-| `messageId` (implicit)    | String | Automatically collected, this is a unique identifier for each message that lets you find an individual message across the API |
-| `receivedAt` (implicit)   | Date   | The timestamp of when a message is received by MetaRouter                                                                     |
-| `sentAt` (optional)       | Date   | The timestamp of when a message is sent to MetaRouter                                                                         |
-| `type` (implicit)         | String | Type of message, according to the API method                                                                                  |
-| `userId` (required)       | Dtring | Unique string that identifies a user in your database                                                                         |
-| `version` (implicit)      | Number | Version of the Tracking API that received the message, automatically set by MetaRouter                                        |
+| Field          | Type              | Description                                                                                                                   |
+| :------------- | :---------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| [20]           | [20]              | [60]                                                                                                                          |
+| `anonymousId`  | Object (optional) | A pseudo-unique substitute for User ID. This is for cases when you don't have an absolutely unique identifier.                |
+| `context`      | Object (optional) | Dictionary of extra information that provides useful context about a message that is not directly related to the API call     |
+| `integrations` | String (optional) | Dictionary of destinations to either enable or disable                                                                        |
+| `messageId`    | String (implicit) | Automatically collected, this is a unique identifier for each message that lets you find an individual message across the API |
+| `receivedAt`   | Date (implicit)   | The timestamp of when a message is received by MetaRouter                                                                     |
+| `sentAt`       | Date (optional)   | The timestamp of when a message is sent to MetaRouter                                                                         |
+| `type`         | String (implicit) | Type of message, according to the API method                                                                                  |
+| `userId`       | String (required) | Unique string that identifies a user in your database                                                                         |
+| `version`      | Number (implicit) | Version of the Tracking API that received the message, automatically set by MetaRouter                                        |
 
 ## Context
 

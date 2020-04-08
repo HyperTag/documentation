@@ -1,5 +1,3 @@
-'use strict'
-
 exports.onRouteUpdate = () => {
   var navList = document.querySelector('.nav-list')
   var navDropdown = document.querySelector('.nav-dropdown select')
