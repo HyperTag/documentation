@@ -111,7 +111,7 @@ Below is a chart detailing what the fields in the above sample payload mean.
 | `sentAt` (optional)       | Date   | The timestamp of when a message is sent to MetaRouter                                                                         |
 | `type` (implicit)         | String | Type of message, according to the API method                                                                                  |
 | `userId` (required)       | Dtring | Unique string that identifies a user in your database                                                                         |
-| `version` (implicit)      | Number | Version                                                                                                                       |
+| `version` (implicit)      | Number | Version of the Tracking API that received the message, automatically set by MetaRouter                                        |
 
 ## Context
 

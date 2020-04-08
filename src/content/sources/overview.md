@@ -22,7 +22,6 @@ path: '/sources-and-sdks/'
 
 - [HTTP API](/sources/http-api/)
 - [Java](/sources/java/)
-- [MeteorJS](/sources/meteor-js/)
 - [Node.js](/sources/node-js/)
 - [.NET](/sources/dot-net/)
 - [PHP](/sources/php/)

@@ -41,7 +41,6 @@ Check it out:
 - [HTTP API](/sources/http-api/)
 - [iOS](/sources/ios/)
 - [React Native](/sources/react-native/)
-- [MeteorJS](/sources/meteor-js/)
 - [.NET](/sources/dot-net/)
 - [Node.js](/sources/node-js/)
 - [PHP](/sources/php/)
