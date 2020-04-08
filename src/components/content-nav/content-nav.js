@@ -46,7 +46,9 @@ const ContentNav = ({ type }) => {
 
   const grouped = []
   const nodes = allMarkdownRemark.edges
-    .filter(e => !e.node.fileAbsolutePath.includes('_markdown-templates'))
+    .filter(
+      e => !e.node.fileAbsolutePath.includes('_markdown-templates') && !e.node.fileAbsolutePath.includes('_redirects')
+    )
     .map(e => e.node.frontmatter)
 
   // group links if necessary

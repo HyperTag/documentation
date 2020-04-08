@@ -75,26 +75,28 @@ exports.onRouteUpdate = () => {
   }
 
   var setCurrent = function() {
-    var href = window.location.pathname + window.location.hash
-    var anchor = navList.querySelector('li a[href="' + href + '"]')
+    if (navList) {
+      var href = window.location.pathname + window.location.hash
+      var anchor = navList.querySelector('li a[href="' + href + '"]')
 
-    navList.querySelectorAll('a').forEach(function(a) {
-      a.classList.remove(currentNavSelector)
-    })
+      navList.querySelectorAll('a').forEach(function(a) {
+        a.classList.remove(currentNavSelector)
+      })
 
-    // check if an anchor with the current path exists in nav list
-    // will be false for subheading anchors
-    if (anchor) {
-      anchor.classList.add(currentNavSelector)
-    } else {
-      setCurrentForSubheading()
+      // check if an anchor with the current path exists in nav list
+      // will be false for subheading anchors
+      if (anchor) {
+        anchor.classList.add(currentNavSelector)
+      } else {
+        setCurrentForSubheading()
+      }
+
+      var selectedDropdownIndex = Array.from(navDropdown.options).findIndex(function(option) {
+        return option.value === href
+      })
+
+      navDropdown.selectedIndex = selectedDropdownIndex
     }
-
-    var selectedDropdownIndex = Array.from(navDropdown.options).findIndex(function(option) {
-      return option.value === href
-    })
-
-    navDropdown.selectedIndex = selectedDropdownIndex
   }
 
   var setHashByOffset = function(section) {

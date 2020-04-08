@@ -204,9 +204,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
+  const redirects = result.data.allMarkdownRemark.edges
+    .map(e => e.node)
+    .filter(node => node.fileAbsolutePath.includes('_redirects'))
+
   let nodes = result.data.allMarkdownRemark.edges
     .map(e => e.node)
-    .filter(node => !node.fileAbsolutePath.includes('_markdown-templates'))
+    .filter(
+      node => !node.fileAbsolutePath.includes('_markdown-templates') && !node.fileAbsolutePath.includes('_redirects')
+    )
 
   // run mutations on node content
   nodes = setTableColumnWidths(nodes)
@@ -236,6 +242,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         html,
       },
+    })
+  })
+
+  redirects.forEach(({ frontmatter }) => {
+    createPage({
+      path: frontmatter.path,
+      component: path.resolve(`src/templates/redirect.js`),
     })
   })
 }

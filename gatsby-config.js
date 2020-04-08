@@ -6,10 +6,15 @@ module.exports = {
     title: siteTitle,
     description: `MetaRouter is a data engineering platform that that helps you collect, process, and route streaming data.`,
     author: `metarouter.io`,
-    siteUrl: `https://metarouter.io/docs`,
+    siteUrl: `https://docs.metarouter.io`,
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ['/v2/**/*'],
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     {
