@@ -76,7 +76,7 @@ main {
   @apply float-right;
 }
 .header-links li {
-  @apply p-2 pr-0;
+  @apply p-2 pr-0 ml-2;
   @apply inline-block;
 }
 
