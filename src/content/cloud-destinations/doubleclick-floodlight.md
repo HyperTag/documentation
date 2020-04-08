@@ -52,7 +52,7 @@ Creation Date: 02/08/2017
 
 -->
 
-<iframe src="https://1234567.fls.doubleclick.net/activityi;src=1234567;type=myurl00;cat=myurl0;qty=1;cost=[Revenue];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+<iframe src="https://1234567.fls.doubleclick.net/activityi;src=1234567;type=mytype00;cat=mycat0;qty=1;cost=[Revenue];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>
 
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 ```
