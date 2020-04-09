@@ -3,7 +3,7 @@ collectionIndex: 0
 collectionKey: enterprise-destinations
 collectionTitle: Enterprise Destinations
 
-navIndex: 3
+navIndex: 2
 navText: Overview
 
 path: '/enterprise-destinations/overview/'

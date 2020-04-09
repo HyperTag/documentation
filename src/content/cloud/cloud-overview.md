@@ -132,7 +132,6 @@ Check out the list below to explore all of the destinations available with MetaR
 | Lytics              |   ✔    |   ✔    |   ✔    |
 | Microsoft Ads       |   ✔    |   x    |   x    |
 | Mixpanel            |   ✔    |   ✔    |   ✔    |
-| Netmining           |   ✔    |   x    |   x    |
 | Optimizely          |   ✔    |   x    |   x    |
 | OutBrain            |   ✔    |   x    |   x    |
 | Pebble Post         |   ✔    |   x    |   x    |

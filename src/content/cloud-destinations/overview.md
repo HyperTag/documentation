@@ -56,7 +56,6 @@ Check out our source/destination compatibility matrix below to see which destina
 | Lytics              |   ✔    |   ✔    |   ✔    |
 | Microsoft Ads       |   ✔    |   x    |   x    |
 | Mixpanel            |   ✔    |   ✔    |   ✔    |
-| Netmining           |   ✔    |   x    |   x    |
 | Optimizely          |   ✔    |   x    |   x    |
 | OutBrain            |   ✔    |   x    |   x    |
 | Pebble Post         |   ✔    |   x    |   x    |

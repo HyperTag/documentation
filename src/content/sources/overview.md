@@ -74,7 +74,6 @@ Check out the matrix below if you're wondering which sources are compatible with
 | Lytics              |   ✔    |   ✔    |   ✔    |
 | Microsoft Ads       |   ✔    |   x    |   x    |
 | Mixpanel            |   ✔    |   ✔    |   ✔    |
-| Netmining           |   ✔    |   x    |   x    |
 | Optimizely          |   ✔    |   x    |   x    |
 | OutBrain            |   ✔    |   x    |   x    |
 | Pebble Post         |   ✔    |   x    |   x    |
