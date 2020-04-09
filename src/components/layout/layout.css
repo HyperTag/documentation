@@ -60,6 +60,10 @@ p {
 main {
   @apply p-8;
 }
+main,
+header {
+  min-width: 30rem;
+}
 
 .section-border {
   @apply border-gray-400 border-b border-solid;
@@ -94,6 +98,10 @@ footer p:first-child {
 
 /* responsive styles */
 @media (min-width: 640px) {
+  header {
+    min-width: initial;
+  }
+
   .header-links {
     @apply mr-8;
   }

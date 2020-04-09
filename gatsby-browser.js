@@ -101,11 +101,11 @@ exports.onRouteUpdate = () => {
   }
 
   var setHashByOffset = function(sections) {
-    sections.forEach(function(section) {
-      if (!document.querySelector('.' + sectionAnchorSelector)) {
-        return // bail out if this is a single page
-      }
+    if (!document.querySelector('.' + sectionAnchorSelector)) {
+      return // bail out if this is a single page
+    }
 
+    sections.forEach(function(section) {
       var hasHash = window.location.hash !== ''
       var isSectionSubheading = false
 
@@ -122,7 +122,9 @@ exports.onRouteUpdate = () => {
         section.offsetTop + section.offsetHeight > window.pageYOffset
       ) {
         // TODO deal with cases where this isn't an h1
-        window.location.hash = '#' + section.querySelector('.' + sectionAnchorSelector).id
+        // window.location.hash = '#' + section.querySelector('.' + sectionAnchorSelector).id
+        window.history.pushState({}, '', '#' + section.querySelector('.' + sectionAnchorSelector).id)
+        setCurrent()
       }
     })
   }
@@ -264,7 +266,6 @@ exports.onRouteUpdate = () => {
   setStickyNav()
 
   // event handlers
-  window.addEventListener('hashchange', setCurrent)
   window.addEventListener('resize', setStickyNav)
   document.addEventListener('scroll', onScroll)
   navList && navList.addEventListener('click', onClickNav)

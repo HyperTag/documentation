@@ -105,7 +105,7 @@ Our minimal production size is two Routers and one of each Forwarder. An example
 1. Kubernetes and Helm installed and configured on your computer
 2. Docker installed and configured on your computer
 3. Operational access to your Kubernetes Cluster
-4. The domain(s) you will use for sending events, pointing to the Static IP/Load Balancer created in the _Cloud Provider Prerequisites > Networking_ section.
+4. The domain(s) you will use for sending events, pointing to the Static IP/Load Balancer created in the **Cloud Provider Prerequisites > Networking** section.
 
 ## Step 1: Create Install Directory
 
@@ -117,7 +117,7 @@ Using your terminal, navigate into the directory you created in Step 1. Then, ru
 
 ## Step 3: Installing the platform
 
-Once the installation is complete, the directory you created in Step 1 will now have all of our platform charts, customized to your instructions, within it. Run `helm install metarouter-enterprise -f ./metarouter-ee.yaml --name <RELEASE> --namespace <NAMESPACE>` to install the platform into Kubernetes, replacing `<RELEASE>` with the name you would like to use to reference the platform (we recommend `ee` for just the one deployment) and replacing `<NAMESPACE>` with the namespace you've previously configured for our platform to run in (as specified in the _Kubernetes Prerequisites_ section.)
+Once the installation is complete, the directory you created in Step 1 will now have all of our platform charts, customized to your instructions, within it. Run `helm install metarouter-enterprise -f ./metarouter-ee.yaml --name <RELEASE> --namespace <NAMESPACE>` to install the platform into Kubernetes, replacing `<RELEASE>` with the name you would like to use to reference the platform (we recommend `ee` for just the one deployment) and replacing `<NAMESPACE>` with the namespace you've previously configured for our platform to run in (as specified in the **Kubernetes Prerequisites** section.)
 
 ## Installation complete
 
