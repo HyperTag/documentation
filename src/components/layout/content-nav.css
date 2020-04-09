@@ -51,7 +51,7 @@
   .nav-list header {
     @apply relative;
     @apply z-10;
-    box-shadow: -15px 20px 10px #f5faff;
+    box-shadow: -15px 20px 10px theme('colors.mr-light.medium');
   }
   .nav-list h1 {
     @apply text-left text-base;

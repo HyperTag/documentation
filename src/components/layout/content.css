@@ -141,12 +141,21 @@ main sub {
 
 /* markup with classes embedded in markdown */
 h1.cloud {
-  @apply border-b border-cloud-green border-solid !important;
   @apply text-cloud-green-darkest;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to left, theme('colors.cloud-blue.darkest'), theme('colors.cloud-green.default')) 100% 1;
 }
 h1.enterprise {
-  @apply border-b border-enterprise-orange border-solid !important;
   @apply text-enterprise-orange;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(
+      to left,
+      theme('colors.enterprise-red.darkest'),
+      theme('colors.enterprise-orange.default')
+    )
+    100% 1;
 }
 
 main section .content-logo {

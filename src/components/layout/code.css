@@ -54,8 +54,8 @@ pre[class*='language-'] {
 pre[class*='language-'] > code {
   @apply relative;
   @apply px-3 pt-5 pb-4;
-  border-left: 10px solid #95e7c3;
-  box-shadow: -1px 0px 0px 0px #95e7c3, 0px 0px 0px 1px #eefff8;
+  border-left: 10px solid theme('colors.cloud-green.lightest');
+  box-shadow: -1px 0px 0px 0px theme('colors.cloud-green.lightest'), 0px 0px 0px 1px #eefff8;
   background-color: #fbfbfb;
 }
 
@@ -98,7 +98,7 @@ code[class*='language'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #a83b44;
+  color: theme('colors.enterprise-red.darkest');
 }
 
 .token.selector,
@@ -108,31 +108,31 @@ code[class*='language'] {
 .token.function,
 .token.builtin,
 .token.inserted {
-  color: #4385bb;
+  color: theme('colors.cloud-blue.medium');
 }
 
 .token.operator,
 .token.entity,
 .token.url,
 .token.variable {
-  color: #a83b44;
+  color: theme('colors.enterprise-red.darkest');
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword,
 .token.class-name {
-  color: #64a7dd;
+  color: theme('colors.cloud-blue.default');
 }
 
 .token.regex,
 .token.important {
-  color: #fa7a43;
+  color: theme('colors.enterprise-orange.default');
 }
 
 .language-css .token.string,
 .style .token.string {
-  color: #a83b44;
+  color: theme('colors.enterprise-red.darkest');
 }
 
 .token.important {
