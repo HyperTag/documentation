@@ -7,6 +7,8 @@
 const path = require(`path`)
 const _ = require('lodash')
 const cheerio = require('cheerio')
+const fs = require('fs-extra')
+const ncp = require('ncp').ncp
 
 const query = `
 {
@@ -274,6 +276,33 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: frontmatter.path,
       component: path.resolve(`src/templates/redirect.js`),
+    })
+  })
+}
+
+exports.onPostBuild = () => {
+  if (process.env.NODE_ENV !== 'production') {
+    return
+  }
+
+  // move built files from /public to /docs for github pages
+  return new Promise((resolve, reject) => {
+    ncp(path.join(__dirname, 'public'), path.join(__dirname, 'docs'), err => {
+      if (err) {
+        console.error(err)
+        reject()
+      }
+      console.log('copied from /public to /docs')
+
+      fs.emptyDir(path.join(__dirname, 'public'), err => {
+        if (err) {
+          console.error(err)
+          reject()
+        }
+
+        console.log('emptied /public dir')
+        resolve()
+      })
     })
   })
 }

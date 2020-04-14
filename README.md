@@ -12,11 +12,11 @@ yarn install
 
 ## Development
 
-`gatsby develop`
+Run `gatsby develop`. Try running `gatsby clean` first if you encounter errors.
 
 ## Build & Run Locally
 
-`gatsby build && gatsby serve`
+Run `gatsby build && gatsby serve`.
 
 ## Live Environment & Deployment
 
