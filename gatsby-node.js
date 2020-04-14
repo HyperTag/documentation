@@ -194,6 +194,30 @@ const linkImages = nodes => {
   })
 }
 
+// changes images served from /static to be served from CDN for prod builds
+const replaceImageUrls = nodes => {
+  if (process.env.NODE_ENV !== 'production') {
+    return nodes
+  }
+
+  return nodes.map(node => {
+    const $ = cheerio.load(node.html)
+    const images = $('img')
+
+    if (images.length) {
+      images.each((i, el) => {
+        const image = $(el)
+        if (image.attr('src').startsWith('/images/')) {
+          image.attr('src', image.attr('src').replace('/images/', 'https://cdn.metarouter.io/web/img/docs/content/'))
+        }
+      })
+      node.html = $.html()
+    }
+
+    return node
+  })
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(query)
@@ -217,6 +241,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // run mutations on node content
   nodes = setTableColumnWidths(nodes)
   nodes = addTags(nodes)
+  nodes = replaceImageUrls(nodes)
   nodes = linkImages(nodes)
 
   const groups = createGroups(nodes)
