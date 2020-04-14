@@ -12,7 +12,7 @@ tags: [sources]
 
 ## Getting Started
 
-This library lets you record analytics data from your PHP code. It is a little different than other server-side libraries in that PHP is a single-threaded language, meaning it only processes once language at a time.
+This library lets you record analytics data on the server-side, from within applications and websites developed with PHP.
 
 ### Step 1
 

@@ -16,7 +16,7 @@ This document covers the basic structure of our HTTP Tracking API endpoints and 
 
 ### Authentication (optional)
 
-You'll need to supply your app_ID with each request using HTTP Basic Auth.
+You'll need to supply your `app_ID` with each request using HTTP Basic Auth.
 
 Basic Auth base64 encodes a `username:password` and prepends it with the string `Basic`. The native libraries should handle this for you, but if they do not you'll need to base64 encode a string in which the username is the Source ID and the password is empty. You can base64 encode your Source ID [here](https://www.base64encode.org/)
 

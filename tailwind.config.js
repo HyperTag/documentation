@@ -39,15 +39,12 @@ module.exports = {
           default: '#7ccaa8',
           lightest: '#95e7c3',
           darkest: '#5fa284',
-        }
+        },
       },
       fontFamily: {
         serif: ['podkova', 'palatino', 'georgia', 'serif'],
-        sans: ['montserrat', 'arial', 'segoe ui', 'geneva', 'sans-serif']
+        sans: ['montserrat', 'arial', 'segoe ui', 'geneva', 'sans-serif'],
       },
-    }
-  }
+    },
+  },
 }
-
-
-
