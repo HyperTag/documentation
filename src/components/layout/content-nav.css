@@ -29,8 +29,9 @@
 
 /* responsive styles */
 @media (min-width: 640px) {
-  .scrollbox,
-  #search-input {
+  /* search temporarily hidden */
+  /* #search-input, */
+  .scrollbox {
     @apply block;
   }
   .nav-dropdown {
