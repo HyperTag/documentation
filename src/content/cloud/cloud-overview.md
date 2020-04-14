@@ -80,6 +80,7 @@ Check out the list below to explore all of the destinations available with MetaR
 - [Lytics](/cloud-destinations/lytics/)
 - [Microsoft Advertising](/cloud-destinations/microsoft-advertising/)
 - [Mixpanel](/cloud-destinations/mixpanel/)
+- [NetMining](/cloud-destinations/netmining/)
 - [Optimizely](/cloud-destinations/optimizely/)
 - [OutBrain](/cloud-destinations/outbrain/)
 - [Pinterest](/cloud-destinations/pinterest/)
@@ -132,6 +133,7 @@ Check out the list below to explore all of the destinations available with MetaR
 | Lytics              |   ✔    |   ✔    |   ✔    |
 | Microsoft Ads       |   ✔    |   x    |   x    |
 | Mixpanel            |   ✔    |   ✔    |   ✔    |
+| Netmining           |   ✔    |   x    |   x    |
 | Optimizely          |   ✔    |   x    |   x    |
 | OutBrain            |   ✔    |   x    |   x    |
 | Pebble Post         |   ✔    |   x    |   x    |
